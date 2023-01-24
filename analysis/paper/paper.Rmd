@@ -1,45 +1,43 @@
 ---
-title: "Title Goes Here"
-author:
-  - Myfirstname Mylastname:
-      email: fl@oneplace.edu
-      institute: [UofO]
-      correspondence: true
-  - Yourfirstname Yourlastname:
-      email: fl@another.edu
-      institute: [UofA]
-      correspondence: false
+title: "Contrasting summed probability distributions of shoreline and radiocarbon dates on the Norwegian Skagerrak coast"
+# author: 
+# - 'Isak Roalkvam'
+# - 'University of Oslo, Institute of Archaeology, Conservation and History'
+  # - IsakRoalkvam:
+  #     email: isak.roalkvam@iakh.uio.no
+  #     institute: [iakh]
+      # correspondence: true
+#   - name: Steinar Solheim
+#     email: steinar.solheim@khm.uio.no
+#     institute: [mch]
+#     correspondence: false
 institute:
-  - UofO: University of One Place
-  - UofA: University of Another Place
+  - iakh: Institute of Archaeology, Conservation and History, University of Oslo
+#   - mch: Museum of Cultural History, University of Oslo
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-    bookdown::word_document2:
+    bookdown::pdf_document2:
       fig_caption: yes
+      toc: false
       reference_docx: "../templates/template.docx" # Insert path for the DOCX file
       pandoc_args:
-      - --lua-filter=../templates/scholarly-metadata.lua
-      - --lua-filter=../templates/author-info-blocks.lua
+      # - --lua-filter=../templates/scholarly-metadata.lua
+      # - --lua-filter=../templates/author-info-blocks.lua
       - --lua-filter=../templates/pagebreak.lua
 bibliography: references.bib
 csl: "../templates/journal-of-archaeological-science.csl" # Insert path for the bib-style
-abstract: |
-  Text of abstract
-keywords: |
-  keyword 1; keyword 2; keyword 3
-highlights: |
-  These are the highlights. 
+# abstract: |
+#   Text of abstract
+# keywords: |
+#   keyword 1; keyword 2; keyword 3
+# highlights: |
+#   These are the highlights. 
 ---
 
-<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
+<!-- Keywords: `r rmarkdown::metadata$keywords` -->
 
-<!-- With the following code you can access and display values from the yml header above. -->
+<!-- Highlights: `r rmarkdown::metadata$highlights` -->
 
-Keywords: `r rmarkdown::metadata$keywords`
-
-Highlights: `r rmarkdown::metadata$highlights`
-
-<!-- The following code chunk defines some general settings how code chunks should behave. -->
 
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
@@ -51,44 +49,124 @@ knitr::opts_chunk$set(
   fig.path = "../figures/",
   dpi = 300
 )
+
+knitr::opts_knit$set(
+  eval.after = "fig.cap"
+)
+
+# Set-up so that I can call floatbarrier using regfloat=TRUE in the chunk 
+# headings. See: 
+# https://gist.github.com/burchill/8873d2ade156b27e92a238a774ce2758
+knitr::knit_hooks$set(plot = function (x, options) {
+  float_correct <- function(f, y, opts)  {
+    if (is.null(opts$regfloat) || opts$regfloat==FALSE)
+      paste0(f(y, opts), "\n\n\\FloatBarrier\n")
+    else
+      f(y, opts)
+  }
+  if (!is.null(options$out.width) || !is.null(options$out.height) ||
+      !is.null(options$out.extra) || options$fig.align != "default" ||
+      !is.null(options$fig.subcap)) {
+    if (is.null(options$fig.scap))
+      options$fig.scap = NA
+    return(float_correct(knitr:::hook_plot_tex, x, options))
+  }
+  return(float_correct(knitr:::hook_plot_md_base, x, options))
+})
 ```
 
-<!-- The actual document text starts here: -->
+```{r packages, echo = FALSE}
+library(here)
+library(dplyr)
+library(kableExtra)
+library(sf)
+```
+
+```{r data, include = FALSE}
+surveyed <- st_read(here("analysis/data/raw_data/surveyed_sites.gpkg"))
+```
+
 
 # Introduction
-
-Here is a citation [@Marwick2017]
+Population size is regarded as one of the primary drivers of cultural variation, and is of critical importance to our understanding of past human societies [@shennan2000]. The frequency distribution of radiocarbon dates has been used extensively as one proxy for past relative population sizes [e.g. @crema2022; @french2021], including in Norwegian Stone Age archaeology [@solheim2018a; @solheim2020a; @nielsen2019; @nielsen2021; @bergsvik2021; @jorgensen2020; @lundstrom2021]. The potentially immense value of insights into past population dynamics, combined with the ubiquity of radiocarbon dates and the relative ease with which these can now be processed within what has been termed a dates as data methodology has undoubtedly contributed to the popularity of the approach. Several limitations and forms of criticism have, however, been directed at these procedures. Some of the objections are of a methodological nature, while others pertain to the underlying logic and the degree to which there is likely to be a direct connection between the frequency of ^14^C-dates and population dynamics [@carleton2021; @torfing2015]. What appears to be agreed upon by practitioners and critics alike is that radiocarbon dates are best analysed in this manner when compared and contrasted to other proxies for past population dynamics and other variables that might impact these [@french2016; @palmisano2017]. This paper reports on and begins to unpack the relationship between two measures that have been linked to relative population size in the context of the Mesolithic Skagerrak coast in south-eastern Norway, namely summed probability distribution of calibrated radiocarbon dates and the summed probability distribution of shoreline dated sites (hereafter RSPD and SSPD, respectively).
 
 # Background
+Large parts of the post-glacial landscape of Northern Scandinavia is characterised by dramatic isostatic uplift that has led to a net sea-level fall throughout the Holocene, despite eustatic sea-level rise [e.g. @mörner1979]. As coastal foragers appear to have predominantly settled on or close to the contemporaneous shoreline, this can be utilised to assign an approximate date to the sites. This is done by coupling the present-day altitude of the sites with reconstructions of past shoreline displacement---a method known as shoreline dating. This is not least useful for dating the large number of surveyed sites in the region where other temporal data such as radiocarbon dates or typological indicators in artefact inventories that often follow with an excavation are not available. 
 
-# Methods
+The frequency of shoreline dated sites has also been compared to RSPDs in the past [@solheim2018; @tallavaara2020]. However, this has been done by finding point estimates of shoreline dates that are then aggregated in somewhat arbitrary bins of 200 or 500 years. This therefore does not take into account the uncertainty in the distance between the sites and the contemporaneous shoreline, nor the impact the variability in the rate of sea-level change has on the precision of the dates that can be achieved with the method. In a recent study, @roalkvam2023 has presented a probabilistic method for shoreline dating that takes these parameters into account, thus setting the stage for a more refined investigation of the relationship between frequency of ^14^C-dates and shoreline dated sites. The parametrisation of the method was based on simulating the distance between sites with ^14^C-dates and the prehistoric shoreline along the Skagerrak coast in the region between Horten municipality in the northeast to Arendal municipality in the southwest (see map in Figure \@ref(fig:map)). The results of this analysis indicate that the sites tend to have been located close to the shoreline until just after 4000 BCE when a few sites become more withdrawn from the shoreline, followed by a clear break around 2500 BCE, at which point shoreline dating appears to loose its utility [see @roalkvam2023 for details]. Thus, the geographical and temporal limits outlined above are also used for this study.   
+
+<!-- This paper is decidedly exploratory. While some speculative thoughts concerning the relationship between the variables outlined above underlie the analysis, these could not be instantiated as concrete hypotheses. The data have thus been explored using a wide range of techniques in an attempt to unpick patterns and grasp the relationship between the variables.  -->
+
+## Population dynamics and summed probabilities
+
+The dates as data approach is dependent on there being a direct link between the past generation of material that ultimately become ^14^C samples, and population size. The sum of shoreline dated sites, on the other hand, is determined by site frequency, and if used as a proxy for population size is therefore dependent on there being a connection between site count and population size. If a comparison of these proxies do not or only partially correspond, it is thus an open question what factors have impacted either distribution to cause this discrepancy, and which measure, if any, reflect true population dynamics. The issue will therefore initially demand an open and exploratory approach where a multitude of explanatory and confounding effects can be drawn on to explain any observed pattern. 
+
+To what degree the radiocarbon record is determined by past population numbers might vary both geographically and chronologically, based on variation in investigatory and taphonomic factors [@surovell2009b; @bluhm2019], as well as cultural processes within prehistoric populations. One example of the latter is the difference that might exist between farmer and forager populations, where @freeman2018 have suggested that an increased per capita energy consumption introduced with farming means that ^14^C-dates should not be weighted equally when making relative population estimates across such populations. Similarly, while site counts have also been invoked for the analysis of past population dynamics, these are likely to be impacted by factors such as land-use and mobility patterns and settlement nucleation and dispersion [@palmisano2017]. However, these could be considered theoretical issues that have implications for how fluctuations in these proxies should be interpreted. Before any such fluctuations are given any substantive interpretation, however, there are a host of methodological issues that have to be considered.
+
+The most critical of these follow from the fact that the summation of the probabilities associated with the dates for the SPDs is not a statistically coherent procedure. This is because the summed probabilities can no longer been seen as probabilities, but rather represents the combination of events and uncertainties, making the two indistinguishable, and rendering the interpretation of the resulting sum difficult [@blackwell2003; @crema2022]. As @timpson2021[2] put it: 'the SPD is not *the* single best explanation of the data, nor even *a* explanation of the data, but rather a conflation of many possible explanations simultaneously, each of which is mired by the artefacts inherited from the calibration wiggles.' The SPD is not a model. It is the combined representation of a range of possible explanations for the data---the frequency of dated events combined with the variable uncertainty associated with these [@carleton2021]. This means that an SPD cannot be used directly to draw inferences on population dynamics, nor can it be directly compared to other time-series data [@carleton2018]. While this problem can never be entirely resolved, a range of approaches have been developed in an attempt to work around this issue.
+
+The most commonly applied of these is a null-hypothesis significance testing approach by means of Monte Carlo simulation, as introduced by [@shennan2013]. This works by comparing the observed RSPD with a series of simulated RSPDs, generated from a null-model. These null-models are typically a uniform, or exponential or logistic distributions, fit to the observed RSPD by means of regression. These models are chosen *a priori* with reference to common long-term population dynamics. The result from these simulations are then used to create a 95% critical envelope representing the null model. The proportion of the observed RSPD that falls outside this envelope is used to estimate a p-value indicating whether the null model can be rejected. In the case that it can, the portions of the observed RSPD that falls outside this envelope can subsequently be interpreted as representing potentially meaningful demographic events, relative to the null model. However, care has to be taken in how these should be interpreted [@timpson2021]. First, this follows from the fact that 5% of the deviations from the critical envelope can be expected to be random, and there is no way to know which deviations this pertains to. Secondly, a for example exponential null model fit to the data is only one of an infinite set of exponential models with different growth rates that could be used. While a model fit by means of regression will likely have a reasonable growth rate, and by extension exclude many other exponential fits as likely to explain the data, this can be difficult to determine. Finally, the p-value only indicates whether or not the null-model can be rejected as an explanation of the data, and does not provide statistical justification for interpreting the deviations themselves as meaningful demographic signals, as has often been the case [see review by @crema2022; @timpson2021]. Instead of only applying a null-hypothesis significance testing approach using a few models chosen *a priori* to fit to the data, the analysis performed here instead follows the model-fitting approach of @timpson2021.
+
+<!-- @timpson2021 have recently presented a framework for fitting continuous piecewise linear (CPL) models along with more commonly applied models to ^14^C-data and evaluating their relative performance. The CPL models consist of a series of linear pieces, representing phases, defined by n hinges, represented demographic events. These piecewise models allows for the identification of key demographic events and a conservative description of population dynamics between these. One major benefit of the approach is thus also that it provides a clearer inferential justification for a substantive interpretation of the results. Schwarz criterion, apparently misnamed BIC [],  -->
+
+# Methods and data
+
+Sites surveyed by means of test-pitting between Horten and Arendal were initially retrieved from the national heritage database Askeladden [@directorate2018], totalling at `r nrow(surveyed)` records. The records were then manually reviewed and given a quality score based on the criteria in Table \@ref(tab:tab1), indicating the degree to which the spatial location and extent of the sites is believed to be represented in the geometries available in the database [see also @roalkvam2020]. All sites with a quality score of 4 or worse were excluded from further analysis. Data on excavated sites was originally compiled for @roalkvam2023 and has been compared with site data as listed in @damlien2021 and @nielsen2022. Only excavated sites with available spatial data in Askeladden or local databases at the Museum of Cultural History of the University of Oslo were included in the analysis. The 102 excavated sites without relevant ^14^C-dates that were originally shoreline dated were included in the SSPD along with the retained surveyed sites. Any sites situated at elevations that result in a shoreline date earlier than 9460 BCE were then excluded. No sites are yet verifiable known to be older than around 9300 BCE [@glorstad2016], and so while the shoreline dates indicate that some surveyed sites are potentially older than this, they have not been properly investigated and . giving a total of 934 shoreline dated sites in the final SSPD. The borders of the municipalities where the shoreline dated sites are located were used to limit the radiocarbon sample. Radiocarbon dates were taken from @roalkvam2023 and @solheim. Dates done on food crusts were excluded due the issue of marine reservoir effects [@nielsen2019, 83].
+
+All analyses done in this study were performed using the R programming language [@rcoreteam]. Underlying data and programming code used for the paper is available in an repository at X. This is structured as a research compendium following @marwick2018b, to allow for reproducibility of the results [@Marwick2017]. 
+
+```{r tab1}
+Quality <- c(1, 2, 3, 4, 5, 6)
+Definition <- c("Site delineated by use of a GNSS-device, or a securely georeferenced record. Extensive database entry.", "Secure spatial data. Slight disturbance of the site or somewhat lacking database record.", "Secure spatial data. Damaged site, such as outskirts of a quarry, and/or very limited database entry.", "Surveyed by archaeologists. However, the database entry is extremely limited/unclear, the site geometry is only given\\\\as a point or small automatically generated circle, and/or finds are from the topsoil of a field.", "Likely site but uncertain spatial information. Typical example is recurring stray finds in a field or other larger area.", "Single stray find or unverified claims/suggestions of possible site.")
+Count <- c(nrow(filter(surveyed, quality == 1)), nrow(filter(surveyed, quality == 2)), nrow(filter(surveyed, quality == 3)), nrow(filter(surveyed, quality == 4)),
+           nrow(filter(surveyed, quality == 5)), nrow(filter(surveyed, quality == 6)))
+
+df <- data.frame(Definition, Quality, Count)
+
+kableExtra::kable(df, booktabs = TRUE,
+      caption = "Quality scoring of site records of surveyed sites retrieved from the national heritage database Askeladden. The scoring system was first used in Roalkvam (2020).", escape = FALSE) %>% kableExtra::kable_styling(latex_options= c("striped", "scale_down"), stripe_color = "gray!20",)
+```
+
+```{r map, echo = FALSE, fig.cap = "Map of the study area and analysed sites. Black lines indicate the borders between municipalities. The surveyed sites included in the analysis are the ones given a quality score of 3 or higher using the framework in Table 1. Of the excavated sites, 102 have been dated by means of shoreline dating.", out.width = "500px", fig.align="center", regfloat = TRUE}
+knitr::include_graphics(here("analysis/figures/map.png"))
+```
+
+## Summed probability of calibrated radiocarbon dates
+
+Analysis of the ^14^C-dates were done using the R packages *rcarbon* [@crema2021]. To account for investigatory bias that can result from variable sampling intensity between sites, the radiocarbon dates were initially binned and dates were aggregated on a site by site basis if they fell within 200 uncalibrated ^14^C years of each other. When calibrated, these are summed and normalised to sum to unity before being included in the final RSPD. Individual ^14^C-dates were not normalised. This follows from a peculiarity in the calibration procedure which can lead the probability mass of a date to sum to more than one [@weninger2015]. As a consequence of this, normalising the dates before summing has been shown to create spurious spikes in the RSPD. All calibration was done using the IntCal20 calibration curve [@reimer2020]. Edge-effects were handled by only including dates that fall inside the range between xx--2500 BCE with more than 50% probability [cf. @timpson2021].
+
+The RSPD was first subjected to the standard null-hypothesis testing approach through Monte Carlo simulation, as introduced above [see @shennan2013] by fitting two models to the observed RSPD. Here this was an exponential model, fit by means of regression, and a uniform model. A series of individual calendar years are then drawn from this distribution with replacement, the number of which equals the number of bins in the observed RSPD. These are then 'uncalibrated' to a single value on the ^14^C scale and a random error from among the observed errors are added to the date. These are then calibrated back to the calendar scale and finally summed. Here, this procedure was repeated 1000 times for each null model. The 2.5th and 97.5th quantile of the resulting summed probability for each year across all simulations were then retrieved to create the 95% critical envelope with which to compare the observed RSPD. The degree to which the observed curve deviates from the critical envelope is then used to calculate a global p-value, indicating whether or not the null model can be rejected. 
+
+## Summed probability of shoreline dated sites
+
+Summing the probability of the shoreline dated sites and the model-fitting procedures follows the same fundamental structure as that used for the radiocarbon dates, and is based on re-purposed programming code from *rcarbon*. However, idiosyncrasies in the dating method does necessitate some adjustments. First, an illustration of the procedure for shoreline dating a single site, as suggested in @roalkvam2023, is provided in Figure \@ref(fig:shoredate). Four geologic reconstructions of shoreline displacement in the region lays the foundation for the method as implemented here. These shoreline displacement curves are from Horten [@romundset2021], Porsgrunn [@sørensen2014; @sørensen2014b; @sorensen2023], Tvedestrand [@romundset2018; @romundset2018b] and Arendal [@romundset2018b], each associated with a shoreline isobase along which the trajectory for relative sea-level change has been the same [e.g. @svendsen1987]. The first step in the dating procedure is therefore to interpolate the shoreline displacement to the location to be dated.  This is done by inverse distance weighting [e.g. @conolly2020], interpolating the sea-level for each calendar year along the geologic shoreline displacement curves based on the distance from the site to be dated to the isobases of the displacement curves. The analysis in @roalkvam2023 was based on simulating the distance between sites and shoreline by drawing on independent temporal data on site use as evidenced by ^14^C-dates. Sites dated to before 2500 BCE were found to have a likely elevation above sea-level that was reasonably approximated  by a gamma distribution with a decay ratio of 0.168. When shoreline dating, this probability is sequentially stepped through at increments of 0.1 m and transferred to the calendar scale by uniformly distributing the probability across calendar years in the range between the lower and upper limit of the interpolated displacement curve. Here this is done with resoltuon of 10 years on the calendar scale. This procedure gives the the shoreline date of a site. The procedure is thus similar to how a radiocarbon date is calibrated, and insights from studies that deal with the numerical treatment of radiocarbon dates and their summation can consequently be useful as analogy for understanding the same properties for the shoreline dates.  
+
+```{r shoredate, echo = FALSE, fig.cap = "A) Example location relative to the isobases of the displacement curves.  B) The geologic displacement curves and the curve interpolated to the example location. C) Resulting shoreline date in light grey on the x-axis. The black line underneath marks the 95\\% HDR. The dashed line marks the elevation of the example location. The exponential function on the y-axis decays with ratio $\\lambda$ and represents the likely elevation of a site above sea-level when it was in use. ", out.width = "500px", fig.align="center", regfloat = TRUE}
+knitr::include_graphics(here("analysis/figures/shoredate.png"))
+```
+
+<!-- The SSPD was subjected to the same procedure for CPL model fitting and comparison as teh RSPD above. Dates with 50% probability distribution  -->
+
+In figure  the shoreline dated sites are plotted according to their elevation. However, due to the variable uplift rates within the study region, the same elevation does not equate to the same date and so this does not directly tell us much about their temporal distribution. As the trajectory for sea-level regression is starker towards the north-east, the same elevation at a location to the south-west implies a younger date than the same elevation further to the north-east. If the elevation of the sites is instead transformed to point-estimate of their date, used by couplng the mean elevation of the site and the mean of the displacement curve interpolated to each site location, the temporal distribution instead looks like the one provided in figure. This more resembles how the dates have usually been treated.  are instead are transformed to point-estimates of shoreline dates for each site  Looking at the distribution across elevations. Furthermore, one way that help in understanding the is to see tham as equivalent to uncalibrated radiocarbon dates. Given that the shoreline displacement curves have no inversions and should therefore before commutative [cf. @weninger2015, 545], each shoreline date is normalised to sum to unity before being summed, as this should not create spurious spikes in the SSPD.  
+
+In much the same way as characteristics of the calibration curve can introduce bias to the RSPD, the same is true for the SSPD, where the local trajectory of relative sea-level change effectively functions as the calibration curve for each site. As the shoreline displacement curves are interpolated to the sites based on their location along a south-west--north-east gradient, each site is effectively associated with a unique shoreline displacement curve, provided they are not located on the same isobase. With the analogy to the radiocarbon methodology, this would be equivalent to each date being associated with a unique calibration curve. As it would be computationally prohibitive to interpolate the shoreline displacement trajectory for each date to be simulated in the Monte Carlo procedure, one shoreline displacement curve was initially interpolated to the centre of each of a series of 2km wide line segments running perpendicular to the shoreline gradient between the extremes of the distribution of sites (Figure \@ref(fig:incpolys)). These intervals were then assigned a weight based on how the density of observed sites is distributed among them. 
+
+```{r incpolys, echo = FALSE, fig.cap = "Density of included surveyed sites and excavated sites dated by means of shoreline dating (n = 943) as distributed across the 2km wide line segments that run perpendicular to the shoreline gradient. A displacement curve has been interpolated to the centre of each segment for use in the Monte Carlo simulations below.", out.width = "500px", fig.align="center", regfloat = TRUE}
+knitr::include_graphics(here("analysis/figures/incpolys.png"))
+```
+
+Following from the commutative nature of the shoreline dates, the Monte Carlo simulation is based on drawing a sample of calendar dates from the observed date range in the SSPD, equalling the number of shoreline dated sites, where the probability of drawing any individual year is determined by the null model of choice. Each sampled date is then assigned one of the pre-interpolated displacement curves, the probability of which is weighted by the density of observed sites within each 2 km interval. This is equivalent to the *calsample* sampling method from *rcarbon* [@crema2021]. The calendar date is then 'uncalibrated'---to follow the RSPD terminology---to an elevation range from which a single elevation value is then drawn with a uniform probability, using intervals of 5cm. This elevation value is then shoreline dated using the displacement curve for the relevant 2km interval. The dates are then summed, and the process repeated a total of 1000 times. Finally, the 97.5% highest and 2.5% lowest summed probability at each calendar year across all simulations is retrieved to create the 95% critical envelope and find the global p-value.
+
 
 # Results
 
-<!-- Here's some example analysis code: -->
-
-```{r get-data, eval = FALSE}
-# Note the path that we need to use to access our data files when rendering this document
-my_data <- read.csv(here::here('analysis/data/raw_data/my_csv_file.csv'))
+```{r spduniform, echo = FALSE, fig.cap = "[Shoreline sims in this version have only been run 50/1000 times] A) Summed probability of shoreline dated sites (n = 934) compared to a uniform null model. B) Same as A, but with a exponential model. C) Summed probability of calibrated radiocarbon dates (n =, bins = 678) compared to a uniform null model. D) Same as C, but with a exponential null model.", out.width = "500px", fig.align="center", regfloat = TRUE}
+knitr::include_graphics(here("analysis/figures/spds_uniform.png"))
 ```
 
-```{r demo-plot, fig.cap="A plot of random numbers"}
-plot(rnorm(10))
-```
+<!-- # Discussion -->
 
-Figure \@ref(fig:demo-plot) shows how we can have a caption and cross-reference for a plot
-
-```{r demo-inline-code}
-x <- round(pi, 2)
-```
-
-Here is an example of inline code `r x` in the middle of a sentence. 
-
-# Discussion
-
-# Conclusion
-
-# Acknowledgements
+<!-- # Conclusion -->
 
 <!-- The following line inserts a page break  -->
 
@@ -100,20 +178,3 @@ Here is an example of inline code `r x` in the middle of a sentence.
 
 <div id="refs"></div>
 
-\newpage
-
-### Colophon
-
-This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
-
-```{r colophon, cache = FALSE}
-# which R packages and versions?
-if ("devtools" %in% installed.packages()) devtools::session_info()
-```
-
-The current Git commit details are:
-
-```{r}
-# what commit is this file at? 
-if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())  
-```
