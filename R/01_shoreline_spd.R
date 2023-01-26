@@ -50,7 +50,7 @@ rcolsurvq <- survq  %>% dplyr::select(askeladden_id, elev) %>%
   dplyr::rename(ask_id = askeladden_id)
 
 # Combine the data
-sites <-rbind(rcolexcshore, rcolsurvq)
+sites <- rbind(rcolexcshore, rcolsurvq)
 
 ###### Shoreline dating ######
 step_reso = 0.1
@@ -64,25 +64,8 @@ shorelinedates <- shoredate::shoreline_date(sites,
 
 # sdates <- do.call(rbind, lapply(shorelinedates, as.data.frame))
 
-save(shorelinedates,
+save(step_reso, shorelinedates,
      file = here("analysis/data/derived_data/sdates.RData"))
 
-load("analysis/data/derived_data/sdates.RData")
 
-sumdates <- sum_shoredates(shorelinedates, cut_off_level = 0.5)
-
-
-sumdatesdf <- as.data.frame(sumdates) %>%
-  filter(sum.probability > 0)
-
-# Code repurposed from modelTest() from rcarbon
-fit <- nls(y ~ (exp(a + b * x)),
-           data = data.frame(x = sumdatesdf$sum.bce, y = sumdatesdf$sum.probability),
-           start = list(a = 0, b = 0))
-est <- predict(fit, list(x = sumdatesdf$sum.bce))
-predgrid <- data.frame(bce = sumdatesdf$sum.bce, prob_dens = est)
-
-shoredate_sumplot(sumdates) +
-geom_line(data = predgrid, aes(x = bce, y = prob_dens)) +
-  scale_x_continuous(breaks = seq(-10000, 2500, 500))
-
+st_write(sites, here("analysis/data/derived_data/combined_sites.gpkg"))
