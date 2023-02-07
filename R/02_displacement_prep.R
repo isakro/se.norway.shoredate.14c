@@ -2,10 +2,11 @@ library(tidyverse)
 library(sf)
 library(terra)
 library(here)
+library(patchwork)
 # library(spatstat)
 
 sites <- st_read(here("analysis/data/derived_data/combined_sites.gpkg"))
-bmap <- st_read(here("analysis/data/raw_data/naturalearth_countries.gpkg")) %>%
+bmap <- st_read(here("analysis/data/raw_data/naturalearth_norway.gpkg")) %>%
   st_transform(st_crs(sites))
 
 # Specify distance of increments for which to interpolate displacement curve
@@ -15,11 +16,11 @@ deg <- 327
 # Arbritrary long distance for lines
 linedist <- 100000
 
-# Find bounding box of sites adding 1km
-outcoords <- st_bbox(sites) + 1000
+# Find bounding box of sites
+outcoords <- st_bbox(sites)
 # Find bottom left and top right points
-startpt <- st_point(outcoords[1:2])
-endpt <- st_point(outcoords[3:4])
+startpt <- st_point(outcoords[1:2]) - 1000
+endpt <- st_point(outcoords[3:4]) + 1000
 
 xx <- startpt[1] + (linedist/3) * (cos(deg * pi / 180))
 yy <- startpt[2] + (linedist/3) * (sin(deg * pi / 180))
@@ -107,25 +108,60 @@ for(i in 1:nrow(incpolys)){
 save(incpolys,
          file = here("analysis/data/derived_data/displacement_polygons.RData"))
 
-ggplot() +
-  geom_sf(data = incpolys, aes(col = id)) +
-  # geom_sf(data = inccents, aes(col = id)) +
-  geom_sf(data = st_centroid(sites), pch = 21, fill = "red") +
-  theme_classic()
+incpolys$dens <- lengths(st_intersects(incpolys, sites)) /
+  sum(lengths(st_intersects(incpolys, sites)))
 
-color = grDevices::colors()[grep('gr(a|e)y', grDevices::colors(), invert = T)]
-cols <- sample(color, nrow(incpolys))
-
-plot(x = incpolys[1,]$disp[[1]][[1]]$bce,
-     y = incpolys[1,]$disp[[1]][[1]]$lowerelev,
-     type = "l", col = cols[1])
-lines(incpolys[1,]$disp[[1]][[1]]$bce,
-      incpolys[1,]$disp[[1]][[1]]$upperelev, col = cols[1])
-
-for(i in 2:nrow(incpolys)){
-  lines(x = incpolys[i,]$disp[[1]][[1]]$bce,
-        y = incpolys[i,]$disp[[1]][[1]]$lowerelev,
-        type = "l", col = cols[i])
-  lines(incpolys[i,]$disp[[1]][[1]]$bce,
-        incpolys[i,]$disp[[1]][[1]]$upperelev, col = cols[i])
+displist <- list()
+for(i in 1:nrow(incpolys)){
+  tmp_curve <- incpolys[i,]$disp[[1]][[1]]
+  tmp_curve$dens <- incpolys[i,]$dens
+  tmp_curve$id <- incpolys[i,]$id
+  displist[[i]] <- tmp_curve
 }
+
+dispcurves <- do.call(rbind, displist)
+
+displt <- ggplot(dispcurves) +
+  ggplot2::geom_ribbon(ggplot2::aes(x = bce,
+                                    ymin = lowerelev,
+                                    ymax = upperelev,
+                                    group = id,
+                                    alpha = dens)) +
+  labs(title = "B", x = "BCE/CE", y = "Meters above present sea-level") +
+  geom_vline(xintercept = -9465) +
+  theme_bw() +
+  theme(legend.position = "none")
+
+bboxpolys <- st_bbox(sites)
+bboxpolys[1] <- bboxpolys[1] - 900
+bboxpolys[3] <- bboxpolys[3] + 900
+bboxpolys[2] <- bboxpolys[2] - 900
+bboxpolys[4] <- bboxpolys[4] + 900
+bboxpolyspoly <- st_as_sf(st_as_sfc(bboxpolys))
+
+
+mplt <- ggplot() +
+  geom_sf(data = incpolys, aes(fill = dens), colour = NA, alpha = 0.7) +
+  geom_sf(data = bmap, fill = NA, colour = "black") +
+  geom_sf(data = st_centroid(sites), size = 0.5, colour = "black") +
+  # ggsn::scalebar(data = surveyed, dist = 20, dist_unit = "km",
+  #                transform = FALSE, st.size = 4, height = 0.02,
+  #                border.size = 0.1, st.dist = 0.03,
+  #                anchor = c(x = anc[2] - 15500, y = anc[1]) + 8000) +
+  scale_fill_gradient(low = "white", high = "black", name = "Site density") +
+  ggtitle("A") +
+  coord_sf(xlim = c(bboxpolys[1], bboxpolys[3]),
+           ylim = c(bboxpolys[2], bboxpolys[4]),
+           expand = FALSE) +
+  theme_bw() + theme(axis.title=element_blank(),
+                     axis.text.y = element_blank(),
+                     axis.text.x = element_blank(),
+                     rect = element_rect(),
+                     axis.ticks = element_blank(),
+                     panel.grid.major = element_blank(),
+                     legend.position = "left")
+
+mplt + displt
+
+ggsave(here::here("analysis/figures/incpolys.png"),
+       units = "px", width = 2650, height = 1600)

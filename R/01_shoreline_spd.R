@@ -55,17 +55,29 @@ sites <- rbind(rcolexcshore, rcolsurvq)
 ###### Shoreline dating ######
 step_reso = 0.1
 
-shorelinedates <- shoredate::shoreline_date(sites,
-                                            elevation = dtm,
-                                            elev_reso = step_reso,
-                                            cal_reso = 5,
-                                            sparse = TRUE,
-                                            verbose = TRUE)
+shorelinedates <- shoreline_date(sites,
+                                 elevation = dtm,
+                                 elev_reso = step_reso,
+                                 cal_reso = 5,
+                                 sparse = TRUE,
+                                 verbose = TRUE)
 
-# sdates <- do.call(rbind, lapply(shorelinedates, as.data.frame))
 
 save(step_reso, shorelinedates,
      file = here("analysis/data/derived_data/sdates.RData"))
 
+# Exclude sites that were given a NA date (elevation equates to a date older
+# than 9465 BCE or younger than 2500 BCE).
+                  # Younger start date than 2500 BCE
+out_of_range <- c("159969", "94301-1", "144111-1", "144113-1", "144114-1",
+                  "138457-1", "230584-0", "265781-0", "265784-0",
+                  # Earlier start date than 9465 BCE
+                  "158183-1", "171065-1", "171069-1", "220991-1", "220992-1",
+                  "244498-0", "250359-0", "262662-0", "270912-0", "270916-0",
+                  "274933-0", "276689-0", "287819-0")
 
-st_write(sites, here("analysis/data/derived_data/combined_sites.gpkg"))
+combined_sites <- filter(sites, !ask_id %in% out_of_range)
+
+st_write(sites,
+         here("analysis/data/derived_data/combined_sites.gpkg"),
+         append = FALSE)
