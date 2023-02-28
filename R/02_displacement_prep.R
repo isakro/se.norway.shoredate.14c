@@ -128,7 +128,7 @@ displt <- ggplot(dispcurves) +
                                     group = id,
                                     alpha = dens)) +
   labs(title = "B", x = "BCE/CE", y = "Meters above present sea-level") +
-  geom_vline(xintercept = -9465) +
+  scale_x_continuous(expand = c(0,0), limits = c(-9469, 2000)) +
   theme_bw() +
   theme(legend.position = "none")
 
