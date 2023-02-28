@@ -53,11 +53,12 @@ simulation_summary <- function(spd, simulation_results, cut_off, nsim){
   # Format observed SPD and retrieve the probability
   fSPD <- as.data.frame(spd) %>%
     filter(sum.bce <= cut_off) %>%
-    select(sum.probability)
+    select(sum.probability) %>%
+    unlist(use.names = FALSE)
 
   Zsim <- t(apply(sim, 1, scale))
   zLo <- apply(Zsim, 1, quantile, prob = 0.025, na.rm = TRUE)
-  zHi <- apply(Zsim, 1, quantile, prob = 0.975,na.rm = TRUE)
+  zHi <- apply(Zsim, 1, quantile, prob = 0.975, na.rm = TRUE)
 
   Zscore_empirical <- (fSPD - apply(sim, 1, mean))/apply(sim, 1, sd)
   busts <- which(Zscore_empirical < zLo)
