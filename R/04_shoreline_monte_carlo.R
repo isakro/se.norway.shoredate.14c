@@ -407,7 +407,7 @@ sdates <- do.call(rbind, dates_dfs)
 sdates$site <- rep(1:length(dates_dfs) , each = nrow(sdates)/length(dates_dfs))
 
 pd <- as.data.frame(sdates) %>%
-  dplyr::filter(bce <= -2500 & bce >= min(expgrid$year)) %>%
+  dplyr::filter(bce <= -2500 & bce >= -9445) %>%
   dplyr::group_by(bce) %>%
   dplyr::filter(!is.na(probability)) %>%
   dplyr::group_by(site) %>%
@@ -452,17 +452,23 @@ cpl_4 <- JDEoptim(lower = rep(0, 7), upper = rep(1,7), fn = objectiveFunction,
                   trace = TRUE)
 cpl_5 <- JDEoptim(lower = rep(0, 9), upper = rep(1,9), fn = objectiveFunction,
                  PDarray = pd, type='CPL',
-                 NP = 180, maxiter = 800 * 9,
+                 NP = 180, maxiter = 1000 * 9,
                  trace = TRUE)
+save(cpl_5, file = here("analysis/data/derived_data/cpl_5.RData"))
 cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
-                  PDarray = pd, type = 'CPL', NP = 220, maxiter = 400 * 11,
+                  PDarray = pd, type = 'CPL', NP = 220, maxiter = 1000 * 11,
                   trace = TRUE)
+save(cpl_6, file = here("analysis/data/derived_data/cpl_6.RData"))
 cpl_7 <- JDEoptim(lower = rep(0, 13), upper = rep(1, 13), fn = objectiveFunction,
-                  PDarray = pd, type = 'CPL', NP = 260, maxiter = 400 * 13,
+                  PDarray = pd, type = 'CPL', NP = 260, maxiter = 1000 * 13,
                   trace = TRUE)
+save(cpl_7, file = here("analysis/data/derived_data/cpl_7.RData"))
+cpl_8 <- JDEoptim(lower = rep(0, 15), upper = rep(1, 15), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 260, maxiter = 1000 * 15,
+                  trace = TRUE)
+save(cpl_8, file = here("analysis/data/derived_data/cpl_8.RData"))
 
-
-save(cpl_1, cpl_2, cpl_3, cpl_4, cpl_5, cpl_6, exp, logi,
+save(cpl_1, cpl_2, cpl_3, cpl_4, cpl_5, cpl_6, cpl_7, exp, logi,
      file = here("analysis/data/derived_data/shoremodels.RData"))
 load(here("analysis/data/derived_data/shoremodels.RData"))
 
@@ -477,7 +483,8 @@ shore_lik <- c("Exponential" = -exp$value,
              "CPL-3" = -cpl_3$value,
              "CPL-4" = -cpl_4$value,
              "CPL-5" = -cpl_5$value,
-             "CPL-6" = -cpl_6$value)
+             "CPL-6" = -cpl_6$value,
+             "CPL-7" = -cpl_7$value)
 
 shore_bic <- c(log(ssize)*1 - 2*shore_lik[1],
                log(ssize)*2 - 2*shore_lik[2],
@@ -486,7 +493,8 @@ shore_bic <- c(log(ssize)*1 - 2*shore_lik[1],
                log(ssize)*5 - 2*shore_lik[5],
                log(ssize)*7 - 2*shore_lik[6],
                log(ssize)*9 - 2*shore_lik[7],
-               log(ssize)*11 - 2*shore_lik[8])
+               log(ssize)*11 - 2*shore_lik[8],
+               log(ssize)*13 - 2*shore_lik[9])
 
 shore_aic <- c(2*1 - 2*shore_lik[1],
                2*2 - 2*shore_lik[2],
@@ -518,17 +526,17 @@ cpl6$model <- "CPL-6"
 cpl7 <- convertPars(pars = cpl_7$par, years = -9445:-2500, type='CPL')
 cpl7$model <- "CPL-7"
 
-shoremodels <- rbind(expp, logip, cpl1, cpl2, cpl3, cpl4, cpl5, cpl6)
+shoremodels <- rbind(expp, logip, cpl1, cpl2, cpl3, cpl4, cpl5, cpl6, cpl7)
 
 mplt <- ggplot() +
   geom_bar(aes(x = as.numeric(rownames(SPD)), SPD[,1]),
            stat = "identity", col = "grey") +
   geom_line(aes(x = as.numeric(rownames(SPD)),
                 y = SPD[,1])) +
-  geom_line(data = shoremodels, aes(year, pdf, col = model),
-            linewidth = 1.1) +
-  # geom_line(data = cpl6, aes(year, pdf),
+  # geom_line(data = shoremodels, aes(year, pdf, col = model),
   #           linewidth = 1.1) +
+  geom_line(data = cpl7, aes(year, pdf),
+            linewidth = 1.1) +
   # geom_vline(xintercept = (3700-2000)*-1) +
   # scale_x_continuous(breaks = seq(-9000, -2000, 1000),
   #                    expand = expansion(mult = c(0, 0), add = c(100, 0))) +
