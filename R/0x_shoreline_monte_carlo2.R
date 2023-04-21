@@ -404,4 +404,9 @@ uniplt <- ggplot() +
                      limits = c(-10000, -2500),
                      expand = expansion(mult = c(0, 0))) +
   theme_bw()
-uniplt
+
+
+expplt + logiplt + uniplt
+
+ggsave(here::here("analysis/figures/shoreline_mc.png"),
+       units = "px", width = 4000, height = 1250)
