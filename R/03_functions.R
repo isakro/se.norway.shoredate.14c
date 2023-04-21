@@ -40,6 +40,8 @@ reverse_shoredate <- function(shoreline_date,
 }
 
 
+# Reverse a single calendar date to a corresponding elevation
+# Repurposed from rcarbon
 simulation_summary <- function(spd, simulation_results, cut_off, nsim){
 
   # Reformat data frame of normalised simulated SPDs
@@ -53,6 +55,7 @@ simulation_summary <- function(spd, simulation_results, cut_off, nsim){
   # Format observed SPD and retrieve the probability
   fSPD <- as.data.frame(spd) %>%
     filter(sum.bce <= cut_off) %>%
+    mutate(sum.probability = sum.probability/(sum(sum.probability) * 5)) %>%
     select(sum.probability) %>%
     unlist(use.names = FALSE)
 

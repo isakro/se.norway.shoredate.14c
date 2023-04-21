@@ -467,8 +467,9 @@ cpl_8 <- JDEoptim(lower = rep(0, 15), upper = rep(1, 15), fn = objectiveFunction
                   PDarray = pd, type = 'CPL', NP = 260, maxiter = 1000 * 15,
                   trace = TRUE)
 save(cpl_8, file = here("analysis/data/derived_data/cpl_8.RData"))
+load(here("analysis/data/derived_data/cpl_8.RData"))
 
-save(cpl_1, cpl_2, cpl_3, cpl_4, cpl_5, cpl_6, cpl_7, exp, logi,
+save(cpl_1, cpl_2, cpl_3, cpl_4, cpl_5, cpl_6, cpl_7, cpl_8, exp, logi,
      file = here("analysis/data/derived_data/shoremodels.RData"))
 load(here("analysis/data/derived_data/shoremodels.RData"))
 
@@ -484,7 +485,8 @@ shore_lik <- c("Exponential" = -exp$value,
              "CPL-4" = -cpl_4$value,
              "CPL-5" = -cpl_5$value,
              "CPL-6" = -cpl_6$value,
-             "CPL-7" = -cpl_7$value)
+             "CPL-7" = -cpl_7$value,
+             "CPL-8" = -cpl_8$value)
 
 shore_bic <- c(log(ssize)*1 - 2*shore_lik[1],
                log(ssize)*2 - 2*shore_lik[2],
@@ -494,7 +496,8 @@ shore_bic <- c(log(ssize)*1 - 2*shore_lik[1],
                log(ssize)*7 - 2*shore_lik[6],
                log(ssize)*9 - 2*shore_lik[7],
                log(ssize)*11 - 2*shore_lik[8],
-               log(ssize)*13 - 2*shore_lik[9])
+               log(ssize)*13 - 2*shore_lik[9],
+               log(ssize)*15 - 2*shore_lik[10])
 
 shore_aic <- c(2*1 - 2*shore_lik[1],
                2*2 - 2*shore_lik[2],
@@ -525,18 +528,28 @@ cpl6 <- convertPars(pars = cpl_6$par, years = -9445:-2500, type='CPL')
 cpl6$model <- "CPL-6"
 cpl7 <- convertPars(pars = cpl_7$par, years = -9445:-2500, type='CPL')
 cpl7$model <- "CPL-7"
+cpl8 <- convertPars(pars = cpl_8$par, years = -9445:-2500, type='CPL')
+cpl8$model <- "CPL-8"
 
-shoremodels <- rbind(expp, logip, cpl1, cpl2, cpl3, cpl4, cpl5, cpl6, cpl7)
+shoremodels <- rbind(expp, logip, cpl1, cpl2, cpl3, cpl4, cpl5, cpl6, cpl7, cpl8)
 
 mplt <- ggplot() +
   geom_bar(aes(x = as.numeric(rownames(SPD)), SPD[,1]),
            stat = "identity", col = "grey") +
   geom_line(aes(x = as.numeric(rownames(SPD)),
                 y = SPD[,1])) +
-  # geom_line(data = shoremodels, aes(year, pdf, col = model),
-  #           linewidth = 1.1) +
-  geom_line(data = cpl7, aes(year, pdf),
+  geom_line(data = shoremodels, aes(year, pdf, col = model),
             linewidth = 1.1) +
+  #  geom_line(data = cpl5, aes(year, pdf),
+  #           linewidth = 1.1) +
+  # geom_line(data = cpl4, aes(year, pdf),
+  #           linewidth = 1.1, col = "red") +
+  # geom_line(data = logip, aes(year, pdf),
+  #           linewidth = 1.1, col = "red") +
+  # geom_line(data = expp, aes(year, pdf),
+  #           linewidth = 1.1, col = "red") +
+  # geom_line(data = cpl8, aes(year, pdf),
+  #           linewidth = 1.1, col = "red") +
   # geom_vline(xintercept = (3700-2000)*-1) +
   # scale_x_continuous(breaks = seq(-9000, -2000, 1000),
   #                    expand = expansion(mult = c(0, 0), add = c(100, 0))) +
@@ -550,9 +563,9 @@ bicplt <- ggplot() +
   labs(x = "Model", y = "BIC") +
   theme_bw()
 
-aicplt <- ggplot() +
-  geom_point(aes(names(shore_aic), shore_aic), size = 3) +
-  labs(x = "Model", y = "BIC") +
-  theme_bw()
+# aicplt <- ggplot() +
+#   geom_point(aes(names(shore_aic), shore_aic), size = 3) +
+#   labs(x = "Model", y = "BIC") +
+#   theme_bw()
 
-mplt + bicplt + aicplt
+mplt + bicplt

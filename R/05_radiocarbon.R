@@ -2,6 +2,7 @@ library(dplyr)
 library(rcarbon)
 library(ADMUR)
 library(patchwork)
+library(ggplot2)
 
 c14 <- read.csv(here::here("analysis/data/raw_data/radiocarbon.csv"))
 c14 <- c14 %>% filter(context != "Food crust")
@@ -200,7 +201,6 @@ x <- subcal2
 binNames <- unique(subbins2)
 
 calyears <- data.frame(calBP = seq(12000, 4500, -1))
-caldateyears <- seq(caldateTR[1],caldateTR[2],-1)
 binnedMatrix <- matrix(NA, nrow= nrow(calyears), ncol = length(binNames))
 colnames(binnedMatrix) <- binNames
 rownames(binnedMatrix) <- rev(calyears[,1])
@@ -226,26 +226,67 @@ for(b in 1:length(binNames)){
 
 pd <- as.data.frame(binnedMatrix)
 
-# Rename model columns to match ADMUR syntax
-expmodel <- expnull$fit %>%
-  rename("year" = "calBP", "pdf" = "PrDens") %>%
-  filter(year < 10554) %>%
-  select(year, pdf)
-
-logmodel <- lognull$fit %>%
-  rename("year" = "calBP", "pdf" = "PrDens") %>%
-  select(year, pdf)
-
-unimodel <- uninull$fit %>%
-  rename("year" = "calBP", "pdf" = "PrDens") %>%
-  filter(year < 10554) %>%
-  select(year, pdf)
+# # Rename model columns to match ADMUR syntax
+# expmodel <- expnull$fit %>%
+#   rename("year" = "calBP", "pdf" = "PrDens") %>%
+#   filter(year < 10554) %>%
+#   select(year, pdf)
+#
+# logmodel <- lognull$fit %>%
+#   rename("year" = "calBP", "pdf" = "PrDens") %>%
+#   select(year, pdf)
+#
+# unimodel <- uninull$fit %>%
+#   rename("year" = "calBP", "pdf" = "PrDens") %>%
+#   filter(year < 10554) %>%
+#   select(year, pdf)
 
 # Make year range in pd match that of the models
 pd <- pd[as.numeric(rownames(pd)) <= max(expmodel$year),]
-
+plotPD(pd)
 # Check that SPD and models matches plt4-plt6 , above
 SPD <- as.data.frame(rowSums(pd))
+plotPD(SPD/(sum(SPD) * 5))
+
+library(DEoptimR)
+# Fit CPL-models to radiocarbon data
+cpl_1 <- JDEoptim(lower = 0, upper = 1, fn = objectiveFunction, PDarray = pd,
+                  type = 'CPL', NP = 20, trace = TRUE)
+cpl_2 <- JDEoptim(lower = rep(0, 3), upper = rep(1, 3), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 60, trace = TRUE)
+# Increased maxiter for the remaining searches to achieve convergence
+cpl_3 <- JDEoptim(lower = rep(0, 5), upper = rep(1,5), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 100, maxiter = 400 * 5,
+                  trace = TRUE)
+cpl_4 <- JDEoptim(lower = rep(0, 7), upper = rep(1,7), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 140, maxiter = 400 * 7,
+                  trace = TRUE)
+
+# Exponential
+exp <- JDEoptim(lower = -0.01, upper = 0.01, fn = objectiveFunction, PDarray = pd, type = 'exp', NP = 20)
+# Uniform
+uniform <- objectiveFunction(NULL, pd, type='uniform')
+
+maxyr <- max(as.numeric(rownames(SPD)))
+minyr <- min(as.numeric(rownames(SPD)))
+
+cpl1 <- convertPars(pars = cpl_1$par, years = maxyr:minyr, type='CPL')
+cpl1$model <- "CPL-1"
+cpl2 <- convertPars(pars = cpl_2$par, years = -9445:-2500, type='CPL')
+cpl2$model <- "CPL-2"
+EXP <- convertPars(pars=exp$par, years = maxyr:minyr, type = 'exp')
+
+
+plotPD(SPD)
+lines(cpl1$year, cpl1$pdf, lwd = 2, col = cols[1])
+
+ggplot() +
+  geom_bar(aes(x = c14spd$grid$calBP,
+               y = c14spd$grid$PrDens/sum(c14spd$grid$PrDens)), stat = "identity", col = "grey") +
+  geom_line(aes(EXP$year, EXP$pdf))
+  geom_hline(yintercept = uniform)
+
+  geom_line(aes((cpl1$year-1950) *-1, cpl1$pdf))
 
 cols <- c('steelblue','firebrick','orange')
 plotPD(SPD)
