@@ -3,6 +3,7 @@ library(rcarbon)
 library(ADMUR)
 library(patchwork)
 library(ggplot2)
+library(DEoptimR)
 
 c14 <- read.csv(here::here("analysis/data/raw_data/radiocarbon.csv"))
 c14 <- c14 %>% filter(context != "Food crust")
