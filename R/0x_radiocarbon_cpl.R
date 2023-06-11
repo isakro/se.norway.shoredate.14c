@@ -29,6 +29,8 @@ cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
 save(exp, logi, cpl_1, cpl_2, cpl_3, cpl_4, cpl_5,
           file = here("analysis/data/derived_data/rcarbon_models.RData"))
 
+load(file = here("analysis/data/derived_data/rcarbon_models.RData"))
+
 expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
 expp$model <- "Exponential"
 logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
@@ -60,6 +62,9 @@ rcarbon_lik <- c("Exponential" = -exp$value,
 # "CPL-3" = -cpl_3$value,
 # "CPL-4" = -cpl_4$value
 
+# Effective sample size
+ssize <- ncol(pd)
+
 rcarbon_bic <- c(log(ssize)*1 - 2*rcarbon_lik[1], # Exponential
                log(ssize)*2 - 2*rcarbon_lik[2], # Logistic
                log(ssize)*0  - 2*rcarbon_lik[3], # Uniform
@@ -67,7 +72,8 @@ rcarbon_bic <- c(log(ssize)*1 - 2*rcarbon_lik[1], # Exponential
                log(ssize)*3 - 2*rcarbon_lik[5], # CPL-2
                log(ssize)*5 - 2*rcarbon_lik[6], # CPL-3
                log(ssize)*7 - 2*rcarbon_lik[7], # CPL-4
-               log(ssize)*9 - 2*rcarbon_lik[8]) # CPL-5
+               log(ssize)*9 - 2*rcarbon_lik[8] # CPL-5
+               ) #log(ssize)*11 - 2*rcarbon_lik[9] # CPL-6
 
 # log(ssize)*5 - 2*shore_lik[6],
 # log(ssize)*7 - 2*shore_lik[6],
@@ -94,8 +100,8 @@ cplplt <- ggplot() +
 
 
 bicplt <- ggplot() +
-  geom_point(aes(names(rcarbon_bic), rcarbon_bic), size = 3) +
-  labs(x = "Model", y = "BIC") +
+  geom_point(aes(rcarbon_bic, names(rcarbon_bic)), size = 3) +
+  labs(x = "BIC", y = "Model") +
   theme_bw()
 
 cplplt + bicplt

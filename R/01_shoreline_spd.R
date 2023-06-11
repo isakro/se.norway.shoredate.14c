@@ -80,6 +80,8 @@ shorelinedates <- shoreline_date(sites,
 save(step_reso, wmeans, shorelinedates,
      file = here("analysis/data/derived_data/sdates.RData"))
 
+load(file = here("analysis/data/derived_data/sdates.RData"))
+
 # Sum the probability distributions for the shoreline dates
 sumdates <- sum_shoredates(shorelinedates)
 sumdatesdf <- as.data.frame(sumdates) %>%
@@ -101,25 +103,28 @@ combined_sites <- filter(sites, !ask_id %in% out_of_range)
 wplot <- ggplot() +
   geom_histogram(aes(x = wmeans, y = ..density..),
                  binwidth = 200,
-                 col = "black", fill = "grey", alpha = 0.7) +
-  geom_density(aes(x = wmeans),
-               col = "black") +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000)) +
-  labs(title = "Mean shoreline date", x = "BCE", y = "Density") +
+                 col = "grey", fill = "grey") +
+  # geom_density(aes(x = wmeans),
+  #              col = "black") +
+  scale_x_continuous(breaks = seq(-10000, 2500, 1000), limits = c(-9500, -2500)) +
+  labs(title = "Mean TPQ dates", x = "BCE", y = "Density") +
   theme_bw()
 
 splot <- ggplot() +
-  geom_line(data = sumdatesdf, aes(x = sum.bce, y = sum.probability)) +
+  # geom_line(data = sumdatesdf, aes(x = sum.bce, y = sum.probability)) +
+  geom_bar(data = sumdatesdf, aes(x = sum.bce, y = sum.probability),
+                 stat = "identity",
+                 col = "grey", fill = "grey") +
   scale_x_continuous(breaks = seq(-10000, 2500, 1000)) +
-  labs(title = "SSPD", x = "BCE", y = "Summed probability") +
+  labs(title = "Summed probability distribution\nof shoreline dates", x = "BCE", y = "Summed probability") +
   theme_bw()
 
 eplot <- ggplot() +
   geom_histogram(aes(x = combined_sites$elev, y = ..density..),
                  binwidth = 4,
-                 col = "black", fill = "grey", alpha = 0.7) +
-  geom_density(aes(x = combined_sites$elev),
-             col = "black", alpha = 0.7) +
+                 col = "grey", fill = "grey") +
+  # geom_density(aes(x = combined_sites$elev),
+  #            col = "black", alpha = 0.7) +
   labs(title = "Site elevations", x = "Elevation (m)", y = "Density") +
   scale_x_reverse() +
   theme_bw()
@@ -162,6 +167,7 @@ studyareabox[1] <- studyareabox[1] - 15000
 studyareabox[3] <- studyareabox[3] + 15000
 studyareabox[2] <- studyareabox[2] - 5000
 studyareabox[4] <- studyareabox[4] + 5000
+bboxpolyspoly <- st_as_sf(st_as_sfc(studyareabox))
 
 # Reproject the bounding box to match world map, and crop the world map
 # with the bounding box polygon.
@@ -174,7 +180,7 @@ overview <-
   ggplot() +
   geom_sf(data = count_reproj, fill = "grey", colour = NA) +
   geom_sf(data = bboxpolyspoly,
-          fill = NA, colour = "black", size = 0.5) +
+          fill = NA, colour = "black", size = 1) +
   coord_sf(xlim = c(sitbbox[1], sitbbox[3]), ylim = c(sitbbox[2], sitbbox[4]),
            expand = FALSE) +
   theme_bw() + theme(axis.title=element_blank(),
@@ -186,7 +192,6 @@ overview <-
 
 norw_reproj <- st_transform(norway, st_crs(surveyed))
 
-anc <- as.numeric(c(sitbbox$ymin, sitbbox$xmax))
 sa <- ggplot() +
   geom_sf(data = norw_reproj, fill = "grey", colour = NA) +
   geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
@@ -198,7 +203,7 @@ sa <- ggplot() +
           aes(fill = lab),
           size = 2, shape = 21,
           colour = "black", show.legend = "point") +
-  geom_sf(data = st_centroid(excshore), aes(fill = lab),
+  geom_sf(data = st_centroid(excshore), aes(fill = "y"),
           size = 2, shape = 21,
           colour = "black", show.legend = "point") +
   scale_fill_manual(labels = c(paste0("Surveyed sites,\nincluded (n = ",
@@ -209,13 +214,13 @@ sa <- ggplot() +
                                       ")")),
                     values = c("t" = "darkgoldenrod1", "f" = "black", "y" = "white"),
                     name = "") +
-  ggsn::scalebar(data = sites, dist = 20, dist_unit = "km",
-                 transform = FALSE, st.size = 4, height = 0.02,
-                 border.size = 0.1, st.dist = 0.03,
-                 anchor = c(x = anc[2] - 15500, y = anc[1]) + 8000) +
   coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
            ylim = c(studyareabox[2], studyareabox[4]),
            expand = FALSE) +
+  ggspatial::annotation_scale(
+    location = "br",
+    width_hint = 0.3,
+    style = "ticks") +
   theme_bw() + theme(axis.title=element_blank(),
                      axis.text.y = element_blank(),
                      axis.text.x = element_blank(),
@@ -227,10 +232,43 @@ sa <- ggplot() +
 
 cowplot::ggdraw() +
   cowplot::draw_plot(sa) +
-  cowplot::draw_plot(overview, x = 0.126,
-                     y = 0.65, width = 0.35, height = 0.35)
+  cowplot::draw_plot(overview, x = 0.069,
+                     y = 0.7, width = 0.3, height = 0.3)
 
 
 # overview + sa +   plot_layout(widths = c(1, 2.5))
-ggsave(here::here("analysis/figures/map.png"),
-       units = "px", width = 2194*1.7, height = 2380)
+# ggsave(here::here("analysis/figures/map1.png"),
+#        units = "px", width = 2500, height = 2500)
+
+
+# Example date plot"
+
+target_site <- sites[535,]
+target_curve <- interpolate_curve(target_site)
+tpq_date <- shoreline_date(target_site,
+                           elevation = target_site$elev,
+                           model = "none", hdr_prob = 1)
+shdate <-  shoreline_date(target_site,
+                          elevation = target_site$elev)
+
+tplt <- target_plot(target_site, basemap = norw_reproj) +
+  coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
+           ylim = c(studyareabox[2], studyareabox[4]),
+           expand = FALSE)
+
+
+dplt <- displacement_plot(target_curve,
+                          displacement_alpha = 0.4)
+dplt <- dplt + theme(legend.position = "left", legend.direction = "vertical")
+shoredate_plot(tpq_date,
+               date_probability_scale = 6000,
+               greyscale = TRUE,
+               hdr_label_yadj = 0.5)
+tpqplt <- last_plot()
+
+shoredate_plot(shdate, greyscale = TRUE)
+splt <- last_plot()
+
+(tplt + dplt) /
+  (tpqplt + splt) + plot_annotation(tag_levels = "A")
+

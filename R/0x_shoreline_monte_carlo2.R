@@ -42,6 +42,9 @@ pd <- sweep(pd, 2, colSums(pd),"/")
 SPD <- as.data.frame(rowSums(pd))
 SPD <- SPD/( sum(SPD) *5 )
 
+minage <- min(as.numeric(row.names(SPD)))
+maxage <- max(as.numeric(row.names(SPD)))
+
 # Maximum likelihood search using DEoptimR
 exp <- JDEoptim(lower = -0.01, upper = 0.01, fn = objectiveFunction,
                 PDarray = pd, type = "exp", NP = 20)
@@ -51,13 +54,16 @@ logi <- JDEoptim(lower = c(0, 0000), upper = c(1, 10000),
 # No search required for uniform
 unif <- -objectiveFunction(pars = NULL, PDarray = pd, type = 'uniform')
 
-expp <- convertPars(pars = exp$par, years = -9445:-2500, type = 'exp')
+expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
 expp$model <- "Exponential"
-logip <- convertPars(pars = logi$par, years = -9445:-2500, type = 'logistic')
+logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
 logip$model <- "Logistic"
 unifp <- convertPars(pars = NULL, years =  -9445:-2500, type = "uniform")
 unifp$model <- "Uniform"
 
+# Save to use with CPL models
+save(pd, exp, logi, unif, maxage, minage,
+     file = here("analysis/data/derived_data/shore_pd_models.RData"))
 
 # Combine models for plotting
 shoremodels <- rbind(expp, logip, unifp)
@@ -89,7 +95,7 @@ incpolys$dens <- lengths(st_intersects(incpolys, sites)) /
 ssize = sumdates$dates_n
 
 # Number of simulations
-nsim <- 10
+nsim <- 10000
 
 names(expp) <- c("bce", "prob_dens", "model")
 
@@ -177,22 +183,34 @@ simresults <- simresults %>%
 
 expplt <- ggplot() +
   geom_vline(xintercept = as.numeric(names(expsum$busts)),
-             col = "firebrick", alpha = 0.04) +
+             col = "firebrick", alpha = 0.06) +
   geom_vline(xintercept = as.numeric(names(expsum$booms)),
-             col = "darkgreen", alpha = 0.04) +
+             col = "darkgreen", alpha = 0.06) +
   ggplot2::geom_ribbon(data = simresults, aes(x = bce, ymin = low, ymax = high),
                        fill = "grey60", alpha = 0.8) +
   geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
   geom_line(data = expp, aes(x = bce, y = prob_dens),
-            linetype = "dashed", colour = "black") +
+            linewidth = 0.5, col = "red") +
   # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
   #               label = paste("p =", round(expsum$pvalue, 3)))) +
   scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
-  labs(title = "Exponential", x = "BCE", y = "Summed probability") +
+  labs(x = "BCE", y = "Summed probability") +
   scale_x_continuous(breaks = seq(-10000, 2500, 1000),
                      limits = c(-10000, -2500),
                      expand = expansion(mult = c(0, 0))) +
   theme_bw()
+
+if(expsum$pvalue < 0.0001) {
+  expplt <- expplt +
+    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
+                  label = paste("p < 0.0001")))
+} else {
+  expplt <- expplt +
+    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
+                  label = paste("p =", round(expsum$pvalue, 3))))
+}
+
+save(expplt, file = "../external_data/shorespd/expplt.rda")
 
 ##### Monte Carlo simulation - Logistic #####
 
@@ -385,17 +403,37 @@ simresults <- simresults %>%
                 mean = mean(prob_sum_normalised)) %>%
   dplyr::distinct(bce, .keep_all = TRUE)
 
+
+ggplot() +
+  geom_vline(xintercept = as.numeric(names(expsum$busts)),
+             col = "firebrick", alpha = 0.06) +
+  geom_vline(xintercept = as.numeric(names(expsum$booms)),
+             col = "darkgreen", alpha = 0.06) +
+  ggplot2::geom_ribbon(data = simresults, aes(x = bce, ymin = low, ymax = high),
+                       fill = "grey60", alpha = 0.8) +
+  geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
+  geom_line(data = expp, aes(x = bce, y = prob_dens),
+            linewidth = 0.5, col = "red") +
+  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
+  #               label = paste("p =", round(expsum$pvalue, 3)))) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
+  labs(x = "BCE", y = "Summed probability") +
+  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
+                     limits = c(-10000, -2500),
+                     expand = expansion(mult = c(0, 0))) +
+  theme_bw()
+
 uniplt <- ggplot() +
   geom_vline(xintercept = as.numeric(names(unisum$busts)),
-             col = "firebrick", alpha = 0.04) +
+             col = "firebrick", alpha = 0.06) +
   geom_vline(xintercept = as.numeric(names(unisum$booms)),
-             col = "darkgreen", alpha = 0.04) +
+             col = "darkgreen", alpha = 0.06) +
   ggplot2::geom_ribbon(data = simresults,
                        aes(x = bce, ymin = low, ymax = high),
                        fill = "grey60", alpha = 0.8) +
   geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
-  geom_line(data = unifp, aes(x = bce, y = prob_dens),
-            linetype = "dashed", colour = "black") + #"grey40"
+  geom_line(data = unifp, aes(x = year, y = pdf),
+            linewidth = 0.5, colour = "red") + #"grey40"
   labs(title = "Uniform", x = "BCE", y = "Summed probability") +
   # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
   #               label = paste("p =", round(unisum$pvalue, 3)))) +
@@ -405,6 +443,17 @@ uniplt <- ggplot() +
                      expand = expansion(mult = c(0, 0))) +
   theme_bw()
 
+if(unisum$pvalue < 0.0001) {
+  uniplt <- uniplt +
+    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
+                  label = paste("p < 0.0001")))
+} else {
+  uniplt <- uniplt +
+    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
+                  label = paste("p =", round(unisum$pvalue, 3))))
+}
+
+save(uniplt, file = "../external_data/shorespd/uniplt.rda")
 
 expplt + logiplt + uniplt
 
