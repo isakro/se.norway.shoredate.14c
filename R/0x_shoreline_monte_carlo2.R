@@ -31,11 +31,13 @@ sdates$site <- rep(1:length(dates_dfs) , each = nrow(sdates)/length(dates_dfs))
 
 pd <- as.data.frame(sdates) %>%
   dplyr::filter(bce <= -2500 & bce >= -9445) %>%
-  dplyr::group_by(bce) %>%
+  dplyr::mutate(bp = (bce + 1950) * - 1) %>%
+  dplyr::select(-bce) %>%
+  dplyr::group_by(bp) %>%
   dplyr::filter(!is.na(probability)) %>%
   dplyr::group_by(site) %>%
   tidyr::pivot_wider(names_from = site, values_from = probability) %>%
-  tibble::column_to_rownames("bce")
+  tibble::column_to_rownames("bp")
 
 pd <- sweep(pd, 2, colSums(pd),"/")
 
@@ -58,7 +60,7 @@ expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
 expp$model <- "Exponential"
 logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
 logip$model <- "Logistic"
-unifp <- convertPars(pars = NULL, years =  -9445:-2500, type = "uniform")
+unifp <- convertPars(pars = NULL, years =  minage:maxage, type = "uniform")
 unifp$model <- "Uniform"
 
 # Save to use with CPL models
@@ -75,7 +77,8 @@ ggplot() +
   geom_line(aes(x = as.numeric(rownames(SPD)),
                 y = SPD[,1])) +
   geom_line(data = shoremodels, aes(year, pdf, col = model),
-            linewidth = 1.1)
+            linewidth = 1.1) +
+  scale_x_reverse()
 
 
 #### Set up Monte Carlo simulation ####
