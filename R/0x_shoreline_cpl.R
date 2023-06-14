@@ -37,24 +37,28 @@ logip$model <- "Logistic"
 unifp <- convertPars(pars = NULL, years = minage:maxage, type = "uniform")
 unifp$model <- "Uniform"
 cpl1 <- convertPars(pars = cpl_1$par, years = minage:maxage, type = 'CPL')
-cpl1$model <- "CPL-1"
+cpl1$model <- "1-CPL"
 cpl2 <- convertPars(pars = cpl_2$par, years = minage:maxage, type = 'CPL')
-cpl2$model <- "CPL-2"
+cpl2$model <- "2-CPL"
+cpl3 <- convertPars(pars = cpl_3$par, years = minage:maxage, type = 'CPL')
+cpl3$model <- "3-CPL"
 
-shmodels <- rbind(expp, logip, unifp, cpl1, cpl2)
+shmodels <- rbind(expp, logip, unifp, cpl1, cpl2, cpl3)
 
 sh_lik <- c("Exponential" = -exp$value,
                  "Logistic" = -logi$value,
                  "Uniform" = unif,
-                 "CPL-1" = -cpl_1$value,
-                 "CPL-2" = -cpl_2$value)
+                 "1-CPL" = -cpl_1$value,
+                 "2-CPL" = -cpl_2$value,
+                 "3-CPL" = -cpl_3$value)
 
 ssize <- ncol(pd)
 sh_bic <- c(log(ssize)*1 - 2*sh_lik[1], # Exponential
                  log(ssize)*2 - 2*sh_lik[2], # Logistic
                  log(ssize)*0  - 2*sh_lik[3], # Uniform
                  log(ssize)*1 - 2*sh_lik[4], # CPL-1
-                 log(ssize)*3 - 2*sh_lik[5]) # CPL-2
+                 log(ssize)*3 - 2*sh_lik[5],
+                 log(ssize)*5 - 2*sh_lik[6]) # CPL-2
 
 SPD <- as.data.frame(rowSums(pd))
 SPD <- SPD/( sum(SPD) *5 )
