@@ -26,7 +26,7 @@ cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
                   PDarray = pd, type = 'CPL', NP = 220, maxiter =  400 * 11,
                   trace = TRUE)
 
-save(exp, logi, unif, cpl_1, cpl_2, cpl_3, cpl4,
+save(exp, logi, unif, cpl_1, cpl_2, cpl_3, cpl_4,
      file = here::here("analysis/data/derived_data/shore_models.RData"))
 load(file = here::here("analysis/data/derived_data/shore_models.RData"))
 
