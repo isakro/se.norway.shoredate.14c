@@ -4,6 +4,7 @@ library(ADMUR)
 library(patchwork)
 library(ggplot2)
 library(DEoptimR)
+library(here)
 
 set.seed(42)
 
@@ -11,6 +12,9 @@ c14 <- read.csv(here::here("analysis/data/raw_data/radiocarbon.csv"))
 c14 <- c14 %>% filter(context != "Food crust")
 
 names(c14) <- c("site", "context", "material", "lab_ref", "age", "sd")
+
+minage <- 4500
+maxage <- 10975
 
 CalArray <- makeCalArray(intcal20, calrange = c(minage, maxage))
 PD <- phaseCalibrator(c14, CalArray, remove.external = TRUE)
@@ -37,6 +41,7 @@ uniform <- objectiveFunction(NULL, PD, type = 'uniform')
 
 save(exp, log, uniform, CPL.1, CPL.2, CPL.3, CPL.4,
      file = here("analysis/data/derived_data/rcarbon_models.RData"))
+load(file = here("analysis/data/derived_data/rcarbon_models.RData"))
 
 CPL1 <- convertPars(pars=CPL.1$par, years=minage:maxage, type='CPL')
 CPL2 <- convertPars(pars=CPL.2$par, years=minage:maxage, type='CPL')
@@ -59,24 +64,17 @@ BIC.2 <- 3*log(155) - 2*(-CPL.2$value)
 BIC.3 <- 5*log(155) - 2*(-CPL.3$value)
 BIC.4 <- 7*log(155) - 2*(-CPL.4$value)
 BIC.exp <- 1*log(155) - 2*(-exp$value)
-BIC.log <- 2*log(ssize) - 2*(-log$value)
+BIC.log <- 2*log(155) - 2*(-log$value)
 BIC.uniform <- 0 - 2*(-uniform)
 
-bics <- data.frame(model = c("BIC.1", "BIC.2", "BIC.3",
-                             "BIC.4", "BIC.exp", "BIC.log", "BIC.uniform"),
+bics <- data.frame(model = c("1-CPL", "2-CPL", "3-CPL",
+                             "4-CPL", "Exponential", "Logistic", "Uniform"),
                    bic = c(BIC.1, BIC.2, BIC.3, BIC.4, BIC.exp,
                            BIC.log, BIC.uniform))
 
-ggplot(data = bics, aes(x = model, y = bic)) + geom_point()
-
-plotPD(SPD)
-cols <- c('firebrick','orchid2','coral2','steelblue','goldenrod3')
-lines(CPL1$year, CPL1$pdf*-1, col=cols[1], lwd=2)
-lines(CPL2$year, CPL2$pdf*-1, col=cols[2], lwd=2)
-lines(CPL3$year, CPL3$pdf*-1, col=cols[3], lwd=2)
-lines(CPL4$year, CPL4$pdf*-1, col=cols[4], lwd=2)
-lines(EXP$year, EXP$pdf*-1, col=cols[5], lwd=2)
-
+bicplt <- ggplot(data = bics, aes(x = bic, y = model)) + geom_point(size = 2) +
+  labs(x = "BIC", y = "Model") +
+  theme_bw()
 
 CPL1$name <- "1-CPL"
 CPL2$name <- "2-CPL"
@@ -86,9 +84,9 @@ EXP$name <- "Exponential"
 LOG$name <- "Logistic"
 UNI$name <- "Uniform"
 
-rcarbonmodels <- rbind(CPL1, CPL2, CPL3, CPL4, LOG, EXP, UNI)
+rcarbonmodels <- rbind(CPL1, CPL2, CPL3, CPL4,  LOG, EXP, UNI)
 
-ggplot() +
+mplt <- ggplot() +
   geom_bar(aes(x = as.numeric(rownames(SPD)),
                SPD[,1]),
            stat = "identity", col = "grey") +
@@ -112,6 +110,8 @@ ggplot() +
   scale_x_reverse(labels = function(x)(x-2000)*-1) +
   theme_bw() +
   theme(legend.title = element_blank())
+
+mplt + bicplt
 
 c14$datingType <- '14C'
 

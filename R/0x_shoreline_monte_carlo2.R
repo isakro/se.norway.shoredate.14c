@@ -7,7 +7,7 @@ library(patchwork)
 library(ADMUR)
 library(DEoptimR)
 
-set.seed(42)
+set.seed(1)
 
 # Source functions
 source(here("R/03_functions.R"))
@@ -26,46 +26,68 @@ dates_dfs <- lapply(shorelinedates, as.data.frame)
 # Combine these into a single data frame
 sdates <- do.call(rbind, dates_dfs)
 
-# Assign simulation results for each site a unique ID
+# Assign results for each site a unique ID
 sdates$site <- rep(1:length(dates_dfs) , each = nrow(sdates)/length(dates_dfs))
 
+# Format for ADMUR, changing BCE to BP
 pd <- as.data.frame(sdates) %>%
   dplyr::filter(bce <= -2500 & bce >= -9445) %>%
-  dplyr::mutate(bp = (bce + 1950) * - 1) %>%
+  dplyr::mutate(bp = (bce * -1) + 1950) %>%
   dplyr::select(-bce) %>%
   dplyr::group_by(bp) %>%
   dplyr::filter(!is.na(probability)) %>%
   dplyr::group_by(site) %>%
   tidyr::pivot_wider(names_from = site, values_from = probability) %>%
   tibble::column_to_rownames("bp")
-
 pd <- sweep(pd, 2, colSums(pd),"/")
 
+# Create SPD using the ADMUR approach
 SPD <- as.data.frame(rowSums(pd))
 SPD <- SPD/( sum(SPD) *5 )
 
-minage <- min(as.numeric(row.names(SPD)))
-maxage <- max(as.numeric(row.names(SPD)))
+# Find mininum and maximum ages (BP)
+minage <- min(as.numeric(row.names(pd)))
+maxage <- max(as.numeric(row.names(pd)))
 
 # Maximum likelihood search using DEoptimR
 exp <- JDEoptim(lower = -0.01, upper = 0.01, fn = objectiveFunction,
                 PDarray = pd, type = "exp", NP = 20)
-logi <- JDEoptim(lower = c(0, 0000), upper = c(1, 10000),
-                 fn = objectiveFunction, PDarray = pd, type = 'logistic',
-                 NP = 40, trace = TRUE)
 # No search required for uniform
 unif <- -objectiveFunction(pars = NULL, PDarray = pd, type = 'uniform')
 
 expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
 expp$model <- "Exponential"
-logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
-logip$model <- "Logistic"
 unifp <- convertPars(pars = NULL, years =  minage:maxage, type = "uniform")
 unifp$model <- "Uniform"
 
-# Save to use with CPL models
-save(pd, exp, logi, unif, maxage, minage,
-     file = here("analysis/data/derived_data/shore_pd_models.RData"))
+# The logistic model JDEoptim search appears to only succeed with another
+# transformation of the BCE dates
+pd2 <- as.data.frame(sdates) %>%
+  dplyr::filter(bce <= -2500 & bce >= -9445) %>%
+  dplyr::mutate(bp = (bce + 1950) * -1) %>%
+  dplyr::select(-bce) %>%
+  dplyr::group_by(bp) %>%
+  dplyr::filter(!is.na(probability)) %>%
+  dplyr::group_by(site) %>%
+  tidyr::pivot_wider(names_from = site, values_from = probability) %>%
+  tibble::column_to_rownames("bp")
+pd2 <- sweep(pd2, 2, colSums(pd2),"/")
+minage2 <- min(as.numeric(row.names(pd2)))
+maxage2 <- max(as.numeric(row.names(pd2)))
+
+logi <- JDEoptim(lower = c(0, 0000), upper = c(1, 10000),
+                 fn = objectiveFunction, PDarray = pd2, type = 'logistic',
+                 NP = 40, trace = TRUE)
+
+logip <- convertPars(pars = logi$par, years = minage2:maxage2, type = 'logistic')
+logip$model <- "Logistic"
+logip$year <- logip$year + 3900 # Transforming back to BP
+
+
+# Save
+save(pd, expp, logip, unifp, maxage, minage,
+     file = here("analysis/data/derived_data/shore_models_pd.RData"))
+load(here("analysis/data/derived_data/shore_models_pd.RData"))
 
 # Combine models for plotting
 shoremodels <- rbind(expp, logip, unifp)
@@ -80,6 +102,11 @@ ggplot() +
             linewidth = 1.1) +
   scale_x_reverse()
 
+# Change from BP to BCE to use with shoredate
+
+expp$year <- (expp$year - 1950) * -1
+logip$year <- (logip$year - 1950) * -1
+unifp$year <- (unifp$year - 1950) * -1
 
 #### Set up Monte Carlo simulation ####
 
@@ -170,48 +197,31 @@ for(i in seq_along(resfiles)){
   rm(tmp)
 }
 
+results <- list()
+for(i in 1:1000){
+  load(resfiles[i])
+  results[[i]] <- bind_rows(tmp)
+  rm(tmp)
+}
+
 # Retrieve results and normalise each simulated SPD
 simresults <- do.call(rbind.data.frame, results) %>%
   group_by(simn) %>%
   mutate(prob_sum_normalised = prob_sum /(sum(prob_sum, na.rm = TRUE) * 5))
 
-expsum <- simulation_summary(sumdates, simresults, cut_off = -2500, nsim)
+# Model summary (can also be plotted with ADMUR)
+expp <- convertPars(pars = exp$par,
+                    years = as.numeric(rownames(SPD)), type = 'exp')
+mod <- approx(x = expp$year, y = expp$pdf, xout = as.numeric(rownames(SPD)),
+              ties = 'ordered', rule = 2)$y
+exp_summary <- simulation_summary(SPD, simulation_results,
+                                  c(-2500, -9445), mod, ncol(pd))
 
-simresults <- simresults %>%
-  group_by(bce) %>%
-  mutate(low = quantile(prob_sum_normalised, prob = 0.025, na.rm = TRUE),
-         high = quantile(prob_sum_normalised, prob = 0.975, na.rm = TRUE),
-         mean = mean(prob_sum_normalised)) %>%
-  distinct(bce, .keep_all = TRUE)
+# ADMUR plot
+plotSimulationSummary(exp_summary)
 
-expplt <- ggplot() +
-  geom_vline(xintercept = as.numeric(names(expsum$busts)),
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = as.numeric(names(expsum$booms)),
-             col = "darkgreen", alpha = 0.06) +
-  ggplot2::geom_ribbon(data = simresults, aes(x = bce, ymin = low, ymax = high),
-                       fill = "grey60", alpha = 0.8) +
-  geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
-  geom_line(data = expp, aes(x = bce, y = prob_dens),
-            linewidth = 0.5, col = "red") +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(expsum$pvalue, 3)))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
-  labs(x = "BCE", y = "Summed probability") +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
-                     limits = c(-10000, -2500),
-                     expand = expansion(mult = c(0, 0))) +
-  theme_bw()
-
-if(expsum$pvalue < 0.0001) {
-  expplt <- expplt +
-    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-                  label = paste("p < 0.0001")))
-} else {
-  expplt <- expplt +
-    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-                  label = paste("p =", round(expsum$pvalue, 3))))
-}
+# Custom plot
+plot_mc(exp_summary)
 
 save(expplt, file = "../external_data/shorespd/expplt.rda")
 
