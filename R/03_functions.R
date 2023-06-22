@@ -144,9 +144,13 @@ simulation_summary <- function(spd, simulation_results,
 }
 
 
-plot_mc <- function(mc_summary, title = NULL) {
+plot_mc <- function(mc_summary, xppos, yppos, title = NULL) {
   booms <- mc_summary$timeseries$calBP[mc_summary$timeseries$index == 1]
   busts <- mc_summary$timeseries$calBP[mc_summary$timeseries$index == -1]
+
+  spdmax <- max(mc_summary$timeseries$SPD)
+  spdmin <- min(mc_summary$timeseries$SPD)
+  spdadj <- (spdmax - spdmin) * 1.1
 
   p <- round(mc_summary$pvalue, 3)
   plabel <- ifelse(p == 0, "p < 0.001", paste("p =", p))
@@ -166,8 +170,8 @@ plot_mc <- function(mc_summary, title = NULL) {
                     breaks = seq(12000, 4500, -1000),
                     expand = expansion(mult = c(0, 0)),
                     labels = function(x)(x-2000)*-1) +
-    geom_text(aes(-Inf, Inf, hjust = 11, vjust = 1.5,
-                  label = plabel)) +
-    scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
+    geom_text(aes(11000, spdadj), label = plabel) +
+    scale_y_continuous(expand = expansion(mult = c(0, 0.1)),
+                       labels = scales::label_comma()) +
     theme_bw()
 }

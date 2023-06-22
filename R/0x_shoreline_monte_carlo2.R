@@ -197,23 +197,15 @@ for(i in seq_along(resfiles)){
   rm(tmp)
 }
 
-results <- list()
-for(i in 1:1000){
-  load(resfiles[i])
-  results[[i]] <- bind_rows(tmp)
-  rm(tmp)
-}
-
 # Retrieve results and normalise each simulated SPD
 simresults <- do.call(rbind.data.frame, results) %>%
   group_by(simn) %>%
   mutate(prob_sum_normalised = prob_sum /(sum(prob_sum, na.rm = TRUE) * 5))
 
-# Model summary (can also be plotted with ADMUR)
-expp <- convertPars(pars = exp$par,
-                    years = as.numeric(rownames(SPD)), type = 'exp')
-mod <- approx(x = expp$year, y = expp$pdf, xout = as.numeric(rownames(SPD)),
+mod <- approx(x = expp$bce, y = expp$prob_dens, xout = as.numeric(rownames(SPD)),
               ties = 'ordered', rule = 2)$y
+
+# Model summary (can also be plotted with ADMUR)
 exp_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
 
@@ -221,9 +213,9 @@ exp_summary <- simulation_summary(SPD, simulation_results,
 plotSimulationSummary(exp_summary)
 
 # Custom plot
-plot_mc(exp_summary)
+sexpplt <- plot_mc(exp_summary)
 
-save(expplt, file = "../external_data/shorespd/expplt.rda")
+save(sexpplt, file = "../external_data/shorespd/sexpplt.rda")
 
 ##### Monte Carlo simulation - Logistic #####
 
@@ -294,38 +286,22 @@ simresults <- do.call(rbind.data.frame, results) %>%
   dplyr::mutate(
     prob_sum_normalised = prob_sum / (sum(prob_sum, na.rm = TRUE) * 5))
 
-logisum <- simulation_summary(spd = sumdates,
-                              simulation_results = simresults,
-                              cut_off = -2500, nsim)
+# Model summary (can also be plotted with ADMUR)
+mod <- approx(x = logip$bce, y = logip$prob_dens,
+              xout = as.numeric(rownames(SPD)),
+              ties = 'ordered', rule = 2)$y
 
-simresults <- simresults %>%
-  dplyr::group_by(bce) %>%
-  dplyr::mutate(low = quantile(prob_sum_normalised, prob = 0.025,
-                               na.rm = TRUE),
-                high = quantile(prob_sum_normalised, prob = 0.975,
-                                na.rm = TRUE),
-                mean = mean(prob_sum_normalised)) %>%
-  dplyr::distinct(bce, .keep_all = TRUE)
+# Summary results
+log_summary <- simulation_summary(SPD, simulation_results,
+                                  c(-2500, -9445), mod, ncol(pd))
 
-logiplt <- ggplot() +
-  geom_vline(xintercept = as.numeric(names(logisum$busts)),
-             col = "firebrick", alpha = 0.04) +
-  geom_vline(xintercept = as.numeric(names(logisum$booms)),
-             col = "darkgreen", alpha = 0.04) +
-  ggplot2::geom_ribbon(data = simresults, aes(x = bce, ymin = low, ymax = high),
-                       fill = "grey60", alpha = 0.8) +
-  geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
-  # geom_line(data = simresults, aes(x = bce, y = mean), col = "red", lwd = 0.5) +
-  geom_line(data = logip, aes(x = bce, y = prob_dens),
-            linetype = "dashed", colour = "black") +
-  labs(title = "Logistic", x = "BCE", y = "Summed probability") +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(logisum$pvalue, 3)))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
-                     limits = c(-10000, -2500),
-                     expand = expansion(mult = c(0, 0))) +
-  theme_bw()
+# ADMUR plot
+plotSimulationSummary(log_summary)
+
+# Custom plot
+slogplt <- plot_mc(log_summary)
+
+save(slogplt, file = "../external_data/shorespd/slogplt.rda")
 
 ##### Monte Carlo simulation - Uniform #####
 
@@ -405,70 +381,26 @@ simresults <- do.call(rbind.data.frame, results) %>%
   dplyr::mutate(
     prob_sum_normalised = prob_sum / (sum(prob_sum, na.rm = TRUE) * 5))
 
-unisum <- simulation_summary(sumdates, simresults, cut_off = -2500, nsim)
+mod <- approx(x = unifp$bce, y = unifp$prob_dens,
+              xout = as.numeric(rownames(SPD)),
+              ties = 'ordered', rule = 2)$y
 
-simresults <- simresults %>%
-  dplyr::group_by(bce) %>%
-  dplyr::mutate(low = quantile(prob_sum_normalised, prob = 0.025,
-                               na.rm = TRUE),
-                high = quantile(prob_sum_normalised, prob = 0.975,
-                                na.rm = TRUE),
-                mean = mean(prob_sum_normalised)) %>%
-  dplyr::distinct(bce, .keep_all = TRUE)
+# Model summary (can also be plotted with ADMUR)
+uni_summary <- simulation_summary(SPD, simulation_results,
+                                  c(-2500, -9445), mod, ncol(pd))
 
+# ADMUR plot
+plotSimulationSummary(uni_summary)
 
-ggplot() +
-  geom_vline(xintercept = as.numeric(names(expsum$busts)),
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = as.numeric(names(expsum$booms)),
-             col = "darkgreen", alpha = 0.06) +
-  ggplot2::geom_ribbon(data = simresults, aes(x = bce, ymin = low, ymax = high),
-                       fill = "grey60", alpha = 0.8) +
-  geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
-  geom_line(data = expp, aes(x = bce, y = prob_dens),
-            linewidth = 0.5, col = "red") +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(expsum$pvalue, 3)))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
-  labs(x = "BCE", y = "Summed probability") +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
-                     limits = c(-10000, -2500),
-                     expand = expansion(mult = c(0, 0))) +
-  theme_bw()
+# Custom plot
+suniplt <- plot_mc(uni_summary)
 
-uniplt <- ggplot() +
-  geom_vline(xintercept = as.numeric(names(unisum$busts)),
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = as.numeric(names(unisum$booms)),
-             col = "darkgreen", alpha = 0.06) +
-  ggplot2::geom_ribbon(data = simresults,
-                       aes(x = bce, ymin = low, ymax = high),
-                       fill = "grey60", alpha = 0.8) +
-  geom_line(data = sumdatesdf, aes(x = sum.bce, y = probability)) +
-  geom_line(data = unifp, aes(x = year, y = pdf),
-            linewidth = 0.5, colour = "red") + #"grey40"
-  labs(title = "Uniform", x = "BCE", y = "Summed probability") +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(unisum$pvalue, 3)))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0),  add = c(0, 0.0001))) +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
-                     limits = c(-10000, -2500),
-                     expand = expansion(mult = c(0, 0))) +
-  theme_bw()
+save(suniplt, file = "../external_data/shorespd/suniplt.rda")
 
-if(unisum$pvalue < 0.0001) {
-  uniplt <- uniplt +
-    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-                  label = paste("p < 0.0001")))
-} else {
-  uniplt <- uniplt +
-    geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-                  label = paste("p =", round(unisum$pvalue, 3))))
-}
-
-save(uniplt, file = "../external_data/shorespd/uniplt.rda")
-
-expplt + logiplt + uniplt
+sexpplt + slogplt + suniplt
 
 ggsave(here::here("analysis/figures/shoreline_mc.png"),
        units = "px", width = 4000, height = 1250)
+
+
+

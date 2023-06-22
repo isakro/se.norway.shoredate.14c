@@ -127,6 +127,7 @@ unisum <- SPDsimulationTest(c14, calcurve = intcal20,
 
 save(expsum, logsum, unisum,
      file = here("analysis/data/derived_data/admur_model_test.RData"))
+load(file = here("analysis/data/derived_data/admur_model_test.RData"))
 
 # Plot for inspection (setting up plots below that follow same style as
 # that to be used with shoreline dates)
@@ -134,84 +135,13 @@ plotSimulationSummary(expsum)
 plotSimulationSummary(logsum)
 plotSimulationSummary(unisum)
 
-# logsum$n.dates.effective
-# round(logsum$n.phases.effective)
-expbooms <- expsum$timeseries$calBP[expsum$timeseries$index == 1]
-expbusts <- expsum$timeseries$calBP[expsum$timeseries$index == -1]
+rexpplot <- plot_mc(expsum)
+rlogplot <- plot_mc(logsum)
+runiplot <- plot_mc(unisum)
 
-expplt <- ggplot(data = expsum$timeseries, aes(x = calBP)) +
-  geom_vline(xintercept = expbusts,
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = expbooms,
-             col = "darkgreen", alpha = 0.06) +
-  geom_ribbon(aes(ymin = expsum$timeseries$`2.5%`,
-                  ymax = expsum$timeseries$`97.5%`),
-              fill = "grey60", alpha = 0.8) +
-  geom_line(aes(y = expsum$timeseries$SPD), linewidth = 0.5) +
-  geom_line(aes(y = expsum$timeseries$model),
-            linewidth = 0.5, col = "red") +
-  labs(x = "BCE", y = "Summed probability") +
-  scale_x_reverse(limits = c(12000, 4500),
-                  breaks = seq(12000, 4500, -1000),
-                  expand = expansion(mult = c(0, 0)),
-                  labels = function(x)(x-2000)*-1) +
-  geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-                label = paste("p =", expsum$pvalue))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
-  theme_bw()
+(sexpplt + slogplt + suniplt)/
+(rexpplot + rlogplot + runiplot) +
+  plot_annotation(tag_levels = "A")
 
-logbooms <- logsum$timeseries$calBP[logsum$timeseries$index == 1]
-logbusts <- logsum$timeseries$calBP[logsum$timeseries$index == -1]
-
-logplt <- ggplot(data = logsum$timeseries, aes(x = calBP)) +
-  geom_vline(xintercept = logbusts,
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = logbooms,
-             col = "darkgreen", alpha = 0.06) +
-  geom_ribbon(aes(ymin = logsum$timeseries$`2.5%`,
-                  ymax = logsum$timeseries$`97.5%`),
-                fill = "grey60", alpha = 0.8) +
-  geom_line(aes(y = logsum$timeseries$SPD), linewidth = 0.5) +
-  geom_line(aes(y = logsum$timeseries$model),
-            linewidth = 0.5, col = "red") +
-  labs(x = "BCE", y = "Summed probability") +
-  scale_x_reverse(limits = c(12000, 4500),
-                  breaks = seq(12000, 4500, -1000),
-                  expand = expansion(mult = c(0, 0)),
-                  labels = function(x)(x-2000)*-1) +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(lognull$pval, 3)))) +
-  geom_text(aes(-Inf, Inf, hjust = 9.5, vjust = 1.5,
-                label = paste("p =", logsum$pvalue))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
-  theme_bw()
-
-unibooms <- unisum$timeseries$calBP[unisum$timeseries$index == 1]
-unibusts <- unisum$timeseries$calBP[unisum$timeseries$index == -1]
-
-uniplt <- ggplot(data = unisum$timeseries, aes(x = calBP)) +
-  geom_vline(xintercept = unibusts,
-             col = "firebrick", alpha = 0.06) +
-  geom_vline(xintercept = unibooms,
-             col = "darkgreen", alpha = 0.06) +
-  geom_ribbon(aes(ymin = unisum$timeseries$`2.5%`,
-                  ymax = unisum$timeseries$`97.5%`),
-              fill = "grey60", alpha = 0.8) +
-  geom_line(aes(y = unisum$timeseries$SPD), linewidth = 0.5) +
-  labs(x = "BCE", y = "Summed probability") +
-  geom_line(aes(y = unisum$timeseries$model),
-            linewidth = 0.5, col = "red") +
-  scale_x_reverse(limits = c(12000, 4500),
-                  breaks = seq(12000, 4500, -1000),
-                  expand = expansion(mult = c(0, 0)),
-                  labels = function(x)(x-2000)*-1) +
-  # geom_text(aes(-Inf, Inf, hjust = -0.25, vjust = 2,
-  #               label = paste("p =", round(uninull$pval, 3)))) +
-  geom_text(aes(-Inf, Inf, hjust = 9.5, vjust = 1.5,
-                label = paste("p =", unisum$pvalue))) +
-  scale_y_continuous(expand = expansion(mult = c(0, 0.1))) +
-  theme_bw()
-
-
-expplt + logplt + uniplt
-
+ggsave(here::here("analysis/figures/mc.png"),
+       units = "px", width = 4000, height = 1250*2)
