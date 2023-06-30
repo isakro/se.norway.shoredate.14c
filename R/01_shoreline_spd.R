@@ -14,7 +14,6 @@ excavated <- st_zm(read_sf(here("analysis/data/raw_data/excavated_sites.gpkg")))
 dtm <- rast("/home/isak/phd/eaa_presentation/dtm10/dtm10.tif")
 site_dat <- read.csv(here("analysis/data/raw_data/sites.csv"))
 
-
 ###### Prepare site data for shoreline dating ######
 
 # Exclude sites that haven't been excavated and which haven't been shoreline
@@ -40,10 +39,6 @@ surveyed$elev <- terra::extract(dtm, vect(surveyed), fun = mean)[, -1]
 
 # Exclude surveyed sites with a quality score worse than 3
 survq <- dplyr::filter(surveyed, quality < 4)
-
-#
-# surveyed <- surveyed %>% dplyr::mutate(lab = ifelse(quality < 4, "t", "f"))
-# excavated$lab <- "y"
 
 # Select and rename columns needed to perform shoreline dating
 rcolexcshore <- excshore %>% dplyr::select(ask_id, elev)
@@ -106,7 +101,8 @@ wplot <- ggplot() +
                  col = "grey", fill = "grey") +
   # geom_density(aes(x = wmeans),
   #              col = "black") +
-  scale_x_continuous(breaks = seq(-10000, 2500, 1000), limits = c(-9500, -2500)) +
+  scale_x_continuous(breaks = seq(-10000, 2500, 1000),
+                     limits = c(-9500, -2500)) +
   labs(title = "Mean TPQ dates", x = "BCE", y = "Density") +
   theme_bw()
 
@@ -116,7 +112,8 @@ splot <- ggplot() +
                  stat = "identity",
                  col = "grey", fill = "grey") +
   scale_x_continuous(breaks = seq(-10000, 2500, 1000)) +
-  labs(title = "Summed probability distribution\nof shoreline dates", x = "BCE", y = "Summed probability") +
+  labs(title = "Summed probability distribution\nof shoreline dates",
+       x = "BCE", y = "Summed probability") +
   theme_bw()
 
 eplot <- ggplot() +
@@ -207,12 +204,16 @@ sa <- ggplot() +
           size = 2, shape = 21,
           colour = "black", show.legend = "point") +
   scale_fill_manual(labels = c(paste0("Surveyed sites,\nincluded (n = ",
-                                      nrow(dplyr::filter(surveyed, quality < 4)) ,")"),
+                                      nrow(dplyr::filter(surveyed,
+                                                         quality < 4)) ,")"),
                                paste0("Surveyed sites,\nexcluded (n = ",
-                                      nrow(dplyr::filter(surveyed, quality > 3)) ,")"),
-                               paste0("Excavated sites (n = ", nrow(excshore) ,
+                                      nrow(dplyr::filter(surveyed,
+                                                         quality > 3)) ,")"),
+                               paste0("Excavated, shoreline\ndated sites (n = ", nrow(excshore) ,
                                       ")")),
-                    values = c("t" = "darkgoldenrod1", "f" = "black", "y" = "white"),
+                    values = c("t" = "darkgoldenrod1",
+                               "f" = "black",
+                               "y" = "white"),
                     name = "") +
   coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
            ylim = c(studyareabox[2], studyareabox[4]),
@@ -230,16 +231,44 @@ sa <- ggplot() +
                      legend.position = "bottom",
                      legend.text=element_text(size = 11))
 
-cowplot::ggdraw() +
+c14_names <- tools::file_path_sans_ext(colnames(PD))
+
+c14_sites <- excavated %>%
+  filter(site_name %in% c14_names)
+
+pltc14 <- ggplot() +
+  geom_sf(data = norw_reproj, fill = "grey", colour = NA) +
+  geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
+          colour = "black", lwd = 0.25) +
+  geom_sf(data = st_centroid(c14_sites), aes(fill = lab),
+          size = 2, shape = 24,
+          colour = "black", show.legend = "point") +
+  scale_fill_manual(values = c("y" = "red"),
+    labels = c(paste0("Sites with radiocarbon dates (n = ",
+                                      nrow(c14_sites), ")")),
+                    name = "") +
+  coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
+           ylim = c(studyareabox[2], studyareabox[4]),
+           expand = FALSE) +
+  ggspatial::annotation_scale(
+    location = "br",
+    width_hint = 0.3,
+    style = "ticks") +
+  theme_bw() + theme(axis.title=element_blank(),
+                     axis.text.y = element_blank(),
+                     axis.text.x = element_blank(),
+                     rect = element_rect(),
+                     axis.ticks = element_blank(),
+                     panel.grid.major = element_blank(),
+                     legend.position = "bottom",
+                     legend.text=element_text(size = 11))
+
+plt1 <- cowplot::ggdraw() +
   cowplot::draw_plot(sa) +
   cowplot::draw_plot(overview, x = 0.069,
                      y = 0.7, width = 0.3, height = 0.3)
 
-
-# overview + sa +   plot_layout(widths = c(1, 2.5))
-# ggsave(here::here("analysis/figures/map1.png"),
-#        units = "px", width = 2500, height = 2500)
-
+cowplot::plot_grid(plt1, pltc14,ncol = 1, labels = c('A', 'B'))
 
 # Example date plot"
 
@@ -271,4 +300,3 @@ splt <- last_plot()
 
 (tplt + dplt) /
   (tpqplt + splt) + plot_annotation(tag_levels = "A")
-

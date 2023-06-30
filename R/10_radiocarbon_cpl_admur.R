@@ -8,13 +8,15 @@ library(here)
 
 set.seed(42)
 
+source(here("R/03_functions.R"))
+
 c14 <- read.csv(here::here("analysis/data/raw_data/radiocarbon.csv"))
 c14 <- c14 %>% filter(context != "Food crust")
 
 names(c14) <- c("site", "context", "material", "lab_ref", "age", "sd")
 
 minage <- 4500
-maxage <- 10975
+maxage <- 10555
 
 CalArray <- makeCalArray(intcal20, calrange = c(minage, maxage))
 PD <- phaseCalibrator(c14, CalArray, remove.external = TRUE)
@@ -101,13 +103,13 @@ mplt <- ggplot() +
     "Exponential" = "#4daf4a",
     "1-CPL" = "#984ea3",
     "2-CPL" = "#ff7f00",
-    "3-CPL" = "#ffff33",
+    "3-CPL" = "#e0d616",
     "4-CPL" = "#a65628",
     "5-CPL" = "black"
   )) +
   # scale_x_continuous(limit = c(-10000, -2750)) +
   # scale_y_continuous(limit = c(0, 0.001)) +
-  scale_x_reverse(labels = function(x)(x-2000)*-1) +
+  scale_x_reverse(labels = function(x)(x-1950)*-1) +
   theme_bw() +
   theme(legend.title = element_blank())
 
@@ -135,12 +137,12 @@ plotSimulationSummary(expsum)
 plotSimulationSummary(logsum)
 plotSimulationSummary(unisum)
 
-rexpplot <- plot_mc(expsum)
-rlogplot <- plot_mc(logsum)
-runiplot <- plot_mc(unisum)
+expplotr <- plot_mc(expsum)
+logplotr <- plot_mc(logsum)
+uniplotr <- plot_mc(unisum)
 
-(sexpplt + slogplt + suniplt)/
-(rexpplot + rlogplot + runiplot) +
+(expplts + logplts + uniplts)/
+(expplotr + logplotr + uniplotr) +
   plot_annotation(tag_levels = "A")
 
 ggsave(here::here("analysis/figures/mc.png"),

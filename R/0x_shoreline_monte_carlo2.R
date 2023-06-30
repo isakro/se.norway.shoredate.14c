@@ -213,9 +213,9 @@ exp_summary <- simulation_summary(SPD, simulation_results,
 plotSimulationSummary(exp_summary)
 
 # Custom plot
-sexpplt <- plot_mc(exp_summary)
+expplts <- plot_mc(exp_summary)
 
-save(sexpplt, file = "../external_data/shorespd/sexpplt.rda")
+save(expplts, file = "../external_data/shorespd/expplts.rda")
 
 ##### Monte Carlo simulation - Logistic #####
 
@@ -299,9 +299,9 @@ log_summary <- simulation_summary(SPD, simulation_results,
 plotSimulationSummary(log_summary)
 
 # Custom plot
-slogplt <- plot_mc(log_summary)
+logplts <- plot_mc(log_summary)
 
-save(slogplt, file = "../external_data/shorespd/slogplt.rda")
+save(logplts, file = "../external_data/shorespd/logplts.rda")
 
 ##### Monte Carlo simulation - Uniform #####
 
@@ -393,11 +393,11 @@ uni_summary <- simulation_summary(SPD, simulation_results,
 plotSimulationSummary(uni_summary)
 
 # Custom plot
-suniplt <- plot_mc(uni_summary)
+uniplts <- plot_mc(uni_summary)
 
-save(suniplt, file = "../external_data/shorespd/suniplt.rda")
+save(uniplts, file = "../external_data/shorespd/uniplts.rda")
 
-sexpplt + slogplt + suniplt
+expplts + logplts + uniplts
 
 ggsave(here::here("analysis/figures/shoreline_mc.png"),
        units = "px", width = 4000, height = 1250)

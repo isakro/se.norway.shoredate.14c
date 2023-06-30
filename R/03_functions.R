@@ -157,9 +157,9 @@ plot_mc <- function(mc_summary, xppos, yppos, title = NULL) {
 
   ggplot(data = mc_summary$timeseries, aes(x = calBP)) +
     geom_vline(xintercept = busts,
-               col = "firebrick", alpha = 0.06) +
+               col = "firebrick", alpha = 0.05) +
     geom_vline(xintercept = booms,
-               col = "darkgreen", alpha = 0.06) +
+               col = "darkgreen", alpha = 0.05) +
     geom_ribbon(aes(ymin = `2.5%`,
                     ymax = `97.5%`),
                 fill = "grey60", alpha = 0.8) +
@@ -169,7 +169,7 @@ plot_mc <- function(mc_summary, xppos, yppos, title = NULL) {
     scale_x_reverse(limits = c(12000, 4500),
                     breaks = seq(12000, 4500, -1000),
                     expand = expansion(mult = c(0, 0)),
-                    labels = function(x)(x-2000)*-1) +
+                    labels = function(x)(x-1950)*-1) +
     geom_text(aes(11000, spdadj), label = plabel) +
     scale_y_continuous(expand = expansion(mult = c(0, 0.1)),
                        labels = scales::label_comma()) +
