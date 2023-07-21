@@ -194,14 +194,14 @@ sa <- ggplot() +
   geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
           colour = "black", lwd = 0.25) +
   geom_sf(data = st_centroid(surveyed), aes(fill = lab),
-          size = 2, shape = 21,
+          size = 1.5, shape = 21,
           colour = "black", show.legend = "point") +
   geom_sf(data = st_centroid(dplyr::filter(surveyed, quality < 4)),
           aes(fill = lab),
-          size = 2, shape = 21,
+          size = 1.5, shape = 21,
           colour = "black", show.legend = "point") +
   geom_sf(data = st_centroid(excshore), aes(fill = "y"),
-          size = 2, shape = 21,
+          size = 1.5, shape = 21,
           colour = "black", show.legend = "point") +
   scale_fill_manual(labels = c(paste0("Surveyed sites,\nincluded (n = ",
                                       nrow(dplyr::filter(surveyed,
@@ -241,7 +241,7 @@ pltc14 <- ggplot() +
   geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
           colour = "black", lwd = 0.25) +
   geom_sf(data = st_centroid(c14_sites), aes(fill = lab),
-          size = 2, shape = 24,
+          size = 1.5, shape = 24,
           colour = "black", show.legend = "point") +
   scale_fill_manual(values = c("y" = "red"),
     labels = c(paste0("Sites with radiocarbon dates (n = ",
@@ -265,10 +265,16 @@ pltc14 <- ggplot() +
 
 plt1 <- cowplot::ggdraw() +
   cowplot::draw_plot(sa) +
-  cowplot::draw_plot(overview, x = 0.069,
+  cowplot::draw_plot(overview, x = 0.179,
                      y = 0.7, width = 0.3, height = 0.3)
 
-cowplot::plot_grid(plt1, pltc14,ncol = 1, labels = c('A', 'B'))
+(plt1)/
+  pltc14 + plot_annotation(tag_levels = "A")
+
+cowplot::plot_grid(plt1, pltc14, ncol = 1)
+
+ggsave(filename = here("analysis/figures/map2.png"),
+       units = "px", width = 4500, height = 4500)
 
 # Example date plot"
 

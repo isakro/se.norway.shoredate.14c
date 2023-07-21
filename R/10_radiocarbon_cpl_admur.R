@@ -25,8 +25,6 @@ SPD <- as.data.frame( rowSums(PD) )
 # normalise
 SPD <- SPD/( sum(SPD) * CalArray$inc )
 
-
-# CPL parameters must be between 0 and 1, and an odd length.
 CPL.1 <- JDEoptim(lower = 0, upper = 1, fn = objectiveFunction,
                   PDarray = PD, type = 'CPL', NP = 20)
 CPL.2 <- JDEoptim(lower = rep(0, 3), upper = rep(1, 3),
@@ -140,6 +138,10 @@ plotSimulationSummary(unisum)
 expplotr <- plot_mc(expsum)
 logplotr <- plot_mc(logsum)
 uniplotr <- plot_mc(unisum)
+
+load("../external_data/shorespd/expplts.rda")
+load("../external_data/shorespd/logplts.rda")
+load("../external_data/shorespd/uniplts.rda")
 
 (expplts + logplts + uniplts)/
 (expplotr + logplotr + uniplotr) +

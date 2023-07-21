@@ -1,11 +1,13 @@
 library(ADMUR)
 library(DEoptimR)
+library(ggplot2)
+library(patchwork)
 
 set.seed(42)
 
-# Load data from radiocarbon_mc.R: models fit for MC, the pd and the min and
-# max ages
-load(file = here::here("analysis/data/derived_data/shore_pd_models.RData"))
+# Load data from shoreline_monte_carlo.R: models fit for MC, the pd and the
+# min and max ages
+load(file = here::here("analysis/data/derived_data/shore_models_pd.RData"))
 
 # Fit CPL-models to shoreline dates
 cpl_1 <- JDEoptim(lower = 0, upper = 1, fn = objectiveFunction, PDarray = pd,
@@ -26,16 +28,10 @@ cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
                   PDarray = pd, type = 'CPL', NP = 220, maxiter =  400 * 11,
                   trace = TRUE)
 
-save(exp, logi, unif, cpl_1, cpl_2, cpl_3, cpl_4,
+save(cpl_1, cpl_2, cpl_3, cpl_4,
      file = here::here("analysis/data/derived_data/shore_models.RData"))
 load(file = here::here("analysis/data/derived_data/shore_models.RData"))
 
-expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
-expp$model <- "Exponential"
-logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
-logip$model <- "Logistic"
-unifp <- convertPars(pars = NULL, years = minage:maxage, type = "uniform")
-unifp$model <- "Uniform"
 cpl1 <- convertPars(pars = cpl_1$par, years = minage:maxage, type = 'CPL')
 cpl1$model <- "1-CPL"
 cpl2 <- convertPars(pars = cpl_2$par, years = minage:maxage, type = 'CPL')
@@ -65,28 +61,24 @@ sh_bic <- c(log(ssize)*1 - 2*sh_lik[1], # Exponential
                  log(ssize)*7 - 2*sh_lik[7])
 
 SPD <- as.data.frame(rowSums(pd))
-SPD <- SPD/( sum(SPD) *5 )
+SPD <- SPD/(sum(SPD) * 5)
 
 cplplt <- ggplot() +
-  geom_bar(aes(x = (as.numeric(rownames(SPD)) - 2000) * -1,
+  geom_bar(aes(x = as.numeric(rownames(SPD)),
                SPD[,1]),
            stat = "identity", col = "grey") +
-  geom_line(aes(x = (as.numeric(rownames(SPD)) - 2000) * -1,
+  geom_line(aes(x = as.numeric(rownames(SPD)),
                 y = SPD[,1])) +
-  # geom_bar(aes(x = (as.numeric(rownames(SPD)) - 2000) * -1, SPD[,1]),
-  #          stat = "identity", col = "grey") +
-  # geom_line(aes(x = (as.numeric(rownames(SPD)) - 2000) * -1,
-  #               y = SPD[,1])) +
-  geom_line(data = shmodels, aes((year - 2000) * -1, pdf, col = model),
+  geom_line(data = shmodels, aes(year, pdf, col = model),
             linewidth = 1.1) +
   labs(x = "BCE", y = "Summed probability") +
-  # scale_x_continuous(limit = c(-10000, -2750)) +
-  # scale_y_continuous(limit = c(0, 0.001)) +
+  scale_x_reverse(labels = function(x)(x-1950)*-1) +
   theme_bw() +
   theme(legend.title = element_blank())
-
 
 bicplt <- ggplot() +
   geom_point(aes(sh_bic, names(sh_bic)), size = 3) +
   labs(x = "BIC", y = "Model") +
   theme_bw()
+
+cplplt + bicplt

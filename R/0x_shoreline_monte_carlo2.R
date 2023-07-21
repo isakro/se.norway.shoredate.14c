@@ -396,11 +396,3 @@ plotSimulationSummary(uni_summary)
 uniplts <- plot_mc(uni_summary)
 
 save(uniplts, file = "../external_data/shorespd/uniplts.rda")
-
-expplts + logplts + uniplts
-
-ggsave(here::here("analysis/figures/shoreline_mc.png"),
-       units = "px", width = 4000, height = 1250)
-
-
-

@@ -166,8 +166,8 @@ plot_mc <- function(mc_summary, xppos, yppos, title = NULL) {
     geom_line(aes(y = model), linewidth = 0.5, col = "red") +
     geom_line(aes(y = SPD)) +
     labs(x = "BCE", y = "Summed probability", title = title) +
-    scale_x_reverse(limits = c(12000, 4500),
-                    breaks = seq(12000, 4500, -1000),
+    scale_x_reverse(limits = c(11950, 4450),
+                    breaks = seq(11950, 4450, -1000),
                     expand = expansion(mult = c(0, 0)),
                     labels = function(x)(x-1950)*-1) +
     geom_text(aes(11000, spdadj), label = plabel) +
