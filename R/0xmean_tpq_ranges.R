@@ -1,12 +1,13 @@
-library(shoredate)
+# Find the average range of TPQ ranges for the geological displacement curves,
+# to be reported in the main text.
 
+library(shoredate)
 
 # Load centre points for the displacement curves
 centrepoints <- sf::st_read(
   system.file("extdata/isobase_centrepts.gpkg",
               package = "shoredate",
               mustWork = TRUE), quiet = TRUE)
-
 
 # Horten
 

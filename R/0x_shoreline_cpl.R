@@ -82,3 +82,7 @@ bicplt <- ggplot() +
   theme_bw()
 
 cplplt + bicplt
+
+# Save pd, 4-CPL model and min and max age for mcmc
+save(cpl_4, pd, minage, maxage,
+     file = here("analysis/data/derived_data/shore_mcmc_data.RData"))

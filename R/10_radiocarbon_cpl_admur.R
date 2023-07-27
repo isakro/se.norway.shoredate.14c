@@ -21,9 +21,9 @@ maxage <- 10555
 CalArray <- makeCalArray(intcal20, calrange = c(minage, maxage))
 PD <- phaseCalibrator(c14, CalArray, remove.external = TRUE)
 
-SPD <- as.data.frame( rowSums(PD) )
+SPD <- as.data.frame(rowSums(PD))
 # normalise
-SPD <- SPD/( sum(SPD) * CalArray$inc )
+SPD <- SPD/(sum(SPD) * CalArray$inc)
 
 CPL.1 <- JDEoptim(lower = 0, upper = 1, fn = objectiveFunction,
                   PDarray = PD, type = 'CPL', NP = 20)
@@ -149,3 +149,7 @@ load("../external_data/shorespd/uniplts.rda")
 
 ggsave(here::here("analysis/figures/mc.png"),
        units = "px", width = 4000, height = 1250*2)
+
+# Save pd, logistic model and min and max age for mcmc
+save(log, PD, minage, maxage,
+     file = here("analysis/data/derived_data/rcarbon_mcmc_data.RData"))
