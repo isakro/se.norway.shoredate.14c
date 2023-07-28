@@ -48,10 +48,8 @@ cpl3 <- convertPars(pars = cpl_3$par, years = minage:maxage, type = 'CPL')
 cpl3$model <- "3-CPL"
 cpl4 <- convertPars(pars = cpl_4$par, years = minage:maxage, type = 'CPL')
 cpl4$model <- "4-CPL"
-cpl5 <- convertPars(pars = cpl_5$par, years = minage:maxage, type = 'CPL')
-cpl5$model <- "5-CPL"
 
-rcarbonmodels <- rbind(expp, logip, unifp, cpl1, cpl2, cpl3, cpl4, cpl5)
+rcarbonmodels <- rbind(expp, logip, unifp, cpl1, cpl2, cpl3, cpl4)
 
 rcarbon_lik <- c("Exponential" = -exp$value,
                "Logistic" = -logi$value,
