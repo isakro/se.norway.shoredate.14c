@@ -72,9 +72,15 @@ bics <- data.frame(model = c("1-CPL", "2-CPL", "3-CPL",
                    bic = c(BIC.1, BIC.2, BIC.3, BIC.4, BIC.exp,
                            BIC.log, BIC.uniform))
 
+bics <- data.frame(model = c("1-CPL", "2-CPL", "3-CPL",
+                             "4-CPL", "Exponential", "Logistic", "Uniform"),
+                   bic = c(BIC.1, BIC.2, BIC.3, BIC.4, BIC.exp,
+                           BIC.log, BIC.uniform))
+
 bicplt <- ggplot(data = bics, aes(x = bic, y = model)) + geom_point(size = 2) +
-  labs(x = "BIC", y = "Model") +
+  labs(x = "BIC", y = "", subtitle = "Models fit to RSPD") +
   theme_bw()
+
 
 CPL1$name <- "1-CPL"
 CPL2$name <- "2-CPL"

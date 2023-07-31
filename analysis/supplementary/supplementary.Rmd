@@ -26,10 +26,10 @@ load(file = here::here("analysis/data/derived_data/shore_pd_models.RData"))
 
 ```
 
-```{r data, echo = FALSE}
+```{r precompiled, echo = FALSE}
 # For the compilation of this Rmarkdown document, the results were pre-compiled 
 # and are loaded here. Set eval = TRUE in code chunks below to re-run the code.
-load(file = here::here("analysis/data/derived_data/shore_pd_models.RData"))
+load(file = here::here("analysis/data/derived_data/supplementary.RData"))
 
 ```
 

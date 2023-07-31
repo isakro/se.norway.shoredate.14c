@@ -76,11 +76,13 @@ cplplt <- ggplot() +
   theme_bw() +
   theme(legend.title = element_blank())
 
-bicplt <- ggplot() +
-  geom_point(aes(sh_bic, names(sh_bic)), size = 3) +
-  labs(x = "BIC", y = "Model") +
-  theme_bw()
+bicplt_shore <- ggplot() +
+  geom_point(aes(sh_bic, names(sh_bic)), size = 2) +
+  labs(x = "BIC", y = "", subtitle = "Models fit to SSPD") +
+  theme_bw() +
+  theme(panel.border = element_rect(linewidth = 0.5))
 
+bicplt_shore + bicplt
 cplplt + bicplt
 
 # Save pd, 4-CPL model and min and max age for mcmc

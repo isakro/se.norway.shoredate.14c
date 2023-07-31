@@ -1,0 +1,132 @@
+---
+title: "Exploring convergence issues beyond 4-CPL for SPD of shoreline dates"
+author: 
+- 'Isak Roalkvam'
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: html_document
+---
+
+```{r setup}
+# Load required packages
+library(ggplot2)
+library(patchwork)
+library(ADMUR)
+library(DEoptimR)
+
+# Set seed for reproducibility
+set.seed(42)
+```
+
+```{r data}
+# Load data holding the PD array of shoreline dates
+load(file = here::here("analysis/data/derived_data/shore_models_pd.RData"))
+
+# Create SPD
+SPD <- as.data.frame(rowSums(pd))
+SPD <- SPD/(sum(SPD) * 5)
+
+# Plot PD array and SPD for inspection
+plotPD(pd)
+plotPD(SPD)
+```
+
+```{r precompiled, echo = FALSE}
+# For the compilation of this Rmarkdown document, the results were pre-compiled 
+# and are loaded here. Set eval = TRUE in code chunks below to re-run the code.
+load(file = here::here("analysis/data/derived_data/sampsize.RData"))
+
+```
+
+
+```{r sampsize, eval = FALSE}
+
+# Define sample sizes
+sampsize <- c(6, 32, 60, 120, 240, 480)
+
+results <- list()
+temppds <- list()
+
+# Fit 4-6 CPL to randomly drawn number of shoreline dates, and save the results
+for(i in 1:length(sampsize)){
+  tmppd <- pd[, sample(ncol(pd), sampsize[i])]
+  temppds[[i]] <- tmppd
+
+  cpl4 <- JDEoptim(lower = rep(0, 7),
+                   upper = rep(1, 7),
+                   fn = objectiveFunction,
+                   PDarray = tmppd,
+                   type = 'CPL',
+                   NP = 140)
+
+  cpl5 <- JDEoptim(lower = rep(0, 9),
+                   upper = rep(1, 9),
+                   fn = objectiveFunction,
+                   PDarray = tmppd,
+                   type='CPL',
+                   NP = 180)
+
+  cpl6 <- JDEoptim(lower = rep(0, 11),
+                   upper = rep(1,11),
+                   fn = objectiveFunction,
+                   PDarray = tmppd,
+                   type = 'CPL',
+                   NP = 220)
+
+  results[[i]] <- rbind(cpl4, cpl5, cpl6)
+  save(results, temppds, sampsize,
+       file = here::here("analysis/data/derived_data/sampsize.RData"))
+}
+```
+
+```{r, fig.dim = c(8, 5)}
+# Plot the results
+for(i in 1:length(temppds)){
+  tmpspd <- as.data.frame(rowSums(temppds[[i]]) )
+  tmpspd <- tmpspd/( sum(tmpspd) * 5 )
+
+  tmpmodels <- as.data.frame(results[[i]])
+
+  tmpcpl4 <- convertPars(pars = tmpmodels$par[[1]],
+                         years = minage:maxage, type = 'CPL')
+  tmpcpl4$model <- "4-CPL"
+  tmpcpl4$convergence <- tmpmodels$convergence[[1]]
+
+  tmpcpl5 <- convertPars(pars = tmpmodels$par[[2]],
+                         years = minage:maxage, type = 'CPL')
+  tmpcpl5$model <- "5-CPL"
+  tmpcpl5$convergence <- tmpmodels$convergence[[2]]
+
+  tmpcpl6 <- convertPars(pars = tmpmodels$par[[3]],
+                         years = minage:maxage, type = 'CPL')
+  tmpcpl6$model <- "6-CPL"
+  tmpcpl6$convergence <- tmpmodels$convergence[[3]]
+
+  tmpcpls <- rbind(tmpcpl4, tmpcpl5, tmpcpl6)
+
+  print(ggplot() +
+    geom_bar(aes(x = as.numeric(rownames(tmpspd)), y =  tmpspd[,1]), 
+             stat = "identity", col = "grey") +
+    geom_line(aes(x = as.numeric(rownames(tmpspd)), y =  tmpspd[,1])) +
+    geom_line(data = tmpcpls, aes(x = year, y = pdf, col = model),
+              linewidth = 1.1) +
+    labs(x = "calBP", y = "PD", title = paste("Sample size = ", sampsize[i])) +
+    scale_colour_manual(values = c("4-CPL" = "black",
+                                    "5-CPL" = "goldenrod2",
+                                    "6-CPL" = "cornflowerblue")) +
+    scale_x_reverse() +
+    theme_bw() +
+    theme(legend.position = "bottom",
+          legend.title=element_blank()) +
+  ggplot() +
+    geom_point(data = tmpcpls,
+               aes(x = model,
+                   y = as.factor(convergence),
+                   col = as.factor(convergence)),
+               size = 3) +
+    scale_colour_manual(values = c("1" = "red",
+                                   "0" = "chartreuse3")) +
+    labs(x = "Model", y = "Convergence") +
+    theme_bw() +
+    theme(legend.position = "none"))
+}
+```
