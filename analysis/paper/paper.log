@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  31 JUL 2023 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  1 AUG 2023 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,7 +1137,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<../figures/map2.png, id=40, 401.24907pt x 775.39688pt>
+<../figures/map2.png, id=39, 401.24907pt x 775.39688pt>
 File: ../figures/map2.png Graphic file (type png)
 <use ../figures/map2.png>
 Package pdftex.def Info: ../figures/map2.png  used on input line 187.
@@ -1158,7 +1158,7 @@ Overfull \hbox (32.12985pt too wide) in paragraph at lines 216--217
  []
 
 [6] [7 <../figures/example_shoredate.png (PNG copy)>]
-<../figures/summed_examples.png, id=77, 807.015pt x 307.1475pt>
+<../figures/summed_examples.png, id=76, 807.015pt x 307.1475pt>
 File: ../figures/summed_examples.png Graphic file (type png)
 <use ../figures/summed_examples.png>
 Package pdftex.def Info: ../figures/summed_examples.png  used on input line 229
@@ -1169,7 +1169,7 @@ Overfull \hbox (32.12837pt too wide) in paragraph at lines 229--230
  [][] 
  []
 
-<../figures/incpolys.png, id=79, 638.385pt x 385.44pt>
+<../figures/incpolys.png, id=78, 638.385pt x 385.44pt>
 File: ../figures/incpolys.png Graphic file (type png)
 <use ../figures/incpolys.png>
 Package pdftex.def Info: ../figures/incpolys.png  used on input line 240.
@@ -1195,23 +1195,23 @@ File: ../figures/bic.png Graphic file (type png)
 <use ../figures/bic.png>
 Package pdftex.def Info: ../figures/bic.png  used on input line 272.
 (pdftex.def)             Requested size: 433.63217pt x 190.46687pt.
-[10] [11 <../figures/mc.png> <../figures/bic.png>] [12]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 294.
+[10] [11 <../figures/mc.png> <../figures/bic.png>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 290.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13] [14] [15] [16] [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 570.
-[18]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 570.
+) [12] [13] [14] [15] [16] [17] [18]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 583.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 583.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 570.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 570.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 583.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 583.
  ) 
 Here is how much of TeX's memory you used:
- 15343 strings out of 492982
- 219485 string characters out of 6134897
- 349839 words of memory out of 5000000
+ 15351 strings out of 492982
+ 219602 string characters out of 6134897
+ 348832 words of memory out of 5000000
  18372 multiletter control sequences out of 15000+600000
  71630 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1225,10 +1225,10 @@ f/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17
 ype1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/pub
 lic/lm/lmsy10.pfb>
-Output written on paper.pdf (18 pages, 1496328 bytes).
+Output written on paper.pdf (19 pages, 1498684 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 367 compressed objects within 4 object streams
- 131 named destinations out of 1000 (max. 500000)
+ 426 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
+ 139 named destinations out of 1000 (max. 500000)
  14455 words of extra memory for PDF output out of 17280 (max. 10000000)
 
