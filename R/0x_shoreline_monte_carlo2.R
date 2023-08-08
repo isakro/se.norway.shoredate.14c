@@ -202,7 +202,8 @@ simresults <- do.call(rbind.data.frame, results) %>%
   group_by(simn) %>%
   mutate(prob_sum_normalised = prob_sum /(sum(prob_sum, na.rm = TRUE) * 5))
 
-mod <- approx(x = expp$bce, y = expp$prob_dens, xout = as.numeric(rownames(SPD)),
+mod <- approx(x = (expp$bce * -1) + 1950, y = expp$prob_dens,
+              xout = as.numeric(rownames(SPD)),
               ties = 'ordered', rule = 2)$y
 
 # Model summary (can also be plotted with ADMUR)
@@ -291,9 +292,6 @@ mod <- approx(x = (logip$bce * -1) + 1950, y = logip$prob_dens,
               xout = as.numeric(rownames(SPD)),
               ties = 'ordered', rule = 2)$y
 
-ggplot() + geom_line(data = logip, aes(bce, prob_dens)) +
-  geom_line(aes(x = as.numeric(rownames(SPD)), y = SPD[,1]))
-
 # Summary results
 log_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
@@ -305,7 +303,7 @@ plotSimulationSummary(log_summary)
 logplts <- plot_mc(log_summary)
 
 save(logplts, file = "../external_data/shorespd/logplts.rda")
-save(simresults, file = "../external_data/shorespd/logi_simresults.rda")
+load(file = "../external_data/shorespd/logi_simresults.rda")
 
 ##### Monte Carlo simulation - Uniform #####
 
