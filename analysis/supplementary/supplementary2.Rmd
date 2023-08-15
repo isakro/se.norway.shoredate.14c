@@ -19,7 +19,7 @@ set.seed(42)
 
 ```{r data}
 # Load data holding the PD array of shoreline dates
-load(file = here::here("analysis/data/derived_data/shore_models_pd.RData"))
+load(file = here::here("analysis/data/derived_data/shore_pd.RData"))
 
 # Create SPD
 SPD <- as.data.frame(rowSums(pd))
@@ -31,8 +31,9 @@ plotPD(SPD)
 ```
 
 ```{r precompiled, echo = FALSE}
-# For the compilation of this Rmarkdown document, the results were pre-compiled 
-# and are loaded here. Set eval = TRUE in code chunks below to re-run the code.
+# For the compilation of this Rmarkdown document, the results of the code chunk 
+# below  were pre-compiled and are loaded here. Set eval = TRUE below to re-run
+# the code.
 load(file = here::here("analysis/data/derived_data/sampsize.RData"))
 
 ```
@@ -73,8 +74,6 @@ for(i in 1:length(sampsize)){
                    NP = 220)
 
   results[[i]] <- rbind(cpl4, cpl5, cpl6)
-  save(results, temppds, sampsize,
-       file = here::here("analysis/data/derived_data/sampsize.RData"))
 }
 ```
 
@@ -131,13 +130,96 @@ for(i in 1:length(temppds)){
 }
 ```
 
-The figure below displays the results of attempting to adjust parameter settings for improving the parameter search for the 5-CPL model. There only appears to minute variation in the 'value', and none of the models reach convergence. The parameters were altered one at a time, using the following code as the starting point:
+# Different parameter settings for 5-CPL
+
+The figure below displays the results of attempting to adjust parameter settings for improving the parameter search for the 5-CPL model. The identified model parameters are identical across the runs, the variation in the returned values is minute, and none of the searches reached convergence. The parameters used with `JDEoptim()` were altered one at a time, resulting in 11 separate searches. The following code was used as the starting point from where parameters were adjusted:
 ```{r, eval = FALSE}
+# Base code from where the parameters were adjusted individually
 JDEoptim(lower = rep(0, 9),
                    upper = rep(1, 9),
                    fn = objectiveFunction,
                    PDarray = pd,
-                   type='CPL',
+                   type = 'CPL',
                    NP = 180)
 ```
 
+```{r, echo = FALSE}
+
+load(file = here::here("analysis/data/derived_data/exploring_cpl5.RData"))
+
+cpl5iter <- convertPars(pars = cpl_5$par, years = minage:maxage, type = 'CPL')
+cpl5iter$parameter <- "maxiter = 3600"
+cpl5iter$value <- cpl_5$value
+cpl5iter$convergence <- cpl_5$convergence
+
+cpl5iter2 <- convertPars(pars = cpl_5iter2$par, years = minage:maxage, type = 'CPL')
+cpl5iter2$parameter <- "maxiter = 7200"
+cpl5iter2$value <- cpl_5iter2$value
+cpl5iter2$convergence <- cpl_5iter2$convergence
+
+cpl5np <- convertPars(pars = cpl_5np$par, years = minage:maxage, type = 'CPL')
+cpl5np$parameter <- "NP = 360"
+cpl5np$value <- cpl_5np$value
+cpl5np$convergence <- cpl_5np$convergence
+
+cpl5np2 <- convertPars(pars = cpl_5np2$par, years = minage:maxage, type = 'CPL')
+cpl5np2$parameter <- "NP = 720"
+cpl5np2$value <- cpl_5np2$value
+cpl5np2$convergence <- cpl_5np2$convergence
+
+cpl5jitter <- convertPars(pars = cpl_5jitter$par, years = minage:maxage, type = 'CPL')
+cpl5jitter$parameter <- "jitter_factor = NULL"
+cpl5jitter$value <- cpl_5jitter$value
+cpl5jitter$convergence <- cpl_5jitter$convergence
+
+cpl5jitter2 <- convertPars(pars = cpl_5jitter2$par, years = minage:maxage, type = 'CPL')
+cpl5jitter2$parameter <- "jitter_factor = 0.01"
+cpl5jitter2$value <- cpl_5jitter2$value
+cpl5jitter2$convergence <- cpl_5jitter2$convergence
+
+cpl5jitter3 <- convertPars(pars = cpl_5jitter3$par, years = minage:maxage, type = 'CPL')
+cpl5jitter3$parameter <- "jitter_factor = 0.1"
+cpl5jitter3$value <- cpl_5jitter3$value
+cpl5jitter3$convergence <- cpl_5jitter3$convergence
+
+cpl5jitter4 <- convertPars(pars = cpl_5jitter4$par, years = minage:maxage, type = 'CPL')
+cpl5jitter4$parameter <- "jitter_factor = 0.0001"
+cpl5jitter4$value <- cpl_5jitter4$value
+cpl5jitter4$convergence <- cpl_5jitter4$convergence
+
+cpl5mutprob1 <- convertPars(pars = cpl_5mutprob1$par, years = minage:maxage, type = 'CPL')
+cpl5mutprob1$parameter <- "tau_pF = 0.5"
+cpl5mutprob1$value <- cpl_5mutprob1$value
+cpl5mutprob1$convergence <- cpl_5mutprob1$convergence
+
+cpl5mutprob2 <- convertPars(pars = cpl_5mutprob2$par, years = minage:maxage, type = 'CPL')
+cpl5mutprob2$parameter <- "tau_pF = 0.2"
+cpl5mutprob2$value <- cpl_5mutprob2$value
+cpl5mutprob2$convergence <- cpl_5mutprob2$convergence
+
+cpl5mutprob3 <- convertPars(pars = cpl_5mutprob3$par, years = minage:maxage, type = 'CPL')
+cpl5mutprob3$parameter <- "tau_pF = 1"
+cpl5mutprob3$value <- cpl_5mutprob3$value
+cpl5mutprob3$convergence <- cpl_5mutprob3$convergence
+
+cpl5models <- rbind(cpl5iter, cpl5iter2, cpl5np, cpl5np2, cpl5jitter,
+                    cpl5jitter2, cpl5jitter3, cpl5jitter4, cpl5mutprob1,
+                    cpl5mutprob2, cpl5mutprob3)
+
+plt1 <- ggplot() + geom_line(aes(x = as.numeric(rownames(SPD)), y = SPD[,1])) + geom_line(data = cpl5models, aes(x = year, y = pdf, col = parameter)) +
+  labs(title = "Different parameter settings for 5-CPL search") + scale_x_reverse() +
+  theme_bw()
+plt2 <- ggplot() + geom_point(data = cpl5models, aes(x = value, y = parameter)) + geom_vline(xintercept = cpl_5$value, col = "red") +
+  ylab("") +
+  theme_bw()
+plt3 <- ggplot() + geom_point(data = cpl5models, aes(x = as.factor(convergence), y = parameter, col = as.factor(convergence))) +
+  ylab("") +
+  theme_bw() + theme(legend.position =  "none", axis.text.y=element_blank(), axis.ticks.y=element_blank())
+
+plt1 
+  
+```
+
+```{r, echo = FALSE}
+plt2 + plt3
+```
