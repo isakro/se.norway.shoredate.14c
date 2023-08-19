@@ -25,7 +25,7 @@ cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
 
 save(cpl_1, cpl_2, cpl_3, cpl_4, cpl_5, cpl_6,
      file = here::here("analysis/data/derived_data/shore_models.RData"))
-load(file = here::here("analysis/data/derived_data/shore_models.RData"))
+load(file = here::here("analysis/data/derived_data/shore_models1.RData"))
 
 cpl1 <- convertPars(pars = cpl_1$par, years = minage:maxage, type = 'CPL')
 cpl1$model <- "1-CPL"
@@ -35,6 +35,10 @@ cpl3 <- convertPars(pars = cpl_3$par, years = minage:maxage, type = 'CPL')
 cpl3$model <- "3-CPL"
 cpl4 <- convertPars(pars = cpl_4$par, years = minage:maxage, type = 'CPL')
 cpl4$model <- "4-CPL"
+cpl5 <- convertPars(pars = cpl_5$par, years = minage:maxage, type = 'CPL')
+cpl5$model <- "5-CPL"
+cpl6 <- convertPars(pars = cpl_6$par, years = minage:maxage, type = 'CPL')
+cpl6$model <- "6-CPL"
 
 shmodels <- rbind(expp, logip, unifp, cpl1, cpl2, cpl3, cpl4, cpl5, cpl6)
 

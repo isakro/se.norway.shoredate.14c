@@ -18,26 +18,110 @@ set.seed(42)
 ```
 
 ```{r data}
-# Load data holding the PD array of shoreline dates
-load(file = here::here("analysis/data/derived_data/shore_pd.RData"))
+# Load data holding the PD array of shoreline dates and min and max age
+load(file = here::here("analysis/data/derived_data/shore_pd.Rdata"))
 
 # Create SPD
-SPD <- as.data.frame(rowSums(pd))
-SPD <- SPD/(sum(SPD) * 5)
+spd <- as.data.frame(rowSums(pd))
+spd <- spd/(sum(spd) * 5)
 
 # Plot PD array and SPD for inspection
 plotPD(pd)
-plotPD(SPD)
+plotPD(spd)
 ```
 
 ```{r precompiled, echo = FALSE}
-# For the compilation of this Rmarkdown document, the results of the code chunk 
-# below  were pre-compiled and are loaded here. Set eval = TRUE below to re-run
-# the code.
+# For the compilation of this Rmarkdown document, the results of the two code 
+# chunks below were pre-compiled and are loaded here. Set eval = TRUE below to 
+# re-run the code.
 load(file = here::here("analysis/data/derived_data/sampsize.RData"))
+load(file = here::here("analysis/data/derived_data/shore_models1.RData"))
 
 ```
 
+## Default approach (5-CPL and 6-CPL do not convergence)
+
+```{r, eval = FALSE}
+cpl_1 <- JDEoptim(lower = 0, upper = 1, fn = objectiveFunction, PDarray = pd,
+                  type = 'CPL', NP = 20)
+cpl_2 <- JDEoptim(lower = rep(0, 3), upper = rep(1, 3), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 60)
+cpl_3 <- JDEoptim(lower = rep(0, 5), upper = rep(1, 5), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 100)
+cpl_4 <- JDEoptim(lower = rep(0, 7), upper = rep(1, 7), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 140)
+cpl_5 <- JDEoptim(lower = rep(0, 9), upper = rep(1, 9), fn = objectiveFunction,
+                  PDarray = pd, type='CPL', NP = 180)
+cpl_6 <- JDEoptim(lower = rep(0, 11), upper = rep(1,11), fn = objectiveFunction,
+                  PDarray = pd, type = 'CPL', NP = 220)
+```
+
+```{r}
+cpl1 <- convertPars(pars = cpl_1$par, years = minage:maxage, type = 'CPL')
+cpl1$model <- "1-CPL"
+cpl2 <- convertPars(pars = cpl_2$par, years = minage:maxage, type = 'CPL')
+cpl2$model <- "2-CPL"
+cpl3 <- convertPars(pars = cpl_3$par, years = minage:maxage, type = 'CPL')
+cpl3$model <- "3-CPL"
+cpl4 <- convertPars(pars = cpl_4$par, years = minage:maxage, type = 'CPL')
+cpl4$model <- "4-CPL"
+cpl5 <- convertPars(pars = cpl_5$par, years = minage:maxage, type = 'CPL')
+cpl5$model <- "5-CPL"
+cpl6 <- convertPars(pars = cpl_6$par, years = minage:maxage, type = 'CPL')
+cpl6$model <- "6-CPL"
+
+shmodels <- rbind(cpl1, cpl2, cpl3, cpl4, cpl5, cpl6)
+
+sh_lik <- c("1-CPL" = -cpl_1$value,
+            "2-CPL" = -cpl_2$value,
+            "3-CPL" = -cpl_3$value,
+            "4-CPL" = -cpl_4$value,
+            "5-CPL" = -cpl_5$value,
+            "6-CPL" = -cpl_6$value)
+
+ssize <- ncol(pd)
+sh_bic <- c(log(ssize)*1 - 2*sh_lik[1], # 1-CPL
+            log(ssize)*3 - 2*sh_lik[2], # 2-CPL
+            log(ssize)*5 - 2*sh_lik[3], # 3-CPL
+            log(ssize)*7 - 2*sh_lik[4], # 4-CPL
+            log(ssize)*9 - 2*sh_lik[5], # 5-CPL
+            log(ssize)*11 - 2*sh_lik[6]) # 6-CPL
+
+```
+
+```{r}
+modelplt <- ggplot() +
+  geom_bar(aes(x = as.numeric(rownames(spd)),
+               spd[,1]),
+           stat = "identity", col = "grey") +
+  geom_line(aes(x = as.numeric(rownames(spd)),
+                y = spd[,1])) +
+  geom_line(data = shmodels, aes(year, pdf, col = model),
+            linewidth = 1.1) +
+  labs(x = "calBP", y = "PD") +
+  scale_colour_manual(values = c(
+    "1-CPL" = "#e41a1c",
+    "2-CPL" = "#4daf4a",
+    "3-CPL" = "#e0d616",
+    "4-CPL" = "#377eb8",
+    "5-CPL" = "black",
+    "6-CPL" = "#984ea3"
+  )) +
+  scale_x_reverse() +
+  theme_bw() +
+  theme(legend.title = element_blank())
+
+bicplt <- ggplot() +
+  geom_point(aes(sh_bic, names(sh_bic)), size = 2) +
+  labs(x = "BIC", y = "") +
+  scale_y_discrete(limits = rev) +
+  theme_bw()
+
+modelplt
+bicplt
+```
+
+## Increasing number of randomly sampled dates
 
 ```{r sampsize, eval = FALSE}
 
@@ -47,7 +131,8 @@ sampsize <- c(6, 32, 60, 120, 240, 480)
 results <- list()
 temppds <- list()
 
-# Fit 4-6 CPL to randomly drawn number of shoreline dates, and save the results
+# Fit 4-6 CPL to randomly drawn number of shoreline dates using the default
+# parameters
 for(i in 1:length(sampsize)){
   tmppd <- pd[, sample(ncol(pd), sampsize[i])]
   temppds[[i]] <- tmppd
@@ -108,7 +193,8 @@ for(i in 1:length(temppds)){
     geom_line(aes(x = as.numeric(rownames(tmpspd)), y =  tmpspd[,1])) +
     geom_line(data = tmpcpls, aes(x = year, y = pdf, col = model),
               linewidth = 1.1) +
-    labs(x = "calBP", y = "PD", title = paste("Sample size = ", sampsize[i])) +
+    labs(x = "calBP", y = "PD", title = paste("Randomly sampled dates = ",
+                                              sampsize[i])) +
     scale_colour_manual(values = c("4-CPL" = "black",
                                     "5-CPL" = "goldenrod2",
                                     "6-CPL" = "cornflowerblue")) +
@@ -130,9 +216,9 @@ for(i in 1:length(temppds)){
 }
 ```
 
-# Different parameter settings for 5-CPL
+## Exploring parameter settings for 5-CPL search
 
-The figure below displays the results of attempting to adjust parameter settings for improving the parameter search for the 5-CPL model. The identified model parameters are identical across the runs, the variation in the returned values is minute, and none of the searches reached convergence. The parameters used with `JDEoptim()` were altered one at a time, resulting in 11 separate searches. The following code was used as the starting point from where parameters were adjusted:
+The figures below displays the results of attempting to adjust parameter settings for improving the parameter search for the 5-CPL model. The identified model parameters are identical across the runs, the variation in the returned values is minute, and none of the searches reached convergence. The parameters used with `JDEoptim()` were altered one at a time, resulting in 11 separate searches. I have not included the code for each individual run and the plotting of the results, but the following code was used as the starting point from where parameters were adjusted:
 ```{r, eval = FALSE}
 # Base code from where the parameters were adjusted individually
 JDEoptim(lower = rep(0, 9),
@@ -206,8 +292,8 @@ cpl5models <- rbind(cpl5iter, cpl5iter2, cpl5np, cpl5np2, cpl5jitter,
                     cpl5jitter2, cpl5jitter3, cpl5jitter4, cpl5mutprob1,
                     cpl5mutprob2, cpl5mutprob3)
 
-plt1 <- ggplot() + geom_line(aes(x = as.numeric(rownames(SPD)), y = SPD[,1])) + geom_line(data = cpl5models, aes(x = year, y = pdf, col = parameter)) +
-  labs(title = "Different parameter settings for 5-CPL search") + scale_x_reverse() +
+plt1 <- ggplot() + geom_line(aes(x = as.numeric(rownames(spd)), y = spd[,1])) + geom_line(data = cpl5models, aes(x = year, y = pdf, col = parameter)) +
+  scale_x_reverse() +
   theme_bw()
 plt2 <- ggplot() + geom_point(data = cpl5models, aes(x = value, y = parameter)) + geom_vline(xintercept = cpl_5$value, col = "red") +
   ylab("") +

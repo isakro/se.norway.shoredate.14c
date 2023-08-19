@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  15 AUG 2023 18:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  19 AUG 2023 17:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1146,7 +1146,7 @@ Package pdftex.def Info: ../figures/map2.png  used on input line 187.
 LaTeX Warning: Float too large for page by 59.956pt on input line 192.
 
 [4] [5 <../figures/map2.png>] [6]
-<../figures/example_shoredate.png, id=63, 742.27313pt x 577.40718pt>
+<../figures/example_shoredate.png, id=64, 742.27313pt x 577.40718pt>
 File: ../figures/example_shoredate.png Graphic file (type png)
 <use ../figures/example_shoredate.png>
 Package pdftex.def Info: ../figures/example_shoredate.png  used on input line 2
@@ -1158,7 +1158,7 @@ Overfull \hbox (32.12985pt too wide) in paragraph at lines 216--217
  []
 
 [7 <../figures/example_shoredate.png (PNG copy)>]
-<../figures/summed_examples.png, id=75, 807.015pt x 307.1475pt>
+<../figures/summed_examples.png, id=76, 807.015pt x 307.1475pt>
 File: ../figures/summed_examples.png Graphic file (type png)
 <use ../figures/summed_examples.png>
 Package pdftex.def Info: ../figures/summed_examples.png  used on input line 229
@@ -1169,7 +1169,7 @@ Overfull \hbox (32.12837pt too wide) in paragraph at lines 229--230
  [][] 
  []
 
-<../figures/incpolys.png, id=77, 638.385pt x 385.44pt>
+<../figures/incpolys.png, id=78, 638.385pt x 385.44pt>
 File: ../figures/incpolys.png Graphic file (type png)
 <use ../figures/incpolys.png>
 Package pdftex.def Info: ../figures/incpolys.png  used on input line 240.
@@ -1180,7 +1180,7 @@ Overfull \hbox (32.12836pt too wide) in paragraph at lines 240--241
  []
 
 [8 <../figures/summed_examples.png>] [9 <../figures/incpolys.png>]
-<../figures/mc.png, id=89, 963.6pt x 602.25pt>
+<../figures/mc.png, id=90, 963.6pt x 602.25pt>
 File: ../figures/mc.png Graphic file (type png)
 <use ../figures/mc.png>
 Package pdftex.def Info: ../figures/mc.png  used on input line 259.
@@ -1190,7 +1190,7 @@ Overfull \hbox (32.11385pt too wide) in paragraph at lines 259--260
  [][] 
  []
 
-<../figures/bic.png, id=94, 433.62pt x 190.46156pt>
+<../figures/bic.png, id=95, 433.62pt x 190.46156pt>
 File: ../figures/bic.png Graphic file (type png)
 <use ../figures/bic.png>
 Package pdftex.def Info: ../figures/bic.png  used on input line 274.
@@ -1200,34 +1200,33 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 292.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12] [13] [14] [15] [16] [17] [18]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 610.
-[19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 610.
+) [12] [13] [14] [15] [16] [17] [18] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 618.
+[20]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 618.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 610.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 610.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 618.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 618.
  ) 
 Here is how much of TeX's memory you used:
- 15354 strings out of 492982
- 219672 string characters out of 6134897
- 349891 words of memory out of 5000000
- 18372 multiletter control sequences out of 15000+600000
- 71370 words of font info for 118 fonts, out of 8000000 for 9000
+ 15358 strings out of 492982
+ 219711 string characters out of 6134897
+ 348903 words of memory out of 5000000
+ 18370 multiletter control sequences out of 15000+600000
+ 68682 words of font info for 119 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,38p,2202b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,11n,38p,2202b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/te
-xmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-bx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmss8.pfb>
-Output written on paper.pdf (19 pages, 1502352 bytes).
+ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/te
+xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
+r10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb>
+Output written on paper.pdf (20 pages, 1481855 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 403 compressed objects within 5 object streams
- 146 named destinations out of 1000 (max. 500000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 149 named destinations out of 1000 (max. 500000)
  14455 words of extra memory for PDF output out of 17280 (max. 10000000)
 
