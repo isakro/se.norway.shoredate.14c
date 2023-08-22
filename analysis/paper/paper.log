@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  19 AUG 2023 17:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  22 AUG 2023 11:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1209,13 +1209,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 618.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 618.
  ) 
 Here is how much of TeX's memory you used:
- 15358 strings out of 492982
- 219711 string characters out of 6134897
+ 15360 strings out of 492982
+ 219733 string characters out of 6134897
  348903 words of memory out of 5000000
  18370 multiletter control sequences out of 15000+600000
- 68682 words of font info for 119 fonts, out of 8000000 for 9000
+ 68765 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,38p,2202b,395s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,11n,38p,2211b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/te
 xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
@@ -1223,7 +1223,7 @@ r10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb>
-Output written on paper.pdf (20 pages, 1481855 bytes).
+Output written on paper.pdf (20 pages, 1481378 bytes).
 PDF statistics:
  451 PDF objects out of 1000 (max. 8388607)
  406 compressed objects within 5 object streams
