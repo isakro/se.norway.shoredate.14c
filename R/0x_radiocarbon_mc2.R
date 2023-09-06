@@ -75,6 +75,20 @@ logi <- JDEoptim(lower = c(0, 0000), upper = c(1, 10000),
 # No search required for uniform
 unif <- -objectiveFunction(pars = NULL, PDarray = pd, type = 'uniform')
 
+expsum <- SPDsimulationTest(c14, calcurve = intcal20,
+                            calrange = c(minage, maxage), pars = exp$par,
+                            type = 'exp', N = 10000)
+logsum <- SPDsimulationTest(c14, calcurve = intcal20,
+                            calrange = c(minage, maxage), pars = log$par,
+                            type = 'logistic', N = 10000)
+unisum <- SPDsimulationTest(c14, calcurve = intcal20,
+                            calrange = c(minage, maxage), pars = NULL,
+                            type = 'uniform', N = 10000)
+plotSimulationSummary(expsum)
+plotSimulationSummary(logsum)
+plotSimulationSummary(unisum)
+
+
 expp <- convertPars(pars = exp$par, years = minage:maxage, type = 'exp')
 expp$model <- "Exponential"
 logip <- convertPars(pars = logi$par, years = minage:maxage, type = 'logistic')
