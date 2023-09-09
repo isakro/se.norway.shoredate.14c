@@ -1,9 +1,12 @@
+# This script creates 2.5km wide line segments that run perpendicular to the
+# shoreline gradient, interpolates a displacement curve to centre of these,
+# and finds the distribution of sites across them.
+
 library(tidyverse)
 library(sf)
 library(terra)
 library(here)
 library(patchwork)
-# library(spatstat)
 
 sites <- st_read(here("analysis/data/derived_data/combined_sites.gpkg"))
 bmap <- st_read(here("analysis/data/raw_data/naturalearth_norway.gpkg")) %>%

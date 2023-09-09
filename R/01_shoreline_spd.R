@@ -1,3 +1,7 @@
+# The first part of this script prepares data for shoreline dating and the
+# creates the SPD. The second part creates maps and plots exemplifying the
+# method for shoreline dating.
+
 library(tidyverse)
 library(sf)
 library(terra)
@@ -133,7 +137,7 @@ st_write(sites,
          here("analysis/data/derived_data/combined_sites.gpkg"),
          append = FALSE)
 
-# Create map of sites
+#### Create map of sites and plots providing examples of shoreline dating #####
 
 # Exclude out of bounds sites from the two data sets
 surveyed <- filter(surveyed, !askeladden_id %in% out_of_range)
@@ -146,13 +150,6 @@ excavated$lab <- "y"
 worldmap <- st_read(here("analysis/data/raw_data/naturalearth_countries.gpkg"))
 norway <- st_read(here("analysis/data/raw_data/naturalearth_norway.gpkg"))
 muncipalities <- st_read(here("analysis/data/raw_data/municipalities.gpkg"))
-
-# bboxpolys <- st_bbox(sites)
-# bboxpolys[1] <- bboxpolys[1] - 900
-# bboxpolys[3] <- bboxpolys[3] + 900
-# bboxpolys[2] <- bboxpolys[2] - 900
-# bboxpolys[4] <- bboxpolys[4] + 900
-# bboxpolyspoly <- st_as_sf(st_as_sfc(bboxpolys))
 
 sitbbox <- st_bbox(sites)
 sitbbox[1:2] <- sitbbox[1:2] - 1000000

@@ -265,3 +265,109 @@ exprplt + logrplt + unirplt
 ggsave(here::here("analysis/figures/rcarbon_mc.png"),
        units = "px", width = 4000, height = 1250)
 
+
+
+SPDsimulationTest <- function(data, calcurve, calrange, pars, type, inc=5, N=20000){
+
+  # 1. generate observed data SPD
+  print('Generating SPD for observed data')
+  CalArray <- makeCalArray(calcurve, calrange, inc) # makeCalArray, used for obs and each simulation
+  # x <- phaseCalibrator(data, CalArray, width=200, remove.external = FALSE)
+  x <- pd
+
+  SPD.obs <- as.data.frame(rowSums(x))
+  SPD.obs <- SPD.obs/(sum(SPD.obs) * CalArray$inc)
+  SPD.obs <- SPD.obs[,1]
+
+  # 2. various sample sizes and effective sample sizes
+
+  # number of dates in the entire dataset
+  n.dates.all <- nrow(data)
+
+  # effective number of dates that contribute to the date range. Some dates may be slightly outside, giving non-integer.
+  tmp <- summedCalibrator(data, CalArray, normalise = 'none')
+  n.dates.effective <- round(sum(tmp)*inc,1)
+
+  # number of phases in entire dataset
+  if(!'phase'%in%names(data))data <- binner(data, width=200, calcurve)
+  n.phases.all <- length(unique(data$phase))
+
+  # effective number of phases that contribute to the date range. Some phases may be slightly outside, giving non-integer.
+  n.phases.effective <- round(sum(x)*inc,1)
+
+  # number of phases that are mostly internal to date range, used for likelihoods
+  n.phases.internal <- sum(colSums(x)>=(0.5 /inc))
+
+  # 3. convert best pars to a model
+  print('Converting model parameters into a PDF')
+  model <- convertPars(pars, years=CalArray$cal, type)
+
+  # 4. Generate N simulations
+  print('Generating simulated SPDs under the model')
+  SPD.sims <- matrix(,length(SPD.obs),N) # blank matrix
+
+  # how many phases to simulate, increasing slightly to account for sampling across a range 300 yrs wider
+  np <- round(sum(x)*inc * (1+300/diff(calrange)))
+
+  # Generate simulations
+  for(n in 1:N){
+    cal <- simulateCalendarDates(model=model, n=np)
+    age <- uncalibrateCalendarDates(cal, calcurve)
+    d <- data.frame(age = age, sd = sample(data$sd, replace=T, size=length(age)), datingType = '14C')
+    SPD.sims[,n] <- summedCalibrator(d, CalArray, normalise = 'full')[,1]
+
+    # house-keeping
+    if(n>1 & n%in%seq(0,N,length.out=11))print(paste(n,'of',N,'simulations completed'))
+  }
+
+  # 5. Construct various timeseries summaries
+
+  # calBP years
+  calBP <- CalArray$cal
+
+  # expected simulation
+  expected.sim <- rowMeans(SPD.sims)
+
+  # local standard deviation
+  SD <- apply(SPD.sims,1,sd)
+
+  # CIs
+  CI <- t(apply(SPD.sims,1,quantile,prob=c(0.025,0.125,0.25,0.75,0.875,0.975)))
+
+  # model
+  mod <- approx(x=model$year,y=model$pdf,xout=calBP,ties='ordered',rule=2)$y
+
+  # index of SPD.obs above (+1) and below(-1) the 95% CI
+  upper.95 <- CI[,dimnames(CI)[[2]]=="97.5%"]
+  lower.95 <- CI[,dimnames(CI)[[2]]=="2.5%"]
+  index <- as.numeric(SPD.obs>=upper.95)-as.numeric(SPD.obs<=lower.95) #  -1,0,1 values
+
+  # 6. calculate summary statistic for each sim and obs; and GOF p-value
+  print('Generating summary statistics')
+
+  # for observed
+  # summary stat (SS) is simply the proportion of years outside the 95%CI
+  SS.obs <- sum(SPD.obs>upper.95 | SPD.obs<lower.95) / length(SPD.obs)
+
+  # for each simulation
+  SS.sims <- numeric(N)
+  for(n in 1:N){
+    SPD <- SPD.sims[,n]
+    SS.sims[n] <-sum(SPD>upper.95 | SPD<lower.95) / length(SPD.obs)
+  }
+
+  # calculate p-value
+  pvalue <- sum(SS.sims>=SS.obs)/N
+
+  # 7. summarise and return
+  timeseries <- cbind(data.frame(calBP=calBP, expected.sim=expected.sim, local.sd=SD, model=mod, SPD=SPD.obs, index=index),CI)
+
+  return(list(timeseries=timeseries,
+              pvalue=pvalue,
+              observed.stat=SS.obs,
+              simulated.stat=SS.sims,
+              n.dates.all=n.dates.all,
+              n.dates.effective=n.dates.effective,
+              n.phases.all=n.phases.all,
+              n.phases.effective=n.phases.effective,
+              n.phases.internal=n.phases.internal))}

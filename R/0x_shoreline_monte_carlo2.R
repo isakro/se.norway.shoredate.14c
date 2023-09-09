@@ -1,9 +1,10 @@
+# This script performs the Monte Carlo simulations for the shoreline dates
+
 library(ggplot2)
 library(shoredate)
 library(dplyr)
 library(sf)
 library(here)
-library(patchwork)
 library(ADMUR)
 library(DEoptimR)
 
@@ -85,8 +86,8 @@ logip$year <- logip$year + 3900 # Transforming back to BP
 
 
 # Save
-save(pd, expp, logip, unifp, maxage, minage,
-     file = here("analysis/data/derived_data/shore_models_pd.RData"))
+# save(pd, expp, logip, unifp, maxage, minage,
+#      file = here("analysis/data/derived_data/shore_models_pd.RData"))
 load(here("analysis/data/derived_data/shore_models_pd.RData"))
 
 # Combine models for plotting
@@ -134,7 +135,7 @@ sumdatesdf <- filter(sumdatesdf, sum.bce <= max(expp$bce))
 sumdatesdf$probability <- sumdatesdf$sum.probability /
                           (sum(sumdatesdf$sum.probability) * 5)
 
-##### Monte Carlo simulation - Exponential function #####
+##### Monte Carlo simulation - Exponential #####
 
 # Create data frame to hold simulated dates
 random_dates <- data.frame(matrix(nrow = ssize*nsim, ncol = 3))
@@ -303,7 +304,6 @@ plotSimulationSummary(log_summary)
 logplts <- plot_mc(log_summary)
 
 save(logplts, file = "../external_data/shorespd/logplts.rda")
-load(file = "../external_data/shorespd/logi_simresults.rda")
 
 ##### Monte Carlo simulation - Uniform #####
 

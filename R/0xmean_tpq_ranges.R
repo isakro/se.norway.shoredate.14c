@@ -97,27 +97,3 @@ tpqsd <- sd(c(prange, hrange, arange, trange), na.rm = TRUE)
 # save results
 save(tpqmean, tpqsd,
      file = here("analysis/data/derived_data/disp_tpq_ranges.RData"))
-
-library(dplyr)
-
-dispcurves <- get(load(system.file("extdata/displacement_curves.rda",
-              package = "shoredate")))
-
-rocdisp <- dispcurves %>%
-  group_by(name) %>%
-  arrange(bce, .by_group = TRUE) %>%
-  mutate(rate_upper = upperelev - lag(upperelev),
-         rate_lower = lowerelev - lag(lowerelev)) %>%
-  rowwise() %>%
-  mutate(roc_mean = mean(c(rate_upper, rate_lower), na.rm = TRUE))
-
-rocdisp <- rocdisp %>%
-  group_by(name) %>%
-  mutate( roc_mean = rowMeans(select(rocdisp,
-                  c(rate_upper, rate_lower)), na.rm = TRUE))
-
-ggplot(data = rocdisp) +
-  # geom_line(aes(x = bce, y = rate_upper, col = name)) +
-  # geom_line(aes(x = bce, y = rate_lower, col = name)) +
-  geom_line(aes(x = bce, y = roc_mean, col = name)) +
-  scale_x_continuous(breaks = seq(-10000, 0, 1000))
