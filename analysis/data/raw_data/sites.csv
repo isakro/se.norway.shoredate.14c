@@ -1,175 +1,175 @@
-name,ask_id,museum_id,municipality,investigated,radiocarbon,rcarb_cor,multiphase,reference,reported_min_elev,reported_max_elev,dating_method,reported_earliest_bce,reported_latest_bce
-Krøgenesåsen 1,159967,C60371,Arendal,t,t,f,f,Nielsen 2017,35,36,shore_typo,-8850,-8500
-Krøgenesåsen 2,159968,C60372,Arendal,t,f,,f,Nielsen 2017,36,38,shore_typo,-8850,-8500
-Øytangen,108467,C57694,Arendal,t,f,,f,Berge & Loftsgarden 2012,32,34,shore_typo,-8500,-7500
-Marisberg,112382,C59093,Arendal,t,f,,f,Mansrud & Carrasco 2018,30,30,shore_typo,-8000,-7500
-Dybdalshei 1,108338,C60097,Arendal,t,t,t,t,Granum & Schülke 2018,,,c14,-7600,-3900
-Dybdalshei 2,108339,C60098,Arendal,t,t,t,f,Granum & Schülke 2018,,,c14,-2500,-2300
-Dybdalshei 4,108341,C60099,Arendal,t,f,,f,Granum & Schülke 2018,25,25,,,
-Sagene B2,171070,C59675,Arendal,t,t,f,f,Darmark 2018,55,58,shore_typo,-9200,-8800
-Sagene B4,171073,C59677,Arendal,t,f,,f,Darmark 2018b,53,55,shore_typo,-9000,-8800
-Sagene B6,176196,C59679,Arendal,t,t,f,f,Darmark 2018b,48,52,shore_typo,-8900,-8700
-Sagene B1,161300,C59674,Arendal,t,t,f,f,Viken 2018,48,55,shore_typo,-8800,-8700
-Kvastad A9,172657,C59673,Arendal,t,t,f,f,Darmark 2018c,54,55,shore_typo,-8700,-8300
-Kvastad A1 north,172344,C59665,Arendal,t,f,,f,Stokke et al. 2018,53,53,shore_typo,-8600,-8500
-Kvastad A1 south,172344,C59665,Arendal,t,t,t,f,Stokke et al. 2018,,,c14,-8500,-8400
-Kvastad A4 west,172345,C59668,Arendal,t,t,f,f,Darmark et al. 2018,,,shore_typo,-8500,-8300
-Kvastad A4 east,172345,C59668,Arendal,t,t,f,f,Darmark et al. 2018,52,56,shore_typo,-8500,-8300
-Kvastad A5-6,"17666, 17667",C59669,Arendal,t,f,,f,Viken 2018b,46,49,shore_typo,-8400,-8300
-Hesthag C4,170190,C59685,Arendal,t,t,t,f,Viken 2018c,,,c14,-8170,-7730
-Hesthag C2,170172,C59683,Arendal,t,t,t,t,Viken 2018d,,,c14,-8000,-2350
-Krøgenes D2,159966,"C59689, C60093",Arendal,t,t,t,f,Mansrud et al. 2018,,,c14,-5300,-5000
-Krøgenes D7,159965,C59694,Arendal,t,f,,f,Stokke & Reitan 2018,17,18,shore_typo,-4200,-3600
-Krøgenes D10,161275,C59697,Arendal,t,f,,f,Stokke & Reitan 2018,18,20,shore_typo,-5000,-4000
-Krøgenes D1,160617,C59688,Arendal,t,t,t,t,Reitan & Solberg 2018,,,c14,-4600,-2450
-Krøgenes D5,159969,C59692,Arendal,t,f,,f,Reitan & Solberg 2018b,13,14,shore_typo,-2800,-2400
-Mørland D11,172500,C59698,Arendal,t,f,,f,Darmark 2018d,,,typo,-2100,-1200
-Kvastad A2 northeast,172664,C59666,Arendal,t,t,t,t,Stokke & Reitan 2018b,,,c14,-8500,-1700
-Kvastad A2 southwest,172664,C59666,Arendal,t,t,t,t,Stokke & Reitan 2018b,,,c14,-8500,-1700
-Hovland 5,150578,C58448,Larvik,t,t,t,f,Mansrud & Koxvold 2013,,,c14,-8000,-7700
-Hovland 2,120470,C58327,Larvik,t,f,,f,Koxvold 2013,65,70,shore_typo,-8300,-7900
-Nordby 1 (Bommestad-Sky),119409,C57991,Larvik,t,t,f,f,Færø Olsen 2013,65,66,shore_typo,-7950,-7550
-Nordby 2 (Bommestad-Sky),119410,C57993,Larvik,t,t,f,f,Koxvold 2013b,65,70,shore_typo,-7900,-7500
-Hovland 4,119407,C58328,Larvik,t,t,t,f,Mansrud 2013,,,c14,-7900,-7500
-Hovland 1,119401,C57992,Larvik,t,t,t,f,Færø Olsen 2013b,,,c14,-7700,-7400
-Hovland 3,119408,C58236,Larvik,t,t,t,f,Solheim & Færø Olsen 2013,,,c14,-7650,-7450
-Torstvet,119404,C57995,Larvik,t,t,t,f,Mansrud 2013b,,,c14,-7500,-7100
-Nedre Hobekk 2,115976,C58367,Larvik,t,t,f,t,Eigeland 2014,95,97,shore_typo,-8800,-8500
-Solum 1,116021,C58369,Larvik,t,f,,f,Fossum 2014,94,95,shore_typo,-8800,-8400
-Nedre Hobekk 1,115978,C58366,Larvik,t,f,,f,Eigeland 2014b,78,80,shore_typo,-8500,-8200
-Nedre Hobekk 3,115977,C58368,Larvik,t,f,,f,Fossum 2014b,72,75,shore_typo,-8200,-8000
-Sundsaasen 1,136590,C58011,Porsgrunn,t,f,,f,Eggen 2014,62,66,shore_typo,-7900,-7700
-Gunnarsrød 7,"136600, 136602",C58007,Porsgrunn,t,t,f,f,Fossum 2014c,55,59,shore_typo,-7800,-7300
-Prestemoen 1,136598,C58364,Porsgrunn,t,t,t,f,Persson 2014,,,c14,-7700,-7600
-Gunnarsrød 8,136589,C58364,Porsgrunn,t,f,,f,Fossum 2014d,52,54,shore_typo,-7300,-7000
-Langangen Vestgård 1,128960,C57601,Porsgrunn,t,t,t,f,Melvold & Eigeland 2014,,,c14,-6800,-6600
-Gunnarsrød 6a,128961,C58006,Porsgrunn,t,t,f,f,Carrasco et al. 2014,45,46,shore_typo,-6300,-6100
-Gunnarsrød 6b,128964,C58006,Porsgrunn,t,t,f,f,Carrasco et al. 2014,46,46.5,shore_typo,-6500,-6300
-Gunnarsrød 10,52038,C58010,Porsgrunn,t,t,f,f,Reitan & Fossum 2014,43,44,shore_typo,-5800,-5600
-Vallermyrene 4,150594,C58010,Porsgrunn,t,t,t,f,Eigeland & Fossum 2014,,,c14,-5500,-5200
-Vallermyrene 1,136595,C58361,Porsgrunn,t,t,t,f,Reitan 2014,,,c14,-4700,-4100
-Langangen Vestgård 3,136594,C57603,Porsgrunn,t,t,t,f,Eggen 2014b,,,c14,-4350,-4000
-Sundsaasen 2,"136599, 136604",C58012,Porsgrunn,t,f,,f,Melvold & Persson 2014,27,31,shore_typo,-3900,-3400
-Langangen Vestgård 5,136588,C58012,Porsgrunn,t,t,t,t,Reitan 2014b,,,c14,-5000,-3700
-Langangen Vestgård 6,136597,C57606,Porsgrunn,t,t,t,f,Reitan 2014c,,,c14,-4000,-3600
-Gunnarsrød 5,"128956, 128959",C58005,Porsgrunn,t,t,t,t,Reitan 2014d,,,c14,-6600,-3300
-Solum 2,116019,C58370,Larvik,t,f,,f,Fossum 2014e,,,typo,-2400,-1100
-Solum 3,116144,C58371,Larvik,t,t,t,f,Fossum 2014e,,,c14,-2150,-1200
-Vallermyrene 2,136591,C58362,Porsgrunn,t,t,t,t,Reitan 2014e,,,c14,-3800,1050
-Gunnarsrød 3,128954,C58003,Porsgrunn,t,f,,f,Reitan 2014f,35,36,shore_typo,-5000,-4500
-Gunnarsrød 2,128953,C58002,Porsgrunn,t,f,,f,Reitan & Fossum 2014b,45,50.5,shore_typo,-7000,-6000
-Langangen Vestgård 2,"136601, 136605",C57602,Porsgrunn,t,f,,f,Eggen 2014c,40,41,shore_typo,-5800,-5400
-Langangen Vestgård 4,136593,C57604,Porsgrunn,t,f,,f,Reitan 2014g,39,41,shore_typo,-4300,-4300
-Vallermyrene 3,128952,C58363,Porsgrunn,t,f,,f,Reitan 2014h,23,25,shore_typo,-3200,-3000
-Langangen Vestgård 7,172899,C57607,Porsgrunn,t,t,t,f,Reitan 2014i,,,c14,-5000,-4000
-Gunnarsrød 4,"128962, 128957",C58004,Porsgrunn,t,t,t,f,Reitan 2014j,,,c14,-6000,-5800
-Prestemoen 2,109934,C58365,Porsgrunn,t,f,,f,Persson 2014b,34,39,shore_typo,-5000,-4800
-Tinderholt 3,138151,C59985,Bamble,t,f,,f,Koxvold 2017,106,109,shore_typo,-8700,-8500
-Tinderholt 2,146871,C59984,Bamble,t,f,,f,Koxvold 2017b,104,107,shore_typo,-8700,-8400
-Dørdal,146146,C59987,Bamble,t,t,f,f,Solheim et al. 2017,100,101,shore_typo,-8600,-8400
-Tinderholt 1,145410,C59983,Bamble,t,f,,f,Koxvold 2017c,97,100,shore_typo,-8600,-8300
-Skeid,145173,C59986,Bamble,t,f,,f,Nielsen & Solheim 2017,94,95,shore_typo,-8500,-8300
-Hydal 3,138175,C59655,Bamble,t,t,f,f,Koxvold 2017d,76,78,shore_typo,-8300,-8100
-Hydal 4,138171,C59656,Bamble,t,t,f,f,Koxvold 2017e,80,80,shore_typo,-8300,-8100
-Hydal 7,138148,C59660,Bamble,t,t,f,f,Koxvold 2017f,73,74,shore_typo,-8300,-8100
-Hydal 8,138170,C59661,Bamble,t,t,f,f,Koxvold 2017g,70,73,shore_typo,-8200,-8000
-Hegna vest 2,138262,C59652,Bamble,t,t,t,t,Fossum 2017,,,c14,-7900,-7550
-Hegna vest 1,138264,C59651,Bamble,t,t,t,t,Fossum 2017b,,,c14,-8000,-7800
-Hegna vest 3,138263,C59653,Bamble,t,t,t,f,Eigeland & Fossum 2017,,,c14,-7800,-7600
-Hegna øst 6,138160,C59649,Bamble,t,f,,f,Havstein 2017,55,58,shore_typo,-7900,-7700
-Hegna vest 4,145400,C59654,Bamble,t,f,,f,Eigeland & Fossum 2017b,54,57,shore_typo,-7900,-7600
-Hegna øst 5,138163,C59648,Bamble,t,t,f,f,Havstein 2017b,44,49,shore_typo,-7500,-7000
-Hegna øst 7,146129,C59650,Bamble,t,f,,f,Koxvold et al. 2017,40,42,shore_typo,-6500,-6200
-Stokke/Polland 3,116727,C59058,Bamble,t,t,f,f,Fossum 2017c,36,39,shore_typo,-6100,-5400
-Stokke/Polland 8,116720,C59062,Bamble,t,t,t,f,Fossum 2017d,,,c14,-5300,-5200
-Hegna Øst 2,145397,C59645,Bamble,t,t,t,f,Solheim & Havstein 2017,,,c14,-5350,-5200
-Stokke/Polland 5,"116722, 116728",C59060,Bamble,t,t,t,f,Mansrud 2017,,,c14,-5300,-5000
-Stokke/Polland 9,116724,C59063,Bamble,t,f,,f,Fossum 2017e,29,31,shore_typo,-4200,-4000
-Stokke/Polland 1,138156,C59057,Bamble,t,t,t,t,Koxvold 2017h,,,c14,-4300,-3100
-Stokke/Polland 7,116730,C59061,Bamble,t,f,,f,Koxvold & Solheim 2017,33,35,shore_typo,-4900,-4500
-Stokke/Polland 4,116721,C59059,Bamble,t,f,,f,Mansrud 2016,33,34,shore_typo,-5000,-5000
-Pauler 1,97782,C56286,Larvik,t,t,f,f,Schaller Åhrberg 2012,127,130,shore_typo,-9200,-9000
-Pauler 2,97791,C56287,Larvik,t,t,f,f,Nyland 2012,124,124,shore_typo,-9150,-8950
-Pauler 3,97805,C56288,Larvik,t,t,f,f,Amundsen 2012,114,114,shore_typo,-9000,-8800
-Pauler 5,97747,C56290,Larvik,t,f,,f,Amundsen 2012b,108,111,shore_typo,-8975,-8775
-Pauler 4,97803,C56289,Larvik,t,t,f,f,Nyland 2012b,110.5,110.5,shore_typo,-8950,-8750
-Pauler 6,97794,C56291,Larvik,t,f,,f,Jaksland 2012,98,98,shore_typo,-8850,-8650
-Pauler 7,97796,C56292,Larvik,t,f,,f,Jaksland 2012b,95,95,shore_typo,-8800,-8600
-Sky 1,97826,C56293,Larvik,t,f,,f,Amundsen 2012c,108,108,shore_typo,-8950,-8750
-Sky 2,97811,C56294,Larvik,t,f,,f,Schaller Åhrberg 2012b,,,shore_typo,-8800,-8500
-Bakke,97832,C56295,Larvik,t,t,f,f,Nyland & Amundsen 2012,98,98,shore_typo,-8850,-8650
-Nøklegård 1,97863,C56296,Porsgrunn,t,t,t,f,Jaksland & Kræmer 2012,,,c14,-1900,-1750
-Brunstad 24,139824,C59135,Sandefjord,t,t,t,f,Danielsen et al. 2018,,,c14,-6400,-5700
-Brunstad 26,139826,C59339,Sandefjord,t,f,,f,Danielsen et al. 2018,46,50,shore_typo,-5600,-5500
-Brunstad 25,139825,C59338,Sandefjord,t,t,t,f,Reitan & Schülke 2018,,,c14,-6000,-5700
-Kjørholt,222438,C60794,Porsgrunn,t,t,f,f,Koxvold 2020,59,63,shore_typo,-8000,-7700
-Langemyr,144308,C60049,Larvik,t,t,t,f,Koxvold 2018,,,c14,-8200,-7800
-Danebuåsen,171003,C60327,Sandefjord,t,t,f,f,Koxvold 2018b,70,75,shore_typo,-8500,-8300
-Roverud 1,158101,C60795,Bamble,t,f,,f,Koxvold 2020b,59,62,shore_typo,-7500,-7400
-Roverud 2,158114,C60796,Bamble,t,f,,f,Koxvold 2020b,56,59,shore_typo,-7500,-7400
-Rødbøl 54,112781,C55094,Larvik,t,t,t,f,Mansrud 2008,,,c14,-7700,-7550
-Ragnhildrød,100322,C57646,Stokke,t,t,f,t,Mjærum 2012,78,81,shore_typo,-7900,-7500
-Lågerød,169715,C58916,Stokke,t,t,f,f,Eymundsson 2012,64,68,shore_typo,-7400,-7000
-Skutvikåsen 3,110390,C57930,Skien,t,f,,f,Ekstrand 2013,54,55,shore_typo,-7230,-7150
-Skutvikåsen 4,110311,C57931,Skien,t,f,,f,Ekstrand 2013,59,59,shore_typo,-7540,-7540
-Skutvikåsen 5,110312,C57931,Skien,t,f,,f,Ekstrand 2013,30,31,shore_typo,-4500,-4300
-Trondalen,170401,C59637,Risør,t,t,t,f,Mansrud 2018,,,c14,-4400,-3900
-Skljelsø 1,120283,C57209,Risør,t,f,,f,Damlien 2009,22,22,shore_typo,-2800,-2500
-Skljelsø 2,121218,C57383,Risør,t,f,,f,Damlien 2009,15,15,shore_typo,-2300,-1100
-Tangvall nedre 1,113521,C60617,Bamble,t,f,,f,Stokke 2017,23,24,shore_typo,-3550,-3550
-Tangvall nedre 2,113522,C60618,Bamble,t,f,,f,Stokke 2017,23,25,shore_typo,-3550,-3550
-Lunaveien,117534,C57312,Sandefjord,t,t,t,t,Reitan 2010,,,c14,,
-Marum mellom 4,89476,C55260,Sandefjord,t,f,,t,Knutsen & Skogsfjord 2009,,,typo,-2300,-1100
-Førstad store 1,89481,C55257,Sandefjord,t,t,t,t,Knutsen & Skogsfjord 2009,,,c14,-1100,800
-Pjonkerød R1,89537,C58994,Horten,t,t,t,f,Carrasco 2015,,,c14,-7050,-6690
-Pjonkerød R2,89538,C58995,Horten,t,f,,f,Carrasco 2015,62,62,shore_typo,-7500,-6800
-Pjonkerød R3,89539,C58996,Horten,t,f,,f,Carrasco 2015,62,65,shore_typo,-7500,-6800
-Hegna øst 3,145397,C59646,Bamble,t,f,,f,Koxvold & Solheim 2017b,37,39,shore_typo,-5700,-5600
-Nauen A,231092,C53328,Tønsberg,t,t,t,t,Persson 2008,,,c14,-5000,-900
-Nauen B,236294,C53329,Tønsberg,t,f,,f,Persson 2008,33,34,shore_typo,-4000,-4000
-Nauen C,231112,C53330,Tønsberg,t,t,t,f,Persson 2008,,,c14,-4000,-4000
-Nordby 52,112779,C53332,Larvik,t,t,t,t,Gjerpe & Bukkemoen 2008,,,c14,-5700,1300
-Nordby 1,112755,C55533-C55536,Larvik,t,t,t,t,Gjerpe & Bukkemoen 2008b,,,c14,-2550,1400
-Anvik,119055,C58917,Larvik,t,t,f,f,Eymundsson 2014,77,80,shore_typo,-8550,-8250
-Øysang,,C52079,Risør,t,f,,f,Tørhaug 2000,,,,,
-Tverdal,41667,C57343,Arendal,t,t,t,f,Berge 2017,,,c14,,
-Frebergsvik,12346,,Horten,t,t,f,f,Mikkelsen 1975,,,shore_typo,,
-Hegna øst 4,147457,C59647,Bamble,t,f,,f,Koxvold et al. 2016,34,36,shore_typo,-5300,-5100
-Nordby 3 (Bommestad-Sky),119398,C57994,Larvik,t,t,f,f,Mansrud 2013c,49,49,shore_typo,-6800,-6300
-Hydal 6,138155,C59659,Bamble,t,f,,f,Koxvold 2017i,79,79,shore_typo,-8500,-8300
-Hydal 5,138159,C59658,Bamble,t,t,f,f,Koxvold 2016,76,77,shore_typo,-8500,-8200
-Sandtrahelleren,77378,"C38230, C39196",Larvik,t,f,,f,Østmo 1993,,,typo,-4500,-1800
-Rognlien,11534,FC29637,Porsgrunn,t,t,t,t,Ingstad 1970,,,c14,,
-Løvås 1,40831,C62085,Horten,t,t,t,t,Reitan & Hårstad 2021,,,c14,-8250,-7600
-Løvås 2,40831,C62086,Horten,t,t,t,t,Reitan & Hårstad 2021,,,c14,-8250,-7700
-Løvås 3,40831,C62087,Horten,t,t,t,f,Reitan & Hårstad 2021,78,89,shore_typo,-8250,-7600
-Løvås 4,40831,C62088,Horten,t,f,,f,Reitan & Hårstad 2021,77,81,shore_typo,-7600,-7300
-Olsmyren,229813,C62093,Horten,t,f,,f,Hårstad 2021,70,70,shore_typo,-7300,-7050
-Viulsrød 1,"62027-2, 62027-4",C62095,Horten,t,f,,f,Reitan & Hårstad 2021b,71,74,shore_typo,-7400,-7100
-Viulsrød 2,"62027-1, 62027-3",C62095,Horten,t,t,t,t,Reitan & Hårstad 2021b,67,69,shore_typo,-7100,-6900
-Råen 1,58622,C62091,Horten,t,f,,f,Hårstad 2021b,65,65,shore_typo,-7000,-6800
-Adal vestre 1,229871-1,C62089,Horten,t,t,t,t,Granados 2021,63,70,shore_typo,-7100,-6700
-Adal vestre 2,229871-2,C62090,Horten,t,t,t,t,Granados 2021,66,69,shore_typo,-7300,-6600
-Alveberget 8,"219491, 1949",C61487,Arendal,t,t,t,t,Mansrud 2021,,,c14,-3300,-2200
-Alveberget 6,173492,C61488,Arendal,t,f,,f,Stokke 2021,20,22,shore_typo,-5600,-4500
-Auve,49729,C38626,Sandefjord,t,t,t,f,Østmo 2008,,,c14,,
-Brink 1,3101-1,,Sandefjord,t,f,,,Trinterud 1997,63,63,shore_typo,-6500,-6500
-Brink 3 R1,3101-1,,Sandefjord,t,t,t,t,Triuterud 1997,55,55,c14,-6000,-825
-Brink 3 R2,3101-1,,Sandefjord,t,f,,,Triuterud 1997,55,55,shore_typo,-6000,-6000
-Melau,78208,,Larvik,t,f,,f,Matsumoto 2004,100,100,shore_typo,-9500,-8200
-Austein 1,70921,,Larvik,t,f,,f,Matsumoto 2004,105,110,shore_typo,-9500,-8200
-Sande Søndre J,134275,52712,Nøtterøy,t,t,f,t,Karlsen et al. 2001,25,25,shore_typo,-3300,-2300
-Tangen,97144,50180,Kragerø,f,f,,f,Glørstad 2005,20,20,shore_typo,-3700,-3400
-Krøgenes D9,161276,,Arendal,t,,,,Solberg 2017?,16,16,,,
-Krøgenes D8,161278,59695,Arendal,t,f,,t,Viken 2017,39,39,shore_typo,-9250,-8300
-Krøgenes D6,161292,59693,Arendal,t,f,,f,Viken 2017b,40,40,shore_typo,-9300,-8300
-Krøgenes D3,161295,59690,Arendal,t,f,,t,Viken 2017d,38,42,shore_typo,-9300,-8250
-Sagene B5,161298,59678,Arendal,t,t,t,t,Viken 2017c,45,47,shore_typo,-8800,-8700
-Hesthag C3,170177,59684,Arendal,t,,,f,Reitan 2017,,,shore_typo,-8000,-8000
-Hesthag C6,170178,59687,Arendal,t,,,t,Reitan 2017,,,shore_typo,-8000,-1750
-Hesthag C5,170189,59686,Arendal,t,f,,f,Viken 2017d,,,shore_typo,-2200,-1100
-Sagene B8,176195,59681,Arendal,t,f,,f,,39,39,,,
-Sagene B7,176197,59680,Arendal,t,f,,f,,50,50,,,
-Kvastad A7,172665,59671,Tvedestrand,t,t,f,t,Darmark 2015,54,54,shore_typo,-8700,-8300
-Kvastad A8,170971,59672,Tvedestrand,t,f,,f,Darmark 2017,50,55,shore_typo,-8600,-8500
-Kvastad A3,172658,59667,Tvedestrand,t,t,f,f,Stokke & Bjørkli 2016,56,58,shore_typo,-8300,-8000
+name,ask_id,museum_id,municipality,investigated,reference,reported_min_elev,reported_max_elev,dating_method,reported_earliest_bce,reported_latest_bce
+Krøgenesåsen 1,159967,C60371,Arendal,t,Nielsen 2017,35,36,shore_typo,-8850,-8500
+Krøgenesåsen 2,159968,C60372,Arendal,t,Nielsen 2017,36,38,shore_typo,-8850,-8500
+Øytangen,108467,C57694,Arendal,t,Berge & Loftsgarden 2012,32,34,shore_typo,-8500,-7500
+Marisberg,112382,C59093,Arendal,t,Mansrud & Carrasco 2018,30,30,shore_typo,-8000,-7500
+Dybdalshei 1,108338,C60097,Arendal,t,Granum & Schülke 2018,,,c14,-7600,-3900
+Dybdalshei 2,108339,C60098,Arendal,t,Granum & Schülke 2018,,,c14,-2500,-2300
+Dybdalshei 4,108341,C60099,Arendal,t,Granum & Schülke 2018,25,25,,,
+Sagene B2,171070,C59675,Arendal,t,Darmark 2018,55,58,shore_typo,-9200,-8800
+Sagene B4,171073,C59677,Arendal,t,Darmark 2018b,53,55,shore_typo,-9000,-8800
+Sagene B6,176196,C59679,Arendal,t,Darmark 2018b,48,52,shore_typo,-8900,-8700
+Sagene B1,161300,C59674,Arendal,t,Viken 2018,48,55,shore_typo,-8800,-8700
+Kvastad A9,172657,C59673,Arendal,t,Darmark 2018c,54,55,shore_typo,-8700,-8300
+Kvastad A1 north,172344,C59665,Arendal,t,Stokke et al. 2018,53,53,shore_typo,-8600,-8500
+Kvastad A1 south,172344,C59665,Arendal,t,Stokke et al. 2018,,,c14,-8500,-8400
+Kvastad A4 west,172345,C59668,Arendal,t,Darmark et al. 2018,,,shore_typo,-8500,-8300
+Kvastad A4 east,172345,C59668,Arendal,t,Darmark et al. 2018,52,56,shore_typo,-8500,-8300
+Kvastad A5-6,"17666, 17667",C59669,Arendal,t,Viken 2018b,46,49,shore_typo,-8400,-8300
+Hesthag C4,170190,C59685,Arendal,t,Viken 2018c,,,c14,-8170,-7730
+Hesthag C2,170172,C59683,Arendal,t,Viken 2018d,,,c14,-8000,-2350
+Krøgenes D2,159966,"C59689, C60093",Arendal,t,Mansrud et al. 2018,,,c14,-5300,-5000
+Krøgenes D7,159965,C59694,Arendal,t,Stokke & Reitan 2018,17,18,shore_typo,-4200,-3600
+Krøgenes D10,161275,C59697,Arendal,t,Stokke & Reitan 2018,18,20,shore_typo,-5000,-4000
+Krøgenes D1,160617,C59688,Arendal,t,Reitan & Solberg 2018,,,c14,-4600,-2450
+Krøgenes D5,159969,C59692,Arendal,t,Reitan & Solberg 2018b,13,14,shore_typo,-2800,-2400
+Mørland D11,172500,C59698,Arendal,t,Darmark 2018d,,,typo,-2100,-1200
+Kvastad A2 northeast,172664,C59666,Arendal,t,Stokke & Reitan 2018b,,,c14,-8500,-1700
+Kvastad A2 southwest,172664,C59666,Arendal,t,Stokke & Reitan 2018b,,,c14,-8500,-1700
+Hovland 5,150578,C58448,Larvik,t,Mansrud & Koxvold 2013,,,c14,-8000,-7700
+Hovland 2,120470,C58327,Larvik,t,Koxvold 2013,65,70,shore_typo,-8300,-7900
+Nordby 1 (Bommestad-Sky),119409,C57991,Larvik,t,Færø Olsen 2013,65,66,shore_typo,-7950,-7550
+Nordby 2 (Bommestad-Sky),119410,C57993,Larvik,t,Koxvold 2013b,65,70,shore_typo,-7900,-7500
+Hovland 4,119407,C58328,Larvik,t,Mansrud 2013,,,c14,-7900,-7500
+Hovland 1,119401,C57992,Larvik,t,Færø Olsen 2013b,,,c14,-7700,-7400
+Hovland 3,119408,C58236,Larvik,t,Solheim & Færø Olsen 2013,,,c14,-7650,-7450
+Torstvet,119404,C57995,Larvik,t,Mansrud 2013b,,,c14,-7500,-7100
+Nedre Hobekk 2,115976,C58367,Larvik,t,Eigeland 2014,95,97,shore_typo,-8800,-8500
+Solum 1,116021,C58369,Larvik,t,Fossum 2014,94,95,shore_typo,-8800,-8400
+Nedre Hobekk 1,115978,C58366,Larvik,t,Eigeland 2014b,78,80,shore_typo,-8500,-8200
+Nedre Hobekk 3,115977,C58368,Larvik,t,Fossum 2014b,72,75,shore_typo,-8200,-8000
+Sundsaasen 1,136590,C58011,Porsgrunn,t,Eggen 2014,62,66,shore_typo,-7900,-7700
+Gunnarsrød 7,"136600, 136602",C58007,Porsgrunn,t,Fossum 2014c,55,59,shore_typo,-7800,-7300
+Prestemoen 1,136598,C58364,Porsgrunn,t,Persson 2014,,,c14,-7700,-7600
+Gunnarsrød 8,136589,C58364,Porsgrunn,t,Fossum 2014d,52,54,shore_typo,-7300,-7000
+Langangen Vestgård 1,128960,C57601,Porsgrunn,t,Melvold & Eigeland 2014,,,c14,-6800,-6600
+Gunnarsrød 6a,128961,C58006,Porsgrunn,t,Carrasco et al. 2014,45,46,shore_typo,-6300,-6100
+Gunnarsrød 6b,128964,C58006,Porsgrunn,t,Carrasco et al. 2014,46,46.5,shore_typo,-6500,-6300
+Gunnarsrød 10,52038,C58010,Porsgrunn,t,Reitan & Fossum 2014,43,44,shore_typo,-5800,-5600
+Vallermyrene 4,150594,C58010,Porsgrunn,t,Eigeland & Fossum 2014,,,c14,-5500,-5200
+Vallermyrene 1,136595,C58361,Porsgrunn,t,Reitan 2014,,,c14,-4700,-4100
+Langangen Vestgård 3,136594,C57603,Porsgrunn,t,Eggen 2014b,,,c14,-4350,-4000
+Sundsaasen 2,"136599, 136604",C58012,Porsgrunn,t,Melvold & Persson 2014,27,31,shore_typo,-3900,-3400
+Langangen Vestgård 5,136588,C58012,Porsgrunn,t,Reitan 2014b,,,c14,-5000,-3700
+Langangen Vestgård 6,136597,C57606,Porsgrunn,t,Reitan 2014c,,,c14,-4000,-3600
+Gunnarsrød 5,"128956, 128959",C58005,Porsgrunn,t,Reitan 2014d,,,c14,-6600,-3300
+Solum 2,116019,C58370,Larvik,t,Fossum 2014e,,,typo,-2400,-1100
+Solum 3,116144,C58371,Larvik,t,Fossum 2014e,,,c14,-2150,-1200
+Vallermyrene 2,136591,C58362,Porsgrunn,t,Reitan 2014e,,,c14,-3800,1050
+Gunnarsrød 3,128954,C58003,Porsgrunn,t,Reitan 2014f,35,36,shore_typo,-5000,-4500
+Gunnarsrød 2,128953,C58002,Porsgrunn,t,Reitan & Fossum 2014b,45,50.5,shore_typo,-7000,-6000
+Langangen Vestgård 2,"136601, 136605",C57602,Porsgrunn,t,Eggen 2014c,40,41,shore_typo,-5800,-5400
+Langangen Vestgård 4,136593,C57604,Porsgrunn,t,Reitan 2014g,39,41,shore_typo,-4300,-4300
+Vallermyrene 3,128952,C58363,Porsgrunn,t,Reitan 2014h,23,25,shore_typo,-3200,-3000
+Langangen Vestgård 7,172899,C57607,Porsgrunn,t,Reitan 2014i,,,c14,-5000,-4000
+Gunnarsrød 4,"128962, 128957",C58004,Porsgrunn,t,Reitan 2014j,,,c14,-6000,-5800
+Prestemoen 2,109934,C58365,Porsgrunn,t,Persson 2014b,34,39,shore_typo,-5000,-4800
+Tinderholt 3,138151,C59985,Bamble,t,Koxvold 2017,106,109,shore_typo,-8700,-8500
+Tinderholt 2,146871,C59984,Bamble,t,Koxvold 2017b,104,107,shore_typo,-8700,-8400
+Dørdal,146146,C59987,Bamble,t,Solheim et al. 2017,100,101,shore_typo,-8600,-8400
+Tinderholt 1,145410,C59983,Bamble,t,Koxvold 2017c,97,100,shore_typo,-8600,-8300
+Skeid,145173,C59986,Bamble,t,Nielsen & Solheim 2017,94,95,shore_typo,-8500,-8300
+Hydal 3,138175,C59655,Bamble,t,Koxvold 2017d,76,78,shore_typo,-8300,-8100
+Hydal 4,138171,C59656,Bamble,t,Koxvold 2017e,80,80,shore_typo,-8300,-8100
+Hydal 7,138148,C59660,Bamble,t,Koxvold 2017f,73,74,shore_typo,-8300,-8100
+Hydal 8,138170,C59661,Bamble,t,Koxvold 2017g,70,73,shore_typo,-8200,-8000
+Hegna vest 2,138262,C59652,Bamble,t,Fossum 2017,,,c14,-7900,-7550
+Hegna vest 1,138264,C59651,Bamble,t,Fossum 2017b,,,c14,-8000,-7800
+Hegna vest 3,138263,C59653,Bamble,t,Eigeland & Fossum 2017,,,c14,-7800,-7600
+Hegna øst 6,138160,C59649,Bamble,t,Havstein 2017,55,58,shore_typo,-7900,-7700
+Hegna vest 4,145400,C59654,Bamble,t,Eigeland & Fossum 2017b,54,57,shore_typo,-7900,-7600
+Hegna øst 5,138163,C59648,Bamble,t,Havstein 2017b,44,49,shore_typo,-7500,-7000
+Hegna øst 7,146129,C59650,Bamble,t,Koxvold et al. 2017,40,42,shore_typo,-6500,-6200
+Stokke/Polland 3,116727,C59058,Bamble,t,Fossum 2017c,36,39,shore_typo,-6100,-5400
+Stokke/Polland 8,116720,C59062,Bamble,t,Fossum 2017d,,,c14,-5300,-5200
+Hegna Øst 2,145397,C59645,Bamble,t,Solheim & Havstein 2017,,,c14,-5350,-5200
+Stokke/Polland 5,"116722, 116728",C59060,Bamble,t,Mansrud 2017,,,c14,-5300,-5000
+Stokke/Polland 9,116724,C59063,Bamble,t,Fossum 2017e,29,31,shore_typo,-4200,-4000
+Stokke/Polland 1,138156,C59057,Bamble,t,Koxvold 2017h,,,c14,-4300,-3100
+Stokke/Polland 7,116730,C59061,Bamble,t,Koxvold & Solheim 2017,33,35,shore_typo,-4900,-4500
+Stokke/Polland 4,116721,C59059,Bamble,t,Mansrud 2016,33,34,shore_typo,-5000,-5000
+Pauler 1,97782,C56286,Larvik,t,Schaller Åhrberg 2012,127,130,shore_typo,-9200,-9000
+Pauler 2,97791,C56287,Larvik,t,Nyland 2012,124,124,shore_typo,-9150,-8950
+Pauler 3,97805,C56288,Larvik,t,Amundsen 2012,114,114,shore_typo,-9000,-8800
+Pauler 5,97747,C56290,Larvik,t,Amundsen 2012b,108,111,shore_typo,-8975,-8775
+Pauler 4,97803,C56289,Larvik,t,Nyland 2012b,110.5,110.5,shore_typo,-8950,-8750
+Pauler 6,97794,C56291,Larvik,t,Jaksland 2012,98,98,shore_typo,-8850,-8650
+Pauler 7,97796,C56292,Larvik,t,Jaksland 2012b,95,95,shore_typo,-8800,-8600
+Sky 1,97826,C56293,Larvik,t,Amundsen 2012c,108,108,shore_typo,-8950,-8750
+Sky 2,97811,C56294,Larvik,t,Schaller Åhrberg 2012b,,,shore_typo,-8800,-8500
+Bakke,97832,C56295,Larvik,t,Nyland & Amundsen 2012,98,98,shore_typo,-8850,-8650
+Nøklegård 1,97863,C56296,Porsgrunn,t,Jaksland & Kræmer 2012,,,c14,-1900,-1750
+Brunstad 24,139824,C59135,Sandefjord,t,Danielsen et al. 2018,,,c14,-6400,-5700
+Brunstad 26,139826,C59339,Sandefjord,t,Danielsen et al. 2018,46,50,shore_typo,-5600,-5500
+Brunstad 25,139825,C59338,Sandefjord,t,Reitan & Schülke 2018,,,c14,-6000,-5700
+Kjørholt,222438,C60794,Porsgrunn,t,Koxvold 2020,59,63,shore_typo,-8000,-7700
+Langemyr,144308,C60049,Larvik,t,Koxvold 2018,,,c14,-8200,-7800
+Danebuåsen,171003,C60327,Sandefjord,t,Koxvold 2018b,70,75,shore_typo,-8500,-8300
+Roverud 1,158101,C60795,Bamble,t,Koxvold 2020b,59,62,shore_typo,-7500,-7400
+Roverud 2,158114,C60796,Bamble,t,Koxvold 2020b,56,59,shore_typo,-7500,-7400
+Rødbøl 54,112781,C55094,Larvik,t,Mansrud 2008,,,c14,-7700,-7550
+Ragnhildrød,100322,C57646,Stokke,t,Mjærum 2012,78,81,shore_typo,-7900,-7500
+Lågerød,169715,C58916,Stokke,t,Eymundsson 2012,64,68,shore_typo,-7400,-7000
+Skutvikåsen 3,110390,C57930,Skien,t,Ekstrand 2013,54,55,shore_typo,-7230,-7150
+Skutvikåsen 4,110311,C57931,Skien,t,Ekstrand 2013,59,59,shore_typo,-7540,-7540
+Skutvikåsen 5,110312,C57931,Skien,t,Ekstrand 2013,30,31,shore_typo,-4500,-4300
+Trondalen,170401,C59637,Risør,t,Mansrud 2018,,,c14,-4400,-3900
+Skljelsø 1,120283,C57209,Risør,t,Damlien 2009,22,22,shore_typo,-2800,-2500
+Skljelsø 2,121218,C57383,Risør,t,Damlien 2009,15,15,shore_typo,-2300,-1100
+Tangvall nedre 1,113521,C60617,Bamble,t,Stokke 2017,23,24,shore_typo,-3550,-3550
+Tangvall nedre 2,113522,C60618,Bamble,t,Stokke 2017,23,25,shore_typo,-3550,-3550
+Lunaveien,117534,C57312,Sandefjord,t,Reitan 2010,,,c14,,
+Marum mellom 4,89476,C55260,Sandefjord,t,Knutsen & Skogsfjord 2009,,,typo,-2300,-1100
+Førstad store 1,89481,C55257,Sandefjord,t,Knutsen & Skogsfjord 2009,,,c14,-1100,800
+Pjonkerød R1,89537,C58994,Horten,t,Carrasco 2015,,,c14,-7050,-6690
+Pjonkerød R2,89538,C58995,Horten,t,Carrasco 2015,62,62,shore_typo,-7500,-6800
+Pjonkerød R3,89539,C58996,Horten,t,Carrasco 2015,62,65,shore_typo,-7500,-6800
+Hegna øst 3,145397,C59646,Bamble,t,Koxvold & Solheim 2017b,37,39,shore_typo,-5700,-5600
+Nauen A,231092,C53328,Tønsberg,t,Persson 2008,,,c14,-5000,-900
+Nauen B,236294,C53329,Tønsberg,t,Persson 2008,33,34,shore_typo,-4000,-4000
+Nauen C,231112,C53330,Tønsberg,t,Persson 2008,,,c14,-4000,-4000
+Nordby 52,112779,C53332,Larvik,t,Gjerpe & Bukkemoen 2008,,,c14,-5700,1300
+Nordby 1,112755,C55533-C55536,Larvik,t,Gjerpe & Bukkemoen 2008b,,,c14,-2550,1400
+Anvik,119055,C58917,Larvik,t,Eymundsson 2014,77,80,shore_typo,-8550,-8250
+Øysang,,C52079,Risør,t,Tørhaug 2000,,,,,
+Tverdal,41667,C57343,Arendal,t,Berge 2017,,,c14,,
+Frebergsvik,12346,,Horten,t,Mikkelsen 1975,,,shore_typo,,
+Hegna øst 4,147457,C59647,Bamble,t,Koxvold et al. 2016,34,36,shore_typo,-5300,-5100
+Nordby 3 (Bommestad-Sky),119398,C57994,Larvik,t,Mansrud 2013c,49,49,shore_typo,-6800,-6300
+Hydal 6,138155,C59659,Bamble,t,Koxvold 2017i,79,79,shore_typo,-8500,-8300
+Hydal 5,138159,C59658,Bamble,t,Koxvold 2016,76,77,shore_typo,-8500,-8200
+Sandtrahelleren,77378,"C38230, C39196",Larvik,t,Østmo 1993,,,typo,-4500,-1800
+Rognlien,11534,FC29637,Porsgrunn,t,Ingstad 1970,,,c14,,
+Løvås 1,40831,C62085,Horten,t,Reitan & Hårstad 2021,,,c14,-8250,-7600
+Løvås 2,40831,C62086,Horten,t,Reitan & Hårstad 2021,,,c14,-8250,-7700
+Løvås 3,40831,C62087,Horten,t,Reitan & Hårstad 2021,78,89,shore_typo,-8250,-7600
+Løvås 4,40831,C62088,Horten,t,Reitan & Hårstad 2021,77,81,shore_typo,-7600,-7300
+Olsmyren,229813,C62093,Horten,t,Hårstad 2021,70,70,shore_typo,-7300,-7050
+Viulsrød 1,"62027-2, 62027-4",C62095,Horten,t,Reitan & Hårstad 2021b,71,74,shore_typo,-7400,-7100
+Viulsrød 2,"62027-1, 62027-3",C62095,Horten,t,Reitan & Hårstad 2021b,67,69,shore_typo,-7100,-6900
+Råen 1,58622,C62091,Horten,t,Hårstad 2021b,65,65,shore_typo,-7000,-6800
+Adal vestre 1,229871-1,C62089,Horten,t,Granados 2021,63,70,shore_typo,-7100,-6700
+Adal vestre 2,229871-2,C62090,Horten,t,Granados 2021,66,69,shore_typo,-7300,-6600
+Alveberget 8,"219491, 1949",C61487,Arendal,t,Mansrud 2021,,,c14,-3300,-2200
+Alveberget 6,173492,C61488,Arendal,t,Stokke 2021,20,22,shore_typo,-5600,-4500
+Auve,49729,C38626,Sandefjord,t,Østmo 2008,,,c14,,
+Brink 1,3101-1,,Sandefjord,t,Trinterud 1997,63,63,shore_typo,-6500,-6500
+Brink 3 R1,3101-1,,Sandefjord,t,Triuterud 1997,55,55,c14,-6000,-825
+Brink 3 R2,3101-1,,Sandefjord,t,Triuterud 1997,55,55,shore_typo,-6000,-6000
+Melau,78208,,Larvik,t,Matsumoto 2004,100,100,shore_typo,-9500,-8200
+Austein 1,70921,,Larvik,t,Matsumoto 2004,105,110,shore_typo,-9500,-8200
+Sande Søndre J,134275,52712,Nøtterøy,t,Karlsen et al. 2001,25,25,shore_typo,-3300,-2300
+Tangen,97144,50180,Kragerø,f,Glørstad 2005,20,20,shore_typo,-3700,-3400
+Krøgenes D9,161276,,Arendal,t,Solberg 2017?,16,16,,,
+Krøgenes D8,161278,59695,Arendal,t,Viken 2017,39,39,shore_typo,-9250,-8300
+Krøgenes D6,161292,59693,Arendal,t,Viken 2017b,40,40,shore_typo,-9300,-8300
+Krøgenes D3,161295,59690,Arendal,t,Viken 2017d,38,42,shore_typo,-9300,-8250
+Sagene B5,161298,59678,Arendal,t,Viken 2017c,45,47,shore_typo,-8800,-8700
+Hesthag C3,170177,59684,Arendal,t,Reitan 2017,,,shore_typo,-8000,-8000
+Hesthag C6,170178,59687,Arendal,t,Reitan 2017,,,shore_typo,-8000,-1750
+Hesthag C5,170189,59686,Arendal,t,Viken 2017d,,,shore_typo,-2200,-1100
+Sagene B8,176195,59681,Arendal,t,,39,39,,,
+Sagene B7,176197,59680,Arendal,t,,50,50,,,
+Kvastad A7,172665,59671,Tvedestrand,t,Darmark 2015,54,54,shore_typo,-8700,-8300
+Kvastad A8,170971,59672,Tvedestrand,t,Darmark 2017,50,55,shore_typo,-8600,-8500
+Kvastad A3,172658,59667,Tvedestrand,t,Stokke & Bjørkli 2016,56,58,shore_typo,-8300,-8000

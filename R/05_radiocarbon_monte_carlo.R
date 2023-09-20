@@ -1,5 +1,4 @@
-# This script perform Monte Carlo simulation and model comparison using the
-# radiocarbon data.
+# This script performs Monte Carlo simulation using the radiocarbon data.
 
 library(dplyr)
 library(rcarbon)
@@ -16,13 +15,21 @@ source(here("R/03_functions.R"))
 c14 <- read.csv(here::here("analysis/data/raw_data/radiocarbon.csv"))
 c14 <- c14 %>% filter(context != "Food crust")
 
-names(c14) <- c("site", "context", "material", "lab_ref", "age", "sd")
-
 # Use the calibration procedure from rcarbon to identify min and max ages
-minage <- 4500
-maxage <- 10555
+caldates <- calibrate(x = c14$c14_bp, normalised = FALSE,
+                      errors = c14$error, calCurves = "intcal20")
+c14spd <- spd(caldates, timeRange = c(12000, 4500))
+
+max(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
+min(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
+
+minage <- min(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
+maxage <- max(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
+
 
 # Switch to ADMUR
+names(c14) <- c("site", "context", "material", "lab_ref", "age", "sd")
+
 CalArray <- makeCalArray(intcal20, calrange = c(minage, maxage))
 PD <- phaseCalibrator(c14, CalArray, remove.external = TRUE)
 
@@ -34,7 +41,8 @@ uniform <- objectiveFunction(NULL, PD, type = 'uniform')
 
 save(exp, log, uniform,
      file = here("analysis/data/derived_data/rcarbon_models.RData"))
-load(file = here("analysis/data/derived_data/rcarbon_models.RData"))
+save(exp, log, uniform, PD,
+     file = here("analysis/data/derived_data/rcarbon_models_pd.RData"))
 
 c14$datingType <- '14C'
 
@@ -47,10 +55,6 @@ logsum <- SPDsimulationTest(c14, calcurve = intcal20,
 unisum <- SPDsimulationTest(c14, calcurve = intcal20,
                             calrange = c(minage, maxage), pars = NULL,
                             type = 'uniform', N = 10000)
-
-save(expsum, logsum, unisum,
-     file = here("analysis/data/derived_data/admur_model_test.RData"))
-load(file = here("analysis/data/derived_data/admur_model_test.RData"))
 
 # Plot for inspection using ADMUR
 plotSimulationSummary(expsum)

@@ -40,7 +40,7 @@ endline <- st_cast(c(st_point(c(xx,yy)),  st_point(c(xx2,yy2))), "LINESTRING")
 # Find line between closest points on the two lines
 perpline <- st_nearest_points(startline, endline)
 # Find number of increments given the distance between the lines and a set
-# increment (5km)
+# increment (2km)
 ninc <- round(st_length(perpline)/increment)
 # Create ninc number of points at regular intervals along this line
 incpts <- st_line_sample(perpline, ninc) %>%
@@ -108,12 +108,15 @@ for(i in 1:nrow(incpolys)){
   incpolys[i,]$disp <- list(shoredate::interpolate_curve(target = inccents[i,],
                                                          cal_reso = 5))
 }
-save(incpolys,
-         file = here("analysis/data/derived_data/displacement_polygons.RData"))
 
+# Assign weight to the polygon features based on the distribution of sites
 incpolys$dens <- lengths(st_intersects(incpolys, sites)) /
   sum(lengths(st_intersects(incpolys, sites)))
 
+save(incpolys,
+     file = here("analysis/data/derived_data/displacement_polygons.RData"))
+
+# Retrieve displacement curves and weights for plotting
 displist <- list()
 for(i in 1:nrow(incpolys)){
   tmp_curve <- incpolys[i,]$disp[[1]][[1]]
@@ -124,7 +127,7 @@ for(i in 1:nrow(incpolys)){
 
 dispcurves <- do.call(rbind, displist)
 
-displt <- ggplot(dispcurves) +
+displt <- ggplot(as.data.frame(dispcurves)) +
   ggplot2::geom_ribbon(ggplot2::aes(x = bce,
                                     ymin = lowerelev,
                                     ymax = upperelev,

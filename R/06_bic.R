@@ -1,7 +1,9 @@
+# Compare model performances for the SPD of each dating method using BIC
+
 library(ggplot2)
 library(patchwork)
 
-# Load models fit to raadiocarbon SPD
+# Load models fit to radiocarbon SPD
 load(file = here::here("analysis/data/derived_data/rcarbon_models.RData"))
 
 # Find BIC values

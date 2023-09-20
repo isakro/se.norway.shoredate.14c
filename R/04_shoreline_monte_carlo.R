@@ -1,12 +1,14 @@
 # This script performs the Monte Carlo simulations for the shoreline dates
 
 library(ggplot2)
-library(shoredate)
 library(dplyr)
 library(sf)
 library(here)
 library(ADMUR)
 library(DEoptimR)
+
+# Due to how results are returned, shoredate has to be version  < 1.1.0
+library(shoredate)
 
 set.seed(1)
 
@@ -84,11 +86,14 @@ logip <- convertPars(pars = logi$par, years = minage2:maxage2, type = 'logistic'
 logip$model <- "Logistic"
 logip$year <- logip$year + 3900 # Transforming back to BP
 
+# Save models for BIC
+save(exp, unif, logi,
+     file = here("analysis/data/derived_data/shore_models.RData"))
 
-# Save
-# save(pd, expp, logip, unifp, maxage, minage,
-#      file = here("analysis/data/derived_data/shore_models_pd.RData"))
-load(here("analysis/data/derived_data/shore_models_pd.RData"))
+# Save pd array, models and min and max age
+save(pd, expp, logip, unifp, maxage, minage,
+     file = here("analysis/data/derived_data/shore_models_pd.RData"))
+# load(here("analysis/data/derived_data/shore_models_pd.RData"))
 
 # Combine models for plotting
 shoremodels <- rbind(expp, logip, unifp)

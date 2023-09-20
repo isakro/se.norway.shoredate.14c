@@ -2,7 +2,7 @@
 # the results.
 
 # Reverse a single calendar date to a corresponding elevation
-# Repurposed from Bchron::unCalibrate()
+# Repurposed from Bchron.
 reverse_shoredate <- function(shoreline_date,
                               displacement_curve,
                               elev_reso){

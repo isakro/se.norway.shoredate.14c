@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  9 SEP 2023 18:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  20 SEP 2023 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1140,87 +1140,688 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 <../figures/map2.png, id=39, 401.24907pt x 775.39688pt>
 File: ../figures/map2.png Graphic file (type png)
 <use ../figures/map2.png>
-Package pdftex.def Info: ../figures/map2.png  used on input line 191.
+Package pdftex.def Info: ../figures/map2.png  used on input line 193.
 (pdftex.def)             Requested size: 336.58772pt x 650.44157pt.
 
-LaTeX Warning: Float too large for page by 59.956pt on input line 196.
+LaTeX Warning: Float too large for page by 59.956pt on input line 198.
 
 [4] [5 <../figures/map2.png>] [6]
 <../figures/example_shoredate.png, id=67, 742.27313pt x 577.40718pt>
 File: ../figures/example_shoredate.png Graphic file (type png)
 <use ../figures/example_shoredate.png>
 Package pdftex.def Info: ../figures/example_shoredate.png  used on input line 2
-20.
+22.
 (pdftex.def)             Requested size: 501.88487pt x 390.41144pt.
 
-Overfull \hbox (32.12985pt too wide) in paragraph at lines 220--221
+Overfull \hbox (32.12985pt too wide) in paragraph at lines 222--223
  [][] 
  []
 
 <../figures/summed_examples.png, id=73, 807.015pt x 307.1475pt>
 File: ../figures/summed_examples.png Graphic file (type png)
 <use ../figures/summed_examples.png>
-Package pdftex.def Info: ../figures/summed_examples.png  used on input line 233
+Package pdftex.def Info: ../figures/summed_examples.png  used on input line 235
 .
 (pdftex.def)             Requested size: 501.88339pt x 191.0153pt.
 
-Overfull \hbox (32.12837pt too wide) in paragraph at lines 233--234
+Overfull \hbox (32.12837pt too wide) in paragraph at lines 235--236
  [][] 
  []
 
 <../figures/incpolys.png, id=75, 638.385pt x 385.44pt>
 File: ../figures/incpolys.png Graphic file (type png)
 <use ../figures/incpolys.png>
-Package pdftex.def Info: ../figures/incpolys.png  used on input line 244.
+Package pdftex.def Info: ../figures/incpolys.png  used on input line 246.
 (pdftex.def)             Requested size: 501.88338pt x 303.02393pt.
 
-Overfull \hbox (32.12836pt too wide) in paragraph at lines 244--245
+Overfull \hbox (32.12836pt too wide) in paragraph at lines 246--247
  [][] 
  []
 
 [7] [8 <../figures/example_shoredate.png (PNG copy)>] [9 <../figures/summed_exa
 mples.png> <../figures/incpolys.png>]
-<../figures/mc.png, id=93, 963.6pt x 602.25pt>
+<../figures/mc.png, id=92, 963.6pt x 602.25pt>
 File: ../figures/mc.png Graphic file (type png)
 <use ../figures/mc.png>
-Package pdftex.def Info: ../figures/mc.png  used on input line 263.
+Package pdftex.def Info: ../figures/mc.png  used on input line 265.
 (pdftex.def)             Requested size: 501.86887pt x 313.66803pt.
 
-Overfull \hbox (32.11385pt too wide) in paragraph at lines 263--264
+Overfull \hbox (32.11385pt too wide) in paragraph at lines 265--266
  [][] 
  []
 
-<../figures/bic.png, id=98, 481.8pt x 216.81pt>
+<../figures/bic.png, id=97, 481.8pt x 216.81pt>
 File: ../figures/bic.png Graphic file (type png)
 <use ../figures/bic.png>
-Package pdftex.def Info: ../figures/bic.png  used on input line 278.
+Package pdftex.def Info: ../figures/bic.png  used on input line 280.
 (pdftex.def)             Requested size: 481.82086pt x 216.81938pt.
 
-Overfull \hbox (12.06584pt too wide) in paragraph at lines 278--279
+Overfull \hbox (12.06584pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
 [10] [11 <../figures/mc.png> <../figures/bic.png>]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 296.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 298.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [12] [13] [14] [15] [16] [17] [18] [19] [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 633.
+) [12] [13] [14] [15]
+Underfull \hbox (badness 10000) in paragraph at lines 330--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 344--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--353
+
+ []
+
+
+Underfull \hbox (badness 4556) in paragraph at lines 357--357
+[]\T1/lmr/m/n/10 (+20) The For-ma-tion of Lithic As-sem-blages. \T1/lmr/m/it/10
+ (+20) Jour-nal of Ar-chae-o-log-i-cal Sci-ence \T1/lmr/m/n/10 (+20) 46:334--35
+2.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--368
+
+ []
+
+
+Underfull \hbox (badness 2359) in paragraph at lines 372--372
+[]\T1/lmr/m/n/10 (+20) Demographic de-vel-op-ments in Stone Age coastal west-er
+n Nor-way by proxy of ra-dio-car-
+ []
+
+
+Underfull \hbox (badness 1769) in paragraph at lines 372--372
+\T1/lmr/m/n/10 (+20) bon dates, stray finds and pa-ly-no-log-i-cal data. \T1/lm
+r/m/it/10 (+20) Qua-ter-nary Sci-ence Re-views \T1/lmr/m/n/10 (+20) 259:106898.
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--373
+
+ []
+
+
+Underfull \hbox (badness 1019) in paragraph at lines 377--377
+[]\T1/lmr/m/n/10 (+20) Holocene fluc-tu-a-tions in hu-man pop-u-la-tion demon-s
+trate re-peated links to food pro-duc-tion
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 377--377
+\T1/lmr/m/n/10 (+20) and cli-mate. \T1/lmr/m/it/10 (+20) Pro-ceed-ings of the N
+a-tional Academy of Sci-ences \T1/lmr/m/n/10 (+20) 114(49):E10524--E10531.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 374--378
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--383
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--388
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--393
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 394--397
+
+ []
+
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 398--401
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--406
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--416
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--421
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 422--426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 427--431
+
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 435--435
+[]\T1/lmr/m/n/10 (+20) Radiocarbon dat-ing un-cer-tainty and the re-li-a-bil-it
+y of the PEWMA method of time-series
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 432--436
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 442--446
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--451
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--456
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--461
+
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 465--465
+[]\T1/lmr/m/n/10 (+20) Inference from large sets of ra-dio-car-bon dates: Soft-
+ware and meth-ods. \T1/lmr/m/it/10 (+20) Ra-dio-car-bon\T1/lmr/m/n/10 (+20) .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--466
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 467--471
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 472--476
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--481
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--486
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--491
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 492--496
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 497--501
+
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 505--505
+[]\T1/lmr/m/n/10 (+20) Culture Pro-cess and the In-ter-pre-ta-tion of Ra-dio-ca
+r-bon Data. \T1/lmr/m/it/10 (+20) Ra-dio-car-bon \T1/lmr/m/n/10 (+20) 60(2):453
+--467.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--506
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 507--511
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 512--516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--520
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 521--525
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 526--529
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--534
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--539
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 540--544
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--569
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 590--594
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 595--599
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 600--604
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 605--609
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 610--613
+
+ []
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 614--618
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--623
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 624--628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--633
+
+ []
+
+
+Underfull \hbox (badness 2384) in paragraph at lines 637--637
+[]\T1/lmr/m/n/10 (+20) Holocene re-gional pop-u-la-tion dy-nam-ics and cli-mati
+c trends in the Near East: A first
+ []
+
+
+Underfull \hbox (badness 2671) in paragraph at lines 637--637
+\T1/lmr/m/n/10 (+20) com-par-i-son us-ing archaeo-demographic prox-ies. \T1/lmr
+/m/it/10 (+20) Qua-ter-nary Sci-ence Re-views \T1/lmr/m/n/10 (+20) 252:106739.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--638
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 639--643
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 644--647
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 648--651
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 652--656
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--661
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--666
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 667--671
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 672--676
+
+ []
+
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 677--681
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--686
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 687--690
+
+ []
+
+
+Underfull \hbox (badness 1655) in paragraph at lines 693--693
+[]\T1/lmr/m/n/10 (+20) A simulation-based as-sess-ment of the re-la-tion be-twe
+en Stone Age sites and rel-a-tive sea-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 691--694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--698
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--707
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--712
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 713--717
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 718--722
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 723--727
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 728--732
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 733--737
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 738--742
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 743--746
+
+ []
+
 [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 633.
+Underfull \hbox (badness 10000) in paragraph at lines 747--751
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 752--756
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 759--759
+[]\T1/lmr/m/n/10 (+20) in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--761
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 762--765
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 766--770
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 771--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 776--780
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--785
+
+ []
+
+
+Underfull \hbox (badness 1005) in paragraph at lines 789--789
+[]\T1/lmr/m/n/10 (+20) Why are pop-u-la-tion growth rate es-ti-mates of past an
+d present hunter--gatherers so dif-fer-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 786--790
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 791--795
+
+ []
+
+
+Underfull \hbox (badness 1377) in paragraph at lines 799--799
+[]\T1/lmr/m/n/10 (+20) Directly mod-elling pop-u-la-tion dy-nam-ics in the Sout
+h Amer-i-can Arid Di-ag-o-nal us-ing $[]$C
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 796--800
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 801--805
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 806--810
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 811--815
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 819--819
+[]\T1/lmr/m/n/10 (+20) Quantum the-ory of ra-dio-car-bon cal-i-bra-tion. \T1/lm
+r/m/it/10 (+20) World Ar-chae-ol-ogy \T1/lmr/m/n/10 (+20) 47(4):543--566.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 816--820
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 821--825
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
+[23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 633.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 633.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 828.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 828.
  ) 
 Here is how much of TeX's memory you used:
- 15382 strings out of 492982
- 219984 string characters out of 6134897
- 349231 words of memory out of 5000000
+ 15419 strings out of 492982
+ 220408 string characters out of 6134897
+ 343231 words of memory out of 5000000
  18374 multiletter control sequences out of 15000+600000
- 75251 words of font info for 128 fonts, out of 8000000 for 9000
+ 77502 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,38p,2371b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,11n,38p,2345b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/te
 xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
@@ -1230,10 +1831,10 @@ ts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb>
 public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm
 /lmss8.pfb>
-Output written on paper.pdf (21 pages, 1553884 bytes).
+Output written on paper.pdf (23 pages, 1940709 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 421 compressed objects within 5 object streams
- 153 named destinations out of 1000 (max. 500000)
+ 460 PDF objects out of 1000 (max. 8388607)
+ 411 compressed objects within 5 object streams
+ 156 named destinations out of 1000 (max. 500000)
  16503 words of extra memory for PDF output out of 17280 (max. 10000000)
 

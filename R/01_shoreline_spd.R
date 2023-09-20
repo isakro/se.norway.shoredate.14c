@@ -6,7 +6,7 @@ library(tidyverse)
 library(sf)
 library(terra)
 library(here)
-library(shoredate)
+library(shoredate) # Note that shoredate has to be v.1.0.2
 library(patchwork)
 
 # For reproducibility
@@ -55,7 +55,7 @@ sites <- rbind(rcolexcshore, rcolsurvq)
 ###### Shoreline dating ######
 step_reso = 0.1
 
-# Find weighted means dates for figure X in text
+# Find weighted means dates for Figure 3 in the main text
 wmean_dates <- shoreline_date(sites, elevation = dtm,
                               elev_reso = step_reso,
                               cal_reso = 5,
@@ -68,6 +68,7 @@ for(i in 1:length(wmean_dates)){
 }
 wmeans <- wmeans[wmeans  <= -2500]
 
+# Perform shoreline dating using the probabilistic method
 shorelinedates <- shoreline_date(sites,
                                  elevation = dtm,
                                  elev_reso = step_reso,
@@ -79,8 +80,6 @@ shorelinedates <- shoreline_date(sites,
 save(step_reso, wmeans, shorelinedates,
      file = here("analysis/data/derived_data/sdates.RData"))
 
-load(file = here("analysis/data/derived_data/sdates.RData"))
-
 # Sum the probability distributions for the shoreline dates
 sumdates <- sum_shoredates(shorelinedates)
 sumdatesdf <- as.data.frame(sumdates) %>%
@@ -89,7 +88,8 @@ sumdatesdf <- filter(sumdatesdf, sum.bce <= -2500)
 
 # Exclude sites that were given a NA date (elevation equates to a date older
 # than 9465 BCE or younger than 2500 BCE).
-                  # Younger start date than 2500 BCE
+
+                  # Later start date than 2500 BCE
 out_of_range <- c("159969", "94301-1", "144111-1", "144113-1", "144114-1",
                   "138457-1", "230584-0", "265781-0", "265784-0",
                   # Earlier start date than 9465 BCE
@@ -99,12 +99,23 @@ out_of_range <- c("159969", "94301-1", "144111-1", "144113-1", "144114-1",
 
 combined_sites <- filter(sites, !ask_id %in% out_of_range)
 
+st_write(combined_sites,
+         here("analysis/data/derived_data/combined_sites.gpkg"),
+         append = FALSE)
+
+# Exclude out of bounds sites from the two data sets for plotting
+surveyed <- filter(surveyed, !askeladden_id %in% out_of_range)
+excshore <- filter(excshore, !ask_id %in% out_of_range)
+
+save(sites, surveyed, excshore,
+     file = here("analysis/data/derived_data/prepared_sitedata.RData"))
+
+# Create plot of site elevations, mean TPQ dates and SPD of shoreline dates
+
 wplot <- ggplot() +
   geom_histogram(aes(x = wmeans, y = ..density..),
                  binwidth = 200,
                  col = "grey", fill = "grey") +
-  # geom_density(aes(x = wmeans),
-  #              col = "black") +
   scale_x_continuous(breaks = seq(-10000, 2500, 1000),
                      limits = c(-9500, -2500)) +
   labs(title = "Mean TPQ dates", x = "BCE", y = "Density") +
@@ -132,174 +143,3 @@ eplot <- ggplot() +
 
 
 eplot + wplot + splot + plot_annotation(tag_levels = 'A')
-
-st_write(sites,
-         here("analysis/data/derived_data/combined_sites.gpkg"),
-         append = FALSE)
-
-#### Create map of sites and plots providing examples of shoreline dating #####
-
-# Exclude out of bounds sites from the two data sets
-surveyed <- filter(surveyed, !askeladden_id %in% out_of_range)
-excshore <- filter(excshore, !ask_id %in% out_of_range)
-
-# Create label column for plotting
-surveyed <- surveyed %>%  dplyr::mutate(lab = ifelse(quality < 4, "t", "f"))
-excavated$lab <- "y"
-
-worldmap <- st_read(here("analysis/data/raw_data/naturalearth_countries.gpkg"))
-norway <- st_read(here("analysis/data/raw_data/naturalearth_norway.gpkg"))
-muncipalities <- st_read(here("analysis/data/raw_data/municipalities.gpkg"))
-
-sitbbox <- st_bbox(sites)
-sitbbox[1:2] <- sitbbox[1:2] - 1000000
-sitbbox[3:4] <- sitbbox[3:4] + 1000000
-boundingpoly <- st_as_sf(st_as_sfc(sitbbox))
-
-studyareabox <- st_bbox(sites)
-studyareabox[1] <- studyareabox[1] - 15000
-studyareabox[3] <- studyareabox[3] + 15000
-studyareabox[2] <- studyareabox[2] - 5000
-studyareabox[4] <- studyareabox[4] + 5000
-bboxpolyspoly <- st_as_sf(st_as_sfc(studyareabox))
-
-# Reproject the bounding box to match world map, and crop the world map
-# with the bounding box polygon.
-bound_reproj <- st_transform(boundingpoly, st_crs(worldmap))
-mapcountries <- worldmap %>%
-  dplyr::filter(st_intersects(., bound_reproj, sparse = FALSE))
-count_reproj <- st_transform(mapcountries, st_crs(sites))
-
-overview <-
-  ggplot() +
-  geom_sf(data = count_reproj, fill = "grey", colour = NA) +
-  geom_sf(data = bboxpolyspoly,
-          fill = NA, colour = "black", size = 1) +
-  coord_sf(xlim = c(sitbbox[1], sitbbox[3]), ylim = c(sitbbox[2], sitbbox[4]),
-           expand = FALSE) +
-  theme_bw() + theme(axis.title=element_blank(),
-                     axis.text.y = element_blank(),
-                     axis.text.x = element_blank(),
-                     rect = element_rect(),
-                     axis.ticks = element_blank(),
-                     panel.grid.major = element_blank())
-
-norw_reproj <- st_transform(norway, st_crs(surveyed))
-
-sa <- ggplot() +
-  geom_sf(data = norw_reproj, fill = "grey", colour = NA) +
-  geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
-          colour = "black", lwd = 0.25) +
-  geom_sf(data = st_centroid(surveyed), aes(fill = lab),
-          size = 1.5, shape = 21,
-          colour = "black", show.legend = "point") +
-  geom_sf(data = st_centroid(dplyr::filter(surveyed, quality < 4)),
-          aes(fill = lab),
-          size = 1.5, shape = 21,
-          colour = "black", show.legend = "point") +
-  geom_sf(data = st_centroid(excshore), aes(fill = "y"),
-          size = 1.5, shape = 21,
-          colour = "black", show.legend = "point") +
-  scale_fill_manual(labels = c(paste0("Surveyed sites,\nincluded (n = ",
-                                      nrow(dplyr::filter(surveyed,
-                                                         quality < 4)) ,")"),
-                               paste0("Surveyed sites,\nexcluded (n = ",
-                                      nrow(dplyr::filter(surveyed,
-                                                         quality > 3)) ,")"),
-                               paste0("Excavated, shoreline\ndated sites (n = ", nrow(excshore) ,
-                                      ")")),
-                    values = c("t" = "darkgoldenrod1",
-                               "f" = "black",
-                               "y" = "white"),
-                    name = "") +
-  coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
-           ylim = c(studyareabox[2], studyareabox[4]),
-           expand = FALSE) +
-  ggspatial::annotation_scale(
-    location = "br",
-    width_hint = 0.3,
-    style = "ticks") +
-  theme_bw() + theme(axis.title=element_blank(),
-                     axis.text.y = element_blank(),
-                     axis.text.x = element_blank(),
-                     rect = element_rect(),
-                     axis.ticks = element_blank(),
-                     panel.grid.major = element_blank(),
-                     legend.position = "bottom",
-                     legend.text=element_text(size = 11))
-
-c14_names <- tools::file_path_sans_ext(colnames(PD))
-
-c14_sites <- excavated %>%
-  filter(site_name %in% c14_names)
-
-pltc14 <- ggplot() +
-  geom_sf(data = norw_reproj, fill = "grey", colour = NA) +
-  geom_sf(data = st_transform(muncipalities, st_crs(sites)), fill = NA,
-          colour = "black", lwd = 0.25) +
-  geom_sf(data = st_centroid(c14_sites), aes(fill = lab),
-          size = 1.5, shape = 24,
-          colour = "black", show.legend = "point") +
-  scale_fill_manual(values = c("y" = "red"),
-    labels = c(paste0("Sites with radiocarbon dates (n = ",
-                                      nrow(c14_sites), ")")),
-                    name = "") +
-  coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
-           ylim = c(studyareabox[2], studyareabox[4]),
-           expand = FALSE) +
-  ggspatial::annotation_scale(
-    location = "br",
-    width_hint = 0.3,
-    style = "ticks") +
-  theme_bw() + theme(axis.title=element_blank(),
-                     axis.text.y = element_blank(),
-                     axis.text.x = element_blank(),
-                     rect = element_rect(),
-                     axis.ticks = element_blank(),
-                     panel.grid.major = element_blank(),
-                     legend.position = "bottom",
-                     legend.text=element_text(size = 11))
-
-plt1 <- cowplot::ggdraw() +
-  cowplot::draw_plot(sa) +
-  cowplot::draw_plot(overview, x = 0.179,
-                     y = 0.7, width = 0.3, height = 0.3)
-
-(plt1)/
-  pltc14 + plot_annotation(tag_levels = "A")
-
-cowplot::plot_grid(plt1, pltc14, ncol = 1)
-
-ggsave(filename = here("analysis/figures/map2.png"),
-       units = "px", width = 4500, height = 4500)
-
-# Example date plot"
-
-target_site <- sites[535,]
-target_curve <- interpolate_curve(target_site)
-tpq_date <- shoreline_date(target_site,
-                           elevation = target_site$elev,
-                           model = "none", hdr_prob = 1)
-shdate <-  shoreline_date(target_site,
-                          elevation = target_site$elev)
-
-tplt <- target_plot(target_site, basemap = norw_reproj) +
-  coord_sf(xlim = c(studyareabox[1], studyareabox[3]),
-           ylim = c(studyareabox[2], studyareabox[4]),
-           expand = FALSE)
-
-
-dplt <- displacement_plot(target_curve,
-                          displacement_alpha = 0.4)
-dplt <- dplt + theme(legend.position = "left", legend.direction = "vertical")
-shoredate_plot(tpq_date,
-               date_probability_scale = 6000,
-               greyscale = TRUE,
-               hdr_label_yadj = 0.5)
-tpqplt <- last_plot()
-
-shoredate_plot(shdate, greyscale = TRUE)
-splt <- last_plot()
-
-(tplt + dplt) /
-  (tpqplt + splt) + plot_annotation(tag_levels = "A")
