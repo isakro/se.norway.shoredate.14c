@@ -42,7 +42,7 @@ reverse_shoredate <- function(shoreline_date,
   }
 }
 
-# Repurposed from ADMUR
+# Return summary of a Monte Carlo simulation run. Repurposed from ADMUR
 simulation_summary <- function(spd, simulation_results,
                                cut_offs, mod, sample_size){
 
@@ -105,7 +105,8 @@ simulation_summary <- function(spd, simulation_results,
               n.phases.internal=n.phases.internal))
 }
 
-
+# Custom function for plotting results of a Monte Carlo simulation.
+# Based partially on rcarbon.
 plot_mc <- function(mc_summary, xppos, yppos, title = NULL) {
   booms <- mc_summary$timeseries$calBP[mc_summary$timeseries$index == 1]
   busts <- mc_summary$timeseries$calBP[mc_summary$timeseries$index == -1]

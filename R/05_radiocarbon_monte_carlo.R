@@ -1,4 +1,5 @@
-# This script performs Monte Carlo simulation using the radiocarbon data.
+# This script performs Monte Carlo simulation using the radiocarbon data and
+# plots results from both simulations with both shoreline and radiocarbon dates.
 
 library(dplyr)
 library(rcarbon)
@@ -67,9 +68,9 @@ logplotr <- plot_mc(logsum)
 uniplotr <- plot_mc(unisum)
 
 # Load MC plots for shoreline dates, stored externally
-load("../external_data/shorespd/expplts.rda")
-load("../external_data/shorespd/logplts.rda")
-load("../external_data/shorespd/uniplts.rda")
+load(here("analysis/data/derived_data/expplts.rda"))
+load(here("analysis/data/derived_data/logplts.rda"))
+load(here("analysis/data/derived_data/uniplts.rda"))
 
 (expplts + logplts + uniplts)/
 (expplotr + logplotr + uniplotr) +

@@ -6,9 +6,7 @@ library(sf)
 library(here)
 library(ADMUR)
 library(DEoptimR)
-
-# Due to how results are returned, shoredate has to be version  < 1.1.0
-library(shoredate)
+library(shoredate) # Note that shoredate has to be v.1.0.2
 
 set.seed(1)
 
@@ -160,6 +158,9 @@ random_dates$reverse_elevation <- mapply(reverse_shoredate,
                                          random_dates$displacement_curve,
                                          step_reso)
 
+# To rerun the code below the directory external_data/shorespd/exp/
+# has to be created one level above the location of this R project
+
 simdates <- vector("list", ssize)
 start_time <- Sys.time()
 for (i in 1:nrow(random_dates)){
@@ -216,13 +217,13 @@ mod <- approx(x = (expp$bce * -1) + 1950, y = expp$prob_dens,
 exp_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
 
-# ADMUR plot
-plotSimulationSummary(exp_summary)
-
 # Custom plot
 expplts <- plot_mc(exp_summary)
 
-save(expplts, file = "../external_data/shorespd/expplts.rda")
+# ADMUR plot as sanity check
+plotSimulationSummary(exp_summary)
+
+save(expplts, file = here("analysis/data/derived_data/expplts.rda"))
 
 ##### Monte Carlo simulation - Logistic #####
 
@@ -308,7 +309,7 @@ plotSimulationSummary(log_summary)
 # Custom plot
 logplts <- plot_mc(log_summary)
 
-save(logplts, file = "../external_data/shorespd/logplts.rda")
+save(logplts, file = here("analysis/data/derived_data/logplts.rda"))
 
 ##### Monte Carlo simulation - Uniform #####
 
@@ -402,4 +403,4 @@ plotSimulationSummary(uni_summary)
 # Custom plot
 uniplts <- plot_mc(uni_summary)
 
-save(uniplts, file = "../external_data/shorespd/uniplts.rda")
+save(uniplts, file = file = here("analysis/data/derived_data/uniplts.rda"))

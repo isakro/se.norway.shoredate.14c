@@ -1,4 +1,4 @@
-# This script creates 2.5km wide line segments that run perpendicular to the
+# This script creates 2km wide line segments that run perpendicular to the
 # shoreline gradient, interpolates a displacement curve to centre of these,
 # and finds the distribution of sites across them.
 

@@ -1,6 +1,6 @@
 # The first part of this script prepares data for shoreline dating and the
-# creates the SPD. The second part creates maps and plots exemplifying the
-# method for shoreline dating.
+# creates the SPD. The second part creates plots exemplifying different ways of
+# summing shoreline dates.
 
 library(tidyverse)
 library(sf)
