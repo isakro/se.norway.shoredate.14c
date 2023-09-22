@@ -121,10 +121,6 @@ sumdates <- sum_shoredates(shorelinedates)
 sumdatesdf <- as.data.frame(sumdates) %>%
   filter(sum.probability != 0)
 
-# Find density of sites across polygons
-incpolys$dens <- lengths(st_intersects(incpolys, sites)) /
-  sum(lengths(st_intersects(incpolys, sites)))
-
 # Sample size
 ssize = sumdates$dates_n
 
