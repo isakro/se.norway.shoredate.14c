@@ -14,7 +14,7 @@ centrepoints <- sf::st_read(
 # Retreieve the point on the Horten isobase
 horten <- centrepoints[1,]
 
-# Create a sequence of eleveation values from well above the marine limit for
+# Create a sequence of elevation values from well above the marine limit for
 # the curves and down to 20 masl
 elevations <- seq(190, 1, -1)
 
@@ -94,6 +94,6 @@ for(i in 1:length(tsdates)){
 tpqmean <- mean(c(prange, hrange, arange, trange), na.rm = TRUE)
 tpqsd <- sd(c(prange, hrange, arange, trange), na.rm = TRUE)
 
-# save results
+# Save results to be used in the main text
 save(tpqmean, tpqsd,
      file = here("analysis/data/derived_data/disp_tpq_ranges.RData"))

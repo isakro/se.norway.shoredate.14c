@@ -1,4 +1,9 @@
-# This script performs the Monte Carlo simulations for the shoreline dates
+# This script performs the Monte Carlo simulations for the shoreline dates.
+# Note that this is highly inefficient and takes several days, if not weeks to
+# execute. To assess the script it is possible to adjust the
+# nsim object below, which is set to 10000. Setting nsim <- 100 means that
+# each of the three runs should, depending on hardware, execute in an hour or
+# so.
 
 library(ggplot2)
 library(dplyr)
@@ -9,6 +14,21 @@ library(DEoptimR)
 library(shoredate) # Note that shoredate has to be v.1.0.2
 
 set.seed(1)
+
+# Due to memory and storage consideration, the results of the Monte Carlo
+# simulations are stored externally, in the same directory as that created for
+# 00_dtm_prep.R. The results after passing them through
+# simulation_summary(), defined in 03_functions.R, are provided with the
+# repository, and so it is possible to load in these in to inspect the final
+# results (indicated by commented out code for each of the three models below).
+
+# Uncomment code to create directories to hold simulation results, if these do
+# not already exist. Alternatively, respecify folder paths to a desired location
+# in the simulation loops below.
+# subfolders <- c("exp", "logi", "uni")
+# for(i in 1:length(subfolders)){.
+#   print(paste0(here("../external_data/data/shorespd/"), subfolders[i]))
+# }
 
 # Source functions
 source(here("R/03_functions.R"))
@@ -41,10 +61,6 @@ pd <- as.data.frame(sdates) %>%
   tidyr::pivot_wider(names_from = site, values_from = probability) %>%
   tibble::column_to_rownames("bp")
 pd <- sweep(pd, 2, colSums(pd),"/")
-
-# Create SPD using the ADMUR approach
-SPD <- as.data.frame(rowSums(pd))
-SPD <- SPD/( sum(SPD) *5 )
 
 # Find mininum and maximum ages (BP)
 minage <- min(as.numeric(row.names(pd)))
@@ -80,7 +96,9 @@ logi <- JDEoptim(lower = c(0, 0000), upper = c(1, 10000),
                  fn = objectiveFunction, PDarray = pd2, type = 'logistic',
                  NP = 40, trace = TRUE)
 
-logip <- convertPars(pars = logi$par, years = minage2:maxage2, type = 'logistic')
+logip <- convertPars(pars = logi$par,
+                     years = minage2:maxage2,
+                     type = 'logistic')
 logip$model <- "Logistic"
 logip$year <- logip$year + 3900 # Transforming back to BP
 
@@ -93,10 +111,14 @@ save(pd, expp, logip, unifp, maxage, minage,
      file = here("analysis/data/derived_data/shore_models_pd.RData"))
 # load(here("analysis/data/derived_data/shore_models_pd.RData"))
 
+# Create SPD using the ADMUR approach
+SPD <- as.data.frame(rowSums(pd))
+SPD <- SPD/( sum(SPD) *5 )
+
 # Combine models for plotting
 shoremodels <- rbind(expp, logip, unifp)
 
-# Call to plot
+# Call to plot for inspection
 ggplot() +
   geom_bar(aes(x = as.numeric(rownames(SPD)), SPD[,1]),
            stat = "identity", col = "grey") +
@@ -112,6 +134,10 @@ expp$year <- (expp$year - 1950) * -1
 logip$year <- (logip$year - 1950) * -1
 unifp$year <- (unifp$year - 1950) * -1
 
+names(expp) <- c("bce", "prob_dens", "model")
+names(logip) <- c("bce", "prob_dens", "model")
+names(unifp) <-  c("bce", "prob_dens", "model")
+
 #### Set up Monte Carlo simulation ####
 
 # Sum the probability distributions for the shoreline dates
@@ -121,13 +147,11 @@ sumdates <- sum_shoredates(shorelinedates)
 sumdatesdf <- as.data.frame(sumdates) %>%
   filter(sum.probability != 0)
 
-# Sample size
+# Find sample size
 ssize = sumdates$dates_n
 
-# Number of simulations
+# Set number of simulations
 nsim <- 10000
-
-names(expp) <- c("bce", "prob_dens", "model")
 
 # Restrict SSPD and normalise probability
 sumdatesdf <- filter(sumdatesdf, sum.bce <= max(expp$bce))
@@ -140,6 +164,8 @@ sumdatesdf$probability <- sumdatesdf$sum.probability /
 random_dates <- data.frame(matrix(nrow = ssize*nsim, ncol = 3))
 names(random_dates) <- c("sample", "simn", "displacement_curve")
 
+# Draw random samples from the model and assign displacement curve
+# based on the distribution of sites.
 random_dates$sample = sample(expp$bce, replace = TRUE,
                              size = ssize*nsim, prob = expp$prob_dens)
 random_dates$simn <- rep(1:nsim, each = nrow(random_dates)/nsim)
@@ -148,7 +174,7 @@ random_dates$displacement_curve <- incpolys[sample(incpolys$id,
                                               size = ssize*nsim,
                                               prob = incpolys$dens),]$disp[[1]]
 
-# Reverse shoreline date using reverse_shoredate from 03_functions.R
+# Reverse sampled date using reverse_shoredate from 03_functions.R
 random_dates$reverse_elevation <- mapply(reverse_shoredate,
                                          random_dates$sample,
                                          random_dates$displacement_curve,
@@ -156,6 +182,7 @@ random_dates$reverse_elevation <- mapply(reverse_shoredate,
 
 # To rerun the code below the directory external_data/shorespd/exp/
 # has to be created one level above the location of this R project
+# (see start of the script)
 
 simdates <- vector("list", ssize)
 start_time <- Sys.time()
@@ -213,17 +240,21 @@ mod <- approx(x = (expp$bce * -1) + 1950, y = expp$prob_dens,
 exp_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
 
-# Custom plot
-expplts <- plot_mc(exp_summary)
+save(exp_summary,
+     file = here("analysis/data/derived_data/exp_mc_shoredate_summary.rda"))
+# load(here("analysis/data/derived_data/exp_mc_shoredate_summary.rda"))
 
 # ADMUR plot as sanity check
 plotSimulationSummary(exp_summary)
 
+# Custom plot
+expplts <- plot_mc(exp_summary)
+
+# Save plot to be assembled with radiocarbon results in
+# 05_radiocarbon_monte_carlo.R
 save(expplts, file = here("analysis/data/derived_data/expplts.rda"))
 
 ##### Monte Carlo simulation - Logistic #####
-
-names(logip) <- c("bce", "prob_dens", "model")
 
 # Data frame for simulated dates
 random_dates <- data.frame(matrix(nrow = ssize*nsim, ncol = 3))
@@ -299,17 +330,21 @@ mod <- approx(x = (logip$bce * -1) + 1950, y = logip$prob_dens,
 log_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
 
-# ADMUR plot
+save(log_summary,
+     file = here("analysis/data/derived_data/log_mc_shoredate_summary.rda"))
+# load(here("analysis/data/derived_data/log_mc_shoredate_summary.rda"))
+
+# ADMUR plot for inspection
 plotSimulationSummary(log_summary)
 
 # Custom plot
 logplts <- plot_mc(log_summary)
 
+# Save plot to be assembled with radiocarbon results in
+# 05_radiocarbon_monte_carlo.R
 save(logplts, file = here("analysis/data/derived_data/logplts.rda"))
 
 ##### Monte Carlo simulation - Uniform #####
-
-names(unifp) <-  c("bce", "prob_dens", "model")
 
 # Inspect SPD and fitted model
 ggplot() +
@@ -393,10 +428,16 @@ mod <- approx(x = unifp$bce, y = unifp$prob_dens,
 uni_summary <- simulation_summary(SPD, simulation_results,
                                   c(-2500, -9445), mod, ncol(pd))
 
-# ADMUR plot
+save(uni_summary,
+     file = here("analysis/data/derived_data/uni_mc_shoredate_summary.rda"))
+# load(here("analysis/data/derived_data/uni_mc_shoredate_summary.rda"))
+
+# ADMUR plot for inspection
 plotSimulationSummary(uni_summary)
 
 # Custom plot
 uniplts <- plot_mc(uni_summary)
 
-save(uniplts, file = file = here("analysis/data/derived_data/uniplts.rda"))
+# Save plot to be assembled with radiocarbon results in
+# 05_radiocarbon_monte_carlo.R
+save(uniplts, file = here("analysis/data/derived_data/uniplts.rda"))

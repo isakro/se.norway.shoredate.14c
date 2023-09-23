@@ -67,7 +67,7 @@ expplotr <- plot_mc(expsum)
 logplotr <- plot_mc(logsum)
 uniplotr <- plot_mc(unisum)
 
-# Load MC plots for shoreline dates, stored externally
+# Load MC plots for shoreline dates
 load(here("analysis/data/derived_data/expplts.rda"))
 load(here("analysis/data/derived_data/logplts.rda"))
 load(here("analysis/data/derived_data/uniplts.rda"))

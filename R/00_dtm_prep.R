@@ -9,20 +9,22 @@ library(supportR)
 # from the Norwegian Mapping Authority (https://hoydedata.no/LaserInnsyn2/),
 # making sure the downloaded raster covers the sites provided in
 # surveyed_sites.gpkg and excavated_sites.gpkg in the raw_data directory
-# of this repository.
+# of this repository. Finally, as this is only used in 01_shoreline_spd.R
+# and the results of this is as saved files with the repository, it is also
+# possible to skip this step if downloading the DTM is undesirable.
 
 # The DTM tiles and file are stored in a local directory external from the R
-# project. This has to be created, but can also be changed to another
+# project. This directory has to be created, but can also be changed to another
 # directory of choice. However, this will require editing of the file path to
 # the dtm specified in 01_shoreline_spd.R
 
-# Uncomment to create external directory if does not already exist
+# Uncomment to create external directory if this does not already exist
 # dir.create(here("../external_data/data/"))
 
-# Define destination of DTM
-destdir <- here("../external_data/data/")
+# Define external destination of DTM
+destdir <- here("../external_data/dtm/")
 
-# List files in the GitHub repository folder
+# List files in the GitHub repository folder to be downloaded
 dtm_tiles <- github_ls("https://github.com/isakro/assessing.sealevel.dating",
                        folder = "analysis/data/raw_data/tiled_dtm")
 

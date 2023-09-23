@@ -1,6 +1,6 @@
-# The first part of this script prepares data for shoreline dating and the
+# The first part of this script prepares data for shoreline dating and then
 # creates the SPD. The second part creates plots exemplifying different ways of
-# summing shoreline dates.
+# summing shoreline dates. Note that
 
 library(tidyverse)
 library(sf)
@@ -15,7 +15,7 @@ set.seed(1)
 # Load data
 surveyed <- st_read(here("analysis/data/raw_data/surveyed_sites.gpkg"))
 excavated <- st_zm(read_sf(here("analysis/data/raw_data/excavated_sites.gpkg")))
-dtm <- rast("/home/isak/phd/eaa_presentation/dtm10/dtm10.tif")
+dtm <- rast(here("../external_data/dtm/dtm10.tif")) # see 00_dtm_prep.R
 site_dat <- read.csv(here("analysis/data/raw_data/sites.csv"))
 
 ###### Prepare site data for shoreline dating ######
