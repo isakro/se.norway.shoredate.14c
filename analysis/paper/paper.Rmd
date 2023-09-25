@@ -237,6 +237,9 @@ Some further lines of inquiry could be to draw on lithic technology and tool-kit
 
 Seeing as the implemented method for shoreline dating was recently developed and has been subjected to limited evaluation and testing, there are still considerable uncertainties and limitations associated with its application. While we believe the approach represents an improvement over previous implementations, the results should therefore be considered a cautions first exploration of the implications of employing a probabilistic method for shoreline dating when evaluating large scale trends in the temporal frequency distribution of coastal sites in the region.
 
+# Declaration of competing interest{-}
+The authors have no competing interests to declare.
+
 \newpage
 
 # References 
