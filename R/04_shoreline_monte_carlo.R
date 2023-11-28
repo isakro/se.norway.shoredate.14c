@@ -148,7 +148,7 @@ sumdatesdf <- as.data.frame(sumdates) %>%
   filter(sum.probability != 0)
 
 # Find sample size
-ssize = sumdates$dates_n
+ssize <- sumdates$dates_n
 
 # Set number of simulations
 nsim <- 10000
@@ -237,7 +237,7 @@ mod <- approx(x = (expp$bce * -1) + 1950, y = expp$prob_dens,
               ties = 'ordered', rule = 2)$y
 
 # Model summary (can also be plotted with ADMUR)
-exp_summary <- simulation_summary(SPD, simulation_results,
+exp_summary <- simulation_summary(SPD, simresults,
                                   c(-2500, -9445), mod, ncol(pd))
 
 save(exp_summary,
@@ -327,7 +327,7 @@ mod <- approx(x = (logip$bce * -1) + 1950, y = logip$prob_dens,
               ties = 'ordered', rule = 2)$y
 
 # Summary results
-log_summary <- simulation_summary(SPD, simulation_results,
+log_summary <- simulation_summary(SPD, simresults,
                                   c(-2500, -9445), mod, ncol(pd))
 
 save(log_summary,
@@ -425,7 +425,7 @@ mod <- approx(x = unifp$bce, y = unifp$prob_dens,
               ties = 'ordered', rule = 2)$y
 
 # Model summary (can also be plotted with ADMUR)
-uni_summary <- simulation_summary(SPD, simulation_results,
+uni_summary <- simulation_summary(SPD, simresults,
                                   c(-2500, -9445), mod, ncol(pd))
 
 save(uni_summary,

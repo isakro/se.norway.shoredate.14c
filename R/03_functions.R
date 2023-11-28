@@ -50,7 +50,7 @@ simulation_summary <- function(spd, simulation_results,
   SPD.obs <- spd[,1]
 
   # Format simulation results for ADMUR
-  SPD.sims <- simresults %>%
+  SPD.sims <- simulation_results %>%
     dplyr::filter(bce <= cut_offs[1] & bce >= cut_offs[2]) %>%
     dplyr::mutate(bp = (bce * -1) + 1950) %>%
     arrange(bp) %>%

@@ -24,7 +24,7 @@ This repository contains the data and code for our paper:
 
 Our pre-print is online here:
 
-> Roalkvam, Isak <a href="https://orcid.org/0000-0001-6974-1374"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> and Solheim, Steinar <a href="https://orcid.org/0000-0001-8293-8147"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> (2023). _`r Title`_. Online at <https://doi.org/xxx/xxx>
+> Roalkvam, Isak <a href="https://orcid.org/0000-0001-6974-1374"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> and Solheim, Steinar <a href="https://orcid.org/0000-0001-8293-8147"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> (2023). _`r Title`_. Online at <https://doi.org/10.31235/osf.io/2f8ph>
 
 
 ### How to cite
@@ -35,7 +35,7 @@ Please cite this compendium as:
 
 ## Contents
 
-The **R** directory contains scripts for performing the analyses and create the
+The **R** directory contains scripts for performing the analyses and creating the
 figures used in the paper.
 
 The **analysis** directory contains:

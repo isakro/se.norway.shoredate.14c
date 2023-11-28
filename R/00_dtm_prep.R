@@ -10,8 +10,8 @@ library(supportR)
 # making sure the downloaded raster covers the sites provided in
 # surveyed_sites.gpkg and excavated_sites.gpkg in the raw_data directory
 # of this repository. Finally, as this is only used in 01_shoreline_spd.R
-# and the results of this is as saved files with the repository, it is also
-# possible to skip this step if downloading the DTM is undesirable.
+# and the results of this provided as saved files with the repository, it is
+# also possible to skip this step if downloading the DTM is undesirable.
 
 # The DTM tiles and file are stored in a local directory external from the R
 # project. This directory has to be created, but can also be changed to another
@@ -21,7 +21,7 @@ library(supportR)
 # Uncomment to create external directory if this does not already exist
 # dir.create(here("../external_data/data/"))
 
-# Define external destination of DTM
+# Define external destination for DTM
 destdir <- here("../external_data/dtm/")
 
 # List files in the GitHub repository folder to be downloaded

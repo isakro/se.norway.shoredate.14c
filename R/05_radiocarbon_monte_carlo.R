@@ -21,9 +21,6 @@ caldates <- calibrate(x = c14$c14_bp, normalised = FALSE,
                       errors = c14$error, calCurves = "intcal20")
 c14spd <- spd(caldates, timeRange = c(12000, 4500))
 
-max(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
-min(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
-
 minage <- min(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
 maxage <- max(c14spd$grid[c14spd$grid$PrDens > 0,]$calBP)
 
