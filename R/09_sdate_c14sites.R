@@ -56,7 +56,7 @@ pd <- as.data.frame(sdates) %>%
   dplyr::group_by(site) %>%
   tidyr::pivot_wider(names_from = site, values_from = probability) %>%
   tibble::column_to_rownames("bp")
-pd <- sweep(pd, 2, colSums(pd),"/")
+# pd <- sweep(pd, 2, colSums(pd),"/")
 
 SPD <- as.data.frame(rowSums(pd))
 SPD <- SPD/( sum(SPD) *5 )
@@ -69,7 +69,7 @@ c14_shoresumdf <- as.data.frame(c14_shoresum[[1]]) %>%
 c14_shoresumdf <- filter(c14_shoresumdf, bce <= -2550 & bce >= -9445)
 # Normalise after cut-off
 c14_shoresumdf$probability <- c14_shoresumdf$probability /
-                              sum(c14_shoresumdf$probability)
+                              (sum(c14_shoresumdf$probability)* 5)
 
 # Retrieve logistic model used for RSPD
 log_c14 <- convertPars(pars = log$par,
