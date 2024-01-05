@@ -28,7 +28,7 @@ output:
 header-includes:
   \usepackage{placeins}
   \usepackage[left]{lineno}
-  \linenumbers
+  # \linenumbers
 # always_allow_html: true
 bibliography: references.bib
 csl: "../templates/saa.csl" # Insert path for the bib-style
@@ -241,14 +241,25 @@ Some further lines of inquiry could be to draw on lithic technology and tool-kit
 
 Seeing as the implemented method for shoreline dating was recently developed and has been subjected to limited evaluation and testing, there are still considerable uncertainties and limitations associated with its application. While we believe the approach represents an improvement over previous implementations, the results should therefore be considered a cautions first exploration of the implications of employing a probabilistic method for shoreline dating when evaluating large scale trends in the temporal frequency distribution of coastal sites in the region.
 
-# Declaration of competing interest{-}
-The authors have no competing interests to declare.
+# Acknowledgement{-}
+We would like to thank David Wright for commenting on an earlier draft of this paper. We would also like to thank the reviewers for their constructive feedback and PCI archaeology for facilitating their evaluation of our manuscript.
+
+# Funding{-}
+This research received no external funding.
+
+# Conflict of interest disclosure{-}
+The authors declare that they comply with the PCI rule of having no financial conflicts of interest in relation to the content of the article.
+
+# Data, scripts, code, and supplementary information availability{-}
+All data, code, text and figures used for this paper is freely available in a version-controlled repository on GitHub at https://github.com/isakro/se.norway.shoredate.14c. This has been archived on Zenodo at https://doi.org/10.5281/zenodo.10449324.
 
 \newpage
 
 # References 
 
 <div id="refs"></div>
+
+# Supplementary material{-}
 
 ```{r taph, echo = FALSE, fig.cap = "The result of accounting for taphonomic loss in the analysis of the radiocarbon data. A) Comparison of MLE parameters for the logistic population dynamics models when both accounting for and disregarding taphonomy using the ADMUR approach. These are superimposed on the RSPD. As indicated by their perfect overlap, accounting for taphonomy does not impact the MLE parameters. B) The taphonomic component of the logistic model estimated when accounting for taphonomy.", out.width = "500px", fig.align="center", regfloat = TRUE}
 knitr::include_graphics(here("analysis/figures/taphonomic.png"))
