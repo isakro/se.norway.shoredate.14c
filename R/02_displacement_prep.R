@@ -133,7 +133,7 @@ displt <- ggplot(as.data.frame(dispcurves)) +
                                     ymax = upperelev,
                                     group = id,
                                     alpha = dens)) +
-  labs(title = "B", x = "BCE/CE", y = "Meters above present sea-level") +
+  labs(title = "b", x = "BCE/CE", y = "Meters above present sea-level") +
   scale_x_continuous(expand = c(0,0), limits = c(-9469, 2000)) +
   theme_bw() +
   theme(legend.position = "none")
@@ -155,7 +155,7 @@ mplt <- ggplot() +
   #                border.size = 0.1, st.dist = 0.03,
   #                anchor = c(x = anc[2] - 15500, y = anc[1]) + 8000) +
   scale_fill_gradient(low = "white", high = "black", name = "Site density") +
-  ggtitle("A") +
+  ggtitle("a") +
   coord_sf(xlim = c(bboxpolys[1], bboxpolys[3]),
            ylim = c(bboxpolys[2], bboxpolys[4]),
            expand = FALSE) +
@@ -170,4 +170,4 @@ mplt <- ggplot() +
 mplt + displt
 
 ggsave(here::here("analysis/figures/incpolys.png"),
-       units = "px", width = 2650, height = 1600)
+       units = "px", width = 3975, height = 2400, dpi = 400)

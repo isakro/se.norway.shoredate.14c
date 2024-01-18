@@ -142,4 +142,6 @@ eplot <- ggplot() +
   theme_bw()
 
 
-eplot + wplot + splot + plot_annotation(tag_levels = 'A')
+eplot + wplot + splot + plot_annotation(tag_levels = 'a')
+ggsave(here::here("analysis/figures/summed_examples.png"),
+       units = "px", width = 4800, height = 1800, dpi = 400)

@@ -41,4 +41,4 @@ bicplt_shore + bicplt_rcarbon
 
 # Save plot
 ggsave(filename = here::here("analysis/figures/bic.png"),
-       units = "px", width = 2000, height = 900)
+       units = "px", width = 3000, height = 1350, dpi = 400)

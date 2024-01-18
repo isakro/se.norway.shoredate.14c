@@ -76,10 +76,10 @@ load(here("analysis/data/derived_data/uniplts.rda"))
 
 (expplts + logplts + uniplts)/
 (expplotr + logplotr + uniplotr) +
-  plot_annotation(tag_levels = "A")
+  plot_annotation(tag_levels = "a")
 
 ggsave(here::here("analysis/figures/mc.png"),
-       units = "px", width = 4000, height = 1250*2)
+       units = "px", width = 6000, height = 3750, dpi = 400)
 
 
 #### Logistic model with taphonomic loss ####
@@ -90,7 +90,7 @@ logtaph <- JDEoptim(lower = c(0, 0000, 0, -3), upper = c(1, 10000, 20000,0),
                     fn = objectiveFunction, PDarray = PD, type = 'logistic',
                     NP = 40, taphonomy = TRUE)
 
-# Retrieve the logistic model fit without accoutning for taphonomy
+# Retrieve the logistic model fit without accounting for taphonomy
 pop_log <- convertPars(pars=log$par,
                        years=minage:maxage,
                        type='logistic')
@@ -144,7 +144,7 @@ taphplt <- ggplot() +
   theme_bw()
 
 popplt + taphplt +
-  plot_annotation(tag_levels = 'A')
+  plot_annotation(tag_levels = 'a')
 
 ggsave(here::here("analysis/figures/taphonomic.png"),
-       units = "px", width = 3000, height = 1500)
+       units = "px", width = 4500, height = 2250, dpi = 400)

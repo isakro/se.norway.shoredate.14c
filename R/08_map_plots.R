@@ -95,7 +95,8 @@ sa <- ggplot() +
                      axis.ticks = element_blank(),
                      panel.grid.major = element_blank(),
                      legend.position = "bottom",
-                     legend.text=element_text(size = 11))
+                     legend.text=element_text(size = 11),
+                     legend.spacing.x = unit(5, "mm"))
 
 # Retrieve site names for plotting of radiocarbon data
 c14_names <- tools::file_path_sans_ext(colnames(PD))
@@ -136,7 +137,7 @@ plt1 <- cowplot::ggdraw() +
                      y = 0.7, width = 0.3, height = 0.3)
 
 (plt1)/
-  pltc14 + plot_annotation(tag_levels = "A")
+  pltc14 + plot_annotation(tag_levels = "a")
 
 # Example date plot
 
@@ -167,4 +168,7 @@ shoredate_plot(shdate, greyscale = TRUE)
 splt <- last_plot()
 
 (tplt + dplt) /
-  (tpqplt + splt) + plot_annotation(tag_levels = "A")
+  (tpqplt + splt) + plot_annotation(tag_levels = "a")
+
+ggsave(here("analysis/figures/example_shoredate.png"),
+       width = 4200, height = 3400, dpi = 400, units = "px")
