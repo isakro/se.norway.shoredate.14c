@@ -1,46 +1,46 @@
 site_name,context,material,lab_ref,c14_bp,error
 Åby,,Charcoal,Beta-251693,3130,40
-Adal vestre 1,Possible post hole (ID 4050),Spruce (Picea),LuS-15264,665,35
-Adal vestre 1,Possible post hole (ID 4050),Pine (Pinus),LuS-15265,770,35
-Adal vestre 1,Fireplace (ID 6032),Pine (Pinus),LuS-15266,1885,35
-Adal vestre 1,Cooking pit/fireplace (ID 11556),"Hazel (Corylus), nutshell",LuS-15267,2250,35
-Adal vestre 1,Cooking pit (ID 11508),Pine (Pinus),LuS-15268,2445,35
-Adal vestre 1,Cooking pit (ID 11508),Birch (Betula),LuS-15269,1020,35
-Adal vestre 1,Cooking pit/fireplace (ID 11521),"Hazel (Corylus), nutshell",LuS-15270,7950,45
-Adal vestre 1,"Quadrant (574x401ySW, layer 2/3)","Hazel (Corylus), nutshell",LuS-15271,8020,45
-Adal vestre 1,Cooking pit/fireplace (ID 11485),Confier (Coniferae indet.),LuS-16260,3255,35
-Adal vestre 2,Cooking pit/fireplace (ID 10036),"Hazel (Corylus), nutshell",LuS-15272,8140,45
-Adal vestre 2,Cooking pit/fireplace (ID 10051),"Hazel (Corylus), nutshell",LuS-15273,8000,45
+Adal vestre 1,Possible post hole (ID 4050),Charcoal (Picea),LuS-15264,665,35
+Adal vestre 1,Possible post hole (ID 4050),Charcoal (Pinus),LuS-15265,770,35
+Adal vestre 1,Fireplace (ID 6032),Charcoal (Pinus),LuS-15266,1885,35
+Adal vestre 1,Cooking pit/fireplace (ID 11556),Nutshell (Corylus),LuS-15267,2250,35
+Adal vestre 1,Cooking pit (ID 11508),Charcoal (Pinus),LuS-15268,2445,35
+Adal vestre 1,Cooking pit (ID 11508),Charcoal (Betula),LuS-15269,1020,35
+Adal vestre 1,Cooking pit/fireplace (ID 11521),Nutshell (Corylus),LuS-15270,7950,45
+Adal vestre 1,"Quadrant (574x401ySW, layer 2/3)",Nutshell (Corylus),LuS-15271,8020,45
+Adal vestre 1,Cooking pit/fireplace (ID 11485),Charcoal (Coniferae indet.),LuS-16260,3255,35
+Adal vestre 2,Cooking pit/fireplace (ID 10036),Nutshell (Corylus),LuS-15272,8140,45
+Adal vestre 2,Cooking pit/fireplace (ID 10051),Nutshell (Corylus),LuS-15273,8000,45
 Adal vestre 2,Layer,Charcoal (Salix),LuS-15274,7850,45
 Adalstjern,Lake,Peat (NA),T-8853,164,72
-Alveberget 8,Fireplace (ID 1332),Linden (Tilia),LuS-14200,2950,40
-Alveberget 8,Profile bench (ID 1770),Hardwood,LuS-14201,3480,40
-Alveberget 8,Profile bench (ID 1770),Alder/birch (Alnus/Betula),LuS-14202,1215,40
-Alveberget 8,Profile bench (ID 1770),Hazel (Corylus),LuS-14203,1690,40
-Alveberget 8,Profile bench (ID 1306),Alder (Alnus),LuS-14204,4070,40
-Alveberget 8,Fireplace (ID 1752),Alder (Alnus),LuS-14205,3975,40
-Alveberget 8,Profile bench (ID 1306),Hazel (Corylus),LuS-14206,1670,40
-Alveberget 8,Profile bench (ID 1306),Hazel (Corylus),LuS-14207,1190,35
-Alveberget 8,Profile bench (ID 1306),Alder/hazel (Alnus/Corylus),LuS-14208,3095,40
-Alveberget 8,Profile bench (ID 1600),Hazel (Corylus),LuS-14209,1750,40
-Alveberget 8,Profile bench (ID 1600),Alder (Alnus),LuS-14210,3280,40
-Alveberget 8,Profile bench (ID 1600),Willow/aspen (Salix/Populus),LuS-14211,3500,40
-Alveberget 8,Profile bench (ID 1600),Pome fruit tree (Pomoideae),LuS-14212,4360,40
-Alveberget 8,Profile bench (ID 1600),Alder (Alnus),LuS-14213,4165,40
-Alveberget 8,Profile bench (ID 1600),Pine (Pinus),LuS-14214,4155,40
-Alveberget 8,Profile bench (ID 1750),Hazel (Corylus),LuS-14215,1690,40
-Alveberget 8,Profile bench (ID 1750),Alder (Alnus),LuS-14216,4145,40
-Alveberget 8,Profile bench (ID 1537),Alder (Alnus),LuS-14217,4095,40
-Alveberget 8,Profile bench (ID 2504),Hazel (Corylus),LuS-14218,1175,35
-Alveberget 8,Profile bench (ID 2502),Oak (Quercus),LuS-14219,4090,40
-Alveberget 8,"Square (253x351y, layer 8)",Alder/birch (Alnus/Betula),LuS-14220,4130,40
-Alveberget 8,"Square (253x347y, layer 8)",Linden (Tilia),LuS-14221,3605,40
+Alveberget 8,Fireplace (ID 1332),Charcoal (Tilia),LuS-14200,2950,40
+Alveberget 8,Profile bench (ID 1770),Charcoal (hardwood),LuS-14201,3480,40
+Alveberget 8,Profile bench (ID 1770),Charcoal (Alnus/Betula),LuS-14202,1215,40
+Alveberget 8,Profile bench (ID 1770),Charcoal (Corylus),LuS-14203,1690,40
+Alveberget 8,Profile bench (ID 1306),Charcoal (Alnus),LuS-14204,4070,40
+Alveberget 8,Fireplace (ID 1752),Charcoal (Alnus),LuS-14205,3975,40
+Alveberget 8,Profile bench (ID 1306),Charcoal (Corylus),LuS-14206,1670,40
+Alveberget 8,Profile bench (ID 1306),Charcoal (Corylus),LuS-14207,1190,35
+Alveberget 8,Profile bench (ID 1306),Charcoal (Alnus/Corylus),LuS-14208,3095,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Corylus),LuS-14209,1750,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Alnus),LuS-14210,3280,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Salix/Populus),LuS-14211,3500,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Pomoideae),LuS-14212,4360,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Alnus),LuS-14213,4165,40
+Alveberget 8,Profile bench (ID 1600),Charcoal (Pinus),LuS-14214,4155,40
+Alveberget 8,Profile bench (ID 1750),Charcoal (Corylus),LuS-14215,1690,40
+Alveberget 8,Profile bench (ID 1750),Charcoal (Alnus),LuS-14216,4145,40
+Alveberget 8,Profile bench (ID 1537),Charcoal (Alnus),LuS-14217,4095,40
+Alveberget 8,Profile bench (ID 2504),Charcoal (Corylus),LuS-14218,1175,35
+Alveberget 8,Profile bench (ID 2502),Charcoal (Quercus),LuS-14219,4090,40
+Alveberget 8,"Square (253x351y, layer 8)",Charcoal (Alnus/Betula),LuS-14220,4130,40
+Alveberget 8,"Square (253x347y, layer 8)",Charcoal (Tilia),LuS-14221,3605,40
 Alveberget 8,Cultural layer,Cereal (Triticum dicoccum/spelta),LuS-15168,3290,45
-Amundsrød,Cooking pit,"Charcoal (Salix, vier/)",T-15483,2466,99
-Anvik,Fireplace (ID 10520),"Hazel (Corylus), nutshell",Ua-46950,7818,49
-Anvik,Fireplace (ID 10520),Willow (Salix),Ua-46951,7875,52
-Anvik,Fireplace (ID 10520),Willow (Salix),Ua-46952,7744,49
-Anvik,Fireplace (ID 10520),Pine (Pinus),Ua-46953,7678,49
+Amundsrød,Cooking pit,Charcoal (Salix),T-15483,2466,99
+Anvik,Fireplace (ID 10520),Nutshell (Corylus),Ua-46950,7818,49
+Anvik,Fireplace (ID 10520),Charcoal (Salix),Ua-46951,7875,52
+Anvik,Fireplace (ID 10520),Charcoal (Salix),Ua-46952,7744,49
+Anvik,Fireplace (ID 10520),Charcoal (Pinus),Ua-46953,7678,49
 Ås Østre,Pit,Charcoal (Pinus),T-12652,2111,47
 Asdal 3,Hearth,sjekk (sjekk),Ua-72931,5172,29
 Asdal 3,Hearth,sjekk (sjekk),Ua-72933,5359,30
@@ -80,7 +80,7 @@ Auve,Food crust,Food crust (NA),TUa-1216,4438,98
 Auve,Food crust,Food crust (NA),TUa-2384,4435,70
 Auve,Food crust,Food crust (NA),TUa-1218,4433,66
 Auve,Food crust,Food crust (NA),TUa-1220,4432,66
-Auve,Square (ID AE21),Pine/birch (Pinus/Betula),TUa-3724,4420,80
+Auve,Square (ID AE21),Charcoal (Pinus/Betula),TUa-3724,4420,80
 Auve,Food crust,Food crust (NA),TUa-2161,4417,46
 Auve,Food crust,Food crust (NA),TUa-671,4415,54
 Auve,Food crust,Food crust (NA),TUa-2391,4401,69
@@ -89,36 +89,36 @@ Auve,Food crust,Food crust (NA),TUa-739,4382,60
 Auve,Food crust,Food crust (NA),TUa-2392,4380,65
 Auve,Food crust,Food crust (NA),TUa-2150,4370,75
 Auve,Food crust,Food crust (NA),TUa-2393,4364,73
-Auve,Square (ID AC22),Willow/pine (Salix/Pinus),TUa-3723,4365,55
-Auve,Square (ID AC22),Birch/pine (Betula/Pinus),TUa-3725,4355,55
+Auve,Square (ID AC22),Charcoal (Salix/Pinus),TUa-3723,4365,55
+Auve,Square (ID AC22),Charcoal (Betula/Pinus),TUa-3725,4355,55
 Auve,Food crust,Food crust (NA),TUa-669,4345,72
 Auve,Food crust,Food crust (NA),TUa-2390,4340,67
 Auve,Food crust,Food crust (NA),TUa-670,4332,88
-Auve,"Excavation unit, unknown",Elm/willow/linden/pine (Ulmus/Salix/Tilia/Pinus),T-4838,4330,190
+Auve,"Excavation unit, unknown",Charcoal (Ulmus/Salix/Tilia/Pinus),T-4838,4330,190
 Auve,Food crust,Food crust (NA),TUa-1214,4320,65
 Auve,Food crust,Food crust (NA),TUa-1219,4291,68
 Auve,Food crust,Food crust (NA),TUa-2590,4268,74
 Auve,Food crust,Food crust (NA),TUa-2389,4250,67
-Auve,Square (ID W14),Willow/hazel/pine/birch (Salix/Corylus/Pinus/Betula),TUa-3721,4240,45
-Auve,Square (ID W12),"Deciduous (Decid, indet.)",TUa-3720,4230,60
-Auve,Square (ID R9),Willow/decidious/pine (Salix/Decid. indet./Pinus),TUa-3719,4150,55
-Auve,"Excavation unit, unknown",Pine/aspen (Pinus/Populus),T-3816,4150,110
-Auve,Square (ID S11),"Deciduous/pine (Decid, indet./Pinus)",TUa-4122,4130,40
+Auve,Square (ID W14),Charcoal (Salix/Corylus/Pinus/Betula),TUa-3721,4240,45
+Auve,Square (ID W12),"Charcoal (Decid, indet.)",TUa-3720,4230,60
+Auve,Square (ID R9),Charcoal (Salix/Decid. indet./Pinus),TUa-3719,4150,55
+Auve,"Excavation unit, unknown",Charcoal (Pinus/Populus),T-3816,4150,110
+Auve,Square (ID S11),"Charcoal (Decid, indet./Pinus)",TUa-4122,4130,40
 Auve,Food crust,Food crust (NA),TUa-673,4130,72
-Auve,Square (ID Q11),Willow/pine/birch (Salix/Pinus/Betula),TUa-3718,4095,70
-Auve,Square (ID Z17),Birch/willow/pine (Betula/Salix/Pinus),TUa-4123,4090,45
+Auve,Square (ID Q11),Charcoal (Salix/Pinus/Betula),TUa-3718,4095,70
+Auve,Square (ID Z17),Charcoal (Betula/Salix/Pinus),TUa-4123,4090,45
 Auve,Food crust,Food crust (NA),TUa-2156,3928,75
 Auve,Food crust,Food crust (NA),TUa-674,3596,58
-Auve,Sand layer,Pine/rowan/birch (Pinus/Sorbus/Betula),TUa-3716,1640,40
-Auve,Sand layer,Willow/pine/hazel (Salix/Pinus/Corylus),TUa-3717,1215,70
+Auve,Sand layer,Charcoal (Pinus/Sorbus/Betula),TUa-3716,1640,40
+Auve,Sand layer,Charcoal (Salix/Pinus/Corylus),TUa-3717,1215,70
 Auve,Pit,Charcoal (NA),T-3817,640,80
-Auve,Sand layer,Pine/birch (Pinus/Betula),TUa-3722,130,65
-Auve,House remains,bone (Bos taurus),T-10977,183,57
-Auve,"Excavation unit, unknown",Pine (Pinus),T-3437,3570,160
-Auve,"Excavation unit, unknown",Pine (Pinus),T-3438,4240,160
-Auve,"Excavation unit, unknown",Pine (Pinus),T-3436,3570,160
-Bakke,Fireplace (ID 2),Birch (Betula),TUa-7852,2115,30
-Bakke,Fireplace (ID 2),Birch (Betula),TUa-7853,6915,40
+Auve,Sand layer,Charcoal (Pinus/Betula),TUa-3722,130,65
+Auve,House remains,Bone (Bos taurus),T-10977,183,57
+Auve,"Excavation unit, unknown",Charcoal (Pinus),T-3437,3570,160
+Auve,"Excavation unit, unknown",Charcoal (Pinus),T-3438,4240,160
+Auve,"Excavation unit, unknown",Charcoal (Pinus),T-3436,3570,160
+Bakke,Fireplace (ID 2),Charcoal (Betula),TUa-7852,2115,30
+Bakke,Fireplace (ID 2),Charcoal (Betula),TUa-7853,6915,40
 Barkåker,Posthole,Charcoal (Betula),TUa-2891,3557,55
 Barkåker,Hearth,Charcoal (Betula),TUa-2890,3111,57
 Barkåker,Cooking pit,"Charcoal (Betula, )",T-15059,1595,101
@@ -142,7 +142,7 @@ Blåfjell 1,hearth(?),Charcoal (Pinus),LuS-16705,185,30
 Blåfjell 1,hearth,Charcoal (Pinus),LuS-16706,8625,50
 Blåfjell 1,hearth(?),Charcoal (Pinus),LuS-16707,7015,35
 Blåfjell 1,hearth,Charcoal (Populus),LuS-16708,8275,40
-Blåfjell 1,hearth,"Nutshell (macrofossil, nutshell, Corylus)",LuS-16709,1600,30
+Blåfjell 1,hearth,Nutshell (Corylus),LuS-16709,1600,30
 Blåfjell 1,hearth(?),Nutshell (Corylus avellana),LuS-16387,6980,50
 Blåfjell 2,"hearth/cooking pit, layer 3",Charcoal (Pomoideae),LuS-16710,8345,40
 Blåfjell 2,"hearth/cooking pit, layer 3",Charcoal (Salix),LuS-16711,8320,45
@@ -215,14 +215,14 @@ Borge østre 22,,Charcoal (Fraxinus),UBA-18164,2939,38
 Borge østre 22,,Charcoal (Corylus),UBA-18160,2876,27
 Borge østre 22,,Triticum (Triticum),UBA-18527,2875,34
 Borge østre 22,,Charcoal (Corylus avellana),UBA-18176,2826,28
-Borge østre 22,Pit,NA (Hazel nutshell),TRa-1369,2805,30
+Borge østre 22,Pit,Nutshell (Corylus),TRa-1369,2805,30
 Borge østre 22,Pit,Charcoal (Alnus),TRa-2078,2705,45
 Borge østre 22,,Charcoal (Salix sp),UBA-18185,2647,39
-Borge østre 22,,Cerealia (Hordeum sp.),UBA-18158,2609,34
+Borge østre 22,,Cereal (Hordeum sp.),UBA-18158,2609,34
 Borge østre 22,,Charcoal (Alnus sp.),UBA-18172,2567,27
 Borge østre 22,Waterhole,Cereal (Cereal),TRa-1370,2540,35
 Borge østre 22,Cooking pit/Hearth,Charcoal (Quercus),TRa-2083,2480,65
-Borge østre 22,,Charcoal (pinus),UBA-18186,2428,23
+Borge østre 22,,Charcoal (Pinus),UBA-18186,2428,23
 Borge østre 22,,Charcoal (Corylus avellana),UBA-18169,2413,33
 Borge østre 22,Cultivation layer,Cereal (Hordeum),TRa-1366,2305,30
 Borge østre 22,Cooking pit,Charcoal (Corylus),TRa-2082,2300,45
@@ -277,54 +277,54 @@ Bratsberg,,Charcoal,TRa-2499,4800,40
 Brønnum,Wall embankment,Charcoal (Pinus),TUa-1144,1517,86
 Brønnum,Wall embankment,Charcoal (Pinus),TUa-1123,834,62
 Brunla,Burial mound,Charcoal (NA),T-11024,2369,73
-Brunstad 24,Cooking pit (ID 4990),Hazel (Corylus),UBA-28736,7439,39
-Brunstad 24,Cooking pit (ID 4979),Hazel (Corylus),UBA-28735,7374,45
-Brunstad 24,Cooking pit (ID 4967),"Deciduous (Decid, indet.)",UBA-28734,7285,37
-Brunstad 24,"Quadrant (50x54yNE, layer 3)",Hazel (Corylus),Ua-48383,7090,35
+Brunstad 24,Cooking pit (ID 4990),Charcoal (Corylus),UBA-28736,7439,39
+Brunstad 24,Cooking pit (ID 4979),Charcoal (Corylus),UBA-28735,7374,45
+Brunstad 24,Cooking pit (ID 4967),"Charcoal (Decid, indet.)",UBA-28734,7285,37
+Brunstad 24,"Quadrant (50x54yNE, layer 3)",Charcoal (Corylus),Ua-48383,7090,35
 Brunstad 24,Cooking pit,Charcoal (Salix/Populus),UBA-28279,6948,35
-Brunstad 24,Cooking pit (ID 4200),Beech (Fagus),UBA-28732,6873,43
-Brunstad 24,"Quadrant (50x54yNE, layer 2)",Birch (Betula),Ua-48381,6850,35
-Brunstad 24,Cooking pit (ID 2000),Ash (Fraxinus),Ua-48384,2715,30
-Brunstad 24,"Quadrant 50x50x10 cm (50x54y NE, layer 3)",Oak (Quercus),Ua-48382,2646,30
-Brunstad 24,Cooking pit (ID 2574),Aspen/willow (Populus/Salix),UBA-28729,6948,35
-Brunstad 24,Cooking pit (ID 2000),Ash (Fraxinus),UBA-28728,2460,26
-Brunstad 24,Cooking pit (ID 3934),Hazel (Corylus),UBA-28730,2403,26
-Brunstad 24,Cooking pit (ID 4362),Linden (Tilia),UBA-28733,2250,27
-Brunstad 24,Cooking pit (ID 4010),Hazel (Corylus),UBA-28731,2240,27
-Brunstad 25,Cooking pit (ID 3185),Aspen (Populus),UBA-28740,7067,37
-Brunstad 25,"Grave, layer 8 (ID 2400)",Maple (Acer),LuS-11115,7060,45
-Brunstad 25,Fireplace (ID 4663),"Hazel (Corylus), nutshell",UBA-28743,7057,38
-Brunstad 25,Floor layer? (ID 4604),Eml (Ulmus),UBA-28744,7032,34
-Brunstad 25,"Grave, layer 6/7 (ID 2400)",Aspen (Populus),UBA-28737,6943,44
-Brunstad 25,Cooking pit (ID 4895),"Deciduous (Decid, indet.)",UBA-28745,6920,37
-Brunstad 25,Cooking pit (ID 3783),Alder/hazel (Alnus/Corylus),UBA-28742,6886,47
-Brunstad 25,Grave (ID 2400),"Unburnt bone, human, skull",LuS-11202,3645,50
-Brunstad 25,Grave (ID 2400),"Unburnt bone, human, skull",LuS-11114,3790,35
-Brunstad 25,Grave (ID 2400),"Unburnt bone, human, right femur",LuS-11229,4370,95
-Brunstad 25,"Grave, layer 5 (ID 2400)","Charcoal, not determined",Beta-383181,7030,30
-Brunstad 25,Post hole (ID 2429),Alder (Alnus),UBA-28739,2749,27
-Brunstad 25,Post hole (ID 2409),Alder (Alnus),UBA-28738,2715,28
-Brunstad 25,Post hole (ID 3737),Hazel (Corylus),UBA-28741,2659,26
-Dørdal,Fireplace (ID 792),Pine (Pinus),Beta-417123,7120,30
-Dørdal,Fireplace (ID 1134),Pine (Pinus),Beta-417122,7070,30
-Dørdal,Fireplace (ID 792),Pine (Pinus),Ua-53183,7050,31
-Dørdal,Fireplace (ID 1134),Pine (Pinus),Ua-53184,6956,31
-Dybdalshei 1,Cooking pit (ID 501),Willow (Salix),Ua-53022,8566,36
-Dybdalshei 1,Cooking pit (ID 519),Pomoideae (Malinae),Ua-53023,8462,36
-Dybdalshei 1,Cooking pit (ID 545),Pomoideae (Malinae),Ua-53027,8422,36
-Dybdalshei 1,Cooking pit (ID 556),Pomoideae (Malinae),Ua-53028,8199,35
-Dybdalshei 1,Cooking pit (ID 566),Birch (Betula),Ua-53029,6202,32
-Dybdalshei 1,Cooking pit (ID 537),Alder (Alnus),Ua-53026,6150,32
-Dybdalshei 1,Cooking pit (ID 531),Aspen (Populus),Ua-53025,5310,31
-Dybdalshei 1,Cooking pit (ID 526),Oak (Quercus),Ua-53024,5262,31
-Dybdalshei 2,Cooking pit (ID 650),Pine (Pinus),Ua-53030,3868,30
-Dyre,Cooking pit,Charcoal (tilia),T-10651,2135,55
+Brunstad 24,Cooking pit (ID 4200),Charcoal (Fagus),UBA-28732,6873,43
+Brunstad 24,"Quadrant (50x54yNE, layer 2)",Charcoal (Betula),Ua-48381,6850,35
+Brunstad 24,Cooking pit (ID 2000),Charcoal (Fraxinus),Ua-48384,2715,30
+Brunstad 24,"Quadrant 50x50x10 cm (50x54y NE, layer 3)",Charcoal (Quercus),Ua-48382,2646,30
+Brunstad 24,Cooking pit (ID 2574),Charcoal (Populus/Salix),UBA-28729,6948,35
+Brunstad 24,Cooking pit (ID 2000),Charcoal (Fraxinus),UBA-28728,2460,26
+Brunstad 24,Cooking pit (ID 3934),Charcoal (Corylus),UBA-28730,2403,26
+Brunstad 24,Cooking pit (ID 4362),Charcoal (Tilia),UBA-28733,2250,27
+Brunstad 24,Cooking pit (ID 4010),Charcoal (Corylus),UBA-28731,2240,27
+Brunstad 25,Cooking pit (ID 3185),Charcoal (Populus),UBA-28740,7067,37
+Brunstad 25,"Grave, layer 8 (ID 2400)",Charcoal (Acer),LuS-11115,7060,45
+Brunstad 25,Fireplace (ID 4663),Nutshell (Corylus),UBA-28743,7057,38
+Brunstad 25,Floor layer? (ID 4604),Charcoal (Ulmus),UBA-28744,7032,34
+Brunstad 25,"Grave, layer 6/7 (ID 2400)",Charcoal (Populus),UBA-28737,6943,44
+Brunstad 25,Cooking pit (ID 4895),"Charcoal (Decid, indet.)",UBA-28745,6920,37
+Brunstad 25,Cooking pit (ID 3783),Charcoal (Alnus/Corylus),UBA-28742,6886,47
+Brunstad 25,Grave (ID 2400),"Bone, unburnt (Human, skull)",LuS-11202,3645,50
+Brunstad 25,Grave (ID 2400),"Bone, unburnt (Human, skull)",LuS-11114,3790,35
+Brunstad 25,Grave (ID 2400),"Bone, unburnt (Human, right femur)",LuS-11229,4370,95
+Brunstad 25,"Grave, layer 5 (ID 2400)",Charcoal (indet.),Beta-383181,7030,30
+Brunstad 25,Post hole (ID 2429),Charcoal (Alnus),UBA-28739,2749,27
+Brunstad 25,Post hole (ID 2409),Charcoal (Alnus),UBA-28738,2715,28
+Brunstad 25,Post hole (ID 3737),Charcoal (Corylus),UBA-28741,2659,26
+Dørdal,Fireplace (ID 792),Charcoal (Pinus),Beta-417123,7120,30
+Dørdal,Fireplace (ID 1134),Charcoal (Pinus),Beta-417122,7070,30
+Dørdal,Fireplace (ID 792),Charcoal (Pinus),Ua-53183,7050,31
+Dørdal,Fireplace (ID 1134),Charcoal (Pinus),Ua-53184,6956,31
+Dybdalshei 1,Cooking pit (ID 501),Charcoal (Salix),Ua-53022,8566,36
+Dybdalshei 1,Cooking pit (ID 519),Charcoal (Malinae),Ua-53023,8462,36
+Dybdalshei 1,Cooking pit (ID 545),Charcoal (Malinae),Ua-53027,8422,36
+Dybdalshei 1,Cooking pit (ID 556),Charcoal (Malinae),Ua-53028,8199,35
+Dybdalshei 1,Cooking pit (ID 566),Charcoal (Betula),Ua-53029,6202,32
+Dybdalshei 1,Cooking pit (ID 537),Charcoal (Alnus),Ua-53026,6150,32
+Dybdalshei 1,Cooking pit (ID 531),Charcoal (Populus),Ua-53025,5310,31
+Dybdalshei 1,Cooking pit (ID 526),Charcoal (Quercus),Ua-53024,5262,31
+Dybdalshei 2,Cooking pit (ID 650),Charcoal (Pinus),Ua-53030,3868,30
+Dyre,Cooking pit,Charcoal (Tilia),T-10651,2135,55
 E18 lok.10,Cooking pit,Charcoal (Corylus),UBA-17465,1608,23
 E18 lok.10,Hearth,Charcoal (Juniper),UBA-17466,833,33
 E18 lok.11,Cooking pit,Charcoal (Alnus),UBA-17467,2526,29
-E18 lok.11,Posthole,Charcoal (alnus),UBA-17533,2265,23
-E18 lok.11,Posthole,Charcoal (alnus),UBA-17536,2013,21
-E18 lok.11,Posthole,Charcoal (alnus),UBA-17535,2006,22
+E18 lok.11,Posthole,Charcoal (Alnus),UBA-17533,2265,23
+E18 lok.11,Posthole,Charcoal (Alnus),UBA-17536,2013,21
+E18 lok.11,Posthole,Charcoal (Alnus),UBA-17535,2006,22
 E18 lok.11,Wall ditch,Cereal (Cerealia),TRa-1343,1995,25
 E18 lok.11,Pit,Charcoal (Hordeum),UBA-17538,1983,21
 E18 lok.11,Hearth,Charcoal (Corylus),UBA-17469,1982,20
@@ -422,7 +422,7 @@ E18 lok.54,Layer,Charcoal (Corylus avellana),UBA-18201,2509,40
 E18 lok.54,Unknown,Cereal (Ceralia),UBA-17540,2448,26
 E18 lok.54,Layer,Nutshell (Hazel nutshell),UBA-17544,2446,29
 E18 lok.54,Layer,Charcoal (Quercus),UBA-18572,2394,29
-E18 lok.54,Layer,Charcoal (Acer ),UBA-18198,2379,40
+E18 lok.54,Layer,Charcoal (Acer),UBA-18198,2379,40
 E18 lok.54,Layer,Charcoal (Corylus avellana),UBA-18194,2378,40
 E18 lok.54,Layer,Nutshell (Hazel nutshell),UBA-17541,2347,27
 E18 lok.54,Layer,Charcoal (Corylus avellana),UBA-18202,2279,22
@@ -441,7 +441,7 @@ E18 lok.54,Cooking pit,Charcoal (Salix),TRa-1930,1835,35
 E18 lok.54,Cooking pit,Charcoal (Quercus),TRa-1937,1830,40
 E18 lok.54,Layer,Charcoal (Fraxinus),UBA-18206,1766,19
 E18 lok.54,Charcoal layer,Charcoal (Corylus),TRa-1932,1765,35
-E18 lok.54,Cooking pit,Hazel nutshell (Juniper),TRa-2527,1070,30
+E18 lok.54,Cooking pit,Nutshell (Juniper),TRa-2527,1070,30
 E18 lok.54,Layer,Charcoal (Fagus),UBA-18444,337,25
 E18 lok.54,Layer,Charcoal (Fagus),UBA-18443,336,29
 E18 lok.54,Cultivation layer,Nutshell (Juniper),TRa-2525,320,30
@@ -452,11 +452,11 @@ E18 lok.63,Cultivation layer,Charcoal (Corylus),UBA-18445,2758,25
 E18 lok.64,Pit,Charcoal (Alnus),TRa-1938,140,35
 E18 lok.65,Hearth,Charcoal (Picea),TRa-1939,250,35
 E18 lok.7,Ditch,Charcoal (Corylus),UBA-17531,2186,21
-E18 lok.7,Cooking pit,unknown (Alnus),UBA-17458,2123,28
+E18 lok.7,Cooking pit,NA (Alnus),UBA-17458,2123,28
 E18 lok.7,Cooking pit,Charcoal (Indet.),UBA-17460,2081,20
 E18 lok.7,Cooking pit,Charcoal (Alnus),UBA-17462,2070,24
 E18 lok.7,Cooking pit,Charcoal (Alnus),UBA-17461,2067,27
-E18 lok.7,Cooking pit,unknown (Betula),UBA-17459,2026,22
+E18 lok.7,Cooking pit,NA (Betula),UBA-17459,2026,22
 E18 lok.74,Cooking pit,Charcoal (Corylus),TRa1691,2180,45
 E18 lok.75,Cooking pit,Charcoal (Fraxinus),TRa-1941,3475,45
 E18 lok.75,Unknown,Charcoal (Salix/vier),TRa-1692,3410,45
@@ -505,10 +505,10 @@ E18 lok.9,Wall ditch,Charcoal (Juniper),TRa-729,1480,30
 E18 lok.9,Wall ditch,Charcoal (Alnus),TRa-728,1460,30
 E18 lok.9,Posthole,Charcoal (Salix),TRa-736,1440,30
 E18 lok.9,Posthole,Charcoal (Quercus),TRa-735,1310,30
-E18 lok.90,Cultural layer,Nutshell (Hazel nutshell),UBA-18446,4830,28
-E18 lok.90,Stone construction,Nutshell (Hazel nutshell),UBA-17547,3249,33
+E18 lok.90,Cultural layer,Nutshell (Corylus),UBA-18446,4830,28
+E18 lok.90,Stone construction,Nutshell (Corylus),UBA-17547,3249,33
 E18 lok.90,Cultivation layer,Charcoal (Corylus),UBA-18212,3081,25
-E18 lok.90,Indet.,Charcoal (quercus),TRa-1956,2960,35
+E18 lok.90,Indet.,Charcoal (Quercus),TRa-1956,2960,35
 E18 lok.90,Burial mound,Charcoal (Pinus),TRa-1955,2535,40
 E18 lok.90,Burial mound,Cereal (Hordeum),UBA-17473,2149,21
 E18 lok.90,Cooking pit,Charcoal (Alnus),TRa-1954,2120,30
@@ -536,23 +536,23 @@ Eidet,Cultural layer,Charcoal (NA),T-2314,2730,120
 Eidet,Wall,Charcoal (NA),T-2316,1820,80
 Eidet,Wall,Charcoal (NA),T-2313,1210,80
 Eidet,Wall,Charcoal (NA),T-2315,600,60
-Eidstein,,Cerealia,LuS-14850,3070,40
-Eidstein,,Cerealia,LuS-14849,3060,40
-Eidstein,,Cerealia,LuS-14851,3050,40
-Eidstein,,Cerealia,LuS-14846,3040,40
-Eidstein,,Cerealia,LuS-14852,3035,40
-Eidstein,,Cerealia,LuS-14853,3035,40
-Eidstein,,Cerealia,LuS-14847,3025,40
-Eidstein,,Cerealia,LuS-14848,3005,40
+Eidstein,,Cereal (Cerealia),LuS-14850,3070,40
+Eidstein,,Cereal (Cerealia),LuS-14849,3060,40
+Eidstein,,Cereal (Cerealia),LuS-14851,3050,40
+Eidstein,,Cereal (Cerealia),LuS-14846,3040,40
+Eidstein,,Cereal (Cerealia),LuS-14852,3035,40
+Eidstein,,Cereal (Cerealia),LuS-14853,3035,40
+Eidstein,,Cereal (Cerealia),LuS-14847,3025,40
+Eidstein,,Cereal (Cerealia),LuS-14848,3005,40
 Eik,Cooking pit,Charcoal (NA),T-10928,2167,51
-Eik,Cooking pit,Charcoal (deciduous tree),T-10927,1789,81
-Eik,Cooking pit,"Charcoal (Corylus,)",T-10926,1675,67
-Elgesem Lok. 46,Cooking pit,"Charcoal (Betula, Corylus, fraxinus, Salix)",Beta-236873,3520,40
-Elgesem Lok. 46,Posthole,Charcoal (deciduous tree),Beta-234343,1950,40
+Eik,Cooking pit,Charcoal (Decid. indet.),T-10927,1789,81
+Eik,Cooking pit,Charcoal (Corylus),T-10926,1675,67
+Elgesem Lok. 46,Cooking pit,Charcoal (Betula/Corylus/Fraxinus/Salix),Beta-236873,3520,40
+Elgesem Lok. 46,Posthole,Charcoal (Decid. indet.),Beta-234343,1950,40
 Elgesem Lok. 46,Cooking pit,Charcoal (Quercus),Beta-236872,1860,40
-Elgesem Lok. 46,Posthole,Charcoal (deciduous tree),Beta-234344,1560,40
-Farmannshaugen,Burial mound,bone (Cattle),T-11031,1072,109
-Farmannshaugen,Burial mound,bone (Cattle),T-11030,239,58
+Elgesem Lok. 46,Posthole,Charcoal (Decid. indet.),Beta-234344,1560,40
+Farmannshaugen,Burial mound,Bone (Cattle),T-11031,1072,109
+Farmannshaugen,Burial mound,Bone (Cattle),T-11030,239,58
 Fevang,Grave,Charcoal (Quercus),T-11021,3684,114
 Fevang,Cooking pit,"Charcoal (Alnus, fraxinus)",T-11022,1965,81
 Fevang,Cooking pit,Charcoal (Alnus),T-11023,1866,82
@@ -562,22 +562,22 @@ Fevang,Field,Peat (NA),T-5648,2020,70
 Fevang,Field,Peat (NA),T-5647,980,80
 Fevang,Cultivation layer,Charcoal (Quercus),T-5646,1670,70
 Fevang nordre 21/34,Burial ditch,Charcoal (Fagus),Ua-54091,1573,27
-Fevang nordre 21/34,Burial ditch,Charcoal (deciduous tree),Ua-54092,1340,32
+Fevang nordre 21/34,Burial ditch,Charcoal (Decid. indet.),Ua-54092,1340,32
 Fjukstad,Grave,Charcoal (Betula),TRa-51,2980,35
-Fjukstad,Grave,"Charcoal (Betula, Corylus, Quercus)",TRa-49,2475,35
-Fjukstad,Grave,"Charcoal (Betula, Corylus, Quercus)",TRa-47,2280,35
+Fjukstad,Grave,Charcoal (Betula/Corylus/Quercus),TRa-49,2475,35
+Fjukstad,Grave,Charcoal (Betula/Corylus/Quercus),TRa-47,2280,35
 Fjukstad,Hearth,Charcoal (Betula),TRa-50,2270,30
 Fjukstad,Cooking pit,Charcoal (Betula),TRa-48,1700,30
-Førstad store 1,Cooking pit/fireplace (ID 23),Hazel/ash (Corylus/Fraxinus),T-19378,2850,95
-Førstad store 1,Post hole (ID 42),Birch/hazel (Betula/Corylus),TUa-7113,2600,30
-Førstad store 1,Post hole (ID 43),Birch/hazel (Betula/Corylus),TUa-7114,1410,30
-Førstad store 1,Post hole (ID 44),Birch/hazel/ash (Betula/Corylus/Fraxinus),TUa-7115,2205,30
-Førstad store 1,Post hole (ID 47),Birch/hazel (Betula/Corylus),TUa-7116,2475,30
-Frebergsvik,,bone (Steinkobbe),TUa-3980,6574,47
+Førstad store 1,Cooking pit/fireplace (ID 23),Charcoal (Corylus/Fraxinus),T-19378,2850,95
+Førstad store 1,Post hole (ID 42),Charcoal (Betula/Corylus),TUa-7113,2600,30
+Førstad store 1,Post hole (ID 43),Charcoal (Betula/Corylus),TUa-7114,1410,30
+Førstad store 1,Post hole (ID 44),Charcoal (Betula/Corylus/Fraxinus),TUa-7115,2205,30
+Førstad store 1,Post hole (ID 47),Charcoal (Betula/Corylus),TUa-7116,2475,30
+Frebergsvik,,Bone (Steinkobbe),TUa-3980,6574,47
 Frebergsvik A,Fireplace,Charcoal,T-969,450,50
-Frebergsvik B,Do.,Do.,T-929,2260,130
-Frebergsvik B,Cultural layer,Animal bone,T-928,2020,140
-Frebergsvik C,Concentration of charcoal,Charcoal,T-970,3850,110
+Frebergsvik B,Do.,NA,T-929,2260,130
+Frebergsvik B,Cultural layer,Bone (animal),T-928,2020,140
+Frebergsvik C,Concentration of charcoal,Charcoal (NA),T-970,3850,110
 Fyldpå 2,Cultivation layer,"Charcoal (Quercus, Pinus)",Beta-199561,3190,40
 Fyldpå 2,Cairn,"Charcoal (Betula, Corylus, fraxinus, Quercus)",Beta-199559,2900,40
 Fyldpå 2,Pit,"Charcoal (Betula, Corylus, fraxinus)",Beta-204708,2540,50
@@ -627,14 +627,14 @@ Gromstul,Cultivation layer,Charcoal (Alnus),LuS-14703,2190,35
 Gromstul,Cultivation layer,Charcoal (Alnus),LuS-14704,1560,35
 Gromstul,Cultivation layer,Charcoal (Pomoideae),LuS-14705,2430,40
 Grytingen,Cairn,Charcoal (picea),T-16943,918,55
-Gulli 3,Ditch,"Charcoal (Betula, Corylus, tilia, prunus/sorbus)",Beta-199563,3260,70
-Gulli 3,Cooking pit,"Charcoal (Betula, Corylus, fraxinus, Salix/populus)",Beta-199565,1600,60
-Gulli 3,Hearth,"Charcoal (Betula, Corylus, tilia, fraxinus og Quercus)",Beta-199564,1490,60
-Gulli 5,Cooking pit,"Charcoal (Betula, Salix/vier/populus, prunus/sorbus)",Beta-199535,6010,40
-Gulli 5,Posthole,"Charcoal (Salix, vier/populus, fraxinus, Quercus, Pinus)",Beta-199538,3350,40
+Gulli 3,Ditch,"Charcoal (Betula, Corylus, Tilia, Prunus/Sorbus)",Beta-199563,3260,70
+Gulli 3,Cooking pit,"Charcoal (Betula, Corylus, fraxinus, Salix/Populus)",Beta-199565,1600,60
+Gulli 3,Hearth,"Charcoal (Betula, Corylus, Tilia, Fraxinus, Quercus)",Beta-199564,1490,60
+Gulli 5,Cooking pit,"Charcoal (Betula, Salix/Populus, Prunus/Sorbus)",Beta-199535,6010,40
+Gulli 5,Posthole,"Charcoal (Salix, Populus, Fraxinus, Quercus, Pinus)",Beta-199538,3350,40
 Gulli 5,Pit,"Charcoal (Betula, Corylus, Quercus)",Beta-199551,3310,40
 Gulli 5,Posthole,macrofossil (NA),Beta-204703,3240,40
-Gulli 5,Plough marks,"Charcoal (Betula, prunus/sorbus)",Beta-199509,2990,80
+Gulli 5,Plough marks,"Charcoal (Betula, Prunus/Sorbus)",Beta-199509,2990,80
 Gulli 5,Cooking pit,Charcoal (Betula),Beta-199549,2960,40
 Gulli 5,Cooking pit,"Charcoal (Betula, Corylus, fraxinus, Quercus)",Beta-199506,2940,60
 Gulli 5,Cooking pit,"Charcoal (Betula, fraxinus)",Beta-199553,2850,60
@@ -674,7 +674,7 @@ Gulli 5,Cooking pit,"Charcoal (Betula, Quercus, prunus/sorbus)",Beta-199533,1650
 Gulli 5,Cooking pit,"Charcoal (Betula, Corylus, fraxinus, Pinus)",Beta-199544,1640,40
 Gulli 5,Posthole,"Charcoal (Betula, fraxinus, Quercus, Corylus)",Beta-199546,1560,40
 Gulli 5,Cooking pit,"Charcoal (Betula, Corylus)",Beta-199541,1550,60
-Gulli 5,Posthole,macrofossil (Hazel nutshell),Beta-204707,1300,40
+Gulli 5,Posthole,Nutshell (Corylus),Beta-204707,1300,40
 Gulli 5,Posthole,macrofossil (NA),Beta-204706,1250,40
 Gulli 5,Posthole,"Charcoal (Betula, fraxinus)",Beta-204705,1210,40
 Gulli 5,"Circular ditch, grave","Charcoal (Pinus, Quercus, Betula)",Beta-199521,1200,40
@@ -692,25 +692,25 @@ Gulli 5,Posthole,"Charcoal (Betula, Corylus, Pinus)",Beta-199552,390,40
 Gulli 5,"Circular ditch, grave",Charcoal (Pinus),Beta-199514,190,60
 Gulli 5,Cooking pit,"Charcoal (Pinus, picea)",Beta-199543,140,50
 Gulli 5,Cooking pit,Charcoal (Pinus),Beta-199542,130,40
-Gunnarsrød 10,Fireplace (ID 100001),Birch (Betula),UBA-19128,5778,31
-Gunnarsrød 4,"Cultural layer, bottom (ID 100002)",Pine (Pinus),UBA-19158,7210,38
-Gunnarsrød 4,"Cultural layer, top (ID 100002)",Birch (Betula),UBA-19159,6941,36
-Gunnarsrød 4,Fireplace (ID 100000),Hazel (Corylus),UBA-19134,2396,24
-Gunnarsrød 5,Fireplace (ID 1206),"Hazel (Corylus), nutshell",UBA-19147,7582,47
-Gunnarsrød 5,Undefined feature (ID 1420),Birch (Betula),UBA-19145,7336,38
-Gunnarsrød 5,Pit with pottery (ID 1519),Hazel (nutshell)/birch (Corylus/Betula),UBA-19160,4716,31
-Gunnarsrød 5,Pit with pottery (ID 1519),Soot extracted from pottery sherd,LuS-10842,3600,60
-Gunnarsrød 5,Disturbance (ID 1085),Birch (Betula),UBA-19146,168,29
-Gunnarsrød 6a,Cooking pit/fireplace (ID 600),Birch/ash (Betula/Fraxinus),TRa-4112,3735,35
-Gunnarsrød 6a,Charcoal layer,Birch (Betula),UBA-19130,2369,24
-Gunnarsrød 6a,"Square (965x46y, layer 4)","Hazel (Corylus), nutshell",UBA-19131,1330,27
-Gunnarsrød 6a,"Quadrant (969x49ySE, layer 3)","Hazel (Corylus), nutshell",UBA-19132,883,23
-Gunnarsrød 6b,"Squares (917x626y, 916x626y, layer 5)","Hazel (Corylus), nutshell",UBA-19133,3608,25
-Gunnarsrød 6b,Undefined feature (ID 1313),Pine (Pinus),TRa-4113,335,25
-Gunnarsrød 7,Undefined feature (ID 1000),Birch (Betula),UBA-19129,5563,30
-Gunnarsrød 7,Undefined feature (ID 1016),Birch/oak (Betula/Quercus),UBA-19162,1697,26
+Gunnarsrød 10,Fireplace (ID 100001),Charcoal (Betula),UBA-19128,5778,31
+Gunnarsrød 4,"Cultural layer, bottom (ID 100002)",Charcoal (Pinus),UBA-19158,7210,38
+Gunnarsrød 4,"Cultural layer, top (ID 100002)",Charcoal (Betula),UBA-19159,6941,36
+Gunnarsrød 4,Fireplace (ID 100000),Charcoal (Corylus),UBA-19134,2396,24
+Gunnarsrød 5,Fireplace (ID 1206),Nutshell (Corylus),UBA-19147,7582,47
+Gunnarsrød 5,Undefined feature (ID 1420),Charcoal (Betula),UBA-19145,7336,38
+Gunnarsrød 5,Pit with pottery (ID 1519),Nutshell (Corylus),UBA-19160,4716,31
+Gunnarsrød 5,Pit with pottery (ID 1519),Soot (extracted from pottery sherd),LuS-10842,3600,60
+Gunnarsrød 5,Disturbance (ID 1085),Charcoal (Betula),UBA-19146,168,29
+Gunnarsrød 6a,Cooking pit/fireplace (ID 600),Charcoal (Betula/Fraxinus),TRa-4112,3735,35
+Gunnarsrød 6a,Charcoal layer,Charcoal (Betula),UBA-19130,2369,24
+Gunnarsrød 6a,"Square (965x46y, layer 4)",Nutshell (Corylus),UBA-19131,1330,27
+Gunnarsrød 6a,"Quadrant (969x49ySE, layer 3)",Nutshell (Corylus),UBA-19132,883,23
+Gunnarsrød 6b,"Squares (917x626y, 916x626y, layer 5)",Nutshell (Corylus),UBA-19133,3608,25
+Gunnarsrød 6b,Undefined feature (ID 1313),Charcoal (Pinus),TRa-4113,335,25
+Gunnarsrød 7,Undefined feature (ID 1000),Charcoal (Betula),UBA-19129,5563,30
+Gunnarsrød 7,Undefined feature (ID 1016),Charcoal (Betula/Quercus),UBA-19162,1697,26
 Gunnerød,Stone fence,Charcoal (NA),T-9871,2307,156
-Gunnerød,Cairn,Charcoal (tilia),T-9874,2099,90
+Gunnerød,Cairn,Charcoal (Tilia),T-9874,2099,90
 Gunnerød,Cairn,Charcoal (NA),T-9875,1758,93
 Gunnerød,Stone fence,Charcoal (Corylus),TUa-325,1714,70
 Gunnerød,Stone fence,Charcoal (Corylus),TUa-327,1506,82
@@ -719,14 +719,14 @@ Gunnerød,Cairn,Husk (Fagus),T-9873,374,139
 Gunnerød,Cairn,Charcoal (Fagus),T-9872,286,130
 Gunnerød,Field,Charcoal (NA),TUa-78,1150,70
 Gunnerød,Field,Charcoal (NA),TUa-77,960,122
-Gunnerød,Cultural layer,Charcoal (corylus),TUa-244,2190,75
-Gunnerød,Cultural layer,Charcoal (corylus),TUa-246,2005,75
-Gunnerød,Cultural layer,"Charcoal (Betula,)",TUa-245,1900,75
+Gunnerød,Cultural layer,Charcoal (Corylus),TUa-244,2190,75
+Gunnerød,Cultural layer,Charcoal (Corylus),TUa-246,2005,75
+Gunnerød,Cultural layer,Charcoal (Betula),TUa-245,1900,75
 Haga,Pit,Charcoal (Betula),T-13001,2834,46
 Haga,Charcoal layer,Charcoal (Corylus),T-13002,2148,106
 Hassum,Pit,Charcoal (Pinus),T-9562,352,64
 Haugar,Cremation grave,Nutshell (Corylus),TUa-975,1203,60
-Haugar,Cremation grave,Nutshell (Hazel nutshell),TUa-976,1177,67
+Haugar,Cremation grave,Nutshell (Corylus),TUa-976,1177,67
 Haugar,Cremation grave,Charcoal (Betula),TUa-1016,1145,72
 Haugartinget,Grave,Charcoal (NA),Beta-362248,1300,30
 Haugartinget,Grave,Bone (Mammalia),Beta-361406,1190,30
@@ -737,50 +737,50 @@ Haugartinget,Grave,Charcoal (NA),Beta-362247,1120,30
 Hedrum,Sunken lane,Charcoal (Betula),Beta-250590,1150,40
 Hedrum,Hearth,Charcoal (Betula),Beta-250591,1040,40
 Hegna øst 2,Cooking pit,Charcoal (Pinus),Ua-50501 ,6318,26
-Hegna øst 2,Fireplace (ID 11779),Pine (Pinus),Ua-50501,6318,26
-Hegna øst 5,Cooking pit (ID 12477),Hazel (Corylus),Ua-51473,1770,32
-Hegna øst 5,Cooking pit (ID 12514),Birch (Betula),Ua-51474,1666,32
+Hegna øst 2,Fireplace (ID 11779),Charcoal (Pinus),Ua-50501,6318,26
+Hegna øst 5,Cooking pit (ID 12477),Charcoal (Corylus),Ua-51473,1770,32
+Hegna øst 5,Cooking pit (ID 12514),Charcoal (Betula),Ua-51474,1666,32
 Hegna vest 1,Hearth/Cooking pit,Charcoal (Salix),Ua-50485 ,8788,34
-Hegna vest 1,Fireplace (ID 9819),Willow (Salix),Ua-51462,8732,40
-Hegna vest 1,Undefined feature/three throw (ID 100079),Willow (Salix),Ua-51466,6816,36
-Hegna vest 1,Undefined feature (ID 9807a),Alder (Alnus),Ua-51461,3318,32
+Hegna vest 1,Fireplace (ID 9819),Charcoal (Salix),Ua-51462,8732,40
+Hegna vest 1,Undefined feature/three throw (ID 100079),Charcoal (Salix),Ua-51466,6816,36
+Hegna vest 1,Undefined feature (ID 9807a),Charcoal (Alnus),Ua-51461,3318,32
 Hegna vest 1,Cooking pit,Charcoal (Fraxinus),Ua-50484 ,2831,24
-Hegna vest 1,Undefined feature (ID 11663),"Hazel (Corylus), nutshell",Ua-51467,2724,34
-Hegna vest 1,Undefined feature (ID 11663),Birch (Betula),Ua-51463,2670,33
-Hegna vest 1,Stone packing/fireplace (ID 9725),Alder (Alnus),Ua-51460,2667,33
-Hegna vest 1,Undefined feture (ID 15034),Hazel (Corylus),Ua-51465,2474,33
-Hegna vest 1,Fireplace (ID 9642),Pine (Pinus),Ua-50472,2440,24
-Hegna vest 1,Cooking pit (ID 10127),Aspen (Populus),Ua-50475,2225,28
+Hegna vest 1,Undefined feature (ID 11663),Nutshell (Corylus),Ua-51467,2724,34
+Hegna vest 1,Undefined feature (ID 11663),Charcoal (Betula),Ua-51463,2670,33
+Hegna vest 1,Stone packing/fireplace (ID 9725),Charcoal (Alnus),Ua-51460,2667,33
+Hegna vest 1,Undefined feture (ID 15034),Charcoal (Corylus),Ua-51465,2474,33
+Hegna vest 1,Fireplace (ID 9642),Charcoal (Pinus),Ua-50472,2440,24
+Hegna vest 1,Cooking pit (ID 10127),Charcoal (Populus),Ua-50475,2225,28
 Hegna vest 1,Pit,Charcoal (Corylus),Ua-50482 ,2215,21
 Hegna vest 1,Pit,Charcoal (Corylus),Ua-50483 ,2197,21
-Hegna vest 1,Fireplace (ID 9659),Birch (Betula),Ua-50473,2186,21
+Hegna vest 1,Fireplace (ID 9659),Charcoal (Betula),Ua-50473,2186,21
 Hegna vest 1,Cooking pit,Charcoal (Populus),Ua-50480 ,2186,23
 Hegna vest 1,Pit,Charcoal (Corylus),Ua-50486 ,2186,23
-Hegna vest 1,Cooking pit (ID 14298),Aspen (Populus),Ua-50481,2178,24
+Hegna vest 1,Cooking pit (ID 14298),Charcoal (Populus),Ua-50481,2178,24
 Hegna vest 1,Pit,Charcoal (Betula),Ua-50477 ,2174,27
 Hegna vest 1,Cooking pit,Charcoal (Corylus),Ua-50479 ,2154,23
-Hegna vest 1,Undefined feature (ID 11683),Birch (Betula),Ua-51464,2124,33
+Hegna vest 1,Undefined feature (ID 11683),Charcoal (Betula),Ua-51464,2124,33
 Hegna vest 1,Pit,Charcoal (Betula),Ua-50476 ,2118,30
-Hegna vest 1,Undefined feature (ID 15034),"Hazel (Corylus), nutshell",Ua-51468,2063,33
-Hegna vest 1,Cooking pit (ID 9745),Birch (Betula),Ua-50474,1702,22
+Hegna vest 1,Undefined feature (ID 15034),Nutshell (Corylus),Ua-51468,2063,33
+Hegna vest 1,Cooking pit (ID 9745),Charcoal (Betula),Ua-50474,1702,22
 Hegna vest 1,Cooking pit,Charcoal (Betula),Ua-50478 ,1685,20
 Hegna vest 1,Hearth,Charcoal (Betula),Ua-50487 ,971,26
 Hegna vest 1,Hearth/stone construction,Charcoal (Alnus),Ua-51254,7735,41
-Hegna vest 1,Fireplace (ID 14834),Aspen/willow (Populus/Salix),Ua-50485,8788,34
-Hegna vest 1,Cooking pit (ID 14417),Ash (Fraxinus),Ua-50484,2831,24
-Hegna vest 1,Undefined feature (ID 14324),Hazel (Corylus),Ua-50482,2215,21
-Hegna vest 1,Undefined feature (ID 14383),Hazel (Corylus),Ua-50483,2197,21
-Hegna vest 1,Undefined feature (ID 100078),Hazel (Corylus),Ua-50486,2186,23
-Hegna vest 1,Cooking pit (ID 14280),Aspen (Populus),Ua-50480,2186,23
-Hegna vest 1,Undefined feature (ID 11767),Birch (Betula),Ua-50477,2174,27
-Hegna vest 1,Cooking pit (ID 14637),Hazel (Corylus),Ua-50479,2154,23
-Hegna vest 1,Undefined feature (ID 100077),Birch (Betula),Ua-50476,2118,30
-Hegna vest 1,Cooking pit (ID 11828),Birch (Betula),Ua-50478,1685,20
-Hegna vest 1,Fireplace (ID 11707),Birch (Betula),Ua-50487,971,26
+Hegna vest 1,Fireplace (ID 14834),Charcoal (Populus/Salix),Ua-50485,8788,34
+Hegna vest 1,Cooking pit (ID 14417),Charcoal (Fraxinus),Ua-50484,2831,24
+Hegna vest 1,Undefined feature (ID 14324),Charcoal (Corylus),Ua-50482,2215,21
+Hegna vest 1,Undefined feature (ID 14383),Charcoal (Corylus),Ua-50483,2197,21
+Hegna vest 1,Undefined feature (ID 100078),Charcoal (Corylus),Ua-50486,2186,23
+Hegna vest 1,Cooking pit (ID 14280),Charcoal (Populus),Ua-50480,2186,23
+Hegna vest 1,Undefined feature (ID 11767),Charcoal (Betula),Ua-50477,2174,27
+Hegna vest 1,Cooking pit (ID 14637),Charcoal (Corylus),Ua-50479,2154,23
+Hegna vest 1,Undefined feature (ID 100077),Charcoal (Betula),Ua-50476,2118,30
+Hegna vest 1,Cooking pit (ID 11828),Charcoal (Betula),Ua-50478,1685,20
+Hegna vest 1,Fireplace (ID 11707),Charcoal (Betula),Ua-50487,971,26
 Hegna vest 2,Cooking pit,Charcoal (Pinus),Ua-50497 ,8708,38
 Hegna vest 2,Pit,Charcoal (Pinus),Ua-50494 ,3337,27
-Hegna vest 2,Undefined feature (ID 9029),Ash (Fraxinus),Ua-51469,3121,31
-Hegna vest 2,Concentration of stones (ID 9057),Ash (Fraxinus),Ua-51470,3085,31
+Hegna vest 2,Undefined feature (ID 9029),Charcoal (Fraxinus),Ua-51469,3121,31
+Hegna vest 2,Concentration of stones (ID 9057),Charcoal (Fraxinus),Ua-51470,3085,31
 Hegna vest 2,Cooking pit,Charcoal (Populus),Ua-50499 ,2659,25
 Hegna vest 2,Hearth,Charcoal (Populus),Ua-50490 ,2239,25
 Hegna vest 2,Cooking pit,Charcoal (Corylus),Ua-50493 ,2216,23
@@ -792,25 +792,25 @@ Hegna vest 2,Pit/Cooking pit,Charcoal (Betula),Ua-50500 ,2180,22
 Hegna vest 2,Cooking pit/Hearth ,Charcoal (Pinus),Ua-50491 ,2168,28
 Hegna vest 2,Cooking pit,Charcoal (Alnus),Ua-50488 ,1810,23
 Hegna vest 2,Cooking pit,Charcoal (Corylus),Ua-50489 ,1781,24
-Hegna vest 2,Cooking pit (ID 11906),Pine (Pinus),Ua-50497,8708,38
-Hegna vest 2,Square (523x346y),"Burnt bone, mammal",Ua-53190,4900,30
-Hegna vest 2,Undefined feature (ID 11546),"Burnt bone, beaver (Castor)",Ua-53188,3863,57
-Hegna vest 2,Undefined feature (ID 11546),"Burnt bone, Sus/Canis",Ua-53187,3789,60
-Hegna vest 2,Undefined feature (ID 11546),Pine (Pinus),Ua-50494,3337,27
-Hegna vest 2,Undefined feature (ID 11546),"Burnt bone, mammal",Ua-53189,3083,29
-Hegna vest 2,Square (523x346y),"Burnt bone, sheep/goat (Ovis/Capra)",Ua-53191,3079,28
-Hegna vest 2,Cooking pit (ID 11954),Aspen (Populus),Ua-50499,2659,25
-Hegna vest 2,Fireplace (ID 9238),Aspen (Populus),Ua-50490,2239,25
-Hegna vest 2,Cooking pit (ID 8903),Hazel (Corylus),Ua-50493,2216,23
-Hegna vest 2,Cooking pit (ID 9181),Birch (Betula),Ua-50496,2203,27
-Hegna vest 2,Undefined feature (ID 9002),Birch (Betula),Ua-50495,2193,23
-Hegna vest 2,Undefined feature (ID 8940),Birch (Betula),Ua-50492,2190,23
-Hegna vest 2,Cooking pit (ID 11926),Hazel (Corylus),Ua-50498,2188,24
-Hegna vest 2,Cooking pit/ditch (ID 11975),Birch (Betula),Ua-50500,2180,22
-Hegna vest 2,Cooking pit/fireplace (ID 9261),Pine (Pinus),Ua-50491,2168,28
-Hegna vest 2,Cooking pit (ID 9181),Alder (Alnus),Ua-50488,1810,23
-Hegna vest 2,Cooking pit (ID 9211),Hazel (Corylus),Ua-50489,1781,24
-Hegna vest 3,Cooking pit (ID 11620),Aspen/willow (Populus/Salix),Ua-51471,8679,39
+Hegna vest 2,Cooking pit (ID 11906),Charcoal (Pinus),Ua-50497,8708,38
+Hegna vest 2,Square (523x346y),"Bone, burn (mammal)",Ua-53190,4900,30
+Hegna vest 2,Undefined feature (ID 11546),"Bone, burnt (Castor)",Ua-53188,3863,57
+Hegna vest 2,Undefined feature (ID 11546),"Bone, burnt (Sus/Canis)",Ua-53187,3789,60
+Hegna vest 2,Undefined feature (ID 11546),Charcoal (Pinus),Ua-50494,3337,27
+Hegna vest 2,Undefined feature (ID 11546),"Bone, burn (mammal)",Ua-53189,3083,29
+Hegna vest 2,Square (523x346y),"Bone, burnt (Ovis/Capra)",Ua-53191,3079,28
+Hegna vest 2,Cooking pit (ID 11954),Charcoal (Populus),Ua-50499,2659,25
+Hegna vest 2,Fireplace (ID 9238),Charcoal (Populus),Ua-50490,2239,25
+Hegna vest 2,Cooking pit (ID 8903),Charcoal (Corylus),Ua-50493,2216,23
+Hegna vest 2,Cooking pit (ID 9181),Charcoal (Betula),Ua-50496,2203,27
+Hegna vest 2,Undefined feature (ID 9002),Charcoal (Betula),Ua-50495,2193,23
+Hegna vest 2,Undefined feature (ID 8940),Charcoal (Betula),Ua-50492,2190,23
+Hegna vest 2,Cooking pit (ID 11926),Charcoal (Corylus),Ua-50498,2188,24
+Hegna vest 2,Cooking pit/ditch (ID 11975),Charcoal (Betula),Ua-50500,2180,22
+Hegna vest 2,Cooking pit/fireplace (ID 9261),Charcoal (Pinus),Ua-50491,2168,28
+Hegna vest 2,Cooking pit (ID 9181),Charcoal (Alnus),Ua-50488,1810,23
+Hegna vest 2,Cooking pit (ID 9211),Charcoal (Corylus),Ua-50489,1781,24
+Hegna vest 3,Cooking pit (ID 11620),Charcoal (Populus/Salix),Ua-51471,8679,39
 Hellesø,Artefact,Wood (Pinus?),T-1348,290,100
 "Herregådsbekken, ID58538",nedgravning,Charcoal (Pinus sp.),Ua-73085,2178,30
 "Herregådsbekken, ID58538",kremasjonsgrav,Charcoal (Corylus sp.),Ua-73086,2788,31
@@ -836,15 +836,15 @@ Herregårdsbekken,Grave,Bone (Human),TRa-3930,2225,35
 Herregårdsbekken,Grave,Charcoal  (Pinus),UBA-19150,2210,26
 Herregårdsbekken,Hearth,Charcoal  (Betula),UBA-19154,2174,26
 Herregårdsbekken,Grave,Charcoal  (Pinus),UBA-19149,2149,25
-Herregårdsbekken,-,Charcoal (-),Beta-2632269,2100,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632269,2100,40
 Herregårdsbekken,Burial mound ring ditch,Charcoal  (Pinus),UBA-19157,1997,26
-Herregårdsbekken,-,Charcoal (-),Beta-2632268,1980,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632268,1980,40
 Herregårdsbekken,Burial mound ring ditch,Charcoal  (Pinus),UBA-19156,1868,25
-Herregårdsbekken,-,Charcoal (-),Beta-2632270,1660,40
-Herregårdsbekken,-,Charcoal (-),Beta-2632266,1010,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632270,1660,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632266,1010,40
 Herregårdsbekken,Burial mound ring ditch,Charcoal  (Pinus),UBA-19155,288,23
-Herregårdsbekken,-,Charcoal (-),Beta-2632267,190,40
-Herregårdsbekken,-,Charcoal (-),Beta-2632272,170,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632267,190,40
+Herregårdsbekken,-,Charcoal (NA),Beta-2632272,170,40
 Herregårdsbekken,,Charcoal  (Pinus),UBA-19153,157,22
 "Herregårdsbekken, ID222868",kokegop,Charcoal (Corylus sp.),Ua-73104,2343,31
 "Herregårdsbekken, ID222868",kokegrop,Charcoal (Alnus sp.),Ua-73105,4932,33
@@ -886,7 +886,7 @@ Hesby 13,Cooking pit,Charcoal (Pinus),TRa-2260,1985,35
 Hesby 13,Cooking pit,Charcoal (populus),TRa-1357,1975,30
 Hesby 13,Cooking pit,Charcoal (Betula),TRa-1346,1935,25
 Hesby 13,Cooking pit,Charcoal (Pinus),TRa-2261,1920,35
-Hesby 13,Posthole,Cereal (Cereal),TRa-1362,1900,30
+Hesby 13,Posthole,Cereal (Cerealia),TRa-1362,1900,30
 Hesby 13,Pit,Charcoal (populus),TRa-1351,1890,25
 Hesby 13,Cooking pit,Cereal (Hordeum),UBA-17847,1874,24
 Hesby 13,Layer,cereal (Hordeum),UBA-17842,1871,26
@@ -911,38 +911,38 @@ Hesby 13,Well,Charcoal (Alnus),TRa-1355,1105,30
 Hesby 13,Pit,Cereal (Cerealia),TRa-1361,1060,35
 Hesby 13,Well,Charcoal (Salix),TRa-2474,905,25
 Hesby 13,Well,Charcoal (Salix),TRa-2473,900,25
-Hesby 13,Well,Charcoal (-),Beta-308495,350,30
+Hesby 13,Well,Charcoal (NA),Beta-308495,350,30
 Hesby 13,Pit,"Cereal (Cerealia, triticum)",TRa-1344,235,20
 Hesthag C1,Cooking pit,Charcoal  (Corylus),Beta-448114,1790,30
 Hesthag C1,Cultivation layer,Charcoal  (Betula),Beta-439962,1720,30
 Hesthag C1,Cooking pit,Charcoal  (Corylus),Beta-448115,1710,30
 Hesthag C1,Cooking pit,Charcoal  (Corylus),Beta-448117,1680,30
-Hesthag C1,Pit,Hazel nutshell (Corylus),Beta-448118,4950,30
+Hesthag C1,Pit,Nutshell (Corylus),Beta-448118,4950,30
 Hesthag C1,Cooking pit,Charcoal  (Corylus),Beta-448121,1570,30
 Hesthag C1,Pit,Charcoal  (Viburnum),Beta-448119,5270,30
 Hesthag C1,Cooking pit,Charcoal  (Fraxinus),Beta-448116,1890,30
 Hesthag C1,Cooking pit,Charcoal  (Corylus),Beta-448120,2390,30
-Hesthag C2,Cooking pit (ID 5366),Hazel (Corylus),Ua-50984,2143,32
-Hesthag C2,Fireplace (ID 4049),Birch (Betula),Ua-50972,2182,30
-Hesthag C2,Fireplace (ID 2736),Hazel (Corylus),Ua-50971,5172,44
-Hesthag C2,Fireplace (ID 4063),Birch (Betula),Ua-50973,1977,30
-Hesthag C2,Fireplace (ID 2726),Oak (Quercus),Ua-50970,6351,45
-Hesthag C2,Fireplace (ID 4224),Birch (Betula),Ua-50974,1866,31
-Hesthag C4,Cooking pit (ID 41178),Pine (Pinus),Beta-448123,8800,40
-Hesthag C4,Quadrant (993x863yNW),Birch (Betula),Beta-448122,4100,30
+Hesthag C2,Cooking pit (ID 5366),Charcoal  (Corylus),Ua-50984,2143,32
+Hesthag C2,Fireplace (ID 4049),Charcoal (Betula),Ua-50972,2182,30
+Hesthag C2,Fireplace (ID 2736),Charcoal  (Corylus),Ua-50971,5172,44
+Hesthag C2,Fireplace (ID 4063),Charcoal (Betula),Ua-50973,1977,30
+Hesthag C2,Fireplace (ID 2726),Charcoal (Quercus),Ua-50970,6351,45
+Hesthag C2,Fireplace (ID 4224),Charcoal (Betula),Ua-50974,1866,31
+Hesthag C4,Cooking pit (ID 41178),Charcoal (Pinus),Beta-448123,8800,40
+Hesthag C4,Quadrant (993x863yNW),Charcoal (Betula),Beta-448122,4100,30
 Hesthag C6,Pottery,Soot from pottery (NA),Beta-448125,3500,30
 Hesthag C6,Pottery,Soot from pottery (NA),Beta-448124,3660,30
-Hesthag C7,Pit,Hazel nutshell (Corylus),Ua-50197,368,34
-Hesthag C7,Posthole,Hazel nutshell (Corylus),Ua-50582,3469,33
+Hesthag C7,Pit,Nutshell (Corylus),Ua-50197,368,34
+Hesthag C7,Posthole,Nutshell (Corylus),Ua-50582,3469,33
 Hesthag C7,Field ,Food crust (NA),Ua-50198,1859,34
-Hesthag ID170232,Dyrkningslag,Charcoal (Unknown),Beta-360080,3480,30
-Holtan Nedre,,Charcoal,T-9931,5030,80
-Holtan Nedre,,Charcoal,T-9930,4885,80
+Hesthag ID170232,Dyrkningslag,Charcoal (NA),Beta-360080,3480,30
+Holtan Nedre,,Charcoal (NA),T-9931,5030,80
+Holtan Nedre,,Charcoal (NA),T-9930,4885,80
 Hørdalen,Settlement site,Charcoal (Alnus),T-6673,2110,60
 Hørdalen,Cairn,Charcoal (Betula),T-6830,7720,140
 Hørdalen,Cairn,Charcoal (NA),T-6825,3780,80
 Hørdalen,Stone fence,Charcoal (Quercus),T-6671,2520,80
-Hørdalen,Cairn,"Charcoal (Pinus, Løvtre)",T-6820,2370,50
+Hørdalen,Cairn,"Charcoal (Pinus, Decid. indet.)",T-6820,2370,50
 Hørdalen,Field,Charcoal (NA),T-6821,2260,170
 Hørdalen,Cairn,Charcoal (NA),T-6818,2130,100
 Hørdalen,Cultivation layer,Charcoal (Alnus),T-6672,2130,60
@@ -953,47 +953,47 @@ Hørdalen,Cairn,Charcoal (Betula),T-6829,1640,130
 Hørdalen,Stone fence,Charcoal (populus),T-6666,1540,80
 Hørdalen,Charcoal pit,Charcoal (populus),T-6667,1540,80
 Hørdalen,Field,Charcoal (Corylus),T-6669,1050,80
-Hovland 1,Cooking pit (ID 4),Aspen/willow (Populus/Salix),Ua-45675,8623,50
-Hovland 1,"Quadrant (172x159ySW, layer 2)",Birch resin (Betula) on microblade,AAR-16884,8582,33
-Hovland 1,Cooking pit (ID 4),Hazel (Corylus),TRa-3410,8465,55
-Hovland 1,"Square (158x164y, layer 2)","Hazel (Corylus), nutshell",TRa-3408,4070,35
-Hovland 1,Cooking pit (ID 2),Hazel (Corylus),TRa-3409,2435,35
+Hovland 1,Cooking pit (ID 4),Charcoal (Populus/Salix),Ua-45675,8623,50
+Hovland 1,"Quadrant (172x159ySW, layer 2)",Resin (Betula) on microblade,AAR-16884,8582,33
+Hovland 1,Cooking pit (ID 4),Charcoal (Corylus),TRa-3410,8465,55
+Hovland 1,"Square (158x164y, layer 2)",Nutshell (Corylus),TRa-3408,4070,35
+Hovland 1,Cooking pit (ID 2),Charcoal (Corylus),TRa-3409,2435,35
 Hovland 1,Cooking pit,Charcoal (Salix),Ua-45537 ,2807,31
-Hovland 3,Post hole (ID 13),Birch (Betula),Ua-45507,8609,54
-Hovland 3,"Quadrant (99x66yNE, layer 2)","Hazel (Corylus), nutshell",Ua-45515,8606,50
-Hovland 3,Post hole? (ID 17),Birch (Betula),Ua-45509,8594,48
-Hovland 3,Post hole (ID 14),Rowan (Sorbus),Ua-45508,8591,50
-Hovland 3,Undefined feature (ID 24),Birch (Betula),Ua-45504,8584,49
-Hovland 3,Dwelling structure (0-5 cm),Rowan (Sorbus),Ua-45514,8552,50
-Hovland 3,Dwelling structure (10-15 cm),"Hazel (Corylus), nutshell",Ua-45517,8540,51
-Hovland 3,Undefined feature (ID 23),Rowan (Sorbus),Ua-45505,8467,53
-Hovland 3,Undefined/ditch/post hole (ID 18),Birch (Betula),Ua-45511,8465,48
-Hovland 3,Cooking pit (ID 21),Rowan (Sorbus),Ua-45506,8458,48
-Hovland 3,"Quadrant (100x66yNE, layer 3)","Hazel (Corylus), nutshell",Beta-325802,8450,40
-Hovland 3,Dwelling structure (0-5 cm),"Hazel (Corylus), nutshell",Ua-45516,8428,50
-Hovland 3,Undefined/ditch/post hole (ID 18),"Hazel (Corylus), nutshell",Ua-45522,8398,49
-Hovland 3,Dwelling structure (30-35 cm),"Hazel (Corylus), nutshell",Ua-45520,8387,47
-Hovland 3,Dwelling structure (25-30 cm),"Hazel (Corylus), nutshell",Ua-45519,8383,47
-Hovland 3,Cooking pit (ID 25),Birch (Betula),Ua-45503,8376,51
-Hovland 3,Post hole (ID 7),Birch (Betula),Ua-45512,8348,47
-Hovland 3,Dwelling structure (20-25 cm),"Hazel (Corylus), nutshell",Ua-45518,8291,48
-Hovland 3,Post hole (ID 8),"Hazel (Corylus), nutshell",Ua-45523,3423,34
-Hovland 3,Stone packing (ID 15),"Hazel (Corylus), nutshell",Ua-45521,2674,32
-Hovland 3,Fireplace (ID 5),Hazel (Corylus),Ua-45502,2408,34
-Hovland 3,Fireplace (ID 27),Hazel (Corylus),Ua-45501,2188,33
-Hovland 3,Fireplace (ID 11),Birch (Betula),Ua-45510,1833,30
-Hovland 3,"Quadrant (101x67ySW, layer 3)",Birch (Betula),Ua-45513,1334,30
-Hovland 4,"Quadrant (93x46yNW, layer 2)",Burnt bone,Ua-45500,8747,64
-Hovland 4,"Quadrant (90x45ySW, layer 2)","Hazel (Corylus), nutshell",Ua-45499,8630,49
-Hovland 4,Cooking pit (ID 6),Birch (Betula),Ua-45493,8568,51
-Hovland 4,Fireplace (ID 1),Birch (Betula),Ua-45494,8526,52
-Hovland 4,Fireplace (ID 8),Hazel (Corylus),Ua-45495,3534,34
-Hovland 4,Fireplace (ID 10),Hazel (Corylus),Ua-45496,3016,32
-Hovland 4,Cooking pit (ID 14),Hazel (Corylus),Ua-45497,2327,32
-Hovland 4,Fireplace (ID 3),Birch/hazel (Betula/Corylus),Ua-45492,2090,32
-Hovland 4,"Quadrant (101x59yNE, layer 2)","Hazel (Corylus), nutshell",Ua-45498,1751,31
-Hovland 5,"Quadrant (66x104ySE, layer 2)","Hazel (Corylus), nutshell",Ua-45490,8775,52
-Hovland 5,"Quadrant (67x104ySE, layer 1)","Hazel (Corylus), nutshell",Ua-45491,2674,34
+Hovland 3,Post hole (ID 13),Charcoal (Betula),Ua-45507,8609,54
+Hovland 3,"Quadrant (99x66yNE, layer 2)",Nutshell (Corylus),Ua-45515,8606,50
+Hovland 3,Post hole? (ID 17),Charcoal (Betula),Ua-45509,8594,48
+Hovland 3,Post hole (ID 14),Charcoal (Sorbus),Ua-45508,8591,50
+Hovland 3,Undefined feature (ID 24),Charcoal (Betula),Ua-45504,8584,49
+Hovland 3,Dwelling structure (0-5 cm),Charcoal (Sorbus),Ua-45514,8552,50
+Hovland 3,Dwelling structure (10-15 cm),Nutshell (Corylus),Ua-45517,8540,51
+Hovland 3,Undefined feature (ID 23),Charcoal (Sorbus),Ua-45505,8467,53
+Hovland 3,Undefined/ditch/post hole (ID 18),Charcoal (Betula),Ua-45511,8465,48
+Hovland 3,Cooking pit (ID 21),Charcoal (Sorbus),Ua-45506,8458,48
+Hovland 3,"Quadrant (100x66yNE, layer 3)",Nutshell (Corylus),Beta-325802,8450,40
+Hovland 3,Dwelling structure (0-5 cm),Nutshell (Corylus),Ua-45516,8428,50
+Hovland 3,Undefined/ditch/post hole (ID 18),Nutshell (Corylus),Ua-45522,8398,49
+Hovland 3,Dwelling structure (30-35 cm),Nutshell (Corylus),Ua-45520,8387,47
+Hovland 3,Dwelling structure (25-30 cm),Nutshell (Corylus),Ua-45519,8383,47
+Hovland 3,Cooking pit (ID 25),Charcoal (Betula),Ua-45503,8376,51
+Hovland 3,Post hole (ID 7),Charcoal (Betula),Ua-45512,8348,47
+Hovland 3,Dwelling structure (20-25 cm),Nutshell (Corylus),Ua-45518,8291,48
+Hovland 3,Post hole (ID 8),Nutshell (Corylus),Ua-45523,3423,34
+Hovland 3,Stone packing (ID 15),Nutshell (Corylus),Ua-45521,2674,32
+Hovland 3,Fireplace (ID 5),Charcoal (Corylus),Ua-45502,2408,34
+Hovland 3,Fireplace (ID 27),Charcoal (Corylus),Ua-45501,2188,33
+Hovland 3,Fireplace (ID 11),Charcoal (Betula),Ua-45510,1833,30
+Hovland 3,"Quadrant (101x67ySW, layer 3)",Charcoal (Betula),Ua-45513,1334,30
+Hovland 4,"Quadrant (93x46yNW, layer 2)","Bone, burnt (NA)",Ua-45500,8747,64
+Hovland 4,"Quadrant (90x45ySW, layer 2)",Nutshell (Corylus),Ua-45499,8630,49
+Hovland 4,Cooking pit (ID 6),Charcoal (Betula),Ua-45493,8568,51
+Hovland 4,Fireplace (ID 1),Charcoal (Betula),Ua-45494,8526,52
+Hovland 4,Fireplace (ID 8),Charcoal (Corylus),Ua-45495,3534,34
+Hovland 4,Fireplace (ID 10),Charcoal (Corylus),Ua-45496,3016,32
+Hovland 4,Cooking pit (ID 14),Charcoal (Corylus),Ua-45497,2327,32
+Hovland 4,Fireplace (ID 3),Charcoal (Betula/Corylus),Ua-45492,2090,32
+Hovland 4,"Quadrant (101x59yNE, layer 2)",Nutshell (Corylus),Ua-45498,1751,31
+Hovland 5,"Quadrant (66x104ySE, layer 2)",Nutshell (Corylus),Ua-45490,8775,52
+Hovland 5,"Quadrant (67x104ySE, layer 1)",Nutshell (Corylus),Ua-45491,2674,34
 Huseby,Posthole,Charcoal (Betula),T-15238,1315,40
 Huseby,Posthole,Charcoal (Quercus),T-15325,1174,44
 Hydal 1,Posthole,Charcoal (Corylus),Ua-48250,2941,32
@@ -1006,19 +1006,19 @@ Hydal 1,Posthole,Charcoal (Corylus),Ua-48253,1688,34
 Hydal 1,Cooking pit,Charcoal (Alnus),Ua-48247,1646,30
 Hydal 1,Cooking pit,Charcoal (Corylus),Ua-48246,1509,32
 Hydal 3,Cooking pit,Charcoal (Prunus),Ua-50510 ,2858,23
-Hydal 3,Cooking pit (ID 6395),Prunus,Ua-50510,2858,23
-Hydal 4,"Square (107x604y, layer 2)","Hazel (Corylus), nutshell",Ua-51477,6049,36
-Hydal 4,Fireplace (ID 5459),Oak (Quercus),Ua-51476,5944,35
-Hydal 4,"Grave, urn (ID 5442)","Burnt bone, human",Ua-51478,2361,29
-Hydal 4,"Grave, urn (ID 5442)",Willow (Salix),Ua-51475,2064,33
-Hydal 5,Cooking pit (ID 3642),Willow (Salix),Ua-51479,3053,34
+Hydal 3,Cooking pit (ID 6395),Charcoal (Prunus),Ua-50510,2858,23
+Hydal 4,"Square (107x604y, layer 2)",Nutshell (Corylus),Ua-51477,6049,36
+Hydal 4,Fireplace (ID 5459),Charcoal (Quercus),Ua-51476,5944,35
+Hydal 4,"Grave, urn (ID 5442)","Bone, burnt (human)",Ua-51478,2361,29
+Hydal 4,"Grave, urn (ID 5442)",Charcoal (Salix),Ua-51475,2064,33
+Hydal 5,Cooking pit (ID 3642),Charcoal (Salix),Ua-51479,3053,34
 Hydal 7,Layer,Charcoal (Betula),Ua-50511 ,1802,21
-Hydal 7,Undefined feature (ID 6489),Birch (Betula),Ua-50511,1082,21
+Hydal 7,Undefined feature (ID 6489),Charcoal (Betula),Ua-50511,1082,21
 Hydal 8,Cooking pit,Charcoal (populus),Ua-50512 ,3408,24
 Hydal 8,Cooking pit,Charcoal (pomoideae),Ua-50513 ,3178,22
-Hydal 8,Cooking pit/fireplace (ID 6447),Aspen (Populus),Ua-50512,3408,24
-Hydal 8,Cooking pit (ID 6661),Pomoideae (Malinae),Ua-50513,3178,22
-Hydal 8,Concentration of stones (ID 6447),"Hazel (Corylus), nutshell",Ua-52922,1926,29
+Hydal 8,Cooking pit/fireplace (ID 6447),Charcoal (populus),Ua-50512,3408,24
+Hydal 8,Cooking pit (ID 6661),Charcoal (Malinae),Ua-50513,3178,22
+Hydal 8,Concentration of stones (ID 6447),Nutshell (Corylus),Ua-52922,1926,29
 Hystad østre,Cooking pit,Charcoal (Betula),Ua-47926,2840,33
 Hystad østre,Cooking pit,Charcoal (Betula),Ua-47918,2779,31
 Hystad østre,Cooking pit,Charcoal (Corylus),Ua-47925,2767,31
@@ -1041,384 +1041,384 @@ Jarlsberg hovedgård,Cultural layer,Charcoal (Betula),TUa-2947,2853,59
 Jarlsberg hovedgård,Cultural layer,Charcoal (Betula),TUa-2949,1845,53
 Jarlsberg hovedgård,Cultural layer,Charcoal (Betula),TUa-2950,1845,68
 Jarlsberg hovedgård,Cultural layer,"Charcoal (Betula,Ulmus)",TUa-2948,1726,64
-Kaupang ,Barrel,Wood (picea),Beta-206202,1380,50
+Kaupang ,Barrel,Wood (Picea),Beta-206202,1380,50
 "Kaupang, 1",Cultural layer,"Charcoal (Betula,Corylus)",TUa-3821,1216,38
 "Kaupang, Tjølling",Well,Wood (NA),T-1191,1550,140
 "Kaupang, Tjølling",Well,Wood (NA),T-1192,1360,110
 Kaupangveien 224,Hearth,Cereal (Hordeum),Ua-53945,1218,29
 Kaupangveien 224,Posthole,Cereal (Hordeum),Ua-53944,1211,29
-Kaupangveien 224,Pit,Nutshell (Hazel nutshell),Ua-53942,1140,30
-Kaupangveien 224,Forge hearth,Nutshell (Hazel nutshell),Ua-53943,1046,31
-Kjørholt,"Square (50x54y, layer 2)","Hazel (Corylus), nutshell",LuS-12615,160,40
-Kjørholt,"Square (71x51y, layer 1)","Hazel (Corylus), nutshell",LuS-12616,110,40
-Kjørholt,"Square (71x50y, layer 1)",Burnt bone,LuS-13177,40,45
-Kjørholt,"Square (76x49y, layer 1)",Burnt bone,LuS-13178,135,45
-Kongsrød,,Charcoal,TUa-7482,3520,40
-Krøgenes D1,Cooking pit/fireplace (ID 206352),Ash (Fraxinus),Ua-50978,4005,34
-Krøgenes D1,Cooking pit/fireplace (ID 203533),Ash (Fraxinus),Ua-50975,1641,30
-Krøgenes D1,Ditch (ID 203549),Pine (Pinus),Ua-53106,4559,31
-Krøgenes D1,Cooking pit/fireplace (ID 204413),Willow/alder (Salix/Alnus),Ua-50977,4883,40
-Krøgenes D1,Ditch (ID 204424),Willow/alder (Salix/Alnus),Ua-50979,5082,40
-Krøgenes D1,Posthole? (ID 204397),Birch (Betula),Ua-53107,5249,31
-Krøgenes D1,Cooking pit/fireplace (ID 207811),Pine (Pinus),Ua-53110,5334,31
-Krøgenes D1,Hearth,Charcoal  ( Pinus),Ua-50976,5339,37
-Krøgenes D1,Cooking pit/fireplace (ID 207098),Pine (Pinus),Ua-53109,5351,31
-Krøgenes D1,Cooking pit/fireplace (ID 204387),Ash (Fraxinus),Ua-53108,5694,32
-Krøgenes D1,Lag_3_PS67,Charcoal (Unknown),Beta-341825,4860,30
-Krøgenes D1,Lag_4_PS66,Charcoal (Unknown),Beta-341826,3580,30
-Krøgenes D2,"Cultural/Cultivation layer (K1, sample ID 3646)",Hazel (Corylus),Beta-448127,1760,30
-Krøgenes D2,Cultural layer (ID 206712),Pine (Pinus),Ua-50982,6132,45
-Krøgenes D2,"Cultural layer (K2, sample ID 3102)",Alder (Alnus),Beta-448128,6260,30
-Krøgenes D2,Cultural layer (ID 206712),Pine (Pinus),Ua-50980,6297,44
-Krøgenes D2,Stone packing (ID 206735),Pine (Pinus),Ua-50983,7059,143
-Krøgenes D2,Sand layer (ID 206652),Birch (Betula),Ua-50981,3379,34
-Krøgenesåsen 1,Fireplace (ID 1103),Willow (Salix),Ua-55175,1756,27
-Krøgenesåsen 1,Fireplace (ID 1103),Aspen/willow (Populus/Salix),Ua-55176,1779,28
-Krøgenesåsen 1,Fireplace (ID 1103),"Alder/hazel (Alnus/Corylus), nutshell",Ua-55178,1853,28
-Krøgenesåsen 1,Fireplace (ID 1103),Alder/hazel (Alnus/Corylus),Ua-55179,1800,28
-Krøgenesåsen 1,Fireplace (ID 1103),Aspen (Populus),Ua-55177,1830,28
+Kaupangveien 224,Pit,Nutshell (Corylus),Ua-53942,1140,30
+Kaupangveien 224,Forge hearth,Nutshell (Corylus),Ua-53943,1046,31
+Kjørholt,"Square (50x54y, layer 2)",Nutshell (Corylus),LuS-12615,160,40
+Kjørholt,"Square (71x51y, layer 1)",Nutshell (Corylus),LuS-12616,110,40
+Kjørholt,"Square (71x50y, layer 1)","Bone, burnt (NA)",LuS-13177,40,45
+Kjørholt,"Square (76x49y, layer 1)","Bone, burnt (NA)",LuS-13178,135,45
+Kongsrød,,Charcoal (NA),TUa-7482,3520,40
+Krøgenes D1,Cooking pit/fireplace (ID 206352),Charcoal (Fraxinus),Ua-50978,4005,34
+Krøgenes D1,Cooking pit/fireplace (ID 203533),Charcoal (Fraxinus),Ua-50975,1641,30
+Krøgenes D1,Ditch (ID 203549),Charcoal (Pinus),Ua-53106,4559,31
+Krøgenes D1,Cooking pit/fireplace (ID 204413),Charcoal (Salix/Alnus),Ua-50977,4883,40
+Krøgenes D1,Ditch (ID 204424),Charcoal (Salix/Alnus),Ua-50979,5082,40
+Krøgenes D1,Posthole? (ID 204397),Charcoal (Betula),Ua-53107,5249,31
+Krøgenes D1,Cooking pit/fireplace (ID 207811),Charcoal (Pinus),Ua-53110,5334,31
+Krøgenes D1,Hearth,Charcoal (Pinus),Ua-50976,5339,37
+Krøgenes D1,Cooking pit/fireplace (ID 207098),Charcoal (Pinus),Ua-53109,5351,31
+Krøgenes D1,Cooking pit/fireplace (ID 204387),Charcoal (Fraxinus),Ua-53108,5694,32
+Krøgenes D1,Lag_3_PS67,Charcoal (NA),Beta-341825,4860,30
+Krøgenes D1,Lag_4_PS66,Charcoal (NA),Beta-341826,3580,30
+Krøgenes D2,"Cultural/Cultivation layer (K1, sample ID 3646)",Charcoal (Corylus),Beta-448127,1760,30
+Krøgenes D2,Cultural layer (ID 206712),Charcoal (Pinus),Ua-50982,6132,45
+Krøgenes D2,"Cultural layer (K2, sample ID 3102)",Charcoal (Alnus),Beta-448128,6260,30
+Krøgenes D2,Cultural layer (ID 206712),Charcoal (Pinus),Ua-50980,6297,44
+Krøgenes D2,Stone packing (ID 206735),Charcoal (Pinus),Ua-50983,7059,143
+Krøgenes D2,Sand layer (ID 206652),Charcoal (Betula),Ua-50981,3379,34
+Krøgenesåsen 1,Fireplace (ID 1103),Charcoal(Salix),Ua-55175,1756,27
+Krøgenesåsen 1,Fireplace (ID 1103),Charcoal (Populus/Salix),Ua-55176,1779,28
+Krøgenesåsen 1,Fireplace (ID 1103),Nutshell (Alnus/Corylus),Ua-55178,1853,28
+Krøgenesåsen 1,Fireplace (ID 1103),Charcoal (Alnus/Corylus),Ua-55179,1800,28
+Krøgenesåsen 1,Fireplace (ID 1103),Charcoal (populus),Ua-55177,1830,28
 Kullerød,Cooking pit,Charcoal (Quercus),T-15482,2339,70
-Kvastad A1 south,Test pit (ID 20993),Pine (Pinus),Beta-366066,9150,40
-Kvastad A1 south,Fireplace (ID 1108),Indet.,Ua-53919,2164,29
-Kvastad A1 south,Fireplace (ID 1108),Birch (Betula),Ua-53917,2176,29
-Kvastad A1 south,Fireplace (ID 1108),Alder (Alnus),Ua-53918,2249,29
-Kvastad A1 south,Fireplace (ID 1108),Birch (Betula),Ua-52872,2264,27
-Kvastad A1 south,Fireplace (ID 1108),Yew (Taxus),Ua-53920,2400,30
-Kvastad A1 south,Fireplace (ID 1108),Indet.,Ua-53921,2388,29
-Kvastad A1 south,,Hazel nutshell (Corylus),Ua-52873,1159,26
-Kvastad A2,Fireplace (ID 54643),Hulless barley (Hordeum vulgare var. nudum),Ua-52875,3464,28
-Kvastad A2,Fireplace (ID 54643),Oat (Avena sp.),Ua-52877,3470,29
-Kvastad A2,Cultivation layer (ID 53485),Oat (Avena sp.),Ua-52874,3431,28
-Kvastad A2,Fireplace (ID 54643),Oat (Avena sp.),Ua-52876,3477,28
-Kvastad A2,Fireplace (ID 54643),Emmer (Hordeum vulgare var. nudum),Ua-52926,4351,55
-Kvastad A2,Fireplace (ID 54643),Hulless barley (Hordeum vulgare var. nudum),Ua-52925,4551,56
-Kvastad A2,Undefined feature (ID 54075),"Coniferous (Conif. indet.), cone seed scale",Ua-52880,8130,34
-Kvastad A2,Fireplace (ID 57995),Pine (Pinus),Ua-52879,8339,35
-Kvastad A2,Fireplace (ID 57753),Pine (Pinus),Ua-52878,8625,35
-Kvastad A3,Charcoal layer,Charcoal  ( Pinus),Ua-52881,3747,29
-Kvastad A4 east,Trench profile (ID 153311),Pine (Pinus),Ua-52886,1100,26
-Kvastad A4 east,Test pit (ID 21410),,Beta-366067,8760,40
-Kvastad A4 east,Fireplace (ID 150637),Oak (Quercus),Ua-52882,809,26
+Kvastad A1 south,Test pit (ID 20993),Charcoal (Pinus),Beta-366066,9150,40
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (NA),Ua-53919,2164,29
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (Betula),Ua-53917,2176,29
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (Alnus),Ua-53918,2249,29
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (Betula),Ua-52872,2264,27
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (Taxus),Ua-53920,2400,30
+Kvastad A1 south,Fireplace (ID 1108),Charcoal (NA),Ua-53921,2388,29
+Kvastad A1 south,,Nutshell (Corylus),Ua-52873,1159,26
+Kvastad A2,Fireplace (ID 54643),Cereal (Hordeum vulgare var. nudum),Ua-52875,3464,28
+Kvastad A2,Fireplace (ID 54643),Cereal (Avena sp.),Ua-52877,3470,29
+Kvastad A2,Cultivation layer (ID 53485),Cereal (Avena sp.),Ua-52874,3431,28
+Kvastad A2,Fireplace (ID 54643),Cereal (Avena sp.),Ua-52876,3477,28
+Kvastad A2,Fireplace (ID 54643),Cereal (Hordeum vulgare var. nudum),Ua-52926,4351,55
+Kvastad A2,Fireplace (ID 54643),Cereal (Hordeum vulgare var. nudum),Ua-52925,4551,56
+Kvastad A2,Undefined feature (ID 54075),Husk (Conif. indet.),Ua-52880,8130,34
+Kvastad A2,Fireplace (ID 57995),Charcoal (Pinus),Ua-52879,8339,35
+Kvastad A2,Fireplace (ID 57753),Charcoal (Pinus),Ua-52878,8625,35
+Kvastad A3,Charcoal layer,Charcoal (Pinus),Ua-52881,3747,29
+Kvastad A4 east,Trench profile (ID 153311),Charcoal (Pinus),Ua-52886,1100,26
+Kvastad A4 east,Test pit (ID 21410),Charcoal (NA),Beta-366067,8760,40
+Kvastad A4 east,Fireplace (ID 150637),Charcoal (Quercus),Ua-52882,809,26
 Kvastad A4 east,Hearth,Charcoal  (Betula),Ua-52883,1632,26
 Kvastad A4 east,Hearth,Charcoal  (Alnus),Ua-52884,2285,27
-Kvastad A4 east,Cooking pit (ID 153273),Ash (Fraxinus),Ua-52887,2395,27
-Kvastad A7,Cooking pit,Charcoal  ( Salix/Populus),Ua-52889,2356,28
-Kvastad A7,Hearth,Charcoal  ( Pinus),Ua-52890,1510,26
-Kvastad A9,Fireplace (ID 400180),Pine (Pinus),Ua-52893,3187,28
-Kvastad A9,Stone packing (ID 400159),Pine (Pinus),Ua-52892,8119,34
-Kvastad A9,Fireplace (ID 400076),Oak (Quercus),Ua-52891,2476,27
-Lågerød,Cooking pit (ID 2001),Hazel (Corylus),Ua-46830,2516,31
-Lågerød,Undefined feature (ID 2006),Oak (Quercus),Ua-46831,2465,32
-Langangen Vestgård 1,Cooking pit (ID 4286),Pine (Pinus),TRa-4117,8030,55
-Langangen Vestgård 1,Undefined feature (ID 6),Willow (Salix),TRa-4118,8005,45
-Langangen Vestgård 1,Undefined feature (ID 12),Birch/willow (Betula/Salix),TRa-4121,7945,45
-Langangen Vestgård 1,"Quadrant (579x937ySW, layer 2)",Burnt bone,TRa-1994,7785,40
-Langangen Vestgård 1,"Quadrant (580x938yNE, layer 2)",Burnt bone,TRa-1995,7760,40
-Langangen Vestgård 1,Floor layer (ID 1),Pine (Pinus),TRa-2243,7780,70
-Langangen Vestgård 1,Cooking pit (ID 3600),Birch/rowan (Betula/Sorbus),TRa-4114,7870,45
-Langangen Vestgård 1,Cooking pit (ID 3601),Hazel (Corylus),TRa-4115,7740,45
-Langangen Vestgård 1,Cooking pit (ID 4044),Hazel (Corylus),TRa-4116,7800,45
-Langangen Vestgård 1,Undefined feature (ID 8a),Birch/hazel (Betula/Corylus),TRa-4119,7850,45
-Langangen Vestgård 1,Undefined feature (ID 13),Hazel (Corylus),TRa-4120,7875,45
-Langangen Vestgård 1,"Quadrant (583x929yNE, layer 1+2)",Burnt bone,TRa-4122,7795,40
-Langangen Vestgård 1,"Quadrant (589x931yNE, layer 2)",Burnt bone,TRa-4123,7745,35
-Langangen Vestgård 3,Cooking pit (ID 1664),Pine (Pinus),TRa-2248,5910,10
-Langangen Vestgård 3,Cooking pit (ID 1600),Pine (Pinus),TRa-2246,5400,55
-Langangen Vestgård 3,Cooking pit (ID 1600),Pine (Pinus),TRa-2247,5325,50
-Langangen Vestgård 3,Cooking pit (ID 1700),Birch (Betula),TRa-2249,5325,45
-Langangen Vestgård 3,Cooking pit (ID 1700),Birch (Betula),TRa-2250,5325,50
-Langangen Vestgård 3,Cooking pit (ID 1664),Pine (Pinus),TRa-4126,5095,40
-Langangen Vestgård 3,Cooking pit (ID 1640),Birch (Betula),TRa-2245,1080,30
-Langangen Vestgård 5,Cooking pit (ID 2800),Pine (Pinus),TRa-2255,5695,50
-Langangen Vestgård 5,Cooking pit (ID 2821),Birch/willow (Betula/Salix),TRa-2254,5645,45
-Langangen Vestgård 5,Cooking pit/fireplace (ID 395),Birch/linden (Betula/Tilia),TRa-2257,5085,50
-Langangen Vestgård 5,Cooking pit (ID 2300),Birch/willow/rowan (Betula/Salix/Sorbus),TRa-2256,5015,55
-Langangen Vestgård 5,Cooking pit (ID 2329),Birch/willow/rowan (Betula/Salix/Sorbus),TRa-2252,5005,45
-Langangen Vestgård 5,Cooking pit? (ID 5316),Birch (Betula),UBA-19135,3066,25
-Langangen Vestgård 5,Cultural layer? (ID 352),Birch/hazel/willow/rowan (Betula/Corylus/Salix/Sorbus),TRa-2253,2255,45
-Langangen Vestgård 5,Fireplace (ID 3369),Ash (Fraxinus),UBA-19136,1819,26
-Langangen Vestgård 5,Fireplace (ID 350),Birch/hazel (Betula/Corylus),TRa-2251,1785,35
-Langangen Vestgård 5,"Charcoal/406x46ySWSE,layer 2 (ID 2328)",Birch/hazel (Betula/Corylus),TRa-2258,1785,35
-Langangen Vestgård 5,"Quadrant (369x55yNW, layer 2)","Burnt bone, mammal (1.6g)",TRa-1996,100,30
-Langangen Vestgård 6,Cooking pit (ID 2045),Birch (Betula),UBA-19139,5057,28
-Langangen Vestgård 6,Cooking pit? (ID 214),Birch/aspen (Betula/Populus),UBA-19141,5055,27
-Langangen Vestgård 6,Cooking pit (ID 1732),Birch (Betula),UBA-19137,5021,28
-Langangen Vestgård 6,Cooking pit (ID 2000),Birch (Betula),UBA-19138,5017,29
-Langangen Vestgård 6,Cooking pit (ID 1886),Hazel (Corylus),UBA-19143,5010,27
-Langangen Vestgård 6,Undefined feature (ID 572),Birch/hazel (Betula/Corylus),UBA-19142,4939,47
-Langangen Vestgård 6,Fireplace (ID 1776),Birch (Betula),UBA-19140,4931,31
-Langangen Vestgård 6,"Cooking pit (ID 163, east)",Birch/willow (Betula/Salix),UBA-19144,4891,31
-Langangen Vestgård 6,Cooking pit (ID 2032),Birch (Betula),UBA-19161,4813,46
-Langangen Vestgård 6,"Quadrant (61x890yNE, layer 1)","Burnt bone, beaver (Castor)",TRa-4125,3775,30
-Langangen Vestgård 7,Cooking pit (ID 214),Birch/willow (Betula/Salix),TRa-2244,5335,50
-Langemyr,"Quadrant (60x102y, layer 2)","Hazel (Corylus), nutshell",Ua-52063,8853,43
-Langemyr,,Hazel nutshell,UA-52063,8853,43
-Larønningen,,Charcoal,Ua-46657,4796,32
-Larønningen,,Charcoal,Ua-46661,4705,31
+Kvastad A4 east,Cooking pit (ID 153273),Charcoal (Fraxinus),Ua-52887,2395,27
+Kvastad A7,Cooking pit,Charcoal (Salix/Populus),Ua-52889,2356,28
+Kvastad A7,Hearth,Charcoal (Pinus),Ua-52890,1510,26
+Kvastad A9,Fireplace (ID 400180),Charcoal (Pinus),Ua-52893,3187,28
+Kvastad A9,Stone packing (ID 400159),Charcoal (Pinus),Ua-52892,8119,34
+Kvastad A9,Fireplace (ID 400076),Charcoal (Quercus),Ua-52891,2476,27
+Lågerød,Cooking pit (ID 2001),Charcoal (Corylus),Ua-46830,2516,31
+Lågerød,Undefined feature (ID 2006),Charcoal (Quercus),Ua-46831,2465,32
+Langangen Vestgård 1,Cooking pit (ID 4286),Charcoal (Pinus),TRa-4117,8030,55
+Langangen Vestgård 1,Undefined feature (ID 6),Charcoal (Salix),TRa-4118,8005,45
+Langangen Vestgård 1,Undefined feature (ID 12),Charcoal (Betula/Salix),TRa-4121,7945,45
+Langangen Vestgård 1,"Quadrant (579x937ySW, layer 2)","Bone, burnt (NA)",TRa-1994,7785,40
+Langangen Vestgård 1,"Quadrant (580x938yNE, layer 2)","Bone, burnt (NA)",TRa-1995,7760,40
+Langangen Vestgård 1,Floor layer (ID 1),Charcoal (Pinus),TRa-2243,7780,70
+Langangen Vestgård 1,Cooking pit (ID 3600),Charcoal (Betula/Sorbus),TRa-4114,7870,45
+Langangen Vestgård 1,Cooking pit (ID 3601),Charcoal (Corylus),TRa-4115,7740,45
+Langangen Vestgård 1,Cooking pit (ID 4044),Charcoal (Corylus),TRa-4116,7800,45
+Langangen Vestgård 1,Undefined feature (ID 8a),Charcoal (Betula/Corylus),TRa-4119,7850,45
+Langangen Vestgård 1,Undefined feature (ID 13),Charcoal (Corylus),TRa-4120,7875,45
+Langangen Vestgård 1,"Quadrant (583x929yNE, layer 1+2)","Bone, burnt (NA)",TRa-4122,7795,40
+Langangen Vestgård 1,"Quadrant (589x931yNE, layer 2)","Bone, burnt (NA)",TRa-4123,7745,35
+Langangen Vestgård 3,Cooking pit (ID 1664),Charcoal (Pinus),TRa-2248,5910,10
+Langangen Vestgård 3,Cooking pit (ID 1600),Charcoal (Pinus),TRa-2246,5400,55
+Langangen Vestgård 3,Cooking pit (ID 1600),Charcoal (Pinus),TRa-2247,5325,50
+Langangen Vestgård 3,Cooking pit (ID 1700),Charcoal (Betula),TRa-2249,5325,45
+Langangen Vestgård 3,Cooking pit (ID 1700),Charcoal (Betula),TRa-2250,5325,50
+Langangen Vestgård 3,Cooking pit (ID 1664),Charcoal (Pinus),TRa-4126,5095,40
+Langangen Vestgård 3,Cooking pit (ID 1640),Charcoal (Betula),TRa-2245,1080,30
+Langangen Vestgård 5,Cooking pit (ID 2800),Charcoal (Pinus),TRa-2255,5695,50
+Langangen Vestgård 5,Cooking pit (ID 2821),Charcoal (Betula/Salix),TRa-2254,5645,45
+Langangen Vestgård 5,Cooking pit/fireplace (ID 395),Charcoal (Betula/Tilia),TRa-2257,5085,50
+Langangen Vestgård 5,Cooking pit (ID 2300),Charcoal (Betula/Salix/Sorbus),TRa-2256,5015,55
+Langangen Vestgård 5,Cooking pit (ID 2329),Charcoal (Betula/Salix/Sorbus),TRa-2252,5005,45
+Langangen Vestgård 5,Cooking pit? (ID 5316),Charcoal (Betula),UBA-19135,3066,25
+Langangen Vestgård 5,Cultural layer? (ID 352),Charcoal (Betula/Corylus/Salix/Sorbus),TRa-2253,2255,45
+Langangen Vestgård 5,Fireplace (ID 3369),Charcoal (Fraxinus),UBA-19136,1819,26
+Langangen Vestgård 5,Fireplace (ID 350),Charcoal (Betula/Corylus),TRa-2251,1785,35
+Langangen Vestgård 5,"Charcoal/406x46ySWSE,layer 2 (ID 2328)",Charcoal (Betula/Corylus),TRa-2258,1785,35
+Langangen Vestgård 5,"Quadrant (369x55yNW, layer 2)","Bone, burnt (mammal)",TRa-1996,100,30
+Langangen Vestgård 6,Cooking pit (ID 2045),Charcoal (Betula),UBA-19139,5057,28
+Langangen Vestgård 6,Cooking pit? (ID 214),Charcoal (Betula/Populus),UBA-19141,5055,27
+Langangen Vestgård 6,Cooking pit (ID 1732),Charcoal (Betula),UBA-19137,5021,28
+Langangen Vestgård 6,Cooking pit (ID 2000),Charcoal (Betula),UBA-19138,5017,29
+Langangen Vestgård 6,Cooking pit (ID 1886),Charcoal (Corylus),UBA-19143,5010,27
+Langangen Vestgård 6,Undefined feature (ID 572),Charcoal (Betula/Corylus),UBA-19142,4939,47
+Langangen Vestgård 6,Fireplace (ID 1776),Charcoal (Betula),UBA-19140,4931,31
+Langangen Vestgård 6,"Cooking pit (ID 163, east)",Charcoal (Betula/Salix),UBA-19144,4891,31
+Langangen Vestgård 6,Cooking pit (ID 2032),Charcoal (Betula),UBA-19161,4813,46
+Langangen Vestgård 6,"Quadrant (61x890yNE, layer 1)","Bone, burnt (Castor)",TRa-4125,3775,30
+Langangen Vestgård 7,Cooking pit (ID 214),Charcoal (Betula/Salix),TRa-2244,5335,50
+Langemyr,"Quadrant (60x102y, layer 2)",Nutshell (Corylus),Ua-52063,8853,43
+Langemyr,,Nutshell (Corylus),UA-52063,8853,43
+Larønningen,,Charcoal (NA),Ua-46657,4796,32
+Larønningen,,Charcoal (NA),Ua-46661,4705,31
 Lerstang,Charcoal layer,Charcoal (NA),T-2460,1750,60
 Lerstang,Charcoal pit,Charcoal (NA),T-2459,1630,60
 Lerstang,Charcoal pit,Charcoal (NA),T-2458,1630,80
-Lie,,Charcoal,Beta-250336,3280,40
-Lie,,Charcoal,Beta-250337,3190,40
-Lillegården,,Charcoal,Ua-77349,7189,35
-Lillegården,,Charcoal,Ua-77348,6979,34
-Limi,,Charcoal,Beta-455431,3830,30
-Løvås 1,Fireplace (ID 8849),Willow (Salix),LuS-15285,8690,45
-Løvås 1,"Cultural layer, dwelling structure? (ID 10693)","Hazel (Corylus), nutshell",LuS-15286,8880,45
-Løvås 1,"Cultural layer, dwelling structure? (ID 10693)","Hazel (Corylus), nutshell",LuS-15287,8825,45
-Løvås 1,"Cultural layer, dwelling structure? (ID 10693)",Willow (Salix),LuS-15288,8315,45
-Løvås 1,"Cultural layer, dwelling structure? (ID 10693)","Hazel (Corylus), nutshell",LuS-15289,8865,45
-Løvås 1,Fireplace (ID 11804),Pine (Pinus),LuS-15290,8790,45
-Løvås 1,Fireplace (ID 11818),Oak (Quercus),LuS-15291,875,35
-Løvås 1,Fireplace (ID 11838),Pome fruit tree (Pomoideae),LuS-15292,8790,50
-Løvås 1,Fireplace (ID 21143),Hazel (Corylus),LuS-15293,2205,40
-Løvås 1,Fireplace (ID 21167),Hazel (Corylus),LuS-15294,2190,40
-Løvås 1,Fireplace (ID 24057),Hazel (Corylus),LuS-15295,2220,35
-Løvås 1,Fireplace (ID 24085),Pine (Pinus),LuS-15296,8675,45
-Løvås 1,Fireplace (ID 26606),"Hazel (Corylus), nutshell",LuS-15297,8815,45
-Løvås 1,Fireplace (ID 27064),Oak (Quercus),LuS-15298,1570,35
-Løvås 1,"Cultural layer (ID 50), sample (ID 100094)","Hazel (Corylus), nutshell",LuS-15299,8920,50
-Løvås 1,"Cultural layer (ID 51), sample (ID 100097)","Hazel (Corylus), nutshell",LuS-15300,8840,45
-Løvås 1,"Cultural layer (ID 51), sample (ID 100108)","Hazel (Corylus), nutshell",LuS-15301,8805,45
-Løvås 1,"Square (828x208y), sample (ID 100086)",Pine (Pinus),LuS-15302,500,35
-Løvås 2,"Square (915x203yNW, layer 2), sample (ID 100072)","Hazel (Corylus), nutshell",LuS-15303,8870,45
-Løvås 2,"Square (913x206yNW, layer 2), sample  (ID 100073)","Hazel (Corylus), nutshell",LuS-15304,8805,45
-Løvås 2,"Square (914x203ySW, layer 2), sample (ID 100074)","Hazel (Corylus), nutshell",LuS-15305,8850,45
-Løvås 2,"Square (912x204yNW, layer 2), sample (ID 100075)",Willow (Salix),LuS-15306,2210,35
-Løvås 2,"Square (911x205ySW, layer 1)","Hazel (Corylus), nutshell",LuS-15688,2220,35
-Løvås 2,"Square (914x205ySE, layer 1)","Hazel (Corylus), nutshell",LuS-15689,2190,35
-Løvås 2,"Square (912x207yNW, layer 1)","Hazel (Corylus), nutshell",LuS-15690,2330,35
-Løvås 2,"Square (911x203yNW, layer 1)","Hazel (Corylus), nutshell",LuS-15691,200,25
-Løvås 2,"Square (916x208yNW, layer 1)","Hazel (Corylus), nutshell",LuS-15692,2355,35
-Løvås 2,"Square (913x202ySW, layer 1), sample (ID 100059)","Burnt bone, reindeer (Rangiferus tarandus)",LuS-16056,8910,50
-Løvås 3,Fireplace (ID 24176),Pome fruit tree (Pomoideae),LuS-15307,8800,45
-Løvås 3,Fireplace (ID 24195),Aspen (Populus),LuS-15308,8750,45
-Løvås 3,Fireplace (ID 24154),Pome fruit tree (Pomoideae),LuS-15309,8745,45
-Løvås 3,Possible dwelling structure (ID 27142),"Hazel (Corylus), nutshell",LuS-15310,8820,45
-Løvås 3,Possible dwelling structure (ID 27142),"Hazel (Corylus), nutshell",LuS-15311,8920,45
-Løvås 3,Possible dwelling structure (ID 27142),"Hazel (Corylus), nutshell",LuS-15312,8860,45
-Løve,,Charcoal,Beta-240492,3160,40
+Lie,,Charcoal (NA),Beta-250336,3280,40
+Lie,,Charcoal (NA),Beta-250337,3190,40
+Lillegården,,Charcoal (NA),Ua-77349,7189,35
+Lillegården,,Charcoal (NA),Ua-77348,6979,34
+Limi,,Charcoal (NA),Beta-455431,3830,30
+Løvås 1,Fireplace (ID 8849),Charcoal (Salix),LuS-15285,8690,45
+Løvås 1,"Cultural layer, dwelling structure? (ID 10693)",Nutshell (Corylus),LuS-15286,8880,45
+Løvås 1,"Cultural layer, dwelling structure? (ID 10693)",Nutshell (Corylus),LuS-15287,8825,45
+Løvås 1,"Cultural layer, dwelling structure? (ID 10693)",Charcoal (Salix),LuS-15288,8315,45
+Løvås 1,"Cultural layer, dwelling structure? (ID 10693)",Nutshell (Corylus),LuS-15289,8865,45
+Løvås 1,Fireplace (ID 11804),Charcoal (Pinus),LuS-15290,8790,45
+Løvås 1,Fireplace (ID 11818),Charcoal (Quercus),LuS-15291,875,35
+Løvås 1,Fireplace (ID 11838),Charcoal (pomoideae),LuS-15292,8790,50
+Løvås 1,Fireplace (ID 21143),Charcoal (Corylus),LuS-15293,2205,40
+Løvås 1,Fireplace (ID 21167),Charcoal (Corylus),LuS-15294,2190,40
+Løvås 1,Fireplace (ID 24057),Charcoal (Corylus),LuS-15295,2220,35
+Løvås 1,Fireplace (ID 24085),Charcoal (Pinus),LuS-15296,8675,45
+Løvås 1,Fireplace (ID 26606),Nutshell (Corylus),LuS-15297,8815,45
+Løvås 1,Fireplace (ID 27064),Charcoal (Quercus),LuS-15298,1570,35
+Løvås 1,"Cultural layer (ID 50), sample (ID 100094)",Nutshell (Corylus),LuS-15299,8920,50
+Løvås 1,"Cultural layer (ID 51), sample (ID 100097)",Nutshell (Corylus),LuS-15300,8840,45
+Løvås 1,"Cultural layer (ID 51), sample (ID 100108)",Nutshell (Corylus),LuS-15301,8805,45
+Løvås 1,"Square (828x208y), sample (ID 100086)",Charcoal (Pinus),LuS-15302,500,35
+Løvås 2,"Square (915x203yNW, layer 2), sample (ID 100072)",Nutshell (Corylus),LuS-15303,8870,45
+Løvås 2,"Square (913x206yNW, layer 2), sample  (ID 100073)",Nutshell (Corylus),LuS-15304,8805,45
+Løvås 2,"Square (914x203ySW, layer 2), sample (ID 100074)",Nutshell (Corylus),LuS-15305,8850,45
+Løvås 2,"Square (912x204yNW, layer 2), sample (ID 100075)",Charcoal (Salix),LuS-15306,2210,35
+Løvås 2,"Square (911x205ySW, layer 1)",Nutshell (Corylus),LuS-15688,2220,35
+Løvås 2,"Square (914x205ySE, layer 1)",Nutshell (Corylus),LuS-15689,2190,35
+Løvås 2,"Square (912x207yNW, layer 1)",Nutshell (Corylus),LuS-15690,2330,35
+Løvås 2,"Square (911x203yNW, layer 1)",Nutshell (Corylus),LuS-15691,200,25
+Løvås 2,"Square (916x208yNW, layer 1)",Nutshell (Corylus),LuS-15692,2355,35
+Løvås 2,"Square (913x202ySW, layer 1), sample (ID 100059)","Bone, burnt (Rangiferus tarandus)",LuS-16056,8910,50
+Løvås 3,Fireplace (ID 24176),Charcoal (pomoideae),LuS-15307,8800,45
+Løvås 3,Fireplace (ID 24195),Charcoal (populus),LuS-15308,8750,45
+Løvås 3,Fireplace (ID 24154),Charcoal (pomoideae),LuS-15309,8745,45
+Løvås 3,Possible dwelling structure (ID 27142),Nutshell (Corylus),LuS-15310,8820,45
+Løvås 3,Possible dwelling structure (ID 27142),Nutshell (Corylus),LuS-15311,8920,45
+Løvås 3,Possible dwelling structure (ID 27142),Nutshell (Corylus),LuS-15312,8860,45
+Løve,,Charcoal (NA),Beta-240492,3160,40
 Løve øvre,Cultural layer,Food crust (NA),TUa-667,3726,79
-Løveskogen,Post hole,Cereal ( Triticum vulgare),LuS-15964,3420,40
-Løveskogen,Post hole,Nutshell ( Corylus avellana),LuS-15965,3080,40
-Løveskogen,Cultivation layer,charcoal ( Alnus sp.),LuS-15967,3060,40
+Løveskogen,Post hole,Cereal (Triticum vulgare),LuS-15964,3420,40
+Løveskogen,Post hole,Nutshell (Corylus avellana),LuS-15965,3080,40
+Løveskogen,Cultivation layer,Charcoal (Alnus sp.),LuS-15967,3060,40
 Løveskogen,Cultivation layer,Cereal ( Hordeum vulgare),LuS-15968,3115,40
-Løveskogen,Cooking pit,charcoal ( Corylus sp.),LuS-15969,3085,40
-Løveskogen,Cooking pit,charcoal ( Alnus sp.),LuS-15970,2005,40
-Løveskogen,Hearth,charcoal ( Alnus sp.),LuS-15971,3175,40
-Løveskogen,Hearth,charcoal ( Alnus sp.),LuS-15972,3195,45
-Løveskogen,Hearth,charcoal ( Betula sp.),LuS-15973,3135,45
-Løveskogen,Hearth,charcoal ( Alnus sp.),LuS-15974,3315,40
-Løveskogen,Hearth,charcoal ( cf. Fagus),LuS-15975,560,35
-Løveskogen,Post hole,charcoal ( Fraxinus sp.),LuS-15976,3130,35
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15977,3095,35
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15978,3075,40
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15979,3245,40
-Løveskogen,Post hole,charcoal ( Corylus sp.),LuS-15980,3050,40
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15981,3765,40
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15982,3105,45
-Løveskogen,Post hole,charcoal ( Fraxinus sp.),LuS-15983,3165,40
-Løveskogen,Post hole,charcoal ( Fraxinus sp.),LuS-15984,3100,35
-Løveskogen,Post hole,charcoal ( Alnus sp.),LuS-15985,3260,40
-Løveskogen,Post hole,charcoal ( Fraxinus sp.),LuS-15986,3565,35
-Løveskogen,Post hole,charcoal ( Pinus sp.),LuS-15987,5055,35
-Løveskogen,Post hole,Cereal ( cf Triticum aestivum s ae./T. turgidum s d.),LuS-15988,3475,40
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15989,3235,35
-Løveskogen,Post hole,charcoal ( Alnus sp.),LuS-15990,3470,35
-Løveskogen,Post hole,charcoal ( Quercus sp.),LuS-15991,3150,35
-Løveskogen,Post hole,charcoal ( Fraxinus sp.),LuS-15992,3715,35
-Løveskogen,Cultivation layer,burnt bone ( Mammalia),LuS-15740,3660,35
-Løveskogen,Cultivation layer,burnt bone ( Mammalia),LuS-15741,3060,35
-Løveskogen,Cultivation layer,burnt bone ( Mammalia),LuS-15742,3115,30
-Løveskogen,Cultivation layer,burnt bone ( Mammalia),LuS-15743,3165,40
-Løveskogen,Post hole,burnt bone ( Mammalia),LuS-15744,3080,35
-Løveskogen,Post hole,burnt bone ( Mammalia),LuS-15745,3135,30
-Løveskogen,Post hole,burnt bone ( Mammalia),LuS-15746,2995,35
-Lunaveien,"Square (50x53y, layer 1)",Birch (Betula),Beta-276197,1430,40
-Lunaveien,"Square (50x50y, layer 1)",Pine (Pinus),Beta-276198,60,40
-Lunaveien,"Square (51x55y, layer 1)",Birch (Betula),Beta-276199,1690,40
-Lunaveien,"Square (53x52y, layer 1)",Pine (Pinus),Beta-276200,3620,40
-Lunaveien,"Square (50x50y, layer 2)",Burnt bone,Beta-278526,2350,40
-Lunaveien,"Square (51x55y, layer 2)",Burnt bone,Beta-278527,2380,40
-Lunde,Cooking pit,Charcoal (deciduous tree),T-13096,2131,69
+Løveskogen,Cooking pit,Charcoal (Corylus sp.),LuS-15969,3085,40
+Løveskogen,Cooking pit,Charcoal (Alnus sp.),LuS-15970,2005,40
+Løveskogen,Hearth,Charcoal (Alnus sp.),LuS-15971,3175,40
+Løveskogen,Hearth,Charcoal (Alnus sp.),LuS-15972,3195,45
+Løveskogen,Hearth,Charcoal (Betula sp.),LuS-15973,3135,45
+Løveskogen,Hearth,Charcoal (Alnus sp.),LuS-15974,3315,40
+Løveskogen,Hearth,Charcoal (Fagus),LuS-15975,560,35
+Løveskogen,Post hole,Charcoal (Fraxinus sp.),LuS-15976,3130,35
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15977,3095,35
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15978,3075,40
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15979,3245,40
+Løveskogen,Post hole,Charcoal (Corylus sp.),LuS-15980,3050,40
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15981,3765,40
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15982,3105,45
+Løveskogen,Post hole,Charcoal (Fraxinus sp.),LuS-15983,3165,40
+Løveskogen,Post hole,Charcoal (Fraxinus sp.),LuS-15984,3100,35
+Løveskogen,Post hole,Charcoal (Alnus sp.),LuS-15985,3260,40
+Løveskogen,Post hole,Charcoal (Fraxinus sp.),LuS-15986,3565,35
+Løveskogen,Post hole,Charcoal (Pinus sp.),LuS-15987,5055,35
+Løveskogen,Post hole,Cereal (cf. Triticum aestivum s ae./T. turgidum s d.),LuS-15988,3475,40
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15989,3235,35
+Løveskogen,Post hole,Charcoal (Alnus sp.),LuS-15990,3470,35
+Løveskogen,Post hole,Charcoal (Quercus sp.),LuS-15991,3150,35
+Løveskogen,Post hole,Charcoal (Fraxinus sp.),LuS-15992,3715,35
+Løveskogen,Cultivation layer,"Bone, burnt (Mammalia)",LuS-15740,3660,35
+Løveskogen,Cultivation layer,"Bone, burnt (Mammalia)",LuS-15741,3060,35
+Løveskogen,Cultivation layer,"Bone, burnt (Mammalia)",LuS-15742,3115,30
+Løveskogen,Cultivation layer,"Bone, burnt (Mammalia)",LuS-15743,3165,40
+Løveskogen,Post hole,"Bone, burnt (Mammalia)",LuS-15744,3080,35
+Løveskogen,Post hole,"Bone, burnt (Mammalia)",LuS-15745,3135,30
+Løveskogen,Post hole,"Bone, burnt (Mammalia)",LuS-15746,2995,35
+Lunaveien,"Square (50x53y, layer 1)",Charcoal (Betula),Beta-276197,1430,40
+Lunaveien,"Square (50x50y, layer 1)",Charcoal (Pinus),Beta-276198,60,40
+Lunaveien,"Square (51x55y, layer 1)",Charcoal (Betula),Beta-276199,1690,40
+Lunaveien,"Square (53x52y, layer 1)",Charcoal (Pinus),Beta-276200,3620,40
+Lunaveien,"Square (50x50y, layer 2)","Bone, burnt (NA)",Beta-278526,2350,40
+Lunaveien,"Square (51x55y, layer 2)","Bone, burnt (NA)",Beta-278527,2380,40
+Lunde,Cooking pit,Charcoal (Decid. indet.)),T-13096,2131,69
 Mælum kirke,Artefact,Wood (Pinus),TUa-1471,284,67
-Malerød,Hearth,Charcoal (populus/Salix ),TUa-2099,172,85
-Marum,,Charcoal,TRa-722,3510,30
+Malerød,Hearth,Charcoal (Populus/Salix),TUa-2099,172,85
+Marum,,Charcoal (NA),TRa-722,3510,30
 Moen,Log boat,Wood (NA),T-1429,740,110
 Mølen,cairn,Carboniferous soil (NA),T-1359,1810,110
-Mørland Lille 1,Lag_3_PS40189,Charcoal (Unknown),Beta-360071,4940,30
-Mørland Lille 1,Lag_4_PS40195,Charcoal (Unknown),Beta-360072,3040,30
-Mørland Lille 2,Kokegrop,Charcoal (Unknown),Beta-366065,3130,30
+Mørland Lille 1,Lag_3_PS40189,Charcoal (NA),Beta-360071,4940,30
+Mørland Lille 1,Lag_4_PS40195,Charcoal (NA),Beta-360072,3040,30
+Mørland Lille 2,Kokegrop,Charcoal (NA),Beta-366065,3130,30
 Narestø 2,Pottery,Foodcrust (NA),TUa-2256,6185,90
 Narestø 2,Pottery,Foodcrust (NA),TUa-2255,4522,94
 Narestø 2,Pottery,Foodcrust (NA),TUa-2257,4111,77
-Nauen A,Unspecified,"Charcoal, not specified",T-10623,5965,100
-Nauen A,Unspecified,"Charcoal, not specified",T-10464,5875,115
-Nauen A,Unspecified,"Charcoal, not specified",T-10625,3705,120
-Nauen A,Unspecified,"Charcoal, not specified",T-10630,3595,110
-Nauen A,Unspecified,"Charcoal, not specified",T-10624,3175,90
-Nauen A,Unspecified,"Charcoal, not specified",T-10462,2925,80
-Nauen A,Unspecified,"Charcoal, not specified",T-10622,2810,85
-Nauen A,"Concentration, stone? (ID 47)","Charcoal, not specified",T-11050,2760,70
-Nauen A,Unspecified,"Charcoal, not specified",T-10467,2235,80
-Nauen A,Unspecified,"Charcoal, not specified",T-10629,1840,150
-Nauen A,Unspecified,"Charcoal, not specified",T-10908,1755,65
-Nauen A,Unspecified,"Charcoal, not specified",T-10907,1665,50
-Nauen A,Unspecified,"Charcoal, not specified",T-10463,1485,100
-Nauen A,Unspecified,"Charcoal, not specified",T-10628,1335,155
-Nauen A,Unspecified,"Charcoal, not specified",T-10465,1005,155
-Nauen A,Unspecified,"Charcoal, not specified",T-10627,1000,90
-Nauen A,Unspecified,"Charcoal, not specified",T-10626,875,100
-Nauen A,Unspecified,"Charcoal, not specified",T-10466,635,150
-Nauen A,Unspecified,"Charcoal, not specified",T-10909,285,50
-Nauen A,Grave (ID 2),"Charcoal, not specified",T-10906,510,40
-Nauen A,Undefined layer (ID 153),"Charcoal, not specified",TUa-4651,3360,55
-Nauen A,Undefined layer (ID 156),"Charcoal, not specified",Beta-204709,3020,50
-Nauen A,Grave (ID 2),"Charcoal, not specified",T-10906l,490,40
-Nauen A,Transect (ID 630),"Charcoal, not specified",TUa-4652,2765,35
-Nauen C,Unspecified,"Charcoal, not specified",TUa-4653,5190,60
-Nauen C,Possible tree throw (ID 2/4),"Charcoal, not specified",TUa-4654,5210,70
-Nauen C,Possible tree throw (ID 2/4),"Charcoal, not specified",Beta-201399,5020,50
-Nauen C,Possible tree throw (ID 2/4),"Charcoal, not specified",Beta-201400,3780,50
-Nauen C,Possible tree throw (ID 2/4),"Charcoal, not specified",T-17050,3525,110
-Nauen C,Undefined feature (ID 1),"Charcoal, not specified",Beta-201401,2360,40
-Nedre Hobekk 2,"Quadrant (28x193ySW, layer 1)",Burnt bone,Ua-45175,1917,30
-Nøklegård 1,Quadrant (ID not provided),"Burnt bone, mammal",TUa-7708,3515,60
-Nordby 1,"Post hole, house 4 (ID 35188)","Hazel (Corylus), nutshell",TUa-6513,3945,45
-Nordby 1,"Post hole, house 4 (ID 35191)",Oak (Quercus),Tua-6550,3665,45
-Nordby 1,"Post hole, house 3 (ID 35082)","Plant remains, unspecified",TUa-6555,2025,30
-Nordby 1,"Post hole, house 3 (ID 35081)",Barley (Hordeum vulgare),TUa-6511,1805,35
-Nordby 1,"Post hole, house 3 (ID 35036)","Charcoal, unspecified",TUa-6556,1595,45
-Nordby 1,"Post hole, house 2 (ID 35086)","Deciduous (Decid, indet.)",TUa-6551,3760,50
-Nordby 1,"Post hole, house 2 (ID 35091)",Oak (Quercus),TUa-6558,3385,45
-Nordby 1,"Post hole, house 2 (ID 35099)",Oak (Quercus),TUa-6557,3340,45
-Nordby 1,"Post hole, house 2 (ID 35115, 35028)","Cereal, unspecified",Beta-238363,3250,40
-Nordby 1,"Post hole, house 1 (ID 35047)",Barley (Hordeum vulgare),TUa-6517,3555,35
-Nordby 1,"Post hole, house 1 (ID 35063)",Barley (Hordeum vulgare),TUa-6518,3465,35
-Nordby 1,"Post hole, house 1 (ID 35056)",Barley (Hordeum vulgare),TUa-6516,3550,35
-Nordby 1,"Post hole, house 1 (ID 35047)",Birch (Betula),Beta-234329,750,40
-Nordby 1,Undefined feature (ID 35074),Oak (Quercus),Tua-4412,940,50
-Nordby 1,Undefined feature (ID 35064),Birch/ash (Betula/Fraxinus),Tua-6301,3300,25
-Nordby 1,Undefined feature (ID 35054),Birch/hazel (Betula/Corylus),T-18774,740,75
-Nordby 1,Cooking pit (ID 35141),Birch/ash (Betula/Fraxinus),Tua-6302,2575,25
-Nordby 1,Cooking pit (ID 35013),Pine (Pinus),T-18773,845,75
-Nordby 1,Fireplace (ID 35006),Birch/hazel (Betula/Corylus),T-18772,1925,100
-Nordby 1 (Bommestad-Sky),Cooking pit (ID 2),Birch (Betula),TRa-3411,2515,35
-Nordby 2,,Charcoal,TUa-6550,3665,45
-Nordby 2 (Bommestad-Sky),Cooking pit/fireplace (ID 1),Hazel (Corylus),TRa-3413,2310,35
-Nordby 2 (Bommestad-Sky),Cooking pit/fireplace (ID 1),Birch (Betula),Ua-45676,2191,35
-Nordby 2 (Bommestad-Sky),"Quadrant (58x57ySE, layer 5)","Hazel (Corylus), nutshell",TRa-3412,2300,40
-Nordby 2 (Bommestad-Sky),"Quadrant (54x55ySW, layer 1)",Burnt bone,TRa-4075,190,30
-Nordby 3 (Bommestad-Sky),Cooking pit (ID 1),Birch (Betula),TRa-3414,1825,35
-Nordby 52,Fireplace? (ID 35136),"Charcoal, not specified",TUa-6308,6190,35
-Nordby 52,Fireplace? (ID 35185),"Charcoal, not specified",TUa-6307,6260,35
-Nordby 52,Fireplace (ID 35211),"Charcoal, not specified",T-18777,5960,100
-Nordby 52,Fireplace (ID 35212),"Charcoal, not specified",TUa-6306,6140,40
-Nordby 52,Cooking pit/fireplace (ID 35213),"Charcoal, not specified",T-18778,6155,130
-Nordby 52,Fireplace (ID 35215),"Charcoal, not specified",TUa-6304,6140,35
-Nordby 52,Fireplace? (ID 35216),"Charcoal, not specified",TUa-6305,6150,40
-Nordby 52,Fireplace (ID 35002),"Charcoal, not specified",T-18775,2350,85
-Nordby 52,Fireplace (ID 35125),"Charcoal, not specified",T-18776,2490,105
-Nordby 52,Forge (ID 35217),"Charcoal, not specified",TUa-6303,610,25
-Nordby 52,Forge (ID 35217),"Charcoal, not specified",T-18779,505,75
-Nordby 52,Unspecified excavation unit,"Burnt bone, harbour seal (Phoca vitulina)",TUa-6694,3120,35
-Nordby 52,Unspecified excavation unit,"Burnt bone, mammal indet.",TUa-6692,3670,35
-Nordby 52,,Charcoal,TUa-6554,4725,45
+Nauen A,Unspecified,Charcoal (NA),T-10623,5965,100
+Nauen A,Unspecified,Charcoal (NA),T-10464,5875,115
+Nauen A,Unspecified,Charcoal (NA),T-10625,3705,120
+Nauen A,Unspecified,Charcoal (NA),T-10630,3595,110
+Nauen A,Unspecified,Charcoal (NA),T-10624,3175,90
+Nauen A,Unspecified,Charcoal (NA),T-10462,2925,80
+Nauen A,Unspecified,Charcoal (NA),T-10622,2810,85
+Nauen A,"Concentration, stone? (ID 47)",Charcoal (NA),T-11050,2760,70
+Nauen A,Unspecified,Charcoal (NA),T-10467,2235,80
+Nauen A,Unspecified,Charcoal (NA),T-10629,1840,150
+Nauen A,Unspecified,Charcoal (NA),T-10908,1755,65
+Nauen A,Unspecified,Charcoal (NA),T-10907,1665,50
+Nauen A,Unspecified,Charcoal (NA),T-10463,1485,100
+Nauen A,Unspecified,Charcoal (NA),T-10628,1335,155
+Nauen A,Unspecified,Charcoal (NA),T-10465,1005,155
+Nauen A,Unspecified,Charcoal (NA),T-10627,1000,90
+Nauen A,Unspecified,Charcoal (NA),T-10626,875,100
+Nauen A,Unspecified,Charcoal (NA),T-10466,635,150
+Nauen A,Unspecified,Charcoal (NA),T-10909,285,50
+Nauen A,Grave (ID 2),Charcoal (NA),T-10906,510,40
+Nauen A,Undefined layer (ID 153),Charcoal (NA),TUa-4651,3360,55
+Nauen A,Undefined layer (ID 156),Charcoal (NA),Beta-204709,3020,50
+Nauen A,Grave (ID 2),Charcoal (NA),T-10906l,490,40
+Nauen A,Transect (ID 630),Charcoal (NA),TUa-4652,2765,35
+Nauen C,Unspecified,Charcoal (NA),TUa-4653,5190,60
+Nauen C,Possible tree throw (ID 2/4),Charcoal (NA),TUa-4654,5210,70
+Nauen C,Possible tree throw (ID 2/4),Charcoal (NA),Beta-201399,5020,50
+Nauen C,Possible tree throw (ID 2/4),Charcoal (NA),Beta-201400,3780,50
+Nauen C,Possible tree throw (ID 2/4),Charcoal (NA),T-17050,3525,110
+Nauen C,Undefined feature (ID 1),Charcoal (NA),Beta-201401,2360,40
+Nedre Hobekk 2,"Quadrant (28x193ySW, layer 1)","Bone, burnt (NA)",Ua-45175,1917,30
+Nøklegård 1,Quadrant (ID not provided),"Bone, burnt (Mammalia)",TUa-7708,3515,60
+Nordby 1,"Post hole, house 4 (ID 35188)",Nutshell (Corylus),TUa-6513,3945,45
+Nordby 1,"Post hole, house 4 (ID 35191)",Charcoal (Quercus),Tua-6550,3665,45
+Nordby 1,"Post hole, house 3 (ID 35082)",Plant remains (NA),TUa-6555,2025,30
+Nordby 1,"Post hole, house 3 (ID 35081)",Cereal (Hordeum vulgare),TUa-6511,1805,35
+Nordby 1,"Post hole, house 3 (ID 35036)",Charcoal (NA),TUa-6556,1595,45
+Nordby 1,"Post hole, house 2 (ID 35086)","Charcoal (Decid, indet.)",TUa-6551,3760,50
+Nordby 1,"Post hole, house 2 (ID 35091)",Charcoal (Quercus),TUa-6558,3385,45
+Nordby 1,"Post hole, house 2 (ID 35099)",Charcoal (Quercus),TUa-6557,3340,45
+Nordby 1,"Post hole, house 2 (ID 35115, 35028)",Cereal (NA),Beta-238363,3250,40
+Nordby 1,"Post hole, house 1 (ID 35047)",Cereal (Hordeum vulgare),TUa-6517,3555,35
+Nordby 1,"Post hole, house 1 (ID 35063)",Cereal (Hordeum vulgare),TUa-6518,3465,35
+Nordby 1,"Post hole, house 1 (ID 35056)",Cereal (Hordeum vulgare),TUa-6516,3550,35
+Nordby 1,"Post hole, house 1 (ID 35047)",Charcoal (Betula),Beta-234329,750,40
+Nordby 1,Undefined feature (ID 35074),Charcoal (Quercus),Tua-4412,940,50
+Nordby 1,Undefined feature (ID 35064),Charcoal (Betula/Fraxinus),Tua-6301,3300,25
+Nordby 1,Undefined feature (ID 35054),Charcoal (Betula/Corylus),T-18774,740,75
+Nordby 1,Cooking pit (ID 35141),Charcoal (Betula/Fraxinus),Tua-6302,2575,25
+Nordby 1,Cooking pit (ID 35013),Charcoal (Pinus),T-18773,845,75
+Nordby 1,Fireplace (ID 35006),Charcoal (Betula/Corylus),T-18772,1925,100
+Nordby 1 (Bommestad-Sky),Cooking pit (ID 2),Charcoal (Betula),TRa-3411,2515,35
+Nordby 2,,Charcoal (NA),TUa-6550,3665,45
+Nordby 2 (Bommestad-Sky),Cooking pit/fireplace (ID 1),Charcoal (Corylus),TRa-3413,2310,35
+Nordby 2 (Bommestad-Sky),Cooking pit/fireplace (ID 1),Charcoal (Betula),Ua-45676,2191,35
+Nordby 2 (Bommestad-Sky),"Quadrant (58x57ySE, layer 5)",Nutshell (Corylus),TRa-3412,2300,40
+Nordby 2 (Bommestad-Sky),"Quadrant (54x55ySW, layer 1)","Bone, burnt (NA)",TRa-4075,190,30
+Nordby 3 (Bommestad-Sky),Cooking pit (ID 1),Charcoal (Betula),TRa-3414,1825,35
+Nordby 52,Fireplace? (ID 35136),Charcoal (NA),TUa-6308,6190,35
+Nordby 52,Fireplace? (ID 35185),Charcoal (NA),TUa-6307,6260,35
+Nordby 52,Fireplace (ID 35211),Charcoal (NA),T-18777,5960,100
+Nordby 52,Fireplace (ID 35212),Charcoal (NA),TUa-6306,6140,40
+Nordby 52,Cooking pit/fireplace (ID 35213),Charcoal (NA),T-18778,6155,130
+Nordby 52,Fireplace (ID 35215),Charcoal (NA),TUa-6304,6140,35
+Nordby 52,Fireplace? (ID 35216),Charcoal (NA),TUa-6305,6150,40
+Nordby 52,Fireplace (ID 35002),Charcoal (NA),T-18775,2350,85
+Nordby 52,Fireplace (ID 35125),Charcoal (NA),T-18776,2490,105
+Nordby 52,Forge (ID 35217),Charcoal (NA),TUa-6303,610,25
+Nordby 52,Forge (ID 35217),Charcoal (NA),T-18779,505,75
+Nordby 52,Unspecified excavation unit,"Bone, burnt (Phoca vitulina)",TUa-6694,3120,35
+Nordby 52,Unspecified excavation unit,"Bone, burnt (mammal)",TUa-6692,3670,35
+Nordby 52,,Charcoal (NA),TUa-6554,4725,45
 Nykirke,Settlement site,Charcoal (NA),T-2017,3110,120
 Nykirke,Settlement site,Charcoal (NA),T-1791,1920,130
 Nykirke,Hearth,Charcoal (NA),T-1790,1870,140
-Pauler 1,Fireplace (ID 1),Pine (Pinus),Beta-234411,3460,40
-Pauler 1,Fireplace (ID 1),Pine (Pinus),Beta-234412,910,40
-Pauler 1,Fireplace (ID 1),Birch (Betula),Beta-234413,960,40
-Pauler 1,Fireplace (ID 1),"Deciduous (Decid, indet.)",Beta-234414,910,40
-Pauler 1,Fireplace/Burnt root (ID 15),Pine (Pinus),TUa-7848,7245,45
-Pauler 2,Fireplace (ID 1),"Hazel (Corylus), nutshell",Beta-234403,6910,40
-Pauler 2,Fireplace (ID 1),Pine (Pinus),Beta-234404,6990,40
-Pauler 2,Fireplace (ID 1),Pine (Pinus),Beta-234407,3260,40
-Pauler 2,Fireplace (ID 1),Pine (Pinus),Beta-234410,4800,40
-Pauler 2,Fireplace (ID 1),Oak (Quercus),Beta-234409,1440,40
-Pauler 2,Fireplace (ID 1),Birch (Betula),Beta-234408,900,40
-Pauler 2,Fireplace (ID 2),Birch (Betula),Beta-234405,870,40
-Pauler 2,Fireplace (ID 2),Pine (Pinus),Beta-234406,300,40
-Pauler 3,Fireplace (ID 1),Pine/birch (Pinus/Betula),TUa-7849,860,30
-Pauler 4,"Quadrant (97x46yNE, layer 2)","Burnt bone, mammal",TUa-7709,1410,30
-Pauler 4,"Quadrant (98x49yNW, layer 2)","Burnt bone, ungulate",TUa-7710,1420,60
-Pjonkerød R1,"Quadrant 50x50x10 (112x51y NE, layer 2)",Burnt bone,Ua-47916,7970,44
-Pjonkerød R1,Undefined feature (ID 2001),Pine (Pinus),Ua-47914,3178,32
-Pjonkerød R1,Cooking pit (ID 2002),Pine (Pinus),Ua-47915,3117,31
-Pjonkerød R1,Cooking pit (ID 2007),Oak (Quercus),Ua-47917,1373,30
-Pjonkerød R1,Undefined feature (ID 2001),Pine (Pinus),Ua-47913,4959,34
-Portørenga,Wood log,Wood (Pinus?),T-4219,390,40
-Prestegården,Hearth,Charcoal (decidious tree),T-10668,1891,162
+Pauler 1,Fireplace (ID 1),Charcoal (Pinus),Beta-234411,3460,40
+Pauler 1,Fireplace (ID 1),Charcoal (Pinus),Beta-234412,910,40
+Pauler 1,Fireplace (ID 1),Charcoal (Betula),Beta-234413,960,40
+Pauler 1,Fireplace (ID 1),"Charcoal (Decid, indet.)",Beta-234414,910,40
+Pauler 1,Fireplace/Burnt root (ID 15),Charcoal (Pinus),TUa-7848,7245,45
+Pauler 2,Fireplace (ID 1),Nutshell (Corylus),Beta-234403,6910,40
+Pauler 2,Fireplace (ID 1),Charcoal (Pinus),Beta-234404,6990,40
+Pauler 2,Fireplace (ID 1),Charcoal (Pinus),Beta-234407,3260,40
+Pauler 2,Fireplace (ID 1),Charcoal (Pinus),Beta-234410,4800,40
+Pauler 2,Fireplace (ID 1),Charcoal (Quercus),Beta-234409,1440,40
+Pauler 2,Fireplace (ID 1),Charcoal (Betula),Beta-234408,900,40
+Pauler 2,Fireplace (ID 2),Charcoal (Betula),Beta-234405,870,40
+Pauler 2,Fireplace (ID 2),Charcoal (Pinus),Beta-234406,300,40
+Pauler 3,Fireplace (ID 1),Charcoal (Pinus/Betula),TUa-7849,860,30
+Pauler 4,"Quadrant (97x46yNE, layer 2)","Bone, burnt (mammal)",TUa-7709,1410,30
+Pauler 4,"Quadrant (98x49yNW, layer 2)","Bone, burnt (ungulate)",TUa-7710,1420,60
+Pjonkerød R1,"Quadrant 50x50x10 (112x51y NE, layer 2)","Bone, burnt (NA)",Ua-47916,7970,44
+Pjonkerød R1,Undefined feature (ID 2001),Charcoal (Pinus),Ua-47914,3178,32
+Pjonkerød R1,Cooking pit (ID 2002),Charcoal (Pinus),Ua-47915,3117,31
+Pjonkerød R1,Cooking pit (ID 2007),Charcoal (Quercus),Ua-47917,1373,30
+Pjonkerød R1,Undefined feature (ID 2001),Charcoal (Pinus),Ua-47913,4959,34
+Portørenga,Wood log,Wood (NA),T-4219,390,40
+Prestegården,Hearth,Charcoal (Decid. indet.),T-10668,1891,162
 Prestegården,Posthole,Charcoal (NA),TUa-452,1001,63
 Prestegården,Burial mound,Charcoal (NA),T-8842,1392,80
 Prestegården,Cultural layer,Charcoal (Corylus),T-8846,1310,99
 Prestegården,Pit,Charcoal (Corylus),T-8851,1299,50
-Prestegården,Hearth,Charcoal (Decidious tree),T-8849,1259,89
-Prestegården,Pit,Charcoal (Decidious tree),T-8845,1228,91
-Prestemoen 1,"Square (620x149y, layer 6)","Hazel (Corylus), nutshell",Ua-45176,8671,45
-Prestemoen 1,"Square (620x149y, layer 6)",Burnt bone,Ua-45177,8620,45
-Prestemoen 1,"Square (620x149y, layer 8)","Hazel (Corylus), nutshell",Ua-45178,8593,46
+Prestegården,Hearth,Charcoal (Decid. indet.),T-8849,1259,89
+Prestegården,Pit,Charcoal (Decid. indet.),T-8845,1228,91
+Prestemoen 1,"Square (620x149y, layer 6)",Nutshell (Corylus),Ua-45176,8671,45
+Prestemoen 1,"Square (620x149y, layer 6)","Bone, burnt (NA)",Ua-45177,8620,45
+Prestemoen 1,"Square (620x149y, layer 8)",Nutshell (Corylus),Ua-45178,8593,46
 Rafnes,Charcoal pile,Charcoal (NA),T-1893,2850,110
 Rafnes,Charcoal pile,Charcoal (NA),T-1894,1890,80
-Ragnhildrød,Post hole (ID 1350035),Hazel (Corylus),TRa-1796,3690,45
-Ragnhildrød,Post hole (ID 1350035),"Hazel (Corylus), nutshell",UBA-17796,2926,22
-Ragnhildrød,Cooking pit (ID 1350020),Hazel (Corylus),TRa-1120,2325,40
-Ragnhildrød,Cooking pit (ID 1351121),Hazel (Corylus),TRa-1124,2285,35
-Ragnhildrød,Cooking pit (ID 1351087),"Hazel (Corylus), nutshell",UBA-17797,2275,28
-Ragnhildrød,Fireplace (ID 1350026),Hazel (Corylus),TRa-1123,2225,55
-Ragnhildrød,Floor layer (ID 1351069),Hazel (Corylus),UBA-17800,2220,24
-Ragnhildrød,Cooking pit (ID 1351087),Hazel (Corylus),TRa-1798,2195,40
-Ragnhildrød,Cooking pit (ID 1350015),Hazel (Corylus),TRa-1795,2190,30
-Ragnhildrød,Outer wall ditch (ID 1351134),Hazel (Corylus),TRa-1125,2185,45
-Ragnhildrød,Cooking pit (ID 1350020),Hazel (Corylus),UBA-17795,2170,43
-Ragnhildrød,Cooking pit (ID 1350017),Hazel (Corylus),TRa-1118,2140,40
-Ragnhildrød,Fireplace (ID 1351071),Hazel (Corylus),TRa-1121,2130,40
-Ragnhildrød,Fireplace (ID 1351127),Hazel (Corylus),TRa-1799,1945,30
-Ragnhildrød,Fireplace (ID 1351057),Birch (Betula),TRa-1122,1660,45
-Ragnhildrød,Fireplace (ID 1351127),Hazel (Corylus),UBA-17799,1533,33
-Ragnhildrød,Fireplace (ID 1350004),Beech (Fagus),TRa-1117,810,40
-Ragnhildrød,"Layer, dwelling entry-way (ID 1351061)",Oak (Quercus),TRa-2278,7915,90
+Ragnhildrød,Post hole (ID 1350035),Charcoal (Corylus),TRa-1796,3690,45
+Ragnhildrød,Post hole (ID 1350035),Nutshell (Corylus),UBA-17796,2926,22
+Ragnhildrød,Cooking pit (ID 1350020),Charcoal (Corylus),TRa-1120,2325,40
+Ragnhildrød,Cooking pit (ID 1351121),Charcoal (Corylus),TRa-1124,2285,35
+Ragnhildrød,Cooking pit (ID 1351087),Nutshell (Corylus),UBA-17797,2275,28
+Ragnhildrød,Fireplace (ID 1350026),Charcoal (Corylus),TRa-1123,2225,55
+Ragnhildrød,Floor layer (ID 1351069),Charcoal (Corylus),UBA-17800,2220,24
+Ragnhildrød,Cooking pit (ID 1351087),Charcoal (Corylus),TRa-1798,2195,40
+Ragnhildrød,Cooking pit (ID 1350015),Charcoal (Corylus),TRa-1795,2190,30
+Ragnhildrød,Outer wall ditch (ID 1351134),Charcoal (Corylus),TRa-1125,2185,45
+Ragnhildrød,Cooking pit (ID 1350020),Charcoal (Corylus),UBA-17795,2170,43
+Ragnhildrød,Cooking pit (ID 1350017),Charcoal (Corylus),TRa-1118,2140,40
+Ragnhildrød,Fireplace (ID 1351071),Charcoal (Corylus),TRa-1121,2130,40
+Ragnhildrød,Fireplace (ID 1351127),Charcoal (Corylus),TRa-1799,1945,30
+Ragnhildrød,Fireplace (ID 1351057),Charcoal (Betula),TRa-1122,1660,45
+Ragnhildrød,Fireplace (ID 1351127),Charcoal (Corylus),UBA-17799,1533,33
+Ragnhildrød,Fireplace (ID 1350004),Charcoal (Fagus),TRa-1117,810,40
+Ragnhildrød,"Layer, dwelling entry-way (ID 1351061)",Charcoal (Quercus),TRa-2278,7915,90
 Ramsum,Cultivation layer,Charcoal (Betula),TUa-4546,1193,34
 Råstad Nordre,Cooking pit,"Charcoal (Betula, Corylus)",T-15812,2791,48
-Råstad Nordre,Cooking pit,"Charcoal (Betula, populus)",T-15810,2758,52
+Råstad Nordre,Cooking pit,"Charcoal (Betula, Populus)",T-15810,2758,52
 Råstad Nordre,Cooking pit,Charcoal (Fraxinus),T-15809,2576,69
 Råstad Nordre,Cooking pit,Charcoal (Corylus),T-15811,1734,54
 Råstad Nordre,Cooking pit,"Charcoal (Betula, Corylus)",TUa-3594,2688,62
-Ringdal 13,,Organic fragment,Beta-234332,5550,40
-Rødbøl 19,,Charcoal,TUa-5865,4880,50
-Rødbøl 54,Fireplace (ID 20013),"Hazel (Corylus), nutshell",TUa-5558,8630,45
-Rødbøl 54,Fireplace (ID 20019),Birch (Betula),TUa-6053,1770,30
-Rødbøl 54,Cooking pit (ID 20057),Birch (Betula),T-18456,1715,55
-Rødbøl 54,Cooking pit (ID 20005),Birch/hazel (Betula/Corylus),T-18454,1610,70
-Rognlien,Unspecified excavation unit,"Charcoal, unspecified",T-133,4700,120
-Rognlien,Unspecified excavation unit,"Charcoal, unspecified",T-1873,4600,130
-Rognlien,Unspecified excavation unit,"Burnt bone, elk (Alces alces)",TRa-3591,4090,35
-Rognlien,,Bone,Beta-4023,4090,35
+Ringdal 13,,Organic fragment (NA),Beta-234332,5550,40
+Rødbøl 19,,Charcoal (NA),TUa-5865,4880,50
+Rødbøl 54,Fireplace (ID 20013),Nutshell (Corylus),TUa-5558,8630,45
+Rødbøl 54,Fireplace (ID 20019),Charcoal (Betula),TUa-6053,1770,30
+Rødbøl 54,Cooking pit (ID 20057),Charcoal (Betula),T-18456,1715,55
+Rødbøl 54,Cooking pit (ID 20005),Charcoal (Betula/Corylus),T-18454,1610,70
+Rognlien,Unspecified excavation unit,Charcoal (NA),T-133,4700,120
+Rognlien,Unspecified excavation unit,Charcoal (NA),T-1873,4600,130
+Rognlien,Unspecified excavation unit,"Bone, burnt (Alces alces)",TRa-3591,4090,35
+Rognlien,,Bone (NA),Beta-4023,4090,35
 Rolighets-Ødegården,Pit,Charcoal (Betula),T-19631,2246,41
 Rønningen,Charcoal layer,Charcoal (NA),T-1890,510,60
-Rønningsåsen 2,,Charcoal,Ua-77217,8689,37
-Rønningsåsen 2,,Charcoal,Ua-77219,8623,37
-Rønningsåsen 2,,Charcoal,Ua-77218,6640,35
-Rønningsåsen 5,,Charcoal,Ua-77234,5671,34
-Rønningsåsen 6,,Charcoal,Ua-77249,5833,34
-Rønningsåsen 6,,Charcoal,Ua-77250,5607,33
-Rønningsåsen 6,,Charcoal,Ua-77241,5566,33
-Rønningsåsen 6,,Charcoal,Ua-77248,5500,33
-Rønningsåsen 6,,Charcoal,Ua-77243,5368,33
-Rønningsåsen 7,,Charcoal,Ua-77265,5777,34
-Rønningsåsen 7,,Charcoal,Ua-77255,5166,33
-Rønningsåsen 7,,Charcoal,Ua-77263,5056,33
-Rønningsåsen 7,,Charcoal,Ua-77259,5030,34
-Rønningsåsen 7,,Charcoal,Ua-77252,5016,33
-Rønningsåsen 7,,Charcoal,Ua-77261,5009,32
-Rønningsåsen 7,,Charcoal,Ua-77253,5007,33
-Rønningsåsen 7,,Charcoal,Ua-77262,4989,33
-Rønningsåsen 7,,Charcoal,Ua-77264,4981,32
-Rønningsåsen 7,,Charcoal,Ua-77260,4954,33
-Rønningsåsen 7,,Charcoal,Ua-77258,4948,33
-Rønningsåsen 7,,Charcoal,Ua-77254,4937,33
-Rønningsåsen 7,,Charcoal,Ua-77251,4935,32
+Rønningsåsen 2,,Charcoal (NA),Ua-77217,8689,37
+Rønningsåsen 2,,Charcoal (NA),Ua-77219,8623,37
+Rønningsåsen 2,,Charcoal (NA),Ua-77218,6640,35
+Rønningsåsen 5,,Charcoal (NA),Ua-77234,5671,34
+Rønningsåsen 6,,Charcoal (NA),Ua-77249,5833,34
+Rønningsåsen 6,,Charcoal (NA),Ua-77250,5607,33
+Rønningsåsen 6,,Charcoal (NA),Ua-77241,5566,33
+Rønningsåsen 6,,Charcoal (NA),Ua-77248,5500,33
+Rønningsåsen 6,,Charcoal (NA),Ua-77243,5368,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77265,5777,34
+Rønningsåsen 7,,Charcoal (NA),Ua-77255,5166,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77263,5056,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77259,5030,34
+Rønningsåsen 7,,Charcoal (NA),Ua-77252,5016,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77261,5009,32
+Rønningsåsen 7,,Charcoal (NA),Ua-77253,5007,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77262,4989,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77264,4981,32
+Rønningsåsen 7,,Charcoal (NA),Ua-77260,4954,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77258,4948,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77254,4937,33
+Rønningsåsen 7,,Charcoal (NA),Ua-77251,4935,32
 Røsvikhelleren,Charcoal pit,Charcoal (NA),T-2461,1670,60
 Røsvikhelleren,Charcoal layer,Charcoal (NA),T-2462,1610,60
 Rugtvedt,Settlement site,Charcoal (NA),Ua-3667,5950,60
@@ -1426,119 +1426,119 @@ Rugtvedt,Settlement site,Charcoal (NA),Ua-3669,5860,75
 Rugtvedt,Settlement site,Charcoal (NA),Ua-3668,5505,65
 S. Vold,Hearth,Charcoal (NA),T-10916,1403,81
 S. Vold,Hearth,Charcoal (NA),T-10917,177,63
-S. Vold,Hearth,Charcoal (Decidious tree),T-8850,1263,66
+S. Vold,Hearth,Charcoal (Decid. indet.),T-8850,1263,66
 S. Vold,Pit,Wood (Quercus),T-8844,1237,95
 S. Vold,Pit,Charcoal (Corylus),T-8847,1220,78
 S. Vold,Burial mound,Charcoal (NA),T-8848,428,87
 S. Vold,Pit,Charcoal (picea),T-8843,37,76
-Sagene B1,Post-hole (ID 456141),"Pine (Pinus),",Ua-52869,7954,32
-Sagene B1,Post-hole (ID 456149),"Deciduous (Decid, indet.)",Ua-52923,5150,58
-Sagene B1,Post-hole (ID 456132),Pine (Pinus),Ua-52868,3352,27
-Sagene B1,Fireplace (ID 454792),Ash (Fraxinus),Ua-52866,2254,43
-Sagene B1,Floor layer (ID 451586),"Coniferous (Conif. indet.), cone seed scale",Ua-52867,1766,47
-Sagene B2,Tree throw (ID 503080),"Deciduous (Decid, indet.)",Ua-52870,4946,29
-Sagene B2,Cooking pit (ID 500001),Pine (Pinus),Beta-411673,2640,30
-Sagene B2,Cooking pit (ID 500001),Birch (Betula),Beta-411674,2460,30
-Sagene B2,Tree throw (ID 503080),"Coniferous (Conif. indet.), cone",Ua-52924,1305,51
-Sagene B6,"Quadrant (335x875ySW, layer 1)","Hazel (Corylus), nutshell",Beta-442233,1810,30
-Sagene B6,"Quadrant (339x878yNW, layer 2)","Hazel (Corylus), nutshell",Beta-442234,1590,30
-Seierstad 7,,Charcoal,TUa-6351,3575,25
-Seierstad 7,,Charcoal,TUa-6357,3460,35
+Sagene B1,Post-hole (ID 456141),Charcoal (Pinus),Ua-52869,7954,32
+Sagene B1,Post-hole (ID 456149),"Charcoal (Decid, indet.)",Ua-52923,5150,58
+Sagene B1,Post-hole (ID 456132),Charcoal (Pinus),Ua-52868,3352,27
+Sagene B1,Fireplace (ID 454792),Charcoal (Fraxinus),Ua-52866,2254,43
+Sagene B1,Floor layer (ID 451586),Husk (Conif. indet.),Ua-52867,1766,47
+Sagene B2,Tree throw (ID 503080),"Charcoal (Decid, indet.)",Ua-52870,4946,29
+Sagene B2,Cooking pit (ID 500001),Charcoal (Pinus),Beta-411673,2640,30
+Sagene B2,Cooking pit (ID 500001),Charcoal (Betula),Beta-411674,2460,30
+Sagene B2,Tree throw (ID 503080),Husk (Conif. indet.),Ua-52924,1305,51
+Sagene B6,"Quadrant (335x875ySW, layer 1)",Nutshell (Corylus),Beta-442233,1810,30
+Sagene B6,"Quadrant (339x878yNW, layer 2)",Nutshell (Corylus),Beta-442234,1590,30
+Seierstad 7,,Charcoal (NA),TUa-6351,3575,25
+Seierstad 7,,Charcoal (NA),TUa-6357,3460,35
 Semb hovedgård,Cooking pit,"Charcoal (Betula, Corylus)",T-14599,1841,67
 Semb hovedgård,Cooking pit,"Charcoal (Betula, Corylus)",T-14598,1826,50
 Semb hovedgård,Cooking pit,"Charcoal (Betula, Corylus)",T-14601,1797,75
 Semb hovedgård,Cooking pit,Charcoal (Betula),T-14600,1755,70
 Semb hovedgård,Cooking pit,"Charcoal (Betula, Corylus)",T-14597,1737,82
-Sivert Urnes veg,,Charcoal ,TRa-2488,4950,50
-Sivert Urnes veg,,Charcoal ,TRa-2501,4850,40
-Sivert Urnes veg,,Charcoal ,TRa-2497,4800,40
-Sivert Urnes veg,,Charcoal ,TRa-2496,4090,45
-Sivert Urnes veg,,Charcoal ,TRa-2510,3520,35
-Sivert Urnes veg,,Charcoal ,TRa-2504,3305,35
-Sivert Urnes veg,,Charcoal ,TRa-2492,3125,35
-Sivert Urnes veg,,Charcoal ,TRa-2511,3080,35
-Sivert Urnes veg,,Charcoal ,TRa-2500,3015,35
+Sivert Urnes veg,,Charcoal (NA),TRa-2488,4950,50
+Sivert Urnes veg,,Charcoal (NA),TRa-2501,4850,40
+Sivert Urnes veg,,Charcoal (NA),TRa-2497,4800,40
+Sivert Urnes veg,,Charcoal (NA),TRa-2496,4090,45
+Sivert Urnes veg,,Charcoal (NA),TRa-2510,3520,35
+Sivert Urnes veg,,Charcoal (NA),TRa-2504,3305,35
+Sivert Urnes veg,,Charcoal (NA),TRa-2492,3125,35
+Sivert Urnes veg,,Charcoal (NA),TRa-2511,3080,35
+Sivert Urnes veg,,Charcoal (NA),TRa-2500,3015,35
 Sluppan,Cultural layer,Charcoal (NA),T-3057,1660,70
-Snipetorp-Tenvik,,Charcoal,Beta-423356,5560,30
-Snipetorp-Tenvik,,Charcoal,Beta-423355,5350,30
-Solberg 44,,Charcoal,Beta-236871,3030,40
-Solum 3,Undefined feature/wooden construction (ID 350),Hazel (Corylus),Ua-45179,3039,31
-Solum 3,Undefined feature/wooden construction (ID 350),Burnt bone (1.4g),Ua-47125,3622,34
-Solum/Prestegården 203/1,Grave,charcoal ( Betula),LuS-12403,1550,35
-Solum/Prestegården 203/1,layer in upheaved side of road,charcoal ( Quercus),LuS-12404,2370,35
-Solum/Prestegården 203/1,layer in upheaved side of road,charcoal ( deciduous tree),LuS-12405,1900,35
-Solum/Prestegården 203/1,layer in upheaved side of road,charcoal ( coniferous tree/Pinus),LuS-12406,1790,35
-Solum/Prestegården 203/1,Fill among stones,charcoal ( deciduos tree),LuS-12407,1825,35
-Solum/Prestegården 203/1,Fill among stones,charcoal ( Picea),LuS-12408,120,35
-Solum/Prestegården 203/1,Fill among stones,charcoal ( deciduous tree),LuS-12409,105,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Betula),LuS-12410,2175,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Corylus),LuS-12411,2090,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Betula),LuS-12412,2160,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Betula),LuS-12413,2095,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Alnus),LuS-12414,2255,35
-Solum/Prestegården 203/1,Cooking pit,charcoal ( Pinus),LuS-12415,2430,35
-Solum/Prestegården 203/1,Burial mound,charcoal ( Betula),LuS-12416,2080,35
-Solum/Prestegården 203/1,Burial mound,charcoal ( Pinus),LuS-12417,2450,35
-Solum/Prestegården 203/1,Burial mound,charcoal ( Alnus/Betula),LuS-12418,2915,35
-Solum/Prestegården 203/1,Burial mound,charcoal ( Pinus),LuS-12419,3350,40
-Solum/Prestegården 203/1,Posthole,charcoal ( Pinus),LuS-12420,1780,35
-Solum/Prestegården 203/1,Posthole,charcoal ( Pinus),LuS-12421,1760,35
-Solum/Prestegården 203/1,Clearance cairn,charcoal ( Pinus),LuS-12422,3010,40
-Solum/Prestegården 203/1,Clearance cairn,charcoal ( Betula),LuS-12423,2380,35
-Solum/Prestegården 203/1,Grave,charcoal ( Quercus),LuS-12424,1640,35
-Solum/Prestegården 203/1,Burial mound,Bone ( Homo sapiens femur),LuS-12506,1590,40
-Solum/Prestegården 203/1,Burial mound,Bone ( Homo sapiens os longum),LuS-12507,1560,40
-Solum/Prestegården 203/1,Grave,Bone ( Homo sapiens os longum),LuS-12508,1515,40
-Solum/Prestegården 203/1,Redeposited cremation burial?,charcoal ( Alnus),LuS-13339,1565,40
-Solum/Prestegården 203/1,Grave,charcoal ( Betula),LuS-13340,1590,40
-Solum/Prestegården 203/1,Cairn,charcoal ( Corylus),LuS-13341,1850,40
-Solum/Prestegården 203/1,,charcoal ( Alnus),LuS-13342,2105,40
-Solum/Prestegården 203/1,Hearth,macrofossil ( Hordeum vulgare),LuS-13343,1570,40
-Solum/Prestegården 203/1,Hearth?,charcoal ( Betula),LuS-13344,1775,40
-Solum/Prestegården 203/1,Forge pit,charcoal ( Quercus),LuS-13345,1610,40
-Solum/Prestegården 203/1,Forge pit,charcoal ( Betula),LuS-13346,1600,40
-Solum/Prestegården 203/1,Forge pit,macrofossil ( Cerealia),LuS-13347,1565,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare var. vulgare),LuS-13348,1575,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Corylus avellana nutshell fragments),LuS-13349,3610,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Secale cereale),LuS-13350,1635,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Cerealia),LuS-13351,1565,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare var. vulgare),LuS-13352,1580,45
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare var. vulgare),LuS-13353,1580,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare),LuS-13354,1560,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Cerealia),LuS-13355,1570,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare var. nudum),LuS-13356,1570,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Cerealia),LuS-13357,1575,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Cerealia),LuS-13358,1530,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare var. vulgare),LuS-13359,1580,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare),LuS-13360,1550,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Cerealia),LuS-13361,1545,40
-Solum/Prestegården 203/1,Posthole,macrofossil ( Hordeum vulgare),LuS-13362,1570,40
+Snipetorp-Tenvik,,Charcoal (NA),Beta-423356,5560,30
+Snipetorp-Tenvik,,Charcoal (NA),Beta-423355,5350,30
+Solberg 44,,Charcoal (NA),Beta-236871,3030,40
+Solum 3,Undefined feature/wooden construction (ID 350),Charcoal (Corylus),Ua-45179,3039,31
+Solum 3,Undefined feature/wooden construction (ID 350),"Bone, burnt (NA)",Ua-47125,3622,34
+Solum/Prestegården 203/1,Grave,Charcoal (Betula),LuS-12403,1550,35
+Solum/Prestegården 203/1,layer in upheaved side of road,Charcoal (Quercus),LuS-12404,2370,35
+Solum/Prestegården 203/1,layer in upheaved side of road,"Charcoal (Decid, indet.)",LuS-12405,1900,35
+Solum/Prestegården 203/1,layer in upheaved side of road,Charcoal (Conifer. indet./Pinus),LuS-12406,1790,35
+Solum/Prestegården 203/1,Fill among stones,"Charcoal (Decid, indet.)",LuS-12407,1825,35
+Solum/Prestegården 203/1,Fill among stones,Charcoal (Picea),LuS-12408,120,35
+Solum/Prestegården 203/1,Fill among stones,"Charcoal (Decid, indet.)",LuS-12409,105,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Betula),LuS-12410,2175,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Corylus),LuS-12411,2090,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Betula),LuS-12412,2160,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Betula),LuS-12413,2095,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Alnus),LuS-12414,2255,35
+Solum/Prestegården 203/1,Cooking pit,Charcoal (Pinus),LuS-12415,2430,35
+Solum/Prestegården 203/1,Burial mound,Charcoal (Betula),LuS-12416,2080,35
+Solum/Prestegården 203/1,Burial mound,Charcoal (Pinus),LuS-12417,2450,35
+Solum/Prestegården 203/1,Burial mound,Charcoal (Alnus/Betula),LuS-12418,2915,35
+Solum/Prestegården 203/1,Burial mound,Charcoal (Pinus),LuS-12419,3350,40
+Solum/Prestegården 203/1,Posthole,Charcoal (Pinus),LuS-12420,1780,35
+Solum/Prestegården 203/1,Posthole,Charcoal (Pinus),LuS-12421,1760,35
+Solum/Prestegården 203/1,Clearance cairn,Charcoal (Pinus),LuS-12422,3010,40
+Solum/Prestegården 203/1,Clearance cairn,Charcoal (Betula),LuS-12423,2380,35
+Solum/Prestegården 203/1,Grave,Charcoal (Quercus),LuS-12424,1640,35
+Solum/Prestegården 203/1,Burial mound,"Bone (Homo sapiens, femur)",LuS-12506,1590,40
+Solum/Prestegården 203/1,Burial mound,"Bone (Homo sapiens, os longum)",LuS-12507,1560,40
+Solum/Prestegården 203/1,Grave,"Bone (Homo sapiens, os longum)",LuS-12508,1515,40
+Solum/Prestegården 203/1,Redeposited cremation burial?,Charcoal (Alnus),LuS-13339,1565,40
+Solum/Prestegården 203/1,Grave,Charcoal (Betula),LuS-13340,1590,40
+Solum/Prestegården 203/1,Cairn,Charcoal (Corylus),LuS-13341,1850,40
+Solum/Prestegården 203/1,,Charcoal (Alnus),LuS-13342,2105,40
+Solum/Prestegården 203/1,Hearth,Cereal (Hordeum vulgare),LuS-13343,1570,40
+Solum/Prestegården 203/1,Hearth?,Charcoal (Betula),LuS-13344,1775,40
+Solum/Prestegården 203/1,Forge pit,Charcoal (Quercus),LuS-13345,1610,40
+Solum/Prestegården 203/1,Forge pit,Charcoal (Betula),LuS-13346,1600,40
+Solum/Prestegården 203/1,Forge pit,Cereal (Cerealia),LuS-13347,1565,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare var. vulgare),LuS-13348,1575,40
+Solum/Prestegården 203/1,Posthole,Nutshell ( Corylus avellana),LuS-13349,3610,40
+Solum/Prestegården 203/1,Posthole,Cereal (Secale cereale),LuS-13350,1635,40
+Solum/Prestegården 203/1,Posthole,Cereal (Cerealia),LuS-13351,1565,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare var. vulgare),LuS-13352,1580,45
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare var. vulgare),LuS-13353,1580,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare),LuS-13354,1560,40
+Solum/Prestegården 203/1,Posthole,Cereal (Cerealia),LuS-13355,1570,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare var. nudum),LuS-13356,1570,40
+Solum/Prestegården 203/1,Posthole,Cereal (Cerealia),LuS-13357,1575,40
+Solum/Prestegården 203/1,Posthole,Cereal (Cerealia),LuS-13358,1530,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare var. vulgare),LuS-13359,1580,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare),LuS-13360,1550,40
+Solum/Prestegården 203/1,Posthole,Cereal (Cerealia),LuS-13361,1545,40
+Solum/Prestegården 203/1,Posthole,Cereal (Hordeum vulgare),LuS-13362,1570,40
 Søndre Eikeberg,Posthole,Charcoal (NA),T-13583,1991,124
 Søndre Eikeberg,Hearth,Charcoal (NA),T-13584,1883,70
-Søndre Eikeberg,Cooking pit,"Charcoal (Corylus,Pinus)",T-13582,1776,81
+Søndre Eikeberg,Cooking pit,"Charcoal (Corylus, Pinus)",T-13582,1776,81
 Songe,Hillfort,Charcoal (Quercus),TUa-2439,2250,70
 Songe,Hillfort,Charcoal (Pinus),T-14235,2141,91
 Songe,Hillfort,Charcoal (Pinus),TUa-2730,417,54
 Spellemannshaugen,Charcoal layer,Charcoal (NA),T-3809,1660,70
 Sporevatn,Settlement site,Charcoal (Pinus),T-2332,780,70
-Stillinga,,NA (NA),Ua-50502 ,1787,25
-Stillinga,,NA (NA),Ua-51481,1120,28
-Stokke/Polland 1,Cooking pit (ID 22029),Hazel (Corylus),Ua-48259,5353,101
-Stokke/Polland 1,Cooking pit (ID 18358),Elm (Ulmus),Ua-48264,4911,39
-Stokke/Polland 1,Undefined feature (ID 21238),Hazel (Corylus),Ua-48265,4667,39
-Stokke/Polland 1,Cooking pit (ID 22994),Willow (Salix),Ua-48262,4583,38
-Stokke/Polland 1,Undefined feature (ID 15546),Birch (Betula),Ua-48266,1549,30
-Stokke/Polland 1,Undefined feature (ID 21259),Birch (Betula),Ua-48263,1514,30
-Stokke/Polland 1,Charcoal clamp (ID 18176/22964),Spruce (Picea),Ua-48260,192,30
-Stokke/Polland 1,Cooking pit (ID 10537),Spruce (Picea),Ua-48261,88,31
-Stokke/Polland 1,Tree throw (ID 1568),"Hazel (Corylus), nutshell",Beta-359783,2960,30
-Stokke/Polland 3,Field C,"Hazel (Corylus), nutshell",Ua-48255,957,30
-Stokke/Polland 5,Cooking pit (ID 20345),Alder (Alnus),Ua-48256,6196,40
-Stokke/Polland 5,Cooking pit (ID 20270),Hazel (Corylus),Ua-48258,6177,42
-Stokke/Polland 5,Cooking pit (ID 20289),Pomoideae (Malinae),Ua-48257,6098,40
+Stillinga,Undefined feature,Nutshell (Corylus),Ua-50502 ,1787,25
+Stillinga,,"Bone, burnt (NA)",Ua-51481,1120,28
+Stokke/Polland 1,Cooking pit (ID 22029),Charcoal (Corylus),Ua-48259,5353,101
+Stokke/Polland 1,Cooking pit (ID 18358),Charcoal (Ulmus),Ua-48264,4911,39
+Stokke/Polland 1,Undefined feature (ID 21238),Charcoal (Corylus),Ua-48265,4667,39
+Stokke/Polland 1,Cooking pit (ID 22994),Charcoal (Salix),Ua-48262,4583,38
+Stokke/Polland 1,Undefined feature (ID 15546),Charcoal (Betula),Ua-48266,1549,30
+Stokke/Polland 1,Undefined feature (ID 21259),Charcoal (Betula),Ua-48263,1514,30
+Stokke/Polland 1,Charcoal clamp (ID 18176/22964),Charcoal (Picea),Ua-48260,192,30
+Stokke/Polland 1,Cooking pit (ID 10537),Charcoal (Picea),Ua-48261,88,31
+Stokke/Polland 1,Tree throw (ID 1568),Nutshell (Corylus),Beta-359783,2960,30
+Stokke/Polland 3,Field C,Nutshell (Corylus),Ua-48255,957,30
+Stokke/Polland 5,Cooking pit (ID 20345),Charcoal (Alnus),Ua-48256,6196,40
+Stokke/Polland 5,Cooking pit (ID 20270),Charcoal (Corylus),Ua-48258,6177,42
+Stokke/Polland 5,Cooking pit (ID 20289),Charcoal (Malinae),Ua-48257,6098,40
 Stokke/Polland 8,,NA (NA),Ua-51480,6215,36
-Stokke/Polland 8,Cooking pit/fireplace (ID 24210),Birch (Betula),Ua-51840,6215,35
-Sundsåsen 1,,,UBA-19127,3404,26
+Stokke/Polland 8,Cooking pit/fireplace (ID 24210),Charcoal (Betula),Ua-51840,6215,35
+Sundsåsen 1,,Charcoal (Pinus),UBA-19127,3404,26
 Tangen,,,TRa-3592,4420,35
 Tangen,,,TRa-3593,4415,35
 Tjølling,Settlement site,Charcoal (NA),T-255,600,100
@@ -1546,29 +1546,29 @@ Tjølling,Hearth,Charcoal (NA),T-250,600,80
 Tjølling,Floor,Charcoal (NA),T-253,550,100
 Tjølling,Fundament,Charcoal (NA),T-252,450,100
 Tjølling,House remains,Charcoal (NA),T-254,350,100
-Tjølling,,Charcoal,Beta-252648,3100,40
+Tjølling,,Charcoal (NA),Beta-252648,3100,40
 Tomsbakken,Posthole,Charcoal (NA),T-13585,3135,108
 Tomsbakken,Cultural layer,Charcoal (NA),T-13587,2737,104
 Tomsbakken,Hearth,Charcoal (NA),T-13586,2118,103
-Torsdal,Wood log,Wood (deciduous tree),T-737,1450,80
+Torsdal,Wood log,Wood (Decid. indet.),T-737,1450,80
 Torsrød,Hearth,Charcoal (NA),T-1425,5350,70
 Torsrød,Hearth,Charcoal (NA),T-1493,2550,60
-Torstvet,"Square (61x101y, layer 2)","Hazel (Corylus), nutshell",TRa-3406,8460,55
-Torstvet,"Square (61x102y, layer 2)","Hazel (Corylus), nutshell",TRa-3407,8425,55
-Torstvet,Fireplace (ID 1),Birch (Betula),Ua-45677,2218,34
-Torstvet,Fireplace (ID 1),Birch/willow (Betula/Salix),TRa-3405,3090,30
-Trondalen,Fireplace (ID 2),Hazel (Corylus),Ua-50174,5425,42
-Trondalen,Fireplace (ID 3),Alder (Alnus),Ua-50175,5557,43
-Trondalen,Cooking pit (ID 7),Willow (Salix),Ua-50176,5156,44
-Tverdal,"Cultural layer, quadrant (16x10ySE)",Yew (Taxus),TRa-443,2480,35
-Tverdal,"Cultural layer, quadrant (16x10yNW)",Birch (Betula),TRa-445,2535,30
-Tverdal,"Cultural layer, quadrant (16x10ySW)",Yew (Taxus),TRa-446,2475,40
-Tverdal,"Cultural layer, quadrant (14x10yNW)",Birch (Betula),TRa-444,4370,45
-Tverdal,"Cultural layer, quadrant (16x10y)",Dog (Canis familiaris),Ua-47406,4536,131
-Tverdal,"Cultural layer, quadrant (16x10y)",Boar (Sus scrofa),Ua-47407,4622,48
-Tverdal,"Cultural layer, quadrant (16x10y)",Mammal (Mammalia),Ua-47408,4401,36
+Torstvet,"Square (61x101y, layer 2)",Nutshell (Corylus),TRa-3406,8460,55
+Torstvet,"Square (61x102y, layer 2)",Nutshell (Corylus),TRa-3407,8425,55
+Torstvet,Fireplace (ID 1),Charcoal (Betula),Ua-45677,2218,34
+Torstvet,Fireplace (ID 1),Charcoal (Betula/Salix),TRa-3405,3090,30
+Trondalen,Fireplace (ID 2),Charcoal (Corylus),Ua-50174,5425,42
+Trondalen,Fireplace (ID 3),Charcoal (Alnus),Ua-50175,5557,43
+Trondalen,Cooking pit (ID 7),Charcoal (Salix),Ua-50176,5156,44
+Tverdal,"Cultural layer, quadrant (16x10ySE)",Charcoal (Taxus),TRa-443,2480,35
+Tverdal,"Cultural layer, quadrant (16x10yNW)",Charcoal (Betula),TRa-445,2535,30
+Tverdal,"Cultural layer, quadrant (16x10ySW)",Charcoal (Taxus),TRa-446,2475,40
+Tverdal,"Cultural layer, quadrant (14x10yNW)",Charcoal (Betula),TRa-444,4370,45
+Tverdal,"Cultural layer, quadrant (16x10y)",Bone (Canis familiaris),Ua-47406,4536,131
+Tverdal,"Cultural layer, quadrant (16x10y)",Bone (Sus scrofa),Ua-47407,4622,48
+Tverdal,"Cultural layer, quadrant (16x10y)",Bone (Mammalia),Ua-47408,4401,36
 Ulafeltet,Burial mound,Charcoal (NA),TUa-2440,2105,70
-Undeberg,,Charcoal,LuS-12323,3265,40
+Undeberg,,Charcoal (NA),LuS-12323,3265,40
 Våle prestegård,Cooking pit,Charcoal (Quercus),T-15479,1954,84
 Våle prestegård,Cooking pit,Charcoal (Quercus),T-15474,1952,52
 Våle prestegård,Cooking pit,Charcoal (Quercus),T-15473,1943,61
@@ -1579,30 +1579,30 @@ Våle prestegård,Cooking pit,Charcoal (Quercus),T-15477,1838,75
 Våle prestegård,Cooking pit,Charcoal (Betula),T-15475,1813,97
 Våle prestegård,Cooking pit,Charcoal (Quercus),T-15480,1803,82
 Våle prestegård,Cooking pit,Charcoal (Quercus),T-15481,1786,77
-Vallermyrene 1a,Fireplace (ID 322),Pine (Pinus),Ua-45182,5770,35
-Vallermyrene 1a,Cooking pit/fireplace (ID 301),Pine (Pinus),Ua-45181,5748,35
-Vallermyrene 1b,Cooking pit/fireplace (ID 391),Birch (Betula),Ua-45180,5373,34
-Vallermyrene 2,Fireplace (ID 1017),Hazel (Corylus),Ua-45257,4890,32
-Vallermyrene 2,Cooking pit? (ID 4026),Birch (Betula),Ua-45253,3047,32
-Vallermyrene 2,Post hole? (ID 4455),Willow (Salix),Ua-45258,2821,30
-Vallermyrene 2,Cooking pit (ID 350),Willow (Salix),Ua-45251,2243,32
-Vallermyrene 2,Post hole (ID 2889),Birch (Betula),Ua-45256,2181,30
-Vallermyrene 2,Cultivation layer (Profile in trench),Birch (Betula),Ua-45255,2156,30
-Vallermyrene 2,Cultivation layer (611x554y),Hazel (Corylus),Beta-324757,2120,30
-Vallermyrene 2,Cultivation layer (Profile),Birch (Betula),Ua-45259,2009,30
-Vallermyrene 2,Post hole (ID 4210),Birch (Betula),Ua-45260,1942,30
-Vallermyrene 2,Cooking pit (ID 545),Birch (Betula),Ua-45249,1846,31
-Vallermyrene 2,Cooking pit (ID 437),Birch (Betula),Ua-45248,1803,31
-Vallermyrene 2,Undefined feature (ID 3351),Birch/hazel/rowan (Betula/Corylus/Sorbus),Ua-45252,1654,30
-Vallermyrene 2,Post hole (ID 4468),Pine (Pinus),Ua-45254,1593,30
-Vallermyrene 2,Cooking pit/fireplace (ID 1043),Birch (Betula),Ua-45250,1560,32
-Vallermyrene 4a,"Quadrant (894x242yNE, layer 1)","Burnt bone, mammal (0.5g)",Ua-45169,6489,50
-Vallermyrene 4a,"Quadrant (892x243yNW, layer 3)","Burnt bone, mammal (1g)",Ua-45170,6381,37
-Vallermyrene 4b,Refuse/storage pit (ID 896),Pine (Pinus),Ua-45172,6197,40
-Vallermyrene 4b,Refuse/storage pit (ID 896),Pine (Pinus),Ua-45171,6067,41
-Viulsrød 2,Cooking pit (ID 300),Hazel (Corylus),LuS-14694,2430,35
-Viulsrød 2,Cooking pit (ID 100),Alder (Alnus),LuS-14698,2400,40
-Viulsrød 2,Cooking pit (ID 400),Birch (Betula),LuS-14695,2190,35
-Viulsrød 2,Cooking pit (ID 500),Ash (Fraxinus),LuS-14696,2180,35
-Viulsrød 2,Cooking pit/fireplace (ID 600),Aspen (Populus),LuS-14697,1905,40
+Vallermyrene 1a,Fireplace (ID 322),Charcoal (Pinus),Ua-45182,5770,35
+Vallermyrene 1a,Cooking pit/fireplace (ID 301),Charcoal (Pinus),Ua-45181,5748,35
+Vallermyrene 1b,Cooking pit/fireplace (ID 391),Charcoal (Betula),Ua-45180,5373,34
+Vallermyrene 2,Fireplace (ID 1017),Charcoal (Corylus),Ua-45257,4890,32
+Vallermyrene 2,Cooking pit? (ID 4026),Charcoal (Betula),Ua-45253,3047,32
+Vallermyrene 2,Post hole? (ID 4455),Charcoal (Salix),Ua-45258,2821,30
+Vallermyrene 2,Cooking pit (ID 350),Charcoal (Salix),Ua-45251,2243,32
+Vallermyrene 2,Post hole (ID 2889),Charcoal (Betula),Ua-45256,2181,30
+Vallermyrene 2,Cultivation layer (Profile in trench),Charcoal (Betula),Ua-45255,2156,30
+Vallermyrene 2,Cultivation layer (611x554y),Charcoal (Corylus),Beta-324757,2120,30
+Vallermyrene 2,Cultivation layer (Profile),Charcoal (Betula),Ua-45259,2009,30
+Vallermyrene 2,Post hole (ID 4210),Charcoal (Betula),Ua-45260,1942,30
+Vallermyrene 2,Cooking pit (ID 545),Charcoal (Betula),Ua-45249,1846,31
+Vallermyrene 2,Cooking pit (ID 437),Charcoal (Betula),Ua-45248,1803,31
+Vallermyrene 2,Undefined feature (ID 3351),Charcoal (Betula/Corylus/Sorbus),Ua-45252,1654,30
+Vallermyrene 2,Post hole (ID 4468),Charcoal (Pinus),Ua-45254,1593,30
+Vallermyrene 2,Cooking pit/fireplace (ID 1043),Charcoal (Betula),Ua-45250,1560,32
+Vallermyrene 4a,"Quadrant (894x242yNE, layer 1)","Bone, burnt (mammal)",Ua-45169,6489,50
+Vallermyrene 4a,"Quadrant (892x243yNW, layer 3)","Bone, burnt (mammal)",Ua-45170,6381,37
+Vallermyrene 4b,Refuse/storage pit (ID 896),Charcoal (Pinus),Ua-45172,6197,40
+Vallermyrene 4b,Refuse/storage pit (ID 896),Charcoal (Pinus),Ua-45171,6067,41
+Viulsrød 2,Cooking pit (ID 300),Charcoal (Corylus),LuS-14694,2430,35
+Viulsrød 2,Cooking pit (ID 100),Charcoal (Alnus),LuS-14698,2400,40
+Viulsrød 2,Cooking pit (ID 400),Charcoal (Betula),LuS-14695,2190,35
+Viulsrød 2,Cooking pit (ID 500),Charcoal (Fraxinus),LuS-14696,2180,35
+Viulsrød 2,Cooking pit/fireplace (ID 600),Charcoal (populus),LuS-14697,1905,40
 ,Settlement Site,Charcoal (Fraxinus),TRa-1353,3070,30

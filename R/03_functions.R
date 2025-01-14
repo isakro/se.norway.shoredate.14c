@@ -64,7 +64,7 @@ simulation_summary <- function(spd, simulation_results,
 
   calBP <- as.numeric(rownames(spd))
 
-  # Code below repurposed from ADMUR
+  # Code below re-purposed from ADMUR
 
   # expected simulation
   expected.sim <- rowMeans(SPD.sims)

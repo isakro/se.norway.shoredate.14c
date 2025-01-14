@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  18 JAN 2024 16:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.7.8)  10 DEC 2024 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -756,26 +756,26 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen146
 \bframebox=\box33
 LaTeX Info: Redefining \\ on input line 3056.
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count124
+\float@exts=\toks27
+\float@box=\box34
+\@float@everytoks=\toks28
+\@floatcapt=\box35
 ) (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@colwidth=\skip59
-\multirow@cntb=\count124
+\multirow@cntb=\count125
 \multirow@dima=\skip60
 \bigstrutjot=\dimen147
 ) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen148
 \WF@size=\dimen149
-\c@WF@wrappedlines=\count125
-\WF@box=\box34
-\WF@everypar=\toks27
+\c@WF@wrappedlines=\count126
+\WF@box=\box36
+\WF@everypar=\toks29
 Package: wrapfig 2003/01/31  v 3.6
-) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count126
-\float@exts=\toks28
-\float@box=\box35
-\@float@everytoks=\toks29
-\@floatcapt=\box36
 ) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks30
@@ -1131,101 +1131,287 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 128.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
-<../figures/map.png, id=38, 401.24907pt x 775.39688pt>
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]pdfTeX warning (ext4): dest
+ination with the same identifier (name{page.}) has been already used, duplicate
+ ignored
+<to be read again> 
+                   \relax 
+l.152 
+       [2]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.163 
+       [3]pdfTeX warning (ext4): destination with the same identifier (name{pag
+e.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.174 
+       [4]
+<../figures/map.png, id=43, 401.24907pt x 775.39688pt>
 File: ../figures/map.png Graphic file (type png)
 <use ../figures/map.png>
-Package pdftex.def Info: ../figures/map.png  used on input line 193.
+Package pdftex.def Info: ../figures/map.png  used on input line 197.
 (pdftex.def)             Requested size: 336.58772pt x 650.44157pt.
 
-LaTeX Warning: Float too large for page by 59.956pt on input line 198.
+LaTeX Warning: Float too large for page by 59.956pt on input line 202.
 
-[4] [5 <../figures/map.png>] [6]
-<../figures/example_shoredate.png, id=67, 758.835pt x 614.295pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 F
+       our geological reconstructions of shoreline displacement in the regio...
+[5]pdfTeX warning (ext4): destination with the same identifier (name{page.}) ha
+s been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 F
+       our geological reconstructions of shoreline displacement in the regio...
+[6 <../figures/map.png>]
+<../figures/example_shoredate.png, id=63, 758.835pt x 614.295pt>
 File: ../figures/example_shoredate.png Graphic file (type png)
 <use ../figures/example_shoredate.png>
 Package pdftex.def Info: ../figures/example_shoredate.png  used on input line 2
-22.
+26.
 (pdftex.def)             Requested size: 501.88634pt x 406.28893pt.
 
-Overfull \hbox (32.13132pt too wide) in paragraph at lines 222--223
+Overfull \hbox (32.13132pt too wide) in paragraph at lines 226--227
  [][] 
  []
 
-<../figures/summed_examples.png, id=73, 867.24pt x 325.215pt>
+<../figures/summed_examples.png, id=69, 867.24pt x 325.215pt>
 File: ../figures/summed_examples.png Graphic file (type png)
 <use ../figures/summed_examples.png>
-Package pdftex.def Info: ../figures/summed_examples.png  used on input line 235
+Package pdftex.def Info: ../figures/summed_examples.png  used on input line 239
 .
 (pdftex.def)             Requested size: 501.87476pt x 188.20302pt.
 
-Overfull \hbox (32.11974pt too wide) in paragraph at lines 235--236
+Overfull \hbox (32.11974pt too wide) in paragraph at lines 239--240
  [][] 
  []
 
-<../figures/incpolys.png, id=75, 718.18312pt x 433.62pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \end{figure}
+                   [7]pdfTeX warning (ext4): destination with the same identifi
+er (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.244 \end{figure}
+                   [8 <../figures/example_shoredate.png>]
+<../figures/incpolys.png, id=80, 718.18312pt x 433.62pt>
 File: ../figures/incpolys.png Graphic file (type png)
 <use ../figures/incpolys.png>
-Package pdftex.def Info: ../figures/incpolys.png  used on input line 246.
+Package pdftex.def Info: ../figures/incpolys.png  used on input line 250.
 (pdftex.def)             Requested size: 501.8919pt x 303.02907pt.
 
-Overfull \hbox (32.13689pt too wide) in paragraph at lines 246--247
+Overfull \hbox (32.13689pt too wide) in paragraph at lines 250--251
  [][] 
  []
 
-[7] [8 <../figures/example_shoredate.png>] [9 <../figures/summed_examples.png> 
-<../figures/incpolys.png>]
-<../figures/mc.png, id=91, 1084.05pt x 677.53125pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.263 
+       [9 <../figures/summed_examples.png>]pdfTeX warning (ext4): destination w
+ith the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.263 
+       [10 <../figures/incpolys.png>]
+<../figures/mc.png, id=89, 1084.05pt x 677.53125pt>
 File: ../figures/mc.png Graphic file (type png)
 <use ../figures/mc.png>
-Package pdftex.def Info: ../figures/mc.png  used on input line 265.
+Package pdftex.def Info: ../figures/mc.png  used on input line 269.
 (pdftex.def)             Requested size: 501.87807pt x 313.67378pt.
 
-Overfull \hbox (32.12305pt too wide) in paragraph at lines 265--266
+Overfull \hbox (32.12305pt too wide) in paragraph at lines 269--270
  [][] 
  []
 
-<../figures/bic.png, id=96, 542.025pt x 243.91125pt>
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.279 
+       [11 <../figures/mc.png>]
+<../figures/bic.png, id=102, 542.025pt x 243.91125pt>
 File: ../figures/bic.png Graphic file (type png)
 <use ../figures/bic.png>
-Package pdftex.def Info: ../figures/bic.png  used on input line 280.
+Package pdftex.def Info: ../figures/bic.png  used on input line 284.
 (pdftex.def)             Requested size: 501.89459pt x 225.85255pt.
 
-Overfull \hbox (32.13957pt too wide) in paragraph at lines 280--281
+Overfull \hbox (32.13957pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
-[10] [11 <../figures/mc.png> <../figures/bic.png>] [12]
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 298.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.295 
+       [12 <../figures/bic.png>]pdfTeX warning (ext4): destination with the sam
+e identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.303 
+       [13]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 306.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [13] [14] [15] [16] [17] [18] [19] [20] [21]
-<../figures/taphonomic.png, id=374, 813.0375pt x 406.51875pt>
-File: ../figures/taphonomic.png Graphic file (type png)
-<use ../figures/taphonomic.png>
-Package pdftex.def Info: ../figures/taphonomic.png  used on input line 711.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.313 
+       [14]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.320 A
+       nother relevant point to mention here is that the RSL change is effec...
+[15]pdfTeX warning (ext4): destination with the same identifier (name{page.}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.332 
+       [16]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.356 ...-supplementary-information-availability}}
+                                                   [17]pdfTeX warning (ext4): d
+estination with the same identifier (name{page.}) has been already used, duplic
+ate ignored
+<to be read again> 
+                   \relax 
+l.361 \newpage
+               [18]pdfTeX warning (ext4): destination with the same identifier 
+(name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.424 
+       [19]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.485 \leavevmode
+                 \vadjust pre{\hypertarget{ref-fossum2020}{}}% [20]pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.}) has been already 
+used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.542 \leavevmode
+                 \vadjust pre{\hypertarget{ref-manninen2023}{}}% [21]pdfTeX war
+ning (ext4): destination with the same identifier (name{page.}) has been alread
+y used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.601 
+       [22]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.656 \leavevmode
+                 \vadjust pre{\hypertarget{ref-selsing2010}{}}% [23]pdfTeX warn
+ing (ext4): destination with the same identifier (name{page.}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.715 
+       [24]pdfTeX warning (ext4): destination with the same identifier (name{pa
+ge.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.730 \newpage
+               [25]
+<../figures/dated_material.png, id=394, 813.0375pt x 406.51875pt>
+File: ../figures/dated_material.png Graphic file (type png)
+<use ../figures/dated_material.png>
+Package pdftex.def Info: ../figures/dated_material.png  used on input line 738.
+
 (pdftex.def)             Requested size: 501.8698pt x 250.93488pt.
 
-Overfull \hbox (32.11478pt too wide) in paragraph at lines 711--712
+Overfull \hbox (32.11478pt too wide) in paragraph at lines 738--739
  [][] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 718.
-[22] [23 <../figures/taphonomic.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 718.
+<../figures/normalisation.png, id=395, 813.0375pt x 406.51875pt>
+File: ../figures/normalisation.png Graphic file (type png)
+<use ../figures/normalisation.png>
+Package pdftex.def Info: ../figures/normalisation.png  used on input line 747.
+(pdftex.def)             Requested size: 501.8698pt x 250.93488pt.
+
+Overfull \hbox (32.11478pt too wide) in paragraph at lines 747--748
+ [][] 
+ []
+
+<../figures/mc_nonnorm.png, id=396, 1084.05pt x 338.76563pt>
+File: ../figures/mc_nonnorm.png Graphic file (type png)
+<use ../figures/mc_nonnorm.png>
+Package pdftex.def Info: ../figures/mc_nonnorm.png  used on input line 756.
+(pdftex.def)             Requested size: 501.87807pt x 156.83688pt.
+
+Overfull \hbox (32.12305pt too wide) in paragraph at lines 756--757
+ [][] 
+ []
+
+<../figures/taphonomic.png, id=397, 722.7pt x 813.0375pt>
+File: ../figures/taphonomic.png Graphic file (type png)
+<use ../figures/taphonomic.png>
+Package pdftex.def Info: ../figures/taphonomic.png  used on input line 765.
+(pdftex.def)             Requested size: 501.88356pt x 564.61902pt.
+
+Overfull \hbox (32.12854pt too wide) in paragraph at lines 765--766
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 22.13344pt on input line 770.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.772 \newpage
+               [26 <../figures/dated_material.png>]pdfTeX warning (ext4): desti
+nation with the same identifier (name{page.}) has been already used, duplicate 
+ignored
+<to be read again> 
+                   \relax 
+l.772 \newpage
+               [27 <../figures/normalisation.png> <../figures/mc_nonnorm.png>]p
+dfTeX warning (ext4): destination with the same identifier (name{page.}) has be
+en already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.772 \newpage
+               [28 <../figures/taphonomic.png (PNG copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 787.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.787 \end{document}
+                     [29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 787.
 (./paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 718.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 718.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 787.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 787.
  ) 
 Here is how much of TeX's memory you used:
- 15435 strings out of 492982
- 220551 string characters out of 6134897
- 349978 words of memory out of 5000000
- 18359 multiletter control sequences out of 15000+600000
+ 15443 strings out of 492982
+ 221013 string characters out of 6134897
+ 350694 words of memory out of 5000000
+ 18377 multiletter control sequences out of 15000+600000
  72284 words of font info for 149 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,11n,38p,2353b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,13n,38p,3026b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/te
 xmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lm
@@ -1234,10 +1420,10 @@ ts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb>
 </usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/
 public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmri10.pfb>
-Output written on paper.pdf (23 pages, 4187131 bytes).
+Output written on paper.pdf (29 pages, 9945574 bytes).
 PDF statistics:
- 526 PDF objects out of 1000 (max. 8388607)
- 479 compressed objects within 5 object streams
- 180 named destinations out of 1000 (max. 500000)
- 16548 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 537 PDF objects out of 1000 (max. 8388607)
+ 481 compressed objects within 5 object streams
+ 167 named destinations out of 1000 (max. 500000)
+ 16563 words of extra memory for PDF output out of 17280 (max. 10000000)
 
