@@ -20,11 +20,11 @@ Title <- "Comparing summed probability distributions of shoreline and radiocarbo
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
+> Roalkvam, Isak <a href="https://orcid.org/0000-0001-6974-1374"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> and Solheim, Steinar <a href="https://orcid.org/0000-0001-8293-8147"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> (2025). _`r Title`_. *Journal of Archaeological Method and Theory* 32(1):26 <https://doi.org/10.1007/s10816-025-09696-7>
 
-Our pre-print is online here:
+Our pre-print that was reviewed and recommended through [PCI Archaeology](https://archaeo.peercommunityin.org/articles/rec?id=417) is online here:
 
-> Roalkvam, Isak <a href="https://orcid.org/0000-0001-6974-1374"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> and Solheim, Steinar <a href="https://orcid.org/0000-0001-8293-8147"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> (2023). _`r Title`_. Online at <https://doi.org/10.31235/osf.io/2f8ph>
+> Roalkvam, Isak <a href="https://orcid.org/0000-0001-6974-1374"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> and Solheim, Steinar <a href="https://orcid.org/0000-0001-8293-8147"> <img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" /></a> (2024). _`r Title`_. *Peer Community in Archaeology*. Online at <https://doi.org/10.31235/osf.io/2f8ph>
 
 
 ### How to cite
